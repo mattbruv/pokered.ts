@@ -1,11 +1,11 @@
 import { foo } from "pokered.ts";
 
 function App() {
-  const bar = foo(1, -2);
+  const bar = foo();
   return (
     <>
       <div>Hi world</div>
-      <div>{bar}</div>
+      <div>{bar["pokemon-back-alakazamb"]}</div>
     </>
   );
 }
