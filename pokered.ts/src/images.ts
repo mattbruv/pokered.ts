@@ -1,4 +1,4 @@
-import { graphicsBase64 } from "./gfxBase64";
+import { graphicsBase64 } from "./imagesBase64";
 
 export type ImageCache = Record<keyof typeof graphicsBase64, ImageBitmap>;
 

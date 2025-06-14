@@ -28,4 +28,4 @@ def copy_pngs(src_root, json_path):
     print(f"Created JSON file with {len(data)} images at: {json_path}")
 
 # Example usage
-copy_pngs('../pokered/gfx/', 'src/gfxBase64.ts')
+copy_pngs('../pokered/gfx/', 'src/imagesBase64.ts')

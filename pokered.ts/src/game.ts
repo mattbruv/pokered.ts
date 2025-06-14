@@ -1,4 +1,7 @@
-import { ImageCache, loadImageBitmaps } from "./gfx";
+import { ImageCache, loadImageBitmaps } from "./images";
+
+const SCREEN_WIDTH = 160;
+const SCREEN_HEIGHT = 144;
 
 class PokemonRed {
   #images: ImageCache;
@@ -7,6 +10,11 @@ class PokemonRed {
   constructor(canvas: HTMLCanvasElement, cache: ImageCache) {
     this.#canvas = canvas;
     this.#images = cache;
+    const ctx = this.#canvas.getContext("2d");
+    if (ctx) {
+      ctx.fillStyle = "magenta";
+      ctx.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    }
   }
 
   drawImage(key: keyof ImageCache) {
