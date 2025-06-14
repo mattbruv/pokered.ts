@@ -1,8 +1,8 @@
 import { graphicsBase64 } from "./gfxBase64";
 
-export async function loadImageBitmaps(): Promise<
-  Record<keyof typeof graphicsBase64, ImageBitmap>
-> {
+export type ImageCache = Record<keyof typeof graphicsBase64, ImageBitmap>;
+
+export async function loadImageBitmaps(): Promise<ImageCache> {
   const entries = await Promise.all(
     Object.entries(graphicsBase64).map(async ([key, base64]) => {
       const response = await fetch(`data:image/png;base64,${base64}`);
@@ -12,9 +12,5 @@ export async function loadImageBitmaps(): Promise<
     })
   );
 
-  // Convert back to object
-  return Object.fromEntries(entries) as Record<
-    keyof typeof graphicsBase64,
-    ImageBitmap
-  >;
+  return Object.fromEntries(entries) as ImageCache;
 }
