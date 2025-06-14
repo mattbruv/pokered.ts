@@ -1,5 +1,5 @@
-import { graphicsBase64 } from "./gfxBase64";
+import { loadImageBitmaps } from "./gfx";
 
 export function foo() {
-  return graphicsBase64;
+  return loadImageBitmaps;
 }
