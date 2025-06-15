@@ -4,7 +4,7 @@ export type Map = {
   width: number;
   height: number;
   object: MapObject;
-  blocks: MapBlocks;
+  blocks: BlockSet;
   tileset: Tileset;
   connections: MapConnections;
   textPointers: unknown[];
@@ -12,10 +12,6 @@ export type Map = {
 };
 
 export type MapObject = {
-  //
-};
-
-export type MapBlocks = {
   //
 };
 
@@ -263,3 +259,39 @@ export enum MapName {
   ViridianSchoolHouse,
   WardensHouse,
 }
+
+export function foo(bar: TileIndex) {
+  return bar;
+}
+
+/** A single tile index (0-255) into the tileset */
+export type TileIndex = number;
+
+/**
+ * A BlockSet is an array of Blocks
+ */
+export type BlockSet = Block[];
+
+/**
+ * A block contains 16 tile indices,
+ * where each one is an offset into the tiles from the tileset.
+ */
+// make a tuple to ensure 4x4 structure at compile time
+export type Block = [
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex,
+  TileIndex
+];
