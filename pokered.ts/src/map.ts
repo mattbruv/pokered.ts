@@ -19,20 +19,23 @@ export type MapBlocks = {
   //
 };
 
-export type Connection = {
+type BaseConnection = {
   map: MapName;
-  /**
-   * offset of the target map relative to the current map
-   * (x offset for east/west, y offset for north/south)
-   */
-  offset: number;
+};
+
+export type VerticalConnection = BaseConnection & {
+  yOffset: number;
+};
+
+export type HorizontalConnection = BaseConnection & {
+  xOffset: number;
 };
 
 export type MapConnections = {
-  north?: Connection;
-  south?: Connection;
-  east?: Connection;
-  west?: Connection;
+  north?: VerticalConnection;
+  south?: VerticalConnection;
+  east?: HorizontalConnection;
+  west?: HorizontalConnection;
 };
 
 export enum MapName {
