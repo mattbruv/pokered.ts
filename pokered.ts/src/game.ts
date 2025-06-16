@@ -1,4 +1,4 @@
-import { ImageCache, loadImageBitmaps } from "./images";
+import { ImageCache, loadImageBitmaps } from "./gfx/images";
 
 const SCREEN_WIDTH = 160;
 const SCREEN_HEIGHT = 144;

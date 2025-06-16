@@ -26,7 +26,7 @@ for map_path in maps:
                 tileset = entry[3].replace(",", "")
                 data[name]["name"] = name
                 data[name]["id"] = entry[2].replace(",", "")
-                data[name]["tileset"] = "Tileset." + tileset
+                data[name]["tileset"] = tileset
             if (first == "connection"):
                 direc = rest[0].replace(",", "")
                 to_map = rest[1].replace(",", "")

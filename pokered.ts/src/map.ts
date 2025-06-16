@@ -260,10 +260,6 @@ export enum MapName {
   WardensHouse,
 }
 
-export function foo(bar: TileIndex) {
-  return bar;
-}
-
 /** A single tile index (0-255) into the tileset */
 export type TileIndex = number;
 
