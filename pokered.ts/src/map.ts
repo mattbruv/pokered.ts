@@ -266,14 +266,14 @@ export type TileIndex = number;
 /**
  * A BlockSet is an array of Blocks
  */
-export type BlockSet = Block[];
+export type BlockSet = readonly Block[];
 
 /**
  * A block contains 16 tile indices,
  * where each one is an offset into the tiles from the tileset.
  */
 // make a tuple to ensure 4x4 structure at compile time
-export type Block = [
+export type Block = readonly [
   TileIndex,
   TileIndex,
   TileIndex,
