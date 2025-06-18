@@ -71,6 +71,11 @@ with open("../pokered/constants/map_constants.asm") as f:
 with open("maps.json", "w") as out:
     out.write(json.dumps(data, indent=4))
 
+# with open("src/mapLookup.ts", "a") as mf:
+#     mf.write("\n")
+#     for key in sorted(data):
+#         mf.write(f"[MapName.{key}]: {key},\n")
+
 # for key in data:
 #     path = f"./src/maps/{key}.ts"
 #     with open(path, "w") as f:
