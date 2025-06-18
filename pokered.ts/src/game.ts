@@ -1,4 +1,6 @@
 import { ImageCache, loadImageBitmaps } from "./gfx/images";
+import { MapName } from "./map";
+import { getMap } from "./mapLookup";
 
 const SCREEN_WIDTH = 160;
 const SCREEN_HEIGHT = 144;
@@ -22,6 +24,19 @@ class PokemonRed {
     console.log(key);
     if (context) {
       context.drawImage(this.#images[key], 0, 0);
+      const pallet = getMap(MapName.PalletTown);
+
+      const hexLines = [];
+      for (let i = 0; i < pallet.blocks.length; i += 4) {
+        const group = pallet.blocks
+          .slice(i, i + 4)
+          .map((n) => n.toString(16).padStart(2, "0"))
+          .join("");
+        hexLines.push(group);
+      }
+
+      console.log(pallet);
+      console.log(hexLines.join("\n"));
     }
   }
 }
