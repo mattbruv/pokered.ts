@@ -3,16 +3,18 @@ import os
 
 INPUT_PATH = "maps.json"
 OUTPUT_DIR = "src/maps"
+BLOCKS_OUT_DIR = "src/data/blocks"
 
-TS_HEADER = """import { Map, MapName } from "../map";
-import { Tileset } from "../tileset";
+MAP_TS_HEADER = """import {{ Map, MapName }} from "../map";
+import {{ Tileset }} from "../tileset";
+import {{ {blocks_const} }} from "../data/blocks/{block_file}";
 
 """
 
 TS_BODY_TEMPLATE = """export const {map_name}: Map = {{
   width: {width},
   height: {height},
-  blocks: {blocks},
+  blocks: {blocks_const},
   tileset: Tileset.{tileset},
   connections: {connections},
   object: {{}},
@@ -20,6 +22,8 @@ TS_BODY_TEMPLATE = """export const {map_name}: Map = {{
   script: () => {{}},
 }};
 """
+
+BLOCK_TS_TEMPLATE = "export const {blocks_const} = {blocks};\n"
 
 def format_connection(conn):
     if "xOffset" in conn:
@@ -41,14 +45,9 @@ def format_connections(conns):
         "\n}"
     )
 
-
-
-def to_ts_enum(value: str) -> str:
-    """Convert a string to a valid enum reference"""
-    return value.strip()
-
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(BLOCKS_OUT_DIR, exist_ok=True)
 
     with open(INPUT_PATH, "r") as f:
         maps = json.load(f)
@@ -56,18 +55,34 @@ def main():
     for key, value in maps.items():
         print(key, value["id"])
         map_name = key
+        map_id = value["id"]
         width = value["width"]
         height = value["height"]
-        blocks = json.dumps(value["blocks"] if "blocks" in value else [])
+        blocks = value["blocks"] if "blocks" in value else []
         tileset = value["tileset"].upper()
+
+        # Prepare block export
+        blocks_const = f"{map_id}_BLOCKS"
+        blocks_ts = json.dumps(blocks, indent=2)
+        block_ts_code = BLOCK_TS_TEMPLATE.format(
+            blocks_const=blocks_const,
+            blocks=blocks_ts
+        )
+
+        # Write block data file
+        block_ts_path = os.path.join(BLOCKS_OUT_DIR, f"{map_name}.ts")
+        with open(block_ts_path, "w") as block_file:
+            block_file.write(block_ts_code)
+        print(f"Wrote block data to {block_ts_path}")
 
         connections = format_connections(value.get("connections", {}))
 
         file_contents = (
-            TS_HEADER +
+            MAP_TS_HEADER.format(blocks_const=blocks_const, block_file=map_name) +
             TS_BODY_TEMPLATE.format(
                 map_name=map_name,
                 width=width,
+                blocks_const=blocks_const,
                 height=height,
                 blocks=blocks,
                 tileset=tileset,
