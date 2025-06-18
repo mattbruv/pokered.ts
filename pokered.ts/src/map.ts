@@ -1,12 +1,19 @@
 import { Tileset } from "./tileset";
 
 export type Map = {
+  /** Width of the map in blocks */
   width: number;
+  /** Height of the map in blocks */
   height: number;
-  object: MapObject;
-  blocks: BlockSet;
+  /**
+   * Represents a width * height array of indices into the blocks array for this map's tileset.
+   */
+  blocks: BlockIndex[];
   tileset: Tileset;
+
   connections: MapConnections;
+
+  object: MapObject;
   textPointers: unknown[];
   script: () => void;
 };
@@ -259,6 +266,8 @@ export enum MapName {
   ViridianSchoolHouse,
   WardensHouse,
 }
+
+export type BlockIndex = number;
 
 /** A single tile index (0-255) into the tileset */
 export type TileIndex = number;

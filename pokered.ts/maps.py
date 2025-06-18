@@ -4,12 +4,12 @@ import os
 from pathlib import Path
 
 
-maps = glob.glob("../pokered/data/maps/headers/*.asm", recursive=True)
 
 
 data = {}
 names = set()
 
+maps = glob.glob("../pokered/data/maps/headers/*.asm", recursive=True)
 for map_path in maps:
     with open(map_path, "r") as map:
         content = map.read().splitlines()
@@ -39,6 +39,14 @@ for map_path in maps:
             if first == "end_map_header":
                 continue
 
+maps = glob.glob("../pokered/maps/*.blk", recursive=True)
+for map_path in maps:
+    with open(map_path, "rb") as map:
+        content = list(map.read())
+        name = Path(map_path).stem
+        if name in data:
+            data[name]["bytes"] = content
+        print(name, content)
 
 with open("maps.json", "w") as out:
     out.write(json.dumps(data, indent=4))
