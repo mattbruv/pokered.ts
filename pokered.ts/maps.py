@@ -33,8 +33,13 @@ for map_path in maps:
                 offset = rest[3]
                 data[name]["connections"][direc] = {
                     "map": to_map,
-                    "offset": int(offset)
+                    #"offset": int(offset)
                 }
+                if direc == "north" or direc == "south":
+                    data[name]["connections"][direc]["yOffset"] = int(offset)
+                else:
+                    data[name]["connections"][direc]["xOffset"] = int(offset)
+
                 print(rest, direc)
             if first == "end_map_header":
                 continue
