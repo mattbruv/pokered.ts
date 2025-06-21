@@ -18,12 +18,12 @@ for blockset_path in blocksets:
 
 with open("src/gfx/blocksets.ts", "w") as ts:
     ts.write("import { BlockSet } from \"../map\";\n\n")
-    ts.write("export const BLOCKSETS: Record<string, BlockSet> = {\n")
+    ts.write("export const BLOCKSETS = {\n")
     for block in out:
         ts.write(f"{block}:\n")
         ts.write(json.dumps(out[block]))
         ts.write(",\n")
-    ts.write("} as const")
+    ts.write("} as const satisfies Record<string, BlockSet>")
 # for key in data:
 #     path = f"./src/maps/{key}.ts"
 #     with open(path, "w") as f:

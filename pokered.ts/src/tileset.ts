@@ -1,4 +1,5 @@
 import { BLOCKSETS } from "./gfx/blocksets";
+import { ImageCache } from "./gfx/images";
 import { BlockSet } from "./map";
 
 export enum Tileset {
@@ -57,4 +58,38 @@ const TILESET_BLOCKSET_LOOKUP: Record<Tileset, keyof typeof BLOCKSETS> = {
 
 export function getBlockSet(tileset: Tileset): BlockSet {
   return BLOCKSETS[TILESET_BLOCKSET_LOOKUP[tileset]];
+}
+
+export function getTilesetImage(
+  tileset: Tileset,
+  images: ImageCache
+): ImageBitmap {
+  const lookup: Record<Tileset, ImageBitmap> = {
+    [Tileset.CAVERN]: images["tilesets-cavern"],
+    [Tileset.CEMETERY]: images["tilesets-cemetery"],
+    [Tileset.CLUB]: images["tilesets-club"],
+    [Tileset.DOJO]: images["tilesets-overworld"],
+    [Tileset.FACILITY]: images["tilesets-facility"],
+    [Tileset.FOREST]: images["tilesets-forest"],
+    [Tileset.FOREST_GATE]: images["tilesets-overworld"],
+    [Tileset.GATE]: images["tilesets-gate"],
+    [Tileset.GYM]: images["tilesets-gym"],
+    [Tileset.HOUSE]: images["tilesets-house"],
+    [Tileset.INTERIOR]: images["tilesets-interior"],
+    [Tileset.LAB]: images["tilesets-lab"],
+    [Tileset.LOBBY]: images["tilesets-lobby"],
+    [Tileset.MANSION]: images["tilesets-mansion"],
+    [Tileset.MART]: images["tilesets-overworld"],
+    [Tileset.MUSEUM]: images["tilesets-overworld"],
+    [Tileset.OVERWORLD]: images["tilesets-overworld"],
+    [Tileset.PLATEAU]: images["tilesets-plateau"],
+    [Tileset.POKECENTER]: images["tilesets-pokecenter"],
+    [Tileset.REDS_HOUSE_1]: images["tilesets-reds_house"],
+    [Tileset.REDS_HOUSE_2]: images["tilesets-reds_house"],
+    [Tileset.SHIP]: images["tilesets-ship"],
+    [Tileset.SHIP_PORT]: images["tilesets-ship_port"],
+    [Tileset.UNDERGROUND]: images["tilesets-underground"],
+  };
+
+  return lookup[tileset];
 }
