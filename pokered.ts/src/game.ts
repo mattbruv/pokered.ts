@@ -24,14 +24,14 @@ class PokemonRed {
     const context = this.#canvas.getContext("2d");
 
     if (context) {
-      context.drawImage(this.#images[key], 0, 0);
       const start = performance.now();
-      const mapCanvas = getMapImage(getMap(MapName.CeladonCity), this.#images);
+      const mapCanvas = getMapImage(getMap(MapName.PalletTown), this.#images);
       this.#canvas.width = mapCanvas.width;
       this.#canvas.height = mapCanvas.height;
       console.log(mapCanvas.width, mapCanvas.height);
       console.log(performance.now() - start);
       context.drawImage(mapCanvas, 0, 0);
+      context.drawImage(this.#images[key], 0, 0);
     }
   }
 }
