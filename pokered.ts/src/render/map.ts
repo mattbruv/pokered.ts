@@ -19,22 +19,22 @@ import { getBlockSet, getTilesetImage } from "../tileset";
 
 export function getMapImage(map: Map, images: ImageCache): OffscreenCanvas {
   const { width, height } = map;
-  const canvas = new OffscreenCanvas(width * 8 * 4, height * 8 * 4);
+
   const blockset = getBlockSet(map.tileset);
   const tileset = getTilesetImage(map.tileset, images);
-
-  const ctx = canvas.getContext("2d");
 
   const TILE_SIZE = 8;
   const BLOCK_SIZE = TILE_SIZE * 4;
   const TILES_PER_ROW = tileset.width / TILE_SIZE;
-  //console.log(TILE_SIZE, BLOCK_SIZE, TILES_PER_ROW);
+
+  const canvas = new OffscreenCanvas(width * BLOCK_SIZE, height * BLOCK_SIZE);
+  const ctx = canvas.getContext("2d");
 
   for (let blockY = 0; blockY < height; blockY++) {
     for (let blockX = 0; blockX < width; blockX++) {
-      //debugger;
       const blockIndex = blockY * width + blockX;
-      const currentBlock = blockset[blockIndex];
+      const mapBlock = map.blocks[blockIndex];
+      const currentBlock = blockset[mapBlock];
 
       for (let tileY = 0; tileY < 4; tileY++) {
         for (let tileX = 0; tileX < 4; tileX++) {

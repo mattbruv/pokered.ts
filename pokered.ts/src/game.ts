@@ -26,7 +26,10 @@ class PokemonRed {
     if (context) {
       context.drawImage(this.#images[key], 0, 0);
       const start = performance.now();
-      const mapCanvas = getMapImage(getMap(MapName.PalletTown), this.#images);
+      const mapCanvas = getMapImage(
+        getMap(MapName.VermilionCity),
+        this.#images
+      );
       this.#canvas.width = mapCanvas.width;
       this.#canvas.height = mapCanvas.height;
       console.log(mapCanvas.width, mapCanvas.height);
