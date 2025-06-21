@@ -33,7 +33,7 @@ const TILESET_BLOCKSET_LOOKUP: Record<Tileset, keyof typeof BLOCKSETS> = {
   [Tileset.CAVERN]: "cavern",
   [Tileset.CEMETERY]: "cemetery",
   [Tileset.CLUB]: "club",
-  [Tileset.DOJO]: "overworld", // TODO
+  [Tileset.DOJO]: "gym",
   [Tileset.FACILITY]: "facility",
   [Tileset.FOREST]: "forest",
   [Tileset.FOREST_GATE]: "overworld", // TODO
@@ -68,7 +68,7 @@ export function getTilesetImage(
     [Tileset.CAVERN]: images["tilesets-cavern"],
     [Tileset.CEMETERY]: images["tilesets-cemetery"],
     [Tileset.CLUB]: images["tilesets-club"],
-    [Tileset.DOJO]: images["tilesets-overworld"],
+    [Tileset.DOJO]: images["tilesets-gym"],
     [Tileset.FACILITY]: images["tilesets-facility"],
     [Tileset.FOREST]: images["tilesets-forest"],
     [Tileset.FOREST_GATE]: images["tilesets-overworld"],
