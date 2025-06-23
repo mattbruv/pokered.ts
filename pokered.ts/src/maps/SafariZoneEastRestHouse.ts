@@ -10,5 +10,4 @@ export const SafariZoneEastRestHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

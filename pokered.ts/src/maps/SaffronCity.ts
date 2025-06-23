@@ -15,5 +15,4 @@ export const SaffronCity: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -14,5 +14,4 @@ export const ViridianCity: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

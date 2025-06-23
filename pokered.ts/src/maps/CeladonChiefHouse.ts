@@ -10,5 +10,4 @@ export const CeladonChiefHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

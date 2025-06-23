@@ -10,5 +10,4 @@ export const SaffronPidgeyHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

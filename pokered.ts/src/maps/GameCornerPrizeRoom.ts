@@ -10,5 +10,4 @@ export const GameCornerPrizeRoom: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const MrPsychicsHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

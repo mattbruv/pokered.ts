@@ -10,5 +10,4 @@ export const CinnabarLabMetronomeRoom: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

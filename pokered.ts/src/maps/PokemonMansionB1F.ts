@@ -10,5 +10,4 @@ export const PokemonMansionB1F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

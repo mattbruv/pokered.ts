@@ -10,5 +10,4 @@ export const ViridianNicknameHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const CeruleanCaveB1F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

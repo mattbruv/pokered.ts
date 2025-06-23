@@ -13,5 +13,4 @@ export const Route24: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -15,7 +15,7 @@ export type Map = {
 
   object: MapObject;
   textPointers: unknown[];
-  script: () => void;
+  //script: () => void;
 };
 
 export type MapObject = {

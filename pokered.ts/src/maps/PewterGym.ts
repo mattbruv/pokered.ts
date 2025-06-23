@@ -10,5 +10,4 @@ export const PewterGym: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

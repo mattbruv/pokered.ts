@@ -10,5 +10,4 @@ export const RockTunnelB1F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

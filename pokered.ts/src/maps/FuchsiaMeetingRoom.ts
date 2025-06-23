@@ -10,5 +10,4 @@ export const FuchsiaMeetingRoom: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

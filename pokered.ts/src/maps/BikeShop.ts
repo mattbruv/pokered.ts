@@ -10,5 +10,4 @@ export const BikeShop: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -13,5 +13,4 @@ export const Route9: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

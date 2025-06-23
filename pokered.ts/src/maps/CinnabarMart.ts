@@ -10,5 +10,4 @@ export const CinnabarMart: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

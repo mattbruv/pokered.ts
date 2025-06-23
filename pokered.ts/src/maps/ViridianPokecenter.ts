@@ -10,5 +10,4 @@ export const ViridianPokecenter: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

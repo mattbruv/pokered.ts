@@ -10,5 +10,4 @@ export const FightingDojo: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

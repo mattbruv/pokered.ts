@@ -13,5 +13,4 @@ export const CeladonCity: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

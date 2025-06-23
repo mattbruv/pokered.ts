@@ -10,5 +10,4 @@ export const FuchsiaPokecenter: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

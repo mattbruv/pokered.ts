@@ -10,5 +10,4 @@ export const RockTunnelPokecenter: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

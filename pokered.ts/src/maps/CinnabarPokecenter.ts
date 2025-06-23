@@ -10,5 +10,4 @@ export const CinnabarPokecenter: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

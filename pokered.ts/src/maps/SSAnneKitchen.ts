@@ -10,5 +10,4 @@ export const SSAnneKitchen: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

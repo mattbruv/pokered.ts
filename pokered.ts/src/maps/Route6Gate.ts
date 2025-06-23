@@ -10,5 +10,4 @@ export const Route6Gate: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const CeladonPokecenter: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

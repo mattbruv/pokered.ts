@@ -10,5 +10,4 @@ export const SeafoamIslandsB1F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

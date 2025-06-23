@@ -10,5 +10,4 @@ export const BrunosRoom: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const LoreleisRoom: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

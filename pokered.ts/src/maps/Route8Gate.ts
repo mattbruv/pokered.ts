@@ -10,5 +10,4 @@ export const Route8Gate: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const PewterSpeechHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

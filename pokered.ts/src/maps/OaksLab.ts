@@ -10,5 +10,4 @@ export const OaksLab: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

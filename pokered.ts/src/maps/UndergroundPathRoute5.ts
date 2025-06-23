@@ -10,5 +10,4 @@ export const UndergroundPathRoute5: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

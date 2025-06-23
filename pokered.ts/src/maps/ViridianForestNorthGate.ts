@@ -10,5 +10,4 @@ export const ViridianForestNorthGate: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const CeladonMartElevator: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const SSAnne1FRooms: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

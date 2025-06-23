@@ -10,5 +10,4 @@ export const CinnabarLabFossilRoom: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const PokemonFanClub: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

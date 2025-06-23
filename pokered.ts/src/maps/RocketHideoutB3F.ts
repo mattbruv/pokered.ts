@@ -10,5 +10,4 @@ export const RocketHideoutB3F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

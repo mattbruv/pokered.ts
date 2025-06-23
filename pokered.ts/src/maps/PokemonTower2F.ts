@@ -10,5 +10,4 @@ export const PokemonTower2F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

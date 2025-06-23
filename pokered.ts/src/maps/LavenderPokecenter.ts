@@ -10,5 +10,4 @@ export const LavenderPokecenter: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

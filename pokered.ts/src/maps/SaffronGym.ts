@@ -10,5 +10,4 @@ export const SaffronGym: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

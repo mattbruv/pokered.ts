@@ -10,5 +10,4 @@ export const VermilionPidgeyHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

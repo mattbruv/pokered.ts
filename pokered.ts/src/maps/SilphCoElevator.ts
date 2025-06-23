@@ -10,5 +10,4 @@ export const SilphCoElevator: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const SeafoamIslandsB2F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const CinnabarGym: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

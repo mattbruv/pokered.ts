@@ -10,5 +10,4 @@ export const PowerPlant: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const Route16FlyHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

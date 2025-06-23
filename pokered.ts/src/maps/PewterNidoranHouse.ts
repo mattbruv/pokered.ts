@@ -10,5 +10,4 @@ export const PewterNidoranHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

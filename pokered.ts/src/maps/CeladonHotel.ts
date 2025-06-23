@@ -10,5 +10,4 @@ export const CeladonHotel: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

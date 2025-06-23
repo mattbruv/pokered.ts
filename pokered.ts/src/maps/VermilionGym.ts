@@ -10,5 +10,4 @@ export const VermilionGym: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

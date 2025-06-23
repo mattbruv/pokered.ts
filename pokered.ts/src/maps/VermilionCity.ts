@@ -13,5 +13,4 @@ export const VermilionCity: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

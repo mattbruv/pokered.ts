@@ -10,5 +10,4 @@ export const SafariZoneGate: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

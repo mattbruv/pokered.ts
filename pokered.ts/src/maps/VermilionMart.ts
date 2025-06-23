@@ -10,5 +10,4 @@ export const VermilionMart: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

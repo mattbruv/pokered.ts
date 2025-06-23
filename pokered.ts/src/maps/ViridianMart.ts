@@ -10,5 +10,4 @@ export const ViridianMart: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

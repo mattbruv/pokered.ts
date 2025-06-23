@@ -10,5 +10,4 @@ export const CeruleanBadgeHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

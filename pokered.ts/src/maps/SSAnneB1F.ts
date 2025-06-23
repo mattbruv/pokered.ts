@@ -10,5 +10,4 @@ export const SSAnneB1F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const LavenderMart: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

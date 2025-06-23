@@ -10,5 +10,4 @@ export const UndergroundPathNorthSouth: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

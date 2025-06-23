@@ -10,5 +10,4 @@ export const Route12SuperRodHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

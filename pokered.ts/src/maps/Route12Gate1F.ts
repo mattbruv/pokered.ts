@@ -10,5 +10,4 @@ export const Route12Gate1F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

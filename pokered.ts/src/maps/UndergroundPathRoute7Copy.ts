@@ -10,5 +10,4 @@ export const UndergroundPathRoute7Copy: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

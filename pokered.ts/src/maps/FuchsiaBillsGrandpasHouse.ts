@@ -10,5 +10,4 @@ export const FuchsiaBillsGrandpasHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

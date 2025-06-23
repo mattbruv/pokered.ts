@@ -10,5 +10,4 @@ export const CeruleanTradeHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

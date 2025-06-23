@@ -10,5 +10,4 @@ export const FuchsiaMart: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

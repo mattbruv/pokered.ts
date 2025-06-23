@@ -10,5 +10,4 @@ export const PewterMart: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

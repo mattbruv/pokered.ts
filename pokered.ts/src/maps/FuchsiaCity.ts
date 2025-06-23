@@ -14,5 +14,4 @@ export const FuchsiaCity: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const HallOfFame: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

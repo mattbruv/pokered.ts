@@ -10,5 +10,4 @@ export const SaffronPokecenter: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

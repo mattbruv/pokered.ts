@@ -10,5 +10,4 @@ export const RedsHouse1F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

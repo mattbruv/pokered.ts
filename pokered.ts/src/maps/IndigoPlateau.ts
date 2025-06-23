@@ -12,5 +12,4 @@ export const IndigoPlateau: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

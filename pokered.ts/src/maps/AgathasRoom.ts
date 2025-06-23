@@ -10,5 +10,4 @@ export const AgathasRoom: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

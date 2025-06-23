@@ -10,5 +10,4 @@ export const Route2TradeHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

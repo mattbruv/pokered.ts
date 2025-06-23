@@ -13,5 +13,4 @@ export const PewterCity: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

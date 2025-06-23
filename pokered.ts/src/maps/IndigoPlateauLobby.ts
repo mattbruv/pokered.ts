@@ -10,5 +10,4 @@ export const IndigoPlateauLobby: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

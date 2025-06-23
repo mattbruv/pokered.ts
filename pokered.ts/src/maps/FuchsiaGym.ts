@@ -10,5 +10,4 @@ export const FuchsiaGym: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

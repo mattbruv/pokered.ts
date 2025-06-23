@@ -1,15 +1,34 @@
 import { ImageCache, loadImageBitmaps } from "./gfx/images";
-import { MapName } from "./map";
+import { Map, MapName } from "./map";
 import { getMap } from "./mapLookup";
 import { getMapImage } from "./render/map";
 
 const SCREEN_WIDTH = 160;
 const SCREEN_HEIGHT = 144;
 
+export type GameData = {
+  map: MapData;
+  render: RenderData;
+};
+
+export type MapData = {
+  currentMap: Map;
+  playerPosition: {
+    x: number;
+    y: number;
+  };
+};
+
+export type RenderData = {
+  mapImage: OffscreenCanvas;
+  //
+};
+
 class PokemonRed {
   #images: ImageCache;
   #canvas: HTMLCanvasElement;
   #debug: HTMLCanvasElement;
+  #data: GameData;
 
   constructor(
     canvas: HTMLCanvasElement,
@@ -19,6 +38,7 @@ class PokemonRed {
     this.#canvas = canvas;
     this.#debug = debugCanvas;
     this.#images = cache;
+    this.#data = this.#loadGame();
 
     this.#canvas.width = SCREEN_WIDTH;
     this.#canvas.height = SCREEN_HEIGHT;
@@ -39,9 +59,31 @@ class PokemonRed {
     }
   }
 
+  #loadGame(): GameData {
+    const map = getMap(MapName.PalletTown);
+    const data: GameData = {
+      map: {
+        currentMap: map,
+        playerPosition: {
+          x: 5,
+          y: 6,
+        },
+      },
+      render: {
+        mapImage: getMapImage(map, this.#images),
+      },
+    };
+
+    return data;
+  }
+
+  render() {
+    this.#canvas.getContext("2d")?.drawImage(this.#data.render.mapImage, 0, 0);
+    this.#debug.getContext("2d")?.drawImage(this.#data.render.mapImage, 0, 0);
+  }
+
   drawImage(key: keyof ImageCache) {
     const context = this.#canvas.getContext("2d");
-
     if (context) {
       const start = performance.now();
       const mapCanvas = getMapImage(getMap(MapName.CeladonCity), this.#images);

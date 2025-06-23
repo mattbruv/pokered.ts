@@ -10,5 +10,4 @@ export const SafariZoneSecretHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

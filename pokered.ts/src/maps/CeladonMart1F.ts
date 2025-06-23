@@ -10,5 +10,4 @@ export const CeladonMart1F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

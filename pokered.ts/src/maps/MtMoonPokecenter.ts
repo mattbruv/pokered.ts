@@ -10,5 +10,4 @@ export const MtMoonPokecenter: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -13,5 +13,4 @@ export const CinnabarIsland: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

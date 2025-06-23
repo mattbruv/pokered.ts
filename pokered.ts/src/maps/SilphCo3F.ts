@@ -10,5 +10,4 @@ export const SilphCo3F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

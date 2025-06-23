@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     if (canvas.current && debugCanvas.current) {
       createGame(canvas.current, debugCanvas.current).then((x) => {
-        x.drawImage("pokemon-front-zapdos");
+        x.render();
       });
     }
   }, []);

@@ -223,8 +223,8 @@ import { ViridianPokecenter } from "./maps/ViridianPokecenter";
 import { ViridianSchoolHouse } from "./maps/ViridianSchoolHouse";
 import { WardensHouse } from "./maps/WardensHouse";
 
-export function getMap(map: MapName): Readonly<Map> {
-  return MAP_NAME_LOOKUP[map];
+export function getMap(map: MapName): Map {
+  return structuredClone(MAP_NAME_LOOKUP[map]);
 }
 
 const MAP_NAME_LOOKUP: Record<MapName, Map> = {

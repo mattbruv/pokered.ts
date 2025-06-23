@@ -10,5 +10,4 @@ export const ViridianSchoolHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

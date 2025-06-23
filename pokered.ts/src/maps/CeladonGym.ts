@@ -10,5 +10,4 @@ export const CeladonGym: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

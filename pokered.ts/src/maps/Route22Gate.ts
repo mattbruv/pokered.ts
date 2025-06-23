@@ -10,5 +10,4 @@ export const Route22Gate: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

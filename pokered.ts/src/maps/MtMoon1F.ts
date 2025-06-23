@@ -10,5 +10,4 @@ export const MtMoon1F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

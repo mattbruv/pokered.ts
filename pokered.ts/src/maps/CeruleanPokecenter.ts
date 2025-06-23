@@ -10,5 +10,4 @@ export const CeruleanPokecenter: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -13,5 +13,4 @@ export const Route13: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const WardensHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

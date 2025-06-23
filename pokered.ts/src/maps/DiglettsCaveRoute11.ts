@@ -10,5 +10,4 @@ export const DiglettsCaveRoute11: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

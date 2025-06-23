@@ -19,7 +19,6 @@ TS_BODY_TEMPLATE = """export const {map_name}: Map = {{
   connections: {connections},
   object: {{}},
   textPointers: [],
-  script: () => {{}},
 }};
 """
 

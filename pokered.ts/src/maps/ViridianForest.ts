@@ -10,5 +10,4 @@ export const ViridianForest: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -12,5 +12,4 @@ export const Route25: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

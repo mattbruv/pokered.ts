@@ -13,5 +13,4 @@ export const Route8: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

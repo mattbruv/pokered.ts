@@ -10,5 +10,4 @@ export const VermilionPokecenter: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

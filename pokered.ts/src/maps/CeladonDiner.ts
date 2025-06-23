@@ -10,5 +10,4 @@ export const CeladonDiner: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

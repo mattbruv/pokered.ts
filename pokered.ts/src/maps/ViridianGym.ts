@@ -10,5 +10,4 @@ export const ViridianGym: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

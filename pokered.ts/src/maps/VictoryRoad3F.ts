@@ -10,5 +10,4 @@ export const VictoryRoad3F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

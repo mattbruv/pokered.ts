@@ -10,5 +10,4 @@ export const CinnabarLab: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

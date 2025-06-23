@@ -10,5 +10,4 @@ export const SSAnneBow: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const SafariZoneNorth: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const Museum2F: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

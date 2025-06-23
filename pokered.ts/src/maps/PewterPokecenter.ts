@@ -10,5 +10,4 @@ export const PewterPokecenter: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

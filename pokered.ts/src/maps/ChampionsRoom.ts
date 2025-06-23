@@ -10,5 +10,4 @@ export const ChampionsRoom: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

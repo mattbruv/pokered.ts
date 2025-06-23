@@ -10,5 +10,4 @@ export const GameCorner: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

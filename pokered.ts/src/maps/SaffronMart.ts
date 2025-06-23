@@ -10,5 +10,4 @@ export const SaffronMart: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

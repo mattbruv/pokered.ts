@@ -10,5 +10,4 @@ export const BluesHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

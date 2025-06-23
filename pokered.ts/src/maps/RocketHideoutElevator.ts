@@ -10,5 +10,4 @@ export const RocketHideoutElevator: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

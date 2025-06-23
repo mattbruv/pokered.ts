@@ -14,5 +14,4 @@ export const LavenderTown: Map = {
 },
   object: {},
   textPointers: [],
-  script: () => {},
 };

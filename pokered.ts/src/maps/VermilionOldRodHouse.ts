@@ -10,5 +10,4 @@ export const VermilionOldRodHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

@@ -10,5 +10,4 @@ export const FuchsiaGoodRodHouse: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };

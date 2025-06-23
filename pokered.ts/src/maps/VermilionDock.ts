@@ -10,5 +10,4 @@ export const VermilionDock: Map = {
   connections: {},
   object: {},
   textPointers: [],
-  script: () => {},
 };
