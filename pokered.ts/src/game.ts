@@ -6,17 +6,22 @@ import { getMapImage } from "./render/map";
 const SCREEN_WIDTH = 160;
 const SCREEN_HEIGHT = 144;
 
+export type PlayerData = {
+  name: string;
+  position: {
+    x: number;
+    y: number;
+  };
+};
+
 export type GameData = {
+  player: PlayerData;
   map: MapData;
   render: RenderData;
 };
 
 export type MapData = {
   currentMap: Map;
-  playerPosition: {
-    x: number;
-    y: number;
-  };
 };
 
 export type RenderData = {
@@ -64,13 +69,16 @@ class PokemonRed {
     const data: GameData = {
       map: {
         currentMap: map,
-        playerPosition: {
-          x: 5,
-          y: 6,
-        },
       },
       render: {
         mapImage: getMapImage(map, this.#images),
+      },
+      player: {
+        name: "Red",
+        position: {
+          x: 5,
+          y: 6,
+        },
       },
     };
 
