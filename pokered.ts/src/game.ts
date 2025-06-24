@@ -2,16 +2,19 @@ import { ImageCache, loadImageBitmaps } from "./gfx/images";
 import { Map, MapName } from "./map";
 import { getMap } from "./mapLookup";
 import { getMapImage } from "./render/map";
+import {
+  drawSprite,
+  FacingDirection,
+  MovementStatus,
+  SpriteData,
+} from "./render/sprite";
 
 const SCREEN_WIDTH = 160;
 const SCREEN_HEIGHT = 144;
 
 export type PlayerData = {
   name: string;
-  position: {
-    x: number;
-    y: number;
-  };
+  sprite: SpriteData;
 };
 
 export type GameData = {
@@ -75,9 +78,15 @@ class PokemonRed {
       },
       player: {
         name: "Red",
-        position: {
-          x: 5,
-          y: 6,
+        sprite: {
+          facing: FacingDirection.Down,
+          movementStatus: MovementStatus.Ready,
+          animationFrameCounter: 0,
+          position: {
+            x: 5,
+            y: 6,
+          },
+          image: "sprites-red",
         },
       },
     };
@@ -86,7 +95,13 @@ class PokemonRed {
   }
 
   render() {
-    this.#canvas.getContext("2d")?.drawImage(this.#data.render.mapImage, 0, 0);
+    const ctx = this.#canvas.getContext("2d");
+
+    if (ctx) {
+      ctx.drawImage(this.#data.render.mapImage, 0, 0);
+      drawSprite(ctx, this.#data.player.sprite, this.#images);
+    }
+
     this.#debug.getContext("2d")?.drawImage(this.#data.render.mapImage, 0, 0);
   }
 
