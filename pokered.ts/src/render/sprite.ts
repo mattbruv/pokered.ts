@@ -50,8 +50,8 @@ export function drawSprite(
   const sWidth = 16;
   const sHeight = 16;
 
-  const dx = 0;
-  const dy = 0;
+  const dx = 16 * 5;
+  const dy = 16 * 6 - 4;
   const dWidth = 16;
   const dHeight = 16;
 
