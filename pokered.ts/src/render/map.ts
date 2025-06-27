@@ -1,6 +1,33 @@
 import { ImageCache } from "../gfx/images";
 import { Map } from "../map";
 import { getBlockSet, getTilesetImage } from "../tileset";
+import { drawSprite, SpriteData } from "./sprite";
+
+export function renderOverworld(
+  screen: CanvasRenderingContext2D,
+  images: ImageCache,
+  mapData: Map,
+  mapCanvas: OffscreenCanvas,
+  playerSprite: SpriteData
+) {
+  const PLAYER_OFFSET = 4;
+  const TILE_SIZE = 16; // each tile is 16x16
+  const PLAYER_TILE_OFFSET = PLAYER_OFFSET * TILE_SIZE;
+
+  console.log(playerSprite.position);
+  const dx = -(playerSprite.position.x * TILE_SIZE) + PLAYER_TILE_OFFSET;
+  const dy = -(playerSprite.position.y * TILE_SIZE) + PLAYER_TILE_OFFSET;
+  console.log(dx, dy);
+
+  // Draw the map relative to the player's position within it.
+  screen.drawImage(mapCanvas, dx, dy);
+
+  // Finally, draw the player sprite to the screen on top of everything.
+  // The map is seemingly always rendered relative to the player.
+  // The player is centered 4 tiles over, and 4 tiles down
+  drawSprite(screen, playerSprite, images, PLAYER_OFFSET, PLAYER_OFFSET, 0, 0);
+}
+
 /*
 1. Find its tileset in its header (stored at data/maps/headers/
 2. Read the tileset in as a 2 bits per pixel format file.

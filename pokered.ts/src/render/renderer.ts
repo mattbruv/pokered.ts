@@ -1,7 +1,6 @@
 import { GameData } from "../game";
 import { ImageCache } from "../gfx/images";
-import { getMapImage } from "./map";
-import { drawSprite } from "./sprite";
+import { getMapImage, renderOverworld } from "./map";
 
 const SCREEN_WIDTH = 160;
 const SCREEN_HEIGHT = 144;
@@ -45,15 +44,17 @@ export class Renderer {
 
   render(game: GameData) {
     const ctx = this.#screen.getContext("2d");
-    const ctxDebug = this.#debug.getContext("2d");
 
-    if (ctx && ctxDebug) {
+    if (ctx) {
       const mapImage = getMapImage(game.map.currentMap, this.#images);
 
-      ctxDebug.drawImage(mapImage, 0, 0);
-      drawSprite(ctxDebug, game.player.sprite, this.#images);
-
-      ctx.drawImage(this.#debug, 0, 0);
+      renderOverworld(
+        ctx,
+        this.#images,
+        game.map.currentMap,
+        mapImage,
+        game.player.sprite
+      );
     }
   }
 }

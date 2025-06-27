@@ -31,7 +31,11 @@ export enum FacingDirection {
 export function drawSprite(
   ctx: CanvasRenderingContext2D,
   sprite: SpriteData,
-  cache: ImageCache
+  cache: ImageCache,
+  tileX: number,
+  tileY: number,
+  offsetX: number = 0,
+  offsetY: number = 0
 ) {
   // at which index into the sprite-sheet is this sprite facing?
   const facingLookup: Record<FacingDirection, number> = {
@@ -50,8 +54,8 @@ export function drawSprite(
   const sWidth = 16;
   const sHeight = 16;
 
-  const dx = 16 * 5;
-  const dy = 16 * 6 - 4;
+  const dx = 16 * tileX + offsetX;
+  const dy = 16 * tileY + offsetY;
   const dWidth = 16;
   const dHeight = 16;
 
