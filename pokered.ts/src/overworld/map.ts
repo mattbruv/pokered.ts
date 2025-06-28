@@ -27,10 +27,10 @@ export function canWalkOnTile(map: Map, tileX: number, tileY: number) {
   const block = blockset[blocksetIndex];
   const blockX = tileX % 2;
   const blockY = tileY % 2;
-  const tileIndex = blockY * 8 + blockX * 4;
+  const tileIndex = blockY * 8 + blockX * 2;
   const tileId = block[tileIndex];
   const passableTiles = getTileCollisions(map.tileset);
-  //console.log(blockX, blockY, block, tileIndex, "=", tileId);
+  console.log(blockX, blockY, block, tileIndex, "=", tileId);
   const row = Math.floor(tileId / 16);
   const column = tileId % 16;
   console.log(
