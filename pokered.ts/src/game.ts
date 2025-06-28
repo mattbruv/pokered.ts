@@ -78,7 +78,33 @@ class PokemonRed {
     const keys = this.#input.getInput();
     const player = this.#data.player.sprite;
 
-    // TODO
+    // If the player is not moving and we are pressing a key, move him
+    if (player.movementStatus === MovementStatus.Ready) {
+      let xDiff = 0;
+      let yDiff = 0;
+
+      if (keys.Down) yDiff = 1;
+      if (keys.Up) yDiff = -1;
+      if (keys.Left) xDiff = -1;
+      if (keys.Right) xDiff = 1;
+
+      if (xDiff) {
+        player.movementStatus = MovementStatus.Moving;
+        player.facing =
+          xDiff > 0 ? FacingDirection.Right : FacingDirection.Left;
+      } else if (yDiff) {
+        player.movementStatus = MovementStatus.Moving;
+        player.facing = yDiff > 0 ? FacingDirection.Down : FacingDirection.Up;
+      }
+    }
+
+    // If the player is moving, update the animation
+    if (player.movementStatus === MovementStatus.Moving) {
+      player.animationFrameCounter++;
+      if (player.animationFrameCounter >= 16) {
+        player.movementStatus = MovementStatus.Ready;
+      }
+    }
   }
 
   #render() {
