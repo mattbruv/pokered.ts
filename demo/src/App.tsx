@@ -4,7 +4,11 @@ import "./app.css";
 
 function App() {
   const canvas = useRef<HTMLCanvasElement | null>(null);
+  const hasInitialized = useRef(false);
+
   useEffect(() => {
+    if (hasInitialized.current) return;
+    hasInitialized.current = true;
     if (canvas.current) {
       createGame({
         screen: canvas.current,
