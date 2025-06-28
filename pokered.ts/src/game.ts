@@ -140,6 +140,9 @@ class PokemonRed {
       },
     };
 
+    // cache loaded map in renderer
+    this.#renderer.loadMap(map);
+
     return data;
   }
 }
