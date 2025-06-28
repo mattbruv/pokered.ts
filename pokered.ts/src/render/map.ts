@@ -7,6 +7,7 @@ import { drawSprite, FacingDirection, SpriteData } from "./sprite";
 export function renderOverworld(
   screen: CanvasRenderingContext2D,
   images: ImageCache,
+  currentMap: Map,
   cache: OverworldCache,
   playerSprite: SpriteData
 ) {
@@ -39,15 +40,21 @@ export function renderOverworld(
   screen.drawImage(cache.current.mapImage, dx, dy);
 
   // Draw the connecting maps if there is something to draw.
-  if (cache.north) {
+  if (cache.north && currentMap.connections.north) {
     const deltaY = cache.north.mapImage.height;
     //console.log(dx, dy - deltaY);
-    screen.drawImage(cache.north.mapImage, dx, dy - deltaY);
+
+    // If the north map has an offset, apply it
+    // Offset is in blocks.
+    const offset = currentMap.connections.north.yOffset * 32;
+
+    screen.drawImage(cache.north.mapImage, dx + offset, dy - deltaY);
   }
   if (cache.south) {
     const deltaY = cache.current.mapImage.height;
+    const offset = currentMap.connections.south!.yOffset * 32;
     //console.log(dx, dy - deltaY);
-    screen.drawImage(cache.south.mapImage, dx, dy + deltaY);
+    screen.drawImage(cache.south.mapImage, dx + offset, dy + deltaY);
     //
   }
   if (cache.east) {

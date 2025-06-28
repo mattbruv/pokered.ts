@@ -40,16 +40,30 @@ export function checkMapConnections(
       dir: "east",
       newPosition: { x: 0, y: tileY },
     };
-  if (tileY >= tileHeight)
+  if (tileY >= tileHeight) {
+    let offset = map.connections.south!.yOffset * 2 * -1; // tiles
+    console.log(map.connections.south?.yOffset);
     return {
       dir: "south",
-      newPosition: { x: tileX, y: 0 },
+      newPosition: { x: tileX + offset, y: 0 },
     };
+  }
   if (tileY < 0) {
-    const north = getTileDimensions(getMap(map.connections.north!.map));
+    const north = getMap(map.connections.north!.map);
+    const northTile = getTileDimensions(north);
+
+    console.log("You are south, going north");
+    console.log("north offset:", map.connections.north?.yOffset);
+
+    let offset = map.connections.north!.yOffset * 2; // tiles
+    // if offset is positive, invert it
+
     return {
       dir: "north",
-      newPosition: { x: tileX, y: north.tileHeight - 1 },
+      newPosition: {
+        x: tileX - offset,
+        y: northTile.tileHeight - 1,
+      },
     };
   }
 

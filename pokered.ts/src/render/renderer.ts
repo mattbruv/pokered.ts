@@ -81,6 +81,7 @@ export class Renderer {
       renderOverworld(
         ctx,
         this.#images,
+        game.map.currentMap,
         this.#overworldCache,
         game.player.sprite
       );

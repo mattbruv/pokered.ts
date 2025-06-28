@@ -112,6 +112,7 @@ class PokemonRed {
         if (player.facing == FacingDirection.Down) player.position.y++;
 
         player.movementStatus = MovementStatus.Ready;
+        console.log(player.position);
 
         // If we have moved into a new map, load it.
         const connection = checkMapConnections(
@@ -142,7 +143,7 @@ class PokemonRed {
   }
 
   #loadGame(): GameData {
-    const map = getMap(MapName.CinnabarIsland);
+    const map = getMap(MapName.ViridianCity);
     const data: GameData = {
       map: {
         currentMap: map,
