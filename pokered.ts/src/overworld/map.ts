@@ -1,5 +1,6 @@
 import { Map, MapConnections } from "../map";
 import { getMap } from "../mapLookup";
+import { getBlockSet, getTileCollisions } from "../tileset";
 
 type ConnectionDir = {
   dir: keyof MapConnections;
@@ -14,21 +15,32 @@ export function getBlockIndexAtPosition(
   x: number,
   y: number
 ): number {
-  const { width, height } = map;
-  // return 0;
-  const bx = Math.floor(x / 2);
-  const by = Math.floor(y / 2);
-  const ax = bx;
-  const ay = map.width * by;
-  const result = ax + ay;
-  console.log(x, y, width, height, result, map.blocks.length);
+  const yOffset = map.width * Math.floor(y / 2);
+  const result = Math.floor(x / 2) + yOffset;
   return result;
 }
 
-export function isCollisionTile(map: Map, tileX: number, tileY: number) {
-  //console.log(tileX, tileY);
-  console.log(getBlockIndexAtPosition(map, tileX, tileY));
-  //
+export function canWalkOnTile(map: Map, tileX: number, tileY: number) {
+  const mapBlockIndex = getBlockIndexAtPosition(map, tileX, tileY);
+  const blocksetIndex = map.blocks[mapBlockIndex];
+  const blockset = getBlockSet(map.tileset);
+  const block = blockset[blocksetIndex];
+  const blockX = tileX % 2;
+  const blockY = tileY % 2;
+  const tileIndex = blockY * 8 + blockX * 4;
+  const tileId = block[tileIndex];
+  const passableTiles = getTileCollisions(map.tileset);
+  //console.log(blockX, blockY, block, tileIndex, "=", tileId);
+  const row = Math.floor(tileId / 16);
+  const column = tileId % 16;
+  console.log(
+    "tile: " + tileId,
+    "pos: (" + row + "," + column,
+    ") walkable?: " + passableTiles.includes(tileId),
+    "block:",
+    block
+  );
+  return passableTiles.includes(tileId);
 }
 
 function getTileDimensions(map: Map) {

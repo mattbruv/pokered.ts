@@ -2,7 +2,7 @@ import { ImageCache, loadImageBitmaps } from "./gfx/images";
 import { GameInput } from "./input";
 import { Map, MapName } from "./map";
 import { getMap } from "./mapLookup";
-import { checkMapConnections } from "./overworld/map";
+import { checkMapConnections, canWalkOnTile } from "./overworld/map";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, SpriteData } from "./render/sprite";
 
@@ -89,13 +89,26 @@ class PokemonRed {
       if (keys.Left) xDiff = -1;
       if (keys.Right) xDiff = 1;
 
-      if (xDiff) {
-        player.movementStatus = MovementStatus.Moving;
-        player.facing =
-          xDiff > 0 ? FacingDirection.Right : FacingDirection.Left;
-      } else if (yDiff) {
-        player.movementStatus = MovementStatus.Moving;
-        player.facing = yDiff > 0 ? FacingDirection.Down : FacingDirection.Up;
+      // get position offset at x/y diff
+      // get tile at that pos
+      // if in collidables, don't move
+      const dx = player.position.x + xDiff;
+      const dy = player.position.y + yDiff;
+
+      if (xDiff || yDiff) {
+        //console.log(player.position);
+        const canWalkForward = canWalkOnTile(this.#data.map.currentMap, dx, dy);
+        if (canWalkForward) {
+          if (xDiff) {
+            player.movementStatus = MovementStatus.Moving;
+            player.facing =
+              xDiff > 0 ? FacingDirection.Right : FacingDirection.Left;
+          } else if (yDiff) {
+            player.movementStatus = MovementStatus.Moving;
+            player.facing =
+              yDiff > 0 ? FacingDirection.Down : FacingDirection.Up;
+          }
+        }
       }
     }
 
@@ -155,8 +168,8 @@ class PokemonRed {
           movementStatus: MovementStatus.Ready,
           animationFrameCounter: 0,
           position: {
-            x: 36,
-            y: 14,
+            x: 20,
+            y: 20,
           },
           image: "sprites-red",
         },
