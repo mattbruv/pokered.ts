@@ -106,10 +106,10 @@ class PokemonRed {
       if (player.animationFrameCounter >= 16) {
         player.animationFrameCounter = 0;
 
-        if (player.facing == FacingDirection.Left) player.position.x--;
-        if (player.facing == FacingDirection.Right) player.position.x++;
-        if (player.facing == FacingDirection.Up) player.position.y--;
-        if (player.facing == FacingDirection.Down) player.position.y++;
+        if (player.facing == FacingDirection.Left) player.position.x -= 2;
+        if (player.facing == FacingDirection.Right) player.position.x += 2;
+        if (player.facing == FacingDirection.Up) player.position.y -= 2;
+        if (player.facing == FacingDirection.Down) player.position.y += 2;
 
         player.movementStatus = MovementStatus.Ready;
         console.log(player.position);

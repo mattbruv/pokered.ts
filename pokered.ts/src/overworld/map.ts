@@ -30,9 +30,10 @@ export function checkMapConnections(
 
   if (tileX < 0) {
     const west = getTileDimensions(getMap(map.connections.west!.map));
+    let offset = map.connections.west!.xOffset * 2 * -1; // tiles
     return {
       dir: "west",
-      newPosition: { x: west.tileWidth - 1, y: tileY },
+      newPosition: { x: west.tileWidth - 1, y: tileY + offset },
     };
   }
   if (tileX >= tileWidth) {
@@ -43,7 +44,7 @@ export function checkMapConnections(
     };
   }
   if (tileY >= tileHeight) {
-    let offset = map.connections.south!.yOffset * 2 * -1; // tiles
+    let offset = map.connections.south!.yOffset * 2 * -1;
     console.log(map.connections.south?.yOffset);
     return {
       dir: "south",
@@ -57,8 +58,7 @@ export function checkMapConnections(
     console.log("You are south, going north");
     console.log("north offset:", map.connections.north?.yOffset);
 
-    let offset = map.connections.north!.yOffset * 2; // tiles
-    // if offset is positive, invert it
+    let offset = map.connections.north!.yOffset * 2;
 
     return {
       dir: "north",
