@@ -9,7 +9,7 @@ function App() {
       createGame({
         screen: canvas.current,
       }).then((x) => {
-        x.render();
+        x.start();
       });
     }
   }, []);

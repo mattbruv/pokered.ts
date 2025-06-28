@@ -14,10 +14,10 @@ export function renderOverworld(
   const TILE_SIZE = 16; // each tile is 16x16
   const PLAYER_TILE_OFFSET = PLAYER_OFFSET * TILE_SIZE;
 
-  console.log(playerSprite.position);
+  //console.log(playerSprite.position);
   const dx = -(playerSprite.position.x * TILE_SIZE) + PLAYER_TILE_OFFSET;
   const dy = -(playerSprite.position.y * TILE_SIZE) + PLAYER_TILE_OFFSET;
-  console.log(dx, dy);
+  //console.log(dx, dy);
 
   // Draw the map relative to the player's position within it.
   screen.drawImage(mapCanvas, dx, dy);

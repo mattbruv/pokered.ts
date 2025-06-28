@@ -23,10 +23,16 @@ export type MapData = {
   currentMap: Map;
 };
 
+const SCREEN_REFRESH_RATE = 1000 / 60; // 16.666 MS per tick, GameBoy refreshes as 60 hertz
+
 class PokemonRed {
   #renderer: Renderer;
   #input: GameInput;
   #data: GameData;
+
+  #animationFrameId: number | null = null;
+  #lastTimeStep = 0;
+  #lag = 0;
 
   constructor(canvas: HTMLCanvasElement, cache: ImageCache) {
     this.#renderer = new Renderer(cache, canvas);
@@ -34,9 +40,49 @@ class PokemonRed {
     this.#data = this.#loadGame();
   }
 
-  render() {
+  #gameLoop = (timestamp: DOMHighResTimeStamp) => {
+    const elapsed = timestamp - this.#lastTimeStep;
+    this.#lastTimeStep = timestamp;
+    this.#lag += elapsed;
+
+    let render = false;
+    while (this.#lag >= SCREEN_REFRESH_RATE) {
+      this.#update();
+      render = true;
+      this.#lag -= SCREEN_REFRESH_RATE;
+    }
+
+    if (render) this.#render();
+
+    this.#animationFrameId = requestAnimationFrame(this.#gameLoop);
+  };
+
+  start() {
+    this.#lastTimeStep = performance.now();
+    this.#lag = 0;
+
+    if (this.#animationFrameId === null) {
+      this.#animationFrameId = requestAnimationFrame(this.#gameLoop);
+    }
+  }
+
+  stop() {
+    if (this.#animationFrameId !== null) {
+      cancelAnimationFrame(this.#animationFrameId);
+      this.#animationFrameId = null;
+    }
+  }
+
+  // Game update logic
+  #update() {
+    const keys = this.#input.getInput();
+    const player = this.#data.player.sprite;
+
+    // TODO
+  }
+
+  #render() {
     this.#renderer.render(this.#data);
-    console.log(this.#input.getInput());
   }
 
   #loadGame(): GameData {
