@@ -101,7 +101,15 @@ class PokemonRed {
     // If the player is moving, update the animation
     if (player.movementStatus === MovementStatus.Moving) {
       player.animationFrameCounter++;
+      // If we finished the animation
       if (player.animationFrameCounter >= 16) {
+        player.animationFrameCounter = 0;
+
+        if (player.facing == FacingDirection.Left) player.position.x--;
+        if (player.facing == FacingDirection.Right) player.position.x++;
+        if (player.facing == FacingDirection.Up) player.position.y--;
+        if (player.facing == FacingDirection.Down) player.position.y++;
+
         player.movementStatus = MovementStatus.Ready;
       }
     }
