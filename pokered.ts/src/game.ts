@@ -1,8 +1,13 @@
 import { ImageCache, loadImageBitmaps } from "./gfx/images";
+import { GameInput } from "./input";
 import { Map, MapName } from "./map";
 import { getMap } from "./mapLookup";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, SpriteData } from "./render/sprite";
+
+export type PokemonRedOptions = {
+  screen: HTMLCanvasElement;
+};
 
 export type PlayerData = {
   name: string;
@@ -20,19 +25,18 @@ export type MapData = {
 
 class PokemonRed {
   #renderer: Renderer;
+  #input: GameInput;
   #data: GameData;
 
-  constructor(
-    canvas: HTMLCanvasElement,
-    debugCanvas: HTMLCanvasElement,
-    cache: ImageCache
-  ) {
-    this.#renderer = new Renderer(cache, canvas, debugCanvas);
+  constructor(canvas: HTMLCanvasElement, cache: ImageCache) {
+    this.#renderer = new Renderer(cache, canvas);
+    this.#input = new GameInput();
     this.#data = this.#loadGame();
   }
 
   render() {
     this.#renderer.render(this.#data);
+    console.log(this.#input.getInput());
   }
 
   #loadGame(): GameData {
@@ -61,9 +65,8 @@ class PokemonRed {
 }
 
 export async function createGame(
-  canvas: HTMLCanvasElement,
-  debugCanvas: HTMLCanvasElement
+  options: PokemonRedOptions
 ): Promise<PokemonRed> {
   const cache = await loadImageBitmaps();
-  return new PokemonRed(canvas, debugCanvas, cache);
+  return new PokemonRed(options.screen, cache);
 }

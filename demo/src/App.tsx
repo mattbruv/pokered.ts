@@ -4,10 +4,11 @@ import "./app.css";
 
 function App() {
   const canvas = useRef<HTMLCanvasElement | null>(null);
-  const debugCanvas = useRef<HTMLCanvasElement | null>(null);
   useEffect(() => {
-    if (canvas.current && debugCanvas.current) {
-      createGame(canvas.current, debugCanvas.current).then((x) => {
+    if (canvas.current) {
+      createGame({
+        screen: canvas.current,
+      }).then((x) => {
         x.render();
       });
     }
@@ -18,9 +19,7 @@ function App() {
         <div className="column">
           <canvas ref={canvas} className="pixel-canvas" />
         </div>
-        <div className="column">
-          <canvas ref={debugCanvas} className="pixel-canvas" />
-        </div>
+        <div className="column"></div>
       </div>
     </>
   );
