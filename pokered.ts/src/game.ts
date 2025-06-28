@@ -142,7 +142,7 @@ class PokemonRed {
   }
 
   #loadGame(): GameData {
-    const map = getMap(MapName.PalletTown);
+    const map = getMap(MapName.CinnabarIsland);
     const data: GameData = {
       map: {
         currentMap: map,

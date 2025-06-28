@@ -50,6 +50,16 @@ export function renderOverworld(
     screen.drawImage(cache.south.mapImage, dx, dy + deltaY);
     //
   }
+  if (cache.east) {
+    const deltaX = cache.current.mapImage.width;
+    screen.drawImage(cache.east.mapImage, dx + deltaX, dy);
+    //
+  }
+  if (cache.west) {
+    const deltaX = cache.west.mapImage.width;
+    screen.drawImage(cache.west.mapImage, dx - deltaX, dy);
+    //
+  }
 
   // Finally, draw the player sprite to the screen on top of everything.
   // The map is seemingly always rendered relative to the player.
