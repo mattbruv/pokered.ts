@@ -143,7 +143,7 @@ class PokemonRed {
   }
 
   #loadGame(): GameData {
-    const map = getMap(MapName.ViridianCity);
+    const map = getMap(MapName.CeruleanCity);
     const data: GameData = {
       map: {
         currentMap: map,
@@ -155,8 +155,8 @@ class PokemonRed {
           movementStatus: MovementStatus.Ready,
           animationFrameCounter: 0,
           position: {
-            x: 5,
-            y: 6,
+            x: 36,
+            y: 14,
           },
           image: "sprites-red",
         },

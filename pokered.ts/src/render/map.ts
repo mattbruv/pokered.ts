@@ -59,7 +59,8 @@ export function renderOverworld(
   }
   if (cache.east) {
     const deltaX = cache.current.mapImage.width;
-    screen.drawImage(cache.east.mapImage, dx + deltaX, dy);
+    const offset = currentMap.connections.east!.xOffset * 32;
+    screen.drawImage(cache.east.mapImage, dx + deltaX, dy + offset);
     //
   }
   if (cache.west) {

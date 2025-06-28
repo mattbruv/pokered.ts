@@ -35,11 +35,13 @@ export function checkMapConnections(
       newPosition: { x: west.tileWidth - 1, y: tileY },
     };
   }
-  if (tileX >= tileWidth)
+  if (tileX >= tileWidth) {
+    let offset = map.connections.east!.xOffset * 2 * -1; // tiles
     return {
       dir: "east",
-      newPosition: { x: 0, y: tileY },
+      newPosition: { x: 0, y: tileY + offset },
     };
+  }
   if (tileY >= tileHeight) {
     let offset = map.connections.south!.yOffset * 2 * -1; // tiles
     console.log(map.connections.south?.yOffset);
