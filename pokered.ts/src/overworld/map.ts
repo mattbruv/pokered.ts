@@ -9,6 +9,28 @@ type ConnectionDir = {
   };
 };
 
+export function getBlockIndexAtPosition(
+  map: Map,
+  x: number,
+  y: number
+): number {
+  const { width, height } = map;
+  // return 0;
+  const bx = Math.floor(x / 2);
+  const by = Math.floor(y / 2);
+  const ax = bx;
+  const ay = map.width * by;
+  const result = ax + ay;
+  console.log(x, y, width, height, result, map.blocks.length);
+  return result;
+}
+
+export function isCollisionTile(map: Map, tileX: number, tileY: number) {
+  //console.log(tileX, tileY);
+  console.log(getBlockIndexAtPosition(map, tileX, tileY));
+  //
+}
+
 function getTileDimensions(map: Map) {
   // Map width/height is in blocks made up of 2x2 tiles,
   // so multiply by 2
