@@ -30,6 +30,9 @@ export class Renderer {
     const ctx = this.#screen.getContext("2d");
 
     if (ctx) {
+      ctx.fillStyle = "magenta";
+      ctx.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+
       const mapImage = getMapImage(game.map.currentMap, this.#images);
 
       renderOverworld(
