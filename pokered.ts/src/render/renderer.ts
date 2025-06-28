@@ -7,13 +7,13 @@ import { getMap } from "../mapLookup";
 const SCREEN_WIDTH = 160;
 const SCREEN_HEIGHT = 144;
 
-type MapCache = {
+export type MapCache = {
   mapImage: OffscreenCanvas;
   // TODO: objects
   //objectImage: OffscreenCanvas;
 };
 
-type OverworldCache = {
+export type OverworldCache = {
   current: MapCache;
   // Connections
   north?: MapCache;
@@ -64,7 +64,7 @@ export class Renderer {
           mapImage: getMapImage(getMap(connection.map), this.#images),
         };
       } else {
-        this.#overworldCache[dir] = undefined; // clear if no connection
+        this.#overworldCache[dir] = undefined; // clear cache if no connection
       }
     }
 
@@ -81,8 +81,7 @@ export class Renderer {
       renderOverworld(
         ctx,
         this.#images,
-        game.map.currentMap,
-        this.#overworldCache.current.mapImage,
+        this.#overworldCache,
         game.player.sprite
       );
     }

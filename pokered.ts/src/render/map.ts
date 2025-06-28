@@ -1,13 +1,13 @@
 import { ImageCache } from "../gfx/images";
 import { Map } from "../map";
 import { getBlockSet, getTilesetImage } from "../tileset";
+import { OverworldCache } from "./renderer";
 import { drawSprite, FacingDirection, SpriteData } from "./sprite";
 
 export function renderOverworld(
   screen: CanvasRenderingContext2D,
   images: ImageCache,
-  mapData: Map,
-  mapCanvas: OffscreenCanvas,
+  cache: OverworldCache,
   playerSprite: SpriteData
 ) {
   const PLAYER_OFFSET = 4;
@@ -36,7 +36,20 @@ export function renderOverworld(
   }
 
   // Draw the map relative to the player's position within it.
-  screen.drawImage(mapCanvas, dx, dy);
+  screen.drawImage(cache.current.mapImage, dx, dy);
+
+  // Draw the connecting maps if there is something to draw.
+  if (cache.north) {
+    const deltaY = cache.north.mapImage.height;
+    //console.log(dx, dy - deltaY);
+    screen.drawImage(cache.north.mapImage, dx, dy - deltaY);
+  }
+  if (cache.south) {
+    const deltaY = cache.current.mapImage.height;
+    //console.log(dx, dy - deltaY);
+    screen.drawImage(cache.south.mapImage, dx, dy + deltaY);
+    //
+  }
 
   // Finally, draw the player sprite to the screen on top of everything.
   // The map is seemingly always rendered relative to the player.

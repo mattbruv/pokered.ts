@@ -2,6 +2,7 @@ import { ImageCache, loadImageBitmaps } from "./gfx/images";
 import { GameInput } from "./input";
 import { Map, MapName } from "./map";
 import { getMap } from "./mapLookup";
+import { checkMapConnections } from "./overworld/map";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, SpriteData } from "./render/sprite";
 
@@ -111,8 +112,29 @@ class PokemonRed {
         if (player.facing == FacingDirection.Down) player.position.y++;
 
         player.movementStatus = MovementStatus.Ready;
+
+        // If we have moved into a new map, load it.
+        const connection = checkMapConnections(
+          this.#data.map.currentMap,
+          player.position.x,
+          player.position.y
+        );
+        if (connection) {
+          console.log(connection.dir, connection.newPosition);
+          player.position = connection.newPosition;
+          const nextMap = this.#data.map.currentMap.connections[connection.dir];
+          if (nextMap) {
+            this.#loadMap(getMap(nextMap.map));
+          }
+        }
       }
     }
+  }
+
+  #loadMap(map: Map) {
+    // Load a new map
+    this.#data.map.currentMap = map;
+    this.#renderer.loadMap(map);
   }
 
   #render() {
