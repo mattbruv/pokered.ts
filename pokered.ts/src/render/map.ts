@@ -1,7 +1,7 @@
 import { ImageCache } from "../gfx/images";
 import { Map } from "../map";
 import { getBlockSet, getTilesetImage } from "../tileset";
-import { drawSprite, SpriteData } from "./sprite";
+import { drawSprite, FacingDirection, SpriteData } from "./sprite";
 
 export function renderOverworld(
   screen: CanvasRenderingContext2D,
@@ -15,9 +15,25 @@ export function renderOverworld(
   const PLAYER_TILE_OFFSET = PLAYER_OFFSET * TILE_SIZE;
 
   //console.log(playerSprite.position);
-  const dx = -(playerSprite.position.x * TILE_SIZE) + PLAYER_TILE_OFFSET;
-  const dy = -(playerSprite.position.y * TILE_SIZE) + PLAYER_TILE_OFFSET;
-  //console.log(dx, dy);
+  let dx = -(playerSprite.position.x * TILE_SIZE) + PLAYER_TILE_OFFSET;
+  let dy = -(playerSprite.position.y * TILE_SIZE) + PLAYER_TILE_OFFSET;
+
+  // If player walking, adjust dx/dy
+  if (playerSprite.animationFrameCounter) {
+    const offset = playerSprite.animationFrameCounter;
+
+    const adjustmentMap: Record<FacingDirection, [number, number]> = {
+      [FacingDirection.Down]: [0, -offset],
+      [FacingDirection.Up]: [0, offset],
+      [FacingDirection.Left]: [offset, 0],
+      [FacingDirection.Right]: [-offset, 0],
+    };
+
+    const [walkXDelta, walkYDelta] = adjustmentMap[playerSprite.facing];
+
+    dx += walkXDelta;
+    dy += walkYDelta;
+  }
 
   // Draw the map relative to the player's position within it.
   screen.drawImage(mapCanvas, dx, dy);

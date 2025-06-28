@@ -46,7 +46,13 @@ export function drawSprite(
   };
 
   const spriteImage = cache[sprite.image];
-  const facingIndex = facingLookup[sprite.facing];
+  let facingIndex = facingLookup[sprite.facing];
+
+  // If the sprite is in the second half of a walking animation,
+  // show the walking frame, AKA bump the sprite-sheet index
+  if (sprite.animationFrameCounter >= 8) {
+    facingIndex += 3;
+  }
 
   // sprites are laid out 16x16 top to bottom
   const sx = 0; // sprite will always be at leftmost part of image
