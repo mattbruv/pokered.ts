@@ -41,7 +41,8 @@ export function renderOverworld(
   // Finally, draw the player sprite to the screen on top of everything.
   // The map is seemingly always rendered relative to the player.
   // The player is centered 4 tiles over, and 4 tiles down
-  drawSprite(screen, playerSprite, images, PLAYER_OFFSET, PLAYER_OFFSET, 0, 0);
+  // The player is also offset by 4(?) pixels in the Y direction, so he's not perfectly centered.
+  drawSprite(screen, playerSprite, images, PLAYER_OFFSET, PLAYER_OFFSET, 0, -4);
 }
 
 /*
