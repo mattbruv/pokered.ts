@@ -147,6 +147,17 @@ for map_path in maps:
                         "item_id": item_id.replace(",", ""),
                     }
                     objects["objects"].append(entry)
+                if (count == 7):
+                    tag, x, y, sprite, movement, range_dir, text_id = obj
+                    entry = {
+                        "type": "sprite",
+                        "x": int(x.replace(",", "")),
+                        "y": int(y.replace(",", "")),
+                        "sprite": sprite.replace(",", ""),
+                        "movement": movement.replace(",", ""),
+                        "text_id": text_id.replace(",", ""),
+                    }
+                    objects["objects"].append(entry)
                 print(count)
 
         data[name]["objects"] = objects
