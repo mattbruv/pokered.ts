@@ -14,10 +14,11 @@ import {{ {blocks_const} }} from "../data/blocks/{block_file}";
 TS_BODY_TEMPLATE = """export const {map_name}: Map = {{
   width: {width},
   height: {height},
+  borderBlock: {border},
   blocks: {blocks_const},
   tileset: Tileset.{tileset},
   connections: {connections},
-  object: {{}},
+  objects: {objects},
   textPointers: [],
 }};
 """
@@ -59,6 +60,10 @@ def main():
         height = value["height"]
         blocks = value["blocks"] if "blocks" in value else []
         tileset = value["tileset"].upper()
+        map_objects = value["objects"]
+        border = map_objects["border_block"]
+        del map_objects["border_block"]
+        print(map_objects)
 
         # Prepare block export
         blocks_const = f"{map_id}_BLOCKS"
@@ -85,7 +90,9 @@ def main():
                 height=height,
                 blocks=blocks,
                 tileset=tileset,
-                connections=connections
+                border=border,
+                connections=connections,
+                objects=json.dumps(map_objects)
             )
         )
 

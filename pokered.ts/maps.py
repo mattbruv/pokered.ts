@@ -77,7 +77,7 @@ for map_path in maps:
         print(name, len(content))
         objects = {
             "warps": [],
-            "bg": [],
+            "backgroundItems": [],
             "objects": []
         }
 
@@ -106,8 +106,8 @@ for map_path in maps:
                 entry = {
                     "x": x,
                     "y": y,
-                    "to": toMap,
-                    "warp": toWarp,
+                    "toMap": toMap,
+                    "warpId": toWarp,
                 }
                 objects["warps"].append(entry)
             
@@ -121,9 +121,9 @@ for map_path in maps:
                 entry = {
                     "x": x,
                     "y": y,
-                    "sign_id": sign_id
+                    "signId": sign_id
                 }
-                objects["bg"].append(entry)
+                objects["backgroundItems"].append(entry)
                 #print("BG:", tag, x, y, sign_id)
             
             if obj[0] == "object_event":
@@ -146,9 +146,9 @@ for map_path in maps:
                         "y": int(y.replace(",", "")),
                         "sprite": sprite.replace(",", ""),
                         "movement": movement.replace(",", ""),
-                        "text_id": text_id.replace(",", ""),
-                        "trainer_id": trainer_id.replace(",", ""),
-                        "trainer_level": int(trainer_level.replace(",", "")),
+                        "textId": text_id.replace(",", ""),
+                        "trainerId": trainer_id.replace(",", ""),
+                        "trainerLevel": int(trainer_level.replace(",", "")),
                     }
                     objects["objects"].append(entry)
                 if (count == 8):
@@ -159,8 +159,8 @@ for map_path in maps:
                         "y": int(y.replace(",", "")),
                         "sprite": sprite.replace(",", ""),
                         "movement": movement.replace(",", ""),
-                        "text_id": text_id.replace(",", ""),
-                        "item_id": item_id.replace(",", ""),
+                        "textId": text_id.replace(",", ""),
+                        "itemId": item_id.replace(",", ""),
                     }
                     objects["objects"].append(entry)
                 if (count == 7):
@@ -171,7 +171,7 @@ for map_path in maps:
                         "y": int(y.replace(",", "")),
                         "sprite": sprite.replace(",", ""),
                         "movement": movement.replace(",", ""),
-                        "text_id": text_id.replace(",", ""),
+                        "textId": text_id.replace(",", ""),
                     }
                     objects["objects"].append(entry)
                 print(count)

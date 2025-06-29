@@ -5,21 +5,68 @@ export type Map = {
   width: number;
   /** Height of the map in blocks */
   height: number;
-  /**
-   * Represents a width * height array of indices into the blocks array for this map's tileset.
-   */
+  /** ID of the block that is repeatedly rendered outside of this map's bounds */
+  borderBlock: number;
+  /** A width * height array of indices into the blocks array for this map's tileset. */
   blocks: BlockIndex[];
+  /** The name of the tileset that this map uses */
   tileset: Tileset;
-
+  /** Maps that connect to this one in each cardinal direction */
   connections: MapConnections;
-
-  object: MapObject;
+  /** Data about objects within this map such as warps, sprites, trainers, and signs. */
+  objects: MapObjectData;
+  /** */
   textPointers: unknown[];
-  //script: () => void;
 };
 
-export type MapObject = {
-  //
+/** Represents a warp target */
+export type Warp = {
+  x: number;
+  y: number;
+  toMap: string;
+  warpId: number;
+};
+
+/** Represents a static background item with text, such as a sign, binoculars, etc. */
+export type BackgroundItem = {
+  x: number;
+  y: number;
+  signId: string;
+};
+
+/** Represents a dynamic object in the map, such as NPCs, trainers, items, etc. */
+type MovementType = "STAY" | "WALK"; // expand as needed
+
+type BaseObject = {
+  type: "sprite" | "trainer" | "item";
+  x: number;
+  y: number;
+  sprite: string; // e.g., "SPRITE_YOUNGSTER", "SPRITE_POKE_BALL"
+  movement: MovementType;
+  textId: string; // e.g., "TEXT_VIRIDIANFOREST_YOUNGSTER1"
+};
+
+export type SpriteObject = BaseObject & {
+  type: "sprite";
+};
+
+export type TrainerObject = BaseObject & {
+  type: "trainer";
+  trainerId: string; // e.g., "OPP_BUG_CATCHER"
+  trainerLevel: number;
+};
+
+export type ItemObject = BaseObject & {
+  type: "item";
+  itemId: string; // e.g., "ANTIDOTE", "POTION"
+};
+
+type MapObject = SpriteObject | TrainerObject | ItemObject;
+
+export type MapObjectData = {
+  warps: Warp[];
+  backgroundItems: BackgroundItem[];
+  objects: MapObject[];
 };
 
 type BaseConnection = {
