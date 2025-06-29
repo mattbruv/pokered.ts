@@ -77,6 +77,7 @@ for map_path in maps:
         print(name, len(content))
         objects = {
             "warps": [],
+            "bg": [],
             "objects": []
         }
 
@@ -109,6 +110,21 @@ for map_path in maps:
                     "warp": toWarp,
                 }
                 objects["warps"].append(entry)
+            
+            if obj[0] == "bg_event":
+                #\1 x position
+                #\2 y position
+                #\3 sign id
+                tag, x, y, sign_id = obj
+                x = int(x.replace(",", ""))
+                y = int(y.replace(",", ""))
+                entry = {
+                    "x": x,
+                    "y": y,
+                    "sign_id": sign_id
+                }
+                objects["bg"].append(entry)
+                #print("BG:", tag, x, y, sign_id)
             
             if obj[0] == "object_event":
                 #\1 x position
