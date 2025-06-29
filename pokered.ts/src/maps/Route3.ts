@@ -5,12 +5,106 @@ import { ROUTE_3_BLOCKS } from "../data/blocks/Route3";
 export const Route3: Map = {
   width: 35,
   height: 9,
+  borderBlock: 44,
   blocks: ROUTE_3_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-  north: { map: MapName.Route4, yOffset: 25 },
-  west: { map: MapName.PewterCity, xOffset: -4 }
-},
-  object: {},
-  textPointers: [],
+    north: { map: MapName.Route4, yOffset: 25 },
+    west: { map: MapName.PewterCity, xOffset: -4 }
+  },
+  objects: {
+    warps: [],
+    backgroundItems: [{ x: 59, y: 9, signId: "TEXT_ROUTE3_SIGN" }],
+    objects: [
+      {
+        type: "sprite",
+        x: 57,
+        y: 11,
+        sprite: "SPRITE_SUPER_NERD",
+        movement: "STAY",
+        textId: "TEXT_ROUTE3_SUPER_NERD"
+      },
+      {
+        type: "trainer",
+        x: 10,
+        y: 6,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "STAY",
+        textId: "TEXT_ROUTE3_YOUNGSTER1",
+        trainerId: "OPP_BUG_CATCHER",
+        trainerLevel: 4
+      },
+      {
+        type: "trainer",
+        x: 14,
+        y: 4,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "STAY",
+        textId: "TEXT_ROUTE3_YOUNGSTER2",
+        trainerId: "OPP_YOUNGSTER",
+        trainerLevel: 1
+      },
+      {
+        type: "trainer",
+        x: 16,
+        y: 9,
+        sprite: "SPRITE_COOLTRAINER_F",
+        movement: "STAY",
+        textId: "TEXT_ROUTE3_COOLTRAINER_F1",
+        trainerId: "OPP_LASS",
+        trainerLevel: 1
+      },
+      {
+        type: "trainer",
+        x: 19,
+        y: 5,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "STAY",
+        textId: "TEXT_ROUTE3_YOUNGSTER3",
+        trainerId: "OPP_BUG_CATCHER",
+        trainerLevel: 5
+      },
+      {
+        type: "trainer",
+        x: 23,
+        y: 4,
+        sprite: "SPRITE_COOLTRAINER_F",
+        movement: "STAY",
+        textId: "TEXT_ROUTE3_COOLTRAINER_F2",
+        trainerId: "OPP_LASS",
+        trainerLevel: 2
+      },
+      {
+        type: "trainer",
+        x: 22,
+        y: 9,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "STAY",
+        textId: "TEXT_ROUTE3_YOUNGSTER4",
+        trainerId: "OPP_YOUNGSTER",
+        trainerLevel: 2
+      },
+      {
+        type: "trainer",
+        x: 24,
+        y: 6,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "STAY",
+        textId: "TEXT_ROUTE3_YOUNGSTER5",
+        trainerId: "OPP_BUG_CATCHER",
+        trainerLevel: 6
+      },
+      {
+        type: "trainer",
+        x: 33,
+        y: 10,
+        sprite: "SPRITE_COOLTRAINER_F",
+        movement: "STAY",
+        textId: "TEXT_ROUTE3_COOLTRAINER_F3",
+        trainerId: "OPP_LASS",
+        trainerLevel: 3
+      }
+    ]
+  },
+  textPointers: []
 };

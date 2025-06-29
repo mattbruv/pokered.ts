@@ -5,9 +5,17 @@ import { SILPH_CO_ELEVATOR_BLOCKS } from "../data/blocks/SilphCoElevator";
 export const SilphCoElevator: Map = {
   width: 2,
   height: 2,
+  borderBlock: 15,
   blocks: SILPH_CO_ELEVATOR_BLOCKS,
   tileset: Tileset.LOBBY,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 1, y: 3, toMap: "UNUSED_MAP_ED", warpId: 1 },
+      { x: 2, y: 3, toMap: "UNUSED_MAP_ED", warpId: 1 }
+    ],
+    backgroundItems: [{ x: 3, y: 0, signId: "TEXT_SILPHCOELEVATOR_ELEVATOR" }],
+    objects: []
+  },
+  textPointers: []
 };

@@ -5,9 +5,17 @@ import { CELADON_MART_ELEVATOR_BLOCKS } from "../data/blocks/CeladonMartElevator
 export const CeladonMartElevator: Map = {
   width: 2,
   height: 2,
+  borderBlock: 15,
   blocks: CELADON_MART_ELEVATOR_BLOCKS,
   tileset: Tileset.LOBBY,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 1, y: 3, toMap: "CELADON_MART_1F", warpId: 6 },
+      { x: 2, y: 3, toMap: "CELADON_MART_1F", warpId: 6 }
+    ],
+    backgroundItems: [{ x: 3, y: 0, signId: "TEXT_CELADONMARTELEVATOR" }],
+    objects: []
+  },
+  textPointers: []
 };

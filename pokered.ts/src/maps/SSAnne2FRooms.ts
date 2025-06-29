@@ -5,9 +5,142 @@ import { SS_ANNE_2F_ROOMS_BLOCKS } from "../data/blocks/SSAnne2FRooms";
 export const SSAnne2FRooms: Map = {
   width: 12,
   height: 8,
+  borderBlock: 12,
   blocks: SS_ANNE_2F_ROOMS_BLOCKS,
   tileset: Tileset.SHIP,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 2, y: 5, toMap: "SS_ANNE_2F", warpId: 1 },
+      { x: 3, y: 5, toMap: "SS_ANNE_2F", warpId: 1 },
+      { x: 12, y: 5, toMap: "SS_ANNE_2F", warpId: 2 },
+      { x: 13, y: 5, toMap: "SS_ANNE_2F", warpId: 2 },
+      { x: 22, y: 5, toMap: "SS_ANNE_2F", warpId: 3 },
+      { x: 23, y: 5, toMap: "SS_ANNE_2F", warpId: 3 },
+      { x: 2, y: 15, toMap: "SS_ANNE_2F", warpId: 4 },
+      { x: 3, y: 15, toMap: "SS_ANNE_2F", warpId: 4 },
+      { x: 12, y: 15, toMap: "SS_ANNE_2F", warpId: 5 },
+      { x: 13, y: 15, toMap: "SS_ANNE_2F", warpId: 5 },
+      { x: 22, y: 15, toMap: "SS_ANNE_2F", warpId: 6 },
+      { x: 23, y: 15, toMap: "SS_ANNE_2F", warpId: 6 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "trainer",
+        x: 10,
+        y: 2,
+        sprite: "SPRITE_GENTLEMAN",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_GENTLEMAN1",
+        trainerId: "OPP_GENTLEMAN",
+        trainerLevel: 3
+      },
+      {
+        type: "trainer",
+        x: 13,
+        y: 4,
+        sprite: "SPRITE_FISHER",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_FISHER",
+        trainerId: "OPP_FISHER",
+        trainerLevel: 1
+      },
+      {
+        type: "trainer",
+        x: 0,
+        y: 14,
+        sprite: "SPRITE_GENTLEMAN",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_GENTLEMAN2",
+        trainerId: "OPP_GENTLEMAN",
+        trainerLevel: 5
+      },
+      {
+        type: "trainer",
+        x: 2,
+        y: 11,
+        sprite: "SPRITE_COOLTRAINER_F",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_COOLTRAINER_F",
+        trainerId: "OPP_LASS",
+        trainerLevel: 12
+      },
+      {
+        type: "sprite",
+        x: 1,
+        y: 2,
+        sprite: "SPRITE_GENTLEMAN",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_GENTLEMAN3"
+      },
+      {
+        type: "item",
+        x: 12,
+        y: 1,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_MAX_ETHER",
+        itemId: "MAX_ETHER"
+      },
+      {
+        type: "sprite",
+        x: 21,
+        y: 2,
+        sprite: "SPRITE_GENTLEMAN",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_GENTLEMAN4"
+      },
+      {
+        type: "sprite",
+        x: 22,
+        y: 1,
+        sprite: "SPRITE_GRAMPS",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_GRAMPS"
+      },
+      {
+        type: "item",
+        x: 0,
+        y: 12,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_RARE_CANDY",
+        itemId: "RARE_CANDY"
+      },
+      {
+        type: "sprite",
+        x: 12,
+        y: 12,
+        sprite: "SPRITE_GENTLEMAN",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_GENTLEMAN5"
+      },
+      {
+        type: "sprite",
+        x: 11,
+        y: 14,
+        sprite: "SPRITE_LITTLE_BOY",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_LITTLE_BOY"
+      },
+      {
+        type: "sprite",
+        x: 22,
+        y: 12,
+        sprite: "SPRITE_BRUNETTE_GIRL",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_BRUNETTE_GIRL"
+      },
+      {
+        type: "sprite",
+        x: 20,
+        y: 12,
+        sprite: "SPRITE_BEAUTY",
+        movement: "STAY",
+        textId: "TEXT_SSANNE2FROOMS_BEAUTY"
+      }
+    ]
+  },
+  textPointers: []
 };

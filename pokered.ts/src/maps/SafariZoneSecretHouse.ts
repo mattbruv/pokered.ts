@@ -5,9 +5,26 @@ import { SAFARI_ZONE_SECRET_HOUSE_BLOCKS } from "../data/blocks/SafariZoneSecret
 export const SafariZoneSecretHouse: Map = {
   width: 4,
   height: 4,
+  borderBlock: 23,
   blocks: SAFARI_ZONE_SECRET_HOUSE_BLOCKS,
   tileset: Tileset.LAB,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 2, y: 7, toMap: "SAFARI_ZONE_WEST", warpId: 7 },
+      { x: 3, y: 7, toMap: "SAFARI_ZONE_WEST", warpId: 7 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 3,
+        y: 3,
+        sprite: "SPRITE_FISHING_GURU",
+        movement: "STAY",
+        textId: "TEXT_SAFARIZONESECRETHOUSE_FISHING_GURU"
+      }
+    ]
+  },
+  textPointers: []
 };

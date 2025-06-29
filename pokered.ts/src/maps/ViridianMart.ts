@@ -5,9 +5,42 @@ import { VIRIDIAN_MART_BLOCKS } from "../data/blocks/ViridianMart";
 export const ViridianMart: Map = {
   width: 4,
   height: 4,
+  borderBlock: 0,
   blocks: VIRIDIAN_MART_BLOCKS,
   tileset: Tileset.MART,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 2 },
+      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 2 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 0,
+        y: 5,
+        sprite: "SPRITE_CLERK",
+        movement: "STAY",
+        textId: "TEXT_VIRIDIANMART_CLERK"
+      },
+      {
+        type: "sprite",
+        x: 5,
+        y: 5,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "WALK",
+        textId: "TEXT_VIRIDIANMART_YOUNGSTER"
+      },
+      {
+        type: "sprite",
+        x: 3,
+        y: 3,
+        sprite: "SPRITE_COOLTRAINER_M",
+        movement: "STAY",
+        textId: "TEXT_VIRIDIANMART_COOLTRAINER_M"
+      }
+    ]
+  },
+  textPointers: []
 };

@@ -5,12 +5,84 @@ import { VERMILION_CITY_BLOCKS } from "../data/blocks/VermilionCity";
 export const VermilionCity: Map = {
   width: 20,
   height: 18,
+  borderBlock: 67,
   blocks: VERMILION_CITY_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-  north: { map: MapName.Route6, yOffset: 5 },
-  east: { map: MapName.Route11, xOffset: 4 }
-},
-  object: {},
-  textPointers: [],
+    north: { map: MapName.Route6, yOffset: 5 },
+    east: { map: MapName.Route11, xOffset: 4 }
+  },
+  objects: {
+    warps: [
+      { x: 11, y: 3, toMap: "VERMILION_POKECENTER", warpId: 1 },
+      { x: 9, y: 13, toMap: "POKEMON_FAN_CLUB", warpId: 1 },
+      { x: 23, y: 13, toMap: "VERMILION_MART", warpId: 1 },
+      { x: 12, y: 19, toMap: "VERMILION_GYM", warpId: 1 },
+      { x: 23, y: 19, toMap: "VERMILION_PIDGEY_HOUSE", warpId: 1 },
+      { x: 18, y: 31, toMap: "VERMILION_DOCK", warpId: 1 },
+      { x: 19, y: 31, toMap: "VERMILION_DOCK", warpId: 1 },
+      { x: 15, y: 13, toMap: "VERMILION_TRADE_HOUSE", warpId: 1 },
+      { x: 7, y: 3, toMap: "VERMILION_OLD_ROD_HOUSE", warpId: 1 }
+    ],
+    backgroundItems: [
+      { x: 27, y: 3, signId: "TEXT_VERMILIONCITY_SIGN" },
+      { x: 37, y: 13, signId: "TEXT_VERMILIONCITY_NOTICE_SIGN" },
+      { x: 24, y: 13, signId: "TEXT_VERMILIONCITY_MART_SIGN" },
+      { x: 12, y: 3, signId: "TEXT_VERMILIONCITY_POKECENTER_SIGN" },
+      { x: 7, y: 13, signId: "TEXT_VERMILIONCITY_POKEMON_FAN_CLUB_SIGN" },
+      { x: 7, y: 19, signId: "TEXT_VERMILIONCITY_GYM_SIGN" },
+      { x: 29, y: 15, signId: "TEXT_VERMILIONCITY_HARBOR_SIGN" }
+    ],
+    objects: [
+      {
+        type: "sprite",
+        x: 19,
+        y: 7,
+        sprite: "SPRITE_BEAUTY",
+        movement: "WALK",
+        textId: "TEXT_VERMILIONCITY_BEAUTY"
+      },
+      {
+        type: "sprite",
+        x: 14,
+        y: 6,
+        sprite: "SPRITE_GAMBLER",
+        movement: "STAY",
+        textId: "TEXT_VERMILIONCITY_GAMBLER1"
+      },
+      {
+        type: "sprite",
+        x: 19,
+        y: 30,
+        sprite: "SPRITE_SAILOR",
+        movement: "STAY",
+        textId: "TEXT_VERMILIONCITY_SAILOR1"
+      },
+      {
+        type: "sprite",
+        x: 30,
+        y: 7,
+        sprite: "SPRITE_GAMBLER",
+        movement: "STAY",
+        textId: "TEXT_VERMILIONCITY_GAMBLER2"
+      },
+      {
+        type: "sprite",
+        x: 29,
+        y: 9,
+        sprite: "SPRITE_MONSTER",
+        movement: "WALK",
+        textId: "TEXT_VERMILIONCITY_MACHOP"
+      },
+      {
+        type: "sprite",
+        x: 25,
+        y: 27,
+        sprite: "SPRITE_SAILOR",
+        movement: "WALK",
+        textId: "TEXT_VERMILIONCITY_SAILOR2"
+      }
+    ]
+  },
+  textPointers: []
 };

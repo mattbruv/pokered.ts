@@ -5,9 +5,120 @@ import { SILPH_CO_7F_BLOCKS } from "../data/blocks/SilphCo7F";
 export const SilphCo7F: Map = {
   width: 13,
   height: 9,
+  borderBlock: 46,
   blocks: SILPH_CO_7F_BLOCKS,
   tileset: Tileset.FACILITY,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 16, y: 0, toMap: "SILPH_CO_8F", warpId: 2 },
+      { x: 22, y: 0, toMap: "SILPH_CO_6F", warpId: 1 },
+      { x: 18, y: 0, toMap: "SILPH_CO_ELEVATOR", warpId: 1 },
+      { x: 5, y: 7, toMap: "SILPH_CO_11F", warpId: 4 },
+      { x: 5, y: 3, toMap: "SILPH_CO_3F", warpId: 9 },
+      { x: 21, y: 15, toMap: "SILPH_CO_5F", warpId: 4 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 1,
+        y: 5,
+        sprite: "SPRITE_SILPH_WORKER_M",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO7F_SILPH_WORKER_M1"
+      },
+      {
+        type: "sprite",
+        x: 13,
+        y: 13,
+        sprite: "SPRITE_SILPH_WORKER_M",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO7F_SILPH_WORKER_M2"
+      },
+      {
+        type: "sprite",
+        x: 7,
+        y: 10,
+        sprite: "SPRITE_SILPH_WORKER_M",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO7F_SILPH_WORKER_M3"
+      },
+      {
+        type: "sprite",
+        x: 10,
+        y: 8,
+        sprite: "SPRITE_SILPH_WORKER_F",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO7F_SILPH_WORKER_M4"
+      },
+      {
+        type: "trainer",
+        x: 13,
+        y: 1,
+        sprite: "SPRITE_ROCKET",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO7F_ROCKET1",
+        trainerId: "OPP_ROCKET",
+        trainerLevel: 32
+      },
+      {
+        type: "trainer",
+        x: 2,
+        y: 13,
+        sprite: "SPRITE_SCIENTIST",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO7F_SCIENTIST",
+        trainerId: "OPP_SCIENTIST",
+        trainerLevel: 8
+      },
+      {
+        type: "trainer",
+        x: 20,
+        y: 2,
+        sprite: "SPRITE_ROCKET",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO7F_ROCKET2",
+        trainerId: "OPP_ROCKET",
+        trainerLevel: 33
+      },
+      {
+        type: "trainer",
+        x: 19,
+        y: 14,
+        sprite: "SPRITE_ROCKET",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO7F_ROCKET3",
+        trainerId: "OPP_ROCKET",
+        trainerLevel: 34
+      },
+      {
+        type: "sprite",
+        x: 3,
+        y: 7,
+        sprite: "SPRITE_BLUE",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO7F_RIVAL"
+      },
+      {
+        type: "item",
+        x: 1,
+        y: 9,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO7F_CALCIUM",
+        itemId: "CALCIUM"
+      },
+      {
+        type: "item",
+        x: 24,
+        y: 11,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO7F_TM_SWORDS_DANCE",
+        itemId: "TM_SWORDS_DANCE"
+      }
+    ]
+  },
+  textPointers: []
 };

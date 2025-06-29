@@ -5,9 +5,17 @@ import { ROCKET_HIDEOUT_ELEVATOR_BLOCKS } from "../data/blocks/RocketHideoutElev
 export const RocketHideoutElevator: Map = {
   width: 3,
   height: 4,
+  borderBlock: 15,
   blocks: ROCKET_HIDEOUT_ELEVATOR_BLOCKS,
   tileset: Tileset.LOBBY,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 2, y: 1, toMap: "ROCKET_HIDEOUT_B1F", warpId: 3 },
+      { x: 3, y: 1, toMap: "ROCKET_HIDEOUT_B1F", warpId: 5 }
+    ],
+    backgroundItems: [{ x: 1, y: 1, signId: "TEXT_ROCKETHIDEOUTELEVATOR" }],
+    objects: []
+  },
+  textPointers: []
 };

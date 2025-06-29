@@ -5,9 +5,34 @@ import { PEWTER_SPEECH_HOUSE_BLOCKS } from "../data/blocks/PewterSpeechHouse";
 export const PewterSpeechHouse: Map = {
   width: 4,
   height: 4,
+  borderBlock: 10,
   blocks: PEWTER_SPEECH_HOUSE_BLOCKS,
   tileset: Tileset.HOUSE,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 6 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 6 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 2,
+        y: 3,
+        sprite: "SPRITE_GAMBLER",
+        movement: "STAY",
+        textId: "TEXT_PEWTERSPEECHHOUSE_GAMBLER"
+      },
+      {
+        type: "sprite",
+        x: 4,
+        y: 5,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "STAY",
+        textId: "TEXT_PEWTERSPEECHHOUSE_YOUNGSTER"
+      }
+    ]
+  },
+  textPointers: []
 };

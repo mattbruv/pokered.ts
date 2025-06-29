@@ -5,9 +5,42 @@ import { FUCHSIA_BILLS_GRANDPAS_HOUSE_BLOCKS } from "../data/blocks/FuchsiaBills
 export const FuchsiaBillsGrandpasHouse: Map = {
   width: 4,
   height: 4,
+  borderBlock: 10,
   blocks: FUCHSIA_BILLS_GRANDPAS_HOUSE_BLOCKS,
   tileset: Tileset.HOUSE,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 2 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 2 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 2,
+        y: 3,
+        sprite: "SPRITE_MIDDLE_AGED_WOMAN",
+        movement: "STAY",
+        textId: "TEXT_FUCHSIABILLSGRANDPASHOUSE_MIDDLE_AGED_WOMAN"
+      },
+      {
+        type: "sprite",
+        x: 7,
+        y: 2,
+        sprite: "SPRITE_GAMBLER",
+        movement: "STAY",
+        textId: "TEXT_FUCHSIABILLSGRANDPASHOUSE_BILLS_GRANDPA"
+      },
+      {
+        type: "sprite",
+        x: 5,
+        y: 5,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "STAY",
+        textId: "TEXT_FUCHSIABILLSGRANDPASHOUSE_YOUNGSTER"
+      }
+    ]
+  },
+  textPointers: []
 };

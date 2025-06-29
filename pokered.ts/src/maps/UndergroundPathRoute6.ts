@@ -5,9 +5,27 @@ import { UNDERGROUND_PATH_ROUTE_6_BLOCKS } from "../data/blocks/UndergroundPathR
 export const UndergroundPathRoute6: Map = {
   width: 4,
   height: 4,
+  borderBlock: 10,
   blocks: UNDERGROUND_PATH_ROUTE_6_BLOCKS,
   tileset: Tileset.GATE,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 4 },
+      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 4 },
+      { x: 4, y: 4, toMap: "UNDERGROUND_PATH_NORTH_SOUTH", warpId: 2 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 2,
+        y: 3,
+        sprite: "SPRITE_GIRL",
+        movement: "STAY",
+        textId: "TEXT_UNDERGROUNDPATHROUTE6_GIRL"
+      }
+    ]
+  },
+  textPointers: []
 };

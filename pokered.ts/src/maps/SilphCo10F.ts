@@ -5,9 +5,77 @@ import { SILPH_CO_10F_BLOCKS } from "../data/blocks/SilphCo10F";
 export const SilphCo10F: Map = {
   width: 8,
   height: 9,
+  borderBlock: 46,
   blocks: SILPH_CO_10F_BLOCKS,
   tileset: Tileset.FACILITY,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 8, y: 0, toMap: "SILPH_CO_9F", warpId: 1 },
+      { x: 10, y: 0, toMap: "SILPH_CO_11F", warpId: 1 },
+      { x: 12, y: 0, toMap: "SILPH_CO_ELEVATOR", warpId: 1 },
+      { x: 9, y: 11, toMap: "SILPH_CO_4F", warpId: 4 },
+      { x: 13, y: 15, toMap: "SILPH_CO_4F", warpId: 6 },
+      { x: 13, y: 7, toMap: "SILPH_CO_4F", warpId: 7 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "trainer",
+        x: 1,
+        y: 9,
+        sprite: "SPRITE_ROCKET",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO10F_ROCKET",
+        trainerId: "OPP_ROCKET",
+        trainerLevel: 39
+      },
+      {
+        type: "trainer",
+        x: 10,
+        y: 2,
+        sprite: "SPRITE_SCIENTIST",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO10F_SCIENTIST",
+        trainerId: "OPP_SCIENTIST",
+        trainerLevel: 11
+      },
+      {
+        type: "sprite",
+        x: 9,
+        y: 15,
+        sprite: "SPRITE_SILPH_WORKER_F",
+        movement: "WALK",
+        textId: "TEXT_SILPHCO10F_SILPH_WORKER_F"
+      },
+      {
+        type: "item",
+        x: 2,
+        y: 12,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO10F_TM_EARTHQUAKE",
+        itemId: "TM_EARTHQUAKE"
+      },
+      {
+        type: "item",
+        x: 4,
+        y: 14,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO10F_RARE_CANDY",
+        itemId: "RARE_CANDY"
+      },
+      {
+        type: "item",
+        x: 5,
+        y: 11,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_SILPHCO10F_CARBOS",
+        itemId: "CARBOS"
+      }
+    ]
+  },
+  textPointers: []
 };

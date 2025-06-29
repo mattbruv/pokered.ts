@@ -5,9 +5,44 @@ import { BLUES_HOUSE_BLOCKS } from "../data/blocks/BluesHouse";
 export const BluesHouse: Map = {
   width: 4,
   height: 4,
+  borderBlock: 10,
   blocks: BLUES_HOUSE_BLOCKS,
   tileset: Tileset.HOUSE,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 2 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 2 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 2,
+        y: 3,
+        sprite: "SPRITE_DAISY",
+        movement: "STAY",
+        textId: "TEXT_BLUESHOUSE_DAISY_SITTING"
+      },
+      {
+        type: "item",
+        x: 6,
+        y: 4,
+        sprite: "SPRITE_DAISY",
+        movement: "WALK",
+        textId: "TEXT_BLUESHOUSE_DAISY_WALKING",
+        itemId: "0"
+      },
+      {
+        type: "item",
+        x: 3,
+        y: 3,
+        sprite: "SPRITE_POKEDEX",
+        movement: "STAY",
+        textId: "TEXT_BLUESHOUSE_TOWN_MAP",
+        itemId: "0"
+      }
+    ]
+  },
+  textPointers: []
 };

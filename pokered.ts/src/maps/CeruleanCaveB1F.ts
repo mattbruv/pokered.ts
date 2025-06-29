@@ -5,9 +5,43 @@ import { CERULEAN_CAVE_B1F_BLOCKS } from "../data/blocks/CeruleanCaveB1F";
 export const CeruleanCaveB1F: Map = {
   width: 15,
   height: 9,
+  borderBlock: 125,
   blocks: CERULEAN_CAVE_B1F_BLOCKS,
   tileset: Tileset.CAVERN,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [{ x: 3, y: 6, toMap: "CERULEAN_CAVE_1F", warpId: 9 }],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "trainer",
+        x: 27,
+        y: 13,
+        sprite: "SPRITE_MONSTER",
+        movement: "STAY",
+        textId: "TEXT_CERULEANCAVEB1F_MEWTWO",
+        trainerId: "MEWTWO",
+        trainerLevel: 70
+      },
+      {
+        type: "item",
+        x: 16,
+        y: 9,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_CERULEANCAVEB1F_ULTRA_BALL",
+        itemId: "ULTRA_BALL"
+      },
+      {
+        type: "item",
+        x: 18,
+        y: 1,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_CERULEANCAVEB1F_MAX_REVIVE",
+        itemId: "MAX_REVIVE"
+      }
+    ]
+  },
+  textPointers: []
 };

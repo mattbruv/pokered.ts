@@ -5,9 +5,17 @@ import { VERMILION_DOCK_BLOCKS } from "../data/blocks/VermilionDock";
 export const VermilionDock: Map = {
   width: 14,
   height: 6,
+  borderBlock: 15,
   blocks: VERMILION_DOCK_BLOCKS,
   tileset: Tileset.SHIP_PORT,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 14, y: 0, toMap: "LAST_MAP", warpId: 6 },
+      { x: 14, y: 2, toMap: "SS_ANNE_1F", warpId: 2 }
+    ],
+    backgroundItems: [],
+    objects: []
+  },
+  textPointers: []
 };

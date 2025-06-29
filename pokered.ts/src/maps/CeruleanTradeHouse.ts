@@ -5,9 +5,34 @@ import { CERULEAN_TRADE_HOUSE_BLOCKS } from "../data/blocks/CeruleanTradeHouse";
 export const CeruleanTradeHouse: Map = {
   width: 4,
   height: 4,
+  borderBlock: 10,
   blocks: CERULEAN_TRADE_HOUSE_BLOCKS,
   tileset: Tileset.HOUSE,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 2 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 2 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 5,
+        y: 4,
+        sprite: "SPRITE_GRANNY",
+        movement: "STAY",
+        textId: "TEXT_CERULEANTRADEHOUSE_GRANNY"
+      },
+      {
+        type: "sprite",
+        x: 1,
+        y: 2,
+        sprite: "SPRITE_GAMBLER",
+        movement: "STAY",
+        textId: "TEXT_CERULEANTRADEHOUSE_GAMBLER"
+      }
+    ]
+  },
+  textPointers: []
 };

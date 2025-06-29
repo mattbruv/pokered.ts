@@ -5,9 +5,42 @@ import { BILLS_HOUSE_BLOCKS } from "../data/blocks/BillsHouse";
 export const BillsHouse: Map = {
   width: 4,
   height: 4,
+  borderBlock: 13,
   blocks: BILLS_HOUSE_BLOCKS,
   tileset: Tileset.INTERIOR,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 1 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 1 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 6,
+        y: 5,
+        sprite: "SPRITE_MONSTER",
+        movement: "STAY",
+        textId: "TEXT_BILLSHOUSE_BILL_POKEMON"
+      },
+      {
+        type: "sprite",
+        x: 4,
+        y: 4,
+        sprite: "SPRITE_SUPER_NERD",
+        movement: "STAY",
+        textId: "TEXT_BILLSHOUSE_BILL_SS_TICKET"
+      },
+      {
+        type: "sprite",
+        x: 6,
+        y: 5,
+        sprite: "SPRITE_SUPER_NERD",
+        movement: "STAY",
+        textId: "TEXT_BILLSHOUSE_BILL_CHECK_OUT_MY_RARE_POKEMON"
+      }
+    ]
+  },
+  textPointers: []
 };

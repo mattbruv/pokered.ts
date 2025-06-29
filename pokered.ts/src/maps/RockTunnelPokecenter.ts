@@ -5,9 +5,50 @@ import { ROCK_TUNNEL_POKECENTER_BLOCKS } from "../data/blocks/RockTunnelPokecent
 export const RockTunnelPokecenter: Map = {
   width: 7,
   height: 4,
+  borderBlock: 0,
   blocks: ROCK_TUNNEL_POKECENTER_BLOCKS,
   tileset: Tileset.POKECENTER,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 1 },
+      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 1 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 3,
+        y: 1,
+        sprite: "SPRITE_NURSE",
+        movement: "STAY",
+        textId: "TEXT_ROCKTUNNELPOKECENTER_NURSE"
+      },
+      {
+        type: "sprite",
+        x: 7,
+        y: 3,
+        sprite: "SPRITE_GENTLEMAN",
+        movement: "WALK",
+        textId: "TEXT_ROCKTUNNELPOKECENTER_GENTLEMAN"
+      },
+      {
+        type: "sprite",
+        x: 2,
+        y: 5,
+        sprite: "SPRITE_FISHER",
+        movement: "STAY",
+        textId: "TEXT_ROCKTUNNELPOKECENTER_FISHER"
+      },
+      {
+        type: "sprite",
+        x: 11,
+        y: 2,
+        sprite: "SPRITE_LINK_RECEPTIONIST",
+        movement: "STAY",
+        textId: "TEXT_ROCKTUNNELPOKECENTER_LINK_RECEPTIONIST"
+      }
+    ]
+  },
+  textPointers: []
 };

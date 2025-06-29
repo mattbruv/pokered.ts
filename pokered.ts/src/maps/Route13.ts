@@ -5,12 +5,122 @@ import { ROUTE_13_BLOCKS } from "../data/blocks/Route13";
 export const Route13: Map = {
   width: 30,
   height: 9,
+  borderBlock: 67,
   blocks: ROUTE_13_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-  north: { map: MapName.Route12, yOffset: 20 },
-  west: { map: MapName.Route14, xOffset: 0 }
-},
-  object: {},
-  textPointers: [],
+    north: { map: MapName.Route12, yOffset: 20 },
+    west: { map: MapName.Route14, xOffset: 0 }
+  },
+  objects: {
+    warps: [],
+    backgroundItems: [
+      { x: 15, y: 13, signId: "TEXT_ROUTE13_TRAINER_TIPS1" },
+      { x: 33, y: 5, signId: "TEXT_ROUTE13_TRAINER_TIPS2" },
+      { x: 31, y: 11, signId: "TEXT_ROUTE13_SIGN" }
+    ],
+    objects: [
+      {
+        type: "trainer",
+        x: 49,
+        y: 10,
+        sprite: "SPRITE_COOLTRAINER_M",
+        movement: "STAY",
+        textId: "TEXT_ROUTE13_COOLTRAINER_M1",
+        trainerId: "OPP_BIRD_KEEPER",
+        trainerLevel: 1
+      },
+      {
+        type: "trainer",
+        x: 48,
+        y: 10,
+        sprite: "SPRITE_COOLTRAINER_F",
+        movement: "STAY",
+        textId: "TEXT_ROUTE13_COOLTRAINER_F1",
+        trainerId: "OPP_JR_TRAINER_F",
+        trainerLevel: 12
+      },
+      {
+        type: "trainer",
+        x: 27,
+        y: 9,
+        sprite: "SPRITE_COOLTRAINER_F",
+        movement: "STAY",
+        textId: "TEXT_ROUTE13_COOLTRAINER_F2",
+        trainerId: "OPP_JR_TRAINER_F",
+        trainerLevel: 13
+      },
+      {
+        type: "trainer",
+        x: 23,
+        y: 10,
+        sprite: "SPRITE_COOLTRAINER_F",
+        movement: "STAY",
+        textId: "TEXT_ROUTE13_COOLTRAINER_F3",
+        trainerId: "OPP_JR_TRAINER_F",
+        trainerLevel: 14
+      },
+      {
+        type: "trainer",
+        x: 50,
+        y: 5,
+        sprite: "SPRITE_COOLTRAINER_F",
+        movement: "STAY",
+        textId: "TEXT_ROUTE13_COOLTRAINER_F4",
+        trainerId: "OPP_JR_TRAINER_F",
+        trainerLevel: 15
+      },
+      {
+        type: "trainer",
+        x: 12,
+        y: 4,
+        sprite: "SPRITE_COOLTRAINER_M",
+        movement: "STAY",
+        textId: "TEXT_ROUTE13_COOLTRAINER_M2",
+        trainerId: "OPP_BIRD_KEEPER",
+        trainerLevel: 2
+      },
+      {
+        type: "trainer",
+        x: 33,
+        y: 6,
+        sprite: "SPRITE_BEAUTY",
+        movement: "STAY",
+        textId: "TEXT_ROUTE13_BEAUTY1",
+        trainerId: "OPP_BEAUTY",
+        trainerLevel: 4
+      },
+      {
+        type: "trainer",
+        x: 32,
+        y: 6,
+        sprite: "SPRITE_BEAUTY",
+        movement: "STAY",
+        textId: "TEXT_ROUTE13_BEAUTY2",
+        trainerId: "OPP_BEAUTY",
+        trainerLevel: 5
+      },
+      {
+        type: "trainer",
+        x: 10,
+        y: 7,
+        sprite: "SPRITE_BIKER",
+        movement: "STAY",
+        textId: "TEXT_ROUTE13_BIKER",
+        trainerId: "OPP_BIKER",
+        trainerLevel: 1
+      },
+      {
+        type: "trainer",
+        x: 7,
+        y: 13,
+        sprite: "SPRITE_COOLTRAINER_M",
+        movement: "STAY",
+        textId: "TEXT_ROUTE13_COOLTRAINER_M3",
+        trainerId: "OPP_BIRD_KEEPER",
+        trainerLevel: 3
+      }
+    ]
+  },
+  textPointers: []
 };

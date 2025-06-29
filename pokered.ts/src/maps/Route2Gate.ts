@@ -5,9 +5,36 @@ import { ROUTE_2_GATE_BLOCKS } from "../data/blocks/Route2Gate";
 export const Route2Gate: Map = {
   width: 5,
   height: 4,
+  borderBlock: 10,
   blocks: ROUTE_2_GATE_BLOCKS,
   tileset: Tileset.GATE,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 4, y: 0, toMap: "LAST_MAP", warpId: 4 },
+      { x: 5, y: 0, toMap: "LAST_MAP", warpId: 4 },
+      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 5 },
+      { x: 5, y: 7, toMap: "LAST_MAP", warpId: 5 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 1,
+        y: 4,
+        sprite: "SPRITE_SCIENTIST",
+        movement: "STAY",
+        textId: "TEXT_ROUTE2GATE_OAKS_AIDE"
+      },
+      {
+        type: "sprite",
+        x: 5,
+        y: 4,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "WALK",
+        textId: "TEXT_ROUTE2GATE_YOUNGSTER"
+      }
+    ]
+  },
+  textPointers: []
 };

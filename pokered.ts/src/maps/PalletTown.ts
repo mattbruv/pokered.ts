@@ -5,12 +5,51 @@ import { PALLET_TOWN_BLOCKS } from "../data/blocks/PalletTown";
 export const PalletTown: Map = {
   width: 10,
   height: 9,
+  borderBlock: 11,
   blocks: PALLET_TOWN_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-  north: { map: MapName.Route1, yOffset: 0 },
-  south: { map: MapName.Route21, yOffset: 0 }
-},
-  object: {},
-  textPointers: [],
+    north: { map: MapName.Route1, yOffset: 0 },
+    south: { map: MapName.Route21, yOffset: 0 }
+  },
+  objects: {
+    warps: [
+      { x: 5, y: 5, toMap: "REDS_HOUSE_1F", warpId: 1 },
+      { x: 13, y: 5, toMap: "BLUES_HOUSE", warpId: 1 },
+      { x: 12, y: 11, toMap: "OAKS_LAB", warpId: 2 }
+    ],
+    backgroundItems: [
+      { x: 13, y: 13, signId: "TEXT_PALLETTOWN_OAKSLAB_SIGN" },
+      { x: 7, y: 9, signId: "TEXT_PALLETTOWN_SIGN" },
+      { x: 3, y: 5, signId: "TEXT_PALLETTOWN_PLAYERSHOUSE_SIGN" },
+      { x: 11, y: 5, signId: "TEXT_PALLETTOWN_RIVALSHOUSE_SIGN" }
+    ],
+    objects: [
+      {
+        type: "sprite",
+        x: 8,
+        y: 5,
+        sprite: "SPRITE_OAK",
+        movement: "STAY",
+        textId: "TEXT_PALLETTOWN_OAK"
+      },
+      {
+        type: "sprite",
+        x: 3,
+        y: 8,
+        sprite: "SPRITE_GIRL",
+        movement: "WALK",
+        textId: "TEXT_PALLETTOWN_GIRL"
+      },
+      {
+        type: "sprite",
+        x: 11,
+        y: 14,
+        sprite: "SPRITE_FISHER",
+        movement: "WALK",
+        textId: "TEXT_PALLETTOWN_FISHER"
+      }
+    ]
+  },
+  textPointers: []
 };

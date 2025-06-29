@@ -5,9 +5,34 @@ import { LAVENDER_CUBONE_HOUSE_BLOCKS } from "../data/blocks/LavenderCuboneHouse
 export const LavenderCuboneHouse: Map = {
   width: 4,
   height: 4,
+  borderBlock: 10,
   blocks: LAVENDER_CUBONE_HOUSE_BLOCKS,
   tileset: Tileset.HOUSE,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 5 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 5 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 3,
+        y: 5,
+        sprite: "SPRITE_MONSTER",
+        movement: "STAY",
+        textId: "TEXT_LAVENDERCUBONEHOUSE_CUBONE"
+      },
+      {
+        type: "sprite",
+        x: 2,
+        y: 4,
+        sprite: "SPRITE_BRUNETTE_GIRL",
+        movement: "STAY",
+        textId: "TEXT_LAVENDERCUBONEHOUSE_BRUNETTE_GIRL"
+      }
+    ]
+  },
+  textPointers: []
 };

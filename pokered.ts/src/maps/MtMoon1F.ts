@@ -5,9 +5,147 @@ import { MT_MOON_1F_BLOCKS } from "../data/blocks/MtMoon1F";
 export const MtMoon1F: Map = {
   width: 20,
   height: 18,
+  borderBlock: 3,
   blocks: MT_MOON_1F_BLOCKS,
   tileset: Tileset.CAVERN,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 14, y: 35, toMap: "LAST_MAP", warpId: 2 },
+      { x: 15, y: 35, toMap: "LAST_MAP", warpId: 2 },
+      { x: 5, y: 5, toMap: "MT_MOON_B1F", warpId: 1 },
+      { x: 17, y: 11, toMap: "MT_MOON_B1F", warpId: 3 },
+      { x: 25, y: 15, toMap: "MT_MOON_B1F", warpId: 4 }
+    ],
+    backgroundItems: [
+      { x: 15, y: 23, signId: "TEXT_MTMOON1F_BEWARE_ZUBAT_SIGN" }
+    ],
+    objects: [
+      {
+        type: "trainer",
+        x: 5,
+        y: 6,
+        sprite: "SPRITE_HIKER",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_HIKER",
+        trainerId: "OPP_HIKER",
+        trainerLevel: 1
+      },
+      {
+        type: "trainer",
+        x: 12,
+        y: 16,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_YOUNGSTER1",
+        trainerId: "OPP_YOUNGSTER",
+        trainerLevel: 3
+      },
+      {
+        type: "trainer",
+        x: 30,
+        y: 4,
+        sprite: "SPRITE_COOLTRAINER_F",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_COOLTRAINER_F1",
+        trainerId: "OPP_LASS",
+        trainerLevel: 5
+      },
+      {
+        type: "trainer",
+        x: 24,
+        y: 31,
+        sprite: "SPRITE_SUPER_NERD",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_SUPER_NERD",
+        trainerId: "OPP_SUPER_NERD",
+        trainerLevel: 1
+      },
+      {
+        type: "trainer",
+        x: 16,
+        y: 23,
+        sprite: "SPRITE_COOLTRAINER_F",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_COOLTRAINER_F2",
+        trainerId: "OPP_LASS",
+        trainerLevel: 6
+      },
+      {
+        type: "trainer",
+        x: 7,
+        y: 22,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_YOUNGSTER2",
+        trainerId: "OPP_BUG_CATCHER",
+        trainerLevel: 7
+      },
+      {
+        type: "trainer",
+        x: 30,
+        y: 27,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_YOUNGSTER3",
+        trainerId: "OPP_BUG_CATCHER",
+        trainerLevel: 8
+      },
+      {
+        type: "item",
+        x: 2,
+        y: 20,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_POTION1",
+        itemId: "POTION"
+      },
+      {
+        type: "item",
+        x: 2,
+        y: 2,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_MOON_STONE",
+        itemId: "MOON_STONE"
+      },
+      {
+        type: "item",
+        x: 35,
+        y: 31,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_RARE_CANDY",
+        itemId: "RARE_CANDY"
+      },
+      {
+        type: "item",
+        x: 36,
+        y: 23,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_ESCAPE_ROPE",
+        itemId: "ESCAPE_ROPE"
+      },
+      {
+        type: "item",
+        x: 20,
+        y: 33,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_POTION2",
+        itemId: "POTION"
+      },
+      {
+        type: "item",
+        x: 5,
+        y: 32,
+        sprite: "SPRITE_POKE_BALL",
+        movement: "STAY",
+        textId: "TEXT_MTMOON1F_TM_WATER_GUN",
+        itemId: "TM_WATER_GUN"
+      }
+    ]
+  },
+  textPointers: []
 };

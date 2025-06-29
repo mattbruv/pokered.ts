@@ -5,9 +5,42 @@ import { CERULEAN_MART_BLOCKS } from "../data/blocks/CeruleanMart";
 export const CeruleanMart: Map = {
   width: 4,
   height: 4,
+  borderBlock: 0,
   blocks: CERULEAN_MART_BLOCKS,
   tileset: Tileset.MART,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 6 },
+      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 6 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 0,
+        y: 5,
+        sprite: "SPRITE_CLERK",
+        movement: "STAY",
+        textId: "TEXT_CERULEANMART_CLERK"
+      },
+      {
+        type: "sprite",
+        x: 3,
+        y: 4,
+        sprite: "SPRITE_COOLTRAINER_M",
+        movement: "WALK",
+        textId: "TEXT_CERULEANMART_COOLTRAINER_M"
+      },
+      {
+        type: "sprite",
+        x: 6,
+        y: 2,
+        sprite: "SPRITE_COOLTRAINER_F",
+        movement: "WALK",
+        textId: "TEXT_CERULEANMART_COOLTRAINER_F"
+      }
+    ]
+  },
+  textPointers: []
 };

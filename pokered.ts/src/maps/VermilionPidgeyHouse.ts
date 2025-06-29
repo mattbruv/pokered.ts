@@ -5,9 +5,42 @@ import { VERMILION_PIDGEY_HOUSE_BLOCKS } from "../data/blocks/VermilionPidgeyHou
 export const VermilionPidgeyHouse: Map = {
   width: 4,
   height: 4,
+  borderBlock: 10,
   blocks: VERMILION_PIDGEY_HOUSE_BLOCKS,
   tileset: Tileset.HOUSE,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 5 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 5 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 5,
+        y: 3,
+        sprite: "SPRITE_YOUNGSTER",
+        movement: "STAY",
+        textId: "TEXT_VERMILIONPIDGEYHOUSE_YOUNGSTER"
+      },
+      {
+        type: "sprite",
+        x: 3,
+        y: 5,
+        sprite: "SPRITE_BIRD",
+        movement: "WALK",
+        textId: "TEXT_VERMILIONPIDGEYHOUSE_PIDGEY"
+      },
+      {
+        type: "sprite",
+        x: 4,
+        y: 3,
+        sprite: "SPRITE_PAPER",
+        movement: "STAY",
+        textId: "TEXT_VERMILIONPIDGEYHOUSE_LETTER"
+      }
+    ]
+  },
+  textPointers: []
 };

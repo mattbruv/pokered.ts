@@ -5,9 +5,36 @@ import { CHAMPIONS_ROOM_BLOCKS } from "../data/blocks/ChampionsRoom";
 export const ChampionsRoom: Map = {
   width: 4,
   height: 4,
+  borderBlock: 3,
   blocks: CHAMPIONS_ROOM_BLOCKS,
   tileset: Tileset.GYM,
   connections: {},
-  object: {},
-  textPointers: [],
+  objects: {
+    warps: [
+      { x: 3, y: 7, toMap: "LANCES_ROOM", warpId: 2 },
+      { x: 4, y: 7, toMap: "LANCES_ROOM", warpId: 3 },
+      { x: 3, y: 0, toMap: "HALL_OF_FAME", warpId: 1 },
+      { x: 4, y: 0, toMap: "HALL_OF_FAME", warpId: 1 }
+    ],
+    backgroundItems: [],
+    objects: [
+      {
+        type: "sprite",
+        x: 4,
+        y: 2,
+        sprite: "SPRITE_BLUE",
+        movement: "STAY",
+        textId: "TEXT_CHAMPIONSROOM_RIVAL"
+      },
+      {
+        type: "sprite",
+        x: 3,
+        y: 7,
+        sprite: "SPRITE_OAK",
+        movement: "STAY",
+        textId: "TEXT_CHAMPIONSROOM_OAK"
+      }
+    ]
+  },
+  textPointers: []
 };
