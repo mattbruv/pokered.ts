@@ -53,6 +53,7 @@ export function canWalkOnTile(map: Map, tileX: number, tileY: number): boolean {
 
   const tileId = block[tileIndex];
   const passableTiles = getTileCollisions(map.tileset);
+  /*
   console.log(
     "blockX:",
     blockX,
@@ -74,6 +75,7 @@ export function canWalkOnTile(map: Map, tileX: number, tileY: number): boolean {
     "block:",
     block
   );
+  */
   return passableTiles.includes(tileId);
 }
 

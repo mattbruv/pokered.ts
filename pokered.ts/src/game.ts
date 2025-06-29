@@ -156,7 +156,7 @@ class PokemonRed {
   }
 
   #loadGame(): GameData {
-    const map = getMap(MapName.Route25);
+    const map = getMap(MapName.PalletTown);
     const data: GameData = {
       map: {
         currentMap: map,
@@ -168,8 +168,8 @@ class PokemonRed {
           movementStatus: MovementStatus.Ready,
           animationFrameCounter: 0,
           position: {
-            x: 36,
-            y: 8,
+            x: 5,
+            y: 6,
           },
           image: "sprites-red",
         },
