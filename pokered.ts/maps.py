@@ -66,6 +66,45 @@ with open("../pokered/constants/map_constants.asm") as f:
         data[map]["width"] = width
         data[map]["height"] = height
         #print(name, entry, width, height)
+
+maps = glob.glob("../pokered/data/maps/objects/*.asm", recursive=True)
+for map_path in maps:
+    with open(map_path, "r") as map:
+        content = map.readlines()
+        name = Path(map_path).stem
+        print(name, len(content))
+        objects = {
+            "warps": []
+        }
+
+        for line in content:
+            obj = line.split()
+            if len(obj) == 0:
+                continue
+            #background tile
+            if obj[0] == "db":
+                # extract hex number to int
+                objects["border_block"] = int(obj[1].replace("$", "").replace(",", ""), 16)
+            if obj[0] == "warp_event":
+                #\1 x position
+                #\2 y position
+                #\3 destination map (-1 = wLastMap)
+                #\4 destination warp id; starts at 1 (internally at 0)
+                tag, x, y, toMap, toWarp = obj
+                x = int(x.replace(",", ""))
+                y = int(y.replace(",", ""))
+                toMap = toMap.replace(",","")
+                toWarp = int(toWarp.replace(",",""))
+                print(tag, x, y, toMap, toWarp)
+                entry = {
+                    "x": x,
+                    "y": y,
+                    "to": toMap,
+                    "warp": toWarp,
+                }
+                objects["warps"].append(entry)
+
+        data[name]["objects"] = objects
     
 
 with open("maps.json", "w") as out:
