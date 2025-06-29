@@ -1,5 +1,6 @@
 import { ImageCache } from "../gfx/images";
 import { Map } from "../map";
+import { getBlockIndexAtPosition } from "../overworld/map";
 import { getBlockSet, getTilesetImage } from "../tileset";
 import { OverworldCache } from "./renderer";
 import { drawSprite, FacingDirection, SpriteData } from "./sprite";
@@ -36,8 +37,26 @@ export function renderOverworld(
     dy += walkYDelta;
   }
 
-  // Draw the map relative to the player's position within it.
-  screen.drawImage(cache.current.mapImage, dx, dy);
+  const temp = new OffscreenCanvas(
+    cache.current.mapImage.width,
+    cache.current.mapImage.height
+  );
+  // draw current block outline
+  const { x, y } = playerSprite.position;
+  const block = getBlockIndexAtPosition(currentMap, x, y);
+  const xOff = (block % currentMap.width) * 32;
+  const yOffset = Math.floor(block / currentMap.width) * 32;
+
+  const ct = temp.getContext("2d");
+  if (ct) {
+    ct.drawImage(cache.current.mapImage, 0, 0);
+    ct.strokeStyle = "red";
+    ct.lineWidth = 1;
+    //console.log(xOff, yOffset);
+    ct.strokeRect(xOff, yOffset, 32, 32);
+    // Draw the map relative to the player's position within it.
+    screen.drawImage(temp, dx, dy);
+  }
 
   // Draw the connecting maps if there is something to draw.
   if (cache.north && currentMap.connections.north) {

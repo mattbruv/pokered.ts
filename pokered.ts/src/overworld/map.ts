@@ -20,7 +20,21 @@ export function getBlockIndexAtPosition(
   return result;
 }
 
-export function canWalkOnTile(map: Map, tileX: number, tileY: number) {
+export function isInBounds(map: Map, tileX: number, tileY: number) {
+  const tileDims = getTileDimensions(map);
+  return (
+    tileX >= 0 &&
+    tileX < tileDims.tileWidth &&
+    tileY >= 0 &&
+    tileY < tileDims.tileHeight
+  );
+}
+
+export function canWalkOnTile(map: Map, tileX: number, tileY: number): boolean {
+  // If the user is about to walk about of bounds,
+  // it means that they are about to walk over to a connecting map
+  if (!isInBounds(map, tileX, tileY)) return true;
+
   const mapBlockIndex = getBlockIndexAtPosition(map, tileX, tileY);
   const blocksetIndex = map.blocks[mapBlockIndex];
   const blockset = getBlockSet(map.tileset);
