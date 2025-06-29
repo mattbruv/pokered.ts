@@ -41,10 +41,25 @@ export function canWalkOnTile(map: Map, tileX: number, tileY: number): boolean {
   const block = blockset[blocksetIndex];
   const blockX = tileX % 2;
   const blockY = tileY % 2;
-  const tileIndex = blockY * 8 + blockX * 2;
+
+  // Collision is stored on a per-tile (8px tile) basis;
+  // for instance only the bottom-left quadrant of a (16px) removable tree has the collision flag set,
+  // and only the bottom-left quadrant of a door has it UNset.
+  const tileIndex = blockY * 12 + blockX * 2;
   const tileId = block[tileIndex];
   const passableTiles = getTileCollisions(map.tileset);
-  console.log(blockX, blockY, block, tileIndex, "=", tileId);
+  console.log(
+    "blockX:",
+    blockX,
+    "blockY:",
+    blockY,
+    "block:",
+    block,
+    "tileIndex:",
+    tileIndex,
+    "tileId",
+    tileId
+  );
   const row = Math.floor(tileId / 16);
   const column = tileId % 16;
   console.log(
