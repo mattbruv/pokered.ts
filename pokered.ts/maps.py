@@ -68,19 +68,25 @@ with open("../pokered/constants/map_constants.asm") as f:
         #print(name, entry, width, height)
 
 maps = glob.glob("../pokered/data/maps/objects/*.asm", recursive=True)
+cmds = set()
+
 for map_path in maps:
     with open(map_path, "r") as map:
         content = map.readlines()
         name = Path(map_path).stem
         print(name, len(content))
         objects = {
-            "warps": []
+            "warps": [],
+            "objects": []
         }
 
         for line in content:
             obj = line.split()
             if len(obj) == 0:
                 continue
+            cmd = obj[0]
+            if name not in cmd:
+                cmds.add(cmd)
             #background tile
             if obj[0] == "db":
                 # extract hex number to int
@@ -95,7 +101,7 @@ for map_path in maps:
                 y = int(y.replace(",", ""))
                 toMap = toMap.replace(",","")
                 toWarp = int(toWarp.replace(",",""))
-                print(tag, x, y, toMap, toWarp)
+                #print(tag, x, y, toMap, toWarp)
                 entry = {
                     "x": x,
                     "y": y,
@@ -103,8 +109,48 @@ for map_path in maps:
                     "warp": toWarp,
                 }
                 objects["warps"].append(entry)
+            
+            if obj[0] == "object_event":
+                #\1 x position
+                #\2 y position
+                #\3 sprite id
+                #\4 movement (WALK/STAY)
+                #\5 range or direction
+                #\6 text id
+                #\7 items only: item id
+                #\7 trainers only: trainer class/pokemon id
+                #\8 trainers only: trainer number/pokemon level
+                print(len(obj), obj)
+                count = len(obj)
+                if (count == 9):
+                    tag, x, y, sprite, movement, range_dir, text_id, trainer_id, trainer_level = obj
+                    entry = {
+                        "type": "trainer",
+                        "x": int(x.replace(",", "")),
+                        "y": int(y.replace(",", "")),
+                        "sprite": sprite.replace(",", ""),
+                        "movement": movement.replace(",", ""),
+                        "text_id": text_id.replace(",", ""),
+                        "trainer_id": trainer_id.replace(",", ""),
+                        "trainer_level": int(trainer_level.replace(",", "")),
+                    }
+                    objects["objects"].append(entry)
+                if (count == 8):
+                    tag, x, y, sprite, movement, range_dir, text_id, item_id = obj
+                    entry = {
+                        "type": "item",
+                        "x": int(x.replace(",", "")),
+                        "y": int(y.replace(",", "")),
+                        "sprite": sprite.replace(",", ""),
+                        "movement": movement.replace(",", ""),
+                        "text_id": text_id.replace(",", ""),
+                        "item_id": item_id.replace(",", ""),
+                    }
+                    objects["objects"].append(entry)
+                print(count)
 
         data[name]["objects"] = objects
+print(cmds)
     
 
 with open("maps.json", "w") as out:
