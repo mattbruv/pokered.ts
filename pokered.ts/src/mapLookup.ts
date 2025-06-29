@@ -450,5 +450,5 @@ const MAP_NAME_LOOKUP: Record<MapName, Map> = {
   [MapName.ViridianNicknameHouse]: ViridianNicknameHouse,
   [MapName.ViridianPokecenter]: ViridianPokecenter,
   [MapName.ViridianSchoolHouse]: ViridianSchoolHouse,
-  [MapName.WardensHouse]: WardensHouse,
+  [MapName.WardensHouse]: WardensHouse
 };

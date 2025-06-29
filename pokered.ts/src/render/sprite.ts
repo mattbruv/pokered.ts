@@ -6,7 +6,7 @@ export enum MovementStatus {
   Uninitialized,
   Ready,
   Delayed,
-  Moving,
+  Moving
 }
 
 export type SpriteData = {
@@ -25,7 +25,7 @@ export enum FacingDirection {
   Down,
   Up,
   Left,
-  Right,
+  Right
 }
 
 export function drawSprite(
@@ -42,7 +42,7 @@ export function drawSprite(
     [FacingDirection.Down]: 0,
     [FacingDirection.Up]: 1,
     [FacingDirection.Left]: 2,
-    [FacingDirection.Right]: 2,
+    [FacingDirection.Right]: 2
   };
 
   const spriteImage = cache[sprite.image];

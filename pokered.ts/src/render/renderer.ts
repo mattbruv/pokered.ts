@@ -32,8 +32,8 @@ export class Renderer {
   constructor(images: ImageCache, screen: HTMLCanvasElement) {
     this.#overworldCache = {
       current: {
-        mapImage: new OffscreenCanvas(0, 0),
-      },
+        mapImage: new OffscreenCanvas(0, 0)
+      }
     };
 
     this.#screen = screen;
@@ -61,7 +61,7 @@ export class Renderer {
       const connection = map.connections[dir];
       if (connection?.map) {
         this.#overworldCache[dir] = {
-          mapImage: getMapImage(getMap(connection.map), this.#images),
+          mapImage: getMapImage(getMap(connection.map), this.#images)
         };
       } else {
         this.#overworldCache[dir] = undefined; // clear cache if no connection

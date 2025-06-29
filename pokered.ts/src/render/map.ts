@@ -28,7 +28,7 @@ export function renderOverworld(
       [FacingDirection.Down]: [0, -offset],
       [FacingDirection.Up]: [0, offset],
       [FacingDirection.Left]: [offset, 0],
-      [FacingDirection.Right]: [-offset, 0],
+      [FacingDirection.Right]: [-offset, 0]
     };
 
     const [walkXDelta, walkYDelta] = adjustmentMap[playerSprite.facing];

@@ -84,7 +84,7 @@ function getTileDimensions(map: Map) {
   // so multiply by 2
   return {
     tileWidth: map.width * 2,
-    tileHeight: map.height * 2,
+    tileHeight: map.height * 2
   };
 }
 
@@ -103,14 +103,14 @@ export function checkMapConnections(
     let offset = map.connections.west!.xOffset * 2 * -1; // tiles
     return {
       dir: "west",
-      newPosition: { x: west.tileWidth - 1, y: tileY + offset },
+      newPosition: { x: west.tileWidth - 1, y: tileY + offset }
     };
   }
   if (tileX >= tileWidth) {
     let offset = map.connections.east!.xOffset * 2 * -1; // tiles
     return {
       dir: "east",
-      newPosition: { x: 0, y: tileY + offset },
+      newPosition: { x: 0, y: tileY + offset }
     };
   }
   if (tileY >= tileHeight) {
@@ -118,7 +118,7 @@ export function checkMapConnections(
     console.log(map.connections.south?.yOffset);
     return {
       dir: "south",
-      newPosition: { x: tileX + offset, y: 0 },
+      newPosition: { x: tileX + offset, y: 0 }
     };
   }
   if (tileY < 0) {
@@ -134,8 +134,8 @@ export function checkMapConnections(
       dir: "north",
       newPosition: {
         x: tileX - offset,
-        y: northTile.tileHeight - 1,
-      },
+        y: northTile.tileHeight - 1
+      }
     };
   }
 

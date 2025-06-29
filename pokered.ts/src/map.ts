@@ -311,7 +311,7 @@ export enum MapName {
   ViridianNicknameHouse,
   ViridianPokecenter,
   ViridianSchoolHouse,
-  WardensHouse,
+  WardensHouse
 }
 
 export type BlockIndex = number;

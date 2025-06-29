@@ -6,7 +6,7 @@ const KEY_MAP: Record<GameKey, Set<string>> = {
   Up: new Set(["ArrowUp"]),
   Down: new Set(["ArrowDown"]),
   Left: new Set(["ArrowLeft"]),
-  Right: new Set(["ArrowRight"]),
+  Right: new Set(["ArrowRight"])
 };
 
 export class GameInput {
@@ -27,7 +27,7 @@ export class GameInput {
       Up: false,
       Down: false,
       Left: false,
-      Right: false,
+      Right: false
     };
 
     for (const [key, bindings] of Object.entries(KEY_MAP)) {

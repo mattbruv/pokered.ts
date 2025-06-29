@@ -159,7 +159,7 @@ class PokemonRed {
     const map = getMap(MapName.PalletTown);
     const data: GameData = {
       map: {
-        currentMap: map,
+        currentMap: map
       },
       player: {
         name: "Red",
@@ -169,11 +169,11 @@ class PokemonRed {
           animationFrameCounter: 0,
           position: {
             x: 5,
-            y: 6,
+            y: 6
           },
-          image: "sprites-red",
-        },
-      },
+          image: "sprites-red"
+        }
+      }
     };
 
     // cache loaded map in renderer
