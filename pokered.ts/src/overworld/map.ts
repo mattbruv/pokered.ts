@@ -37,7 +37,20 @@ export function isInBounds(map: Map, tileX: number, tileY: number) {
 export function canWalkOnTile(map: Map, tileX: number, tileY: number): boolean {
   // If the user is about to walk about of bounds,
   // it means that they are about to walk over to a connecting map
-  if (!isInBounds(map, tileX, tileY)) return true;
+  if (!isInBounds(map, tileX, tileY)) {
+    // If we're not in bounds, we are probably walking to a connection, or walking OOB.
+    // If this returns null, we are walking out of bounds, so prevent that.
+    const connection = checkMapConnections(map, tileX, tileY);
+    if (!connection) return false;
+    // If there is a connection, we have to verify that we aren't walking onto a block which
+    // isn't allowed to be walked on, AKA call this recursively with the connecting map.
+    // Maybe not the best way to do this, but it's what's coming to mind right now.
+    // An example of this is in the southwest of pallet town near the lake
+    const connectingMapName = map.connections[connection.dir]?.map;
+    if (!connectingMapName) return false;
+    const { x, y } = connection.newPosition;
+    return canWalkOnTile(getMap(connectingMapName), x, y);
+  }
 
   const mapBlockIndex = getBlockIndexAtPosition(map, tileX, tileY);
   const blocksetIndex = map.blocks[mapBlockIndex];
@@ -57,29 +70,7 @@ export function canWalkOnTile(map: Map, tileX: number, tileY: number): boolean {
 
   const tileId = block[tileIndex];
   const passableTiles = getTileCollisions(map.tileset);
-  /*
-  console.log(
-    "blockX:",
-    blockX,
-    "blockY:",
-    blockY,
-    "block:",
-    block,
-    "tileIndex:",
-    tileIndex,
-    "tileId",
-    tileId
-  );
-  const row = Math.floor(tileId / 16);
-  const column = tileId % 16;
-  console.log(
-    "tile: " + tileId,
-    "pos: (" + row + "," + column,
-    ") walkable?: " + passableTiles.includes(tileId),
-    "block:",
-    block
-  );
-  */
+
   return passableTiles.includes(tileId);
 }
 
@@ -102,37 +93,32 @@ export function checkMapConnections(
   //console.log(map);
   const { tileWidth, tileHeight } = getTileDimensions(map);
 
-  if (tileX < 0) {
-    const west = getTileDimensions(getMap(map.connections.west!.map));
-    let offset = map.connections.west!.xOffset * 2 * -1; // tiles
+  if (tileX < 0 && map.connections.west) {
+    const west = getTileDimensions(getMap(map.connections.west.map));
+    let offset = map.connections.west.xOffset * 2 * -1; // tiles
     return {
       dir: "west",
       newPosition: { x: west.tileWidth - 1, y: tileY + offset }
     };
   }
-  if (tileX >= tileWidth) {
-    let offset = map.connections.east!.xOffset * 2 * -1; // tiles
+  if (tileX >= tileWidth && map.connections.east) {
+    let offset = map.connections.east.xOffset * 2 * -1; // tiles
     return {
       dir: "east",
       newPosition: { x: 0, y: tileY + offset }
     };
   }
-  if (tileY >= tileHeight) {
-    let offset = map.connections.south!.yOffset * 2 * -1;
-    console.log(map.connections.south?.yOffset);
+  if (tileY >= tileHeight && map.connections.south) {
+    let offset = map.connections.south.yOffset * 2 * -1;
     return {
       dir: "south",
       newPosition: { x: tileX + offset, y: 0 }
     };
   }
-  if (tileY < 0) {
-    const north = getMap(map.connections.north!.map);
+  if (tileY < 0 && map.connections.north) {
+    const north = getMap(map.connections.north.map);
     const northTile = getTileDimensions(north);
-
-    console.log("You are south, going north");
-    console.log("north offset:", map.connections.north?.yOffset);
-
-    let offset = map.connections.north!.yOffset * 2;
+    let offset = map.connections.north.yOffset * 2;
 
     return {
       dir: "north",
