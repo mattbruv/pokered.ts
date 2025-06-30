@@ -5,6 +5,9 @@ import { getBlockSet, getTilesetImage, Tileset } from "../tileset";
 import { OverworldCache } from "./renderer";
 import { drawSprite, FacingDirection, SpriteData } from "./sprite";
 
+export const TILE_SIZE_PX = 8;
+export const BLOCK_SIZE_PX = TILE_SIZE_PX * 4;
+
 export function renderOverworld(
   screen: CanvasRenderingContext2D,
   images: ImageCache,
@@ -58,6 +61,10 @@ export function renderOverworld(
   const ct = temp.getContext("2d");
   if (ct) {
     ct.drawImage(cache.current.mapImage, 0, 0);
+
+    // draw map objects to image
+    ct.drawImage(cache.current.objectsImage, 0, 0);
+
     ct.strokeStyle = "red";
     ct.lineWidth = 1;
     //console.log(xOff, yOffset);
@@ -119,7 +126,6 @@ export function renderOverworld(
     Each byte in the map file is an index into the blockset for the block to show at that location.
     Maps are also read from top-left to bottom-right
 */
-
 export function getMapImage(
   width: number,
   height: number,
@@ -130,11 +136,12 @@ export function getMapImage(
   const blockset = getBlockSet(tilesetName);
   const tileset = getTilesetImage(tilesetName, images);
 
-  const TILE_SIZE = 8;
-  const BLOCK_SIZE = TILE_SIZE * 4;
-  const TILES_PER_ROW = tileset.width / TILE_SIZE;
+  const TILES_PER_ROW = tileset.width / TILE_SIZE_PX;
 
-  const canvas = new OffscreenCanvas(width * BLOCK_SIZE, height * BLOCK_SIZE);
+  const canvas = new OffscreenCanvas(
+    width * BLOCK_SIZE_PX,
+    height * BLOCK_SIZE_PX
+  );
   const ctx = canvas.getContext("2d");
 
   for (let blockY = 0; blockY < height; blockY++) {
@@ -149,23 +156,23 @@ export function getMapImage(
           const tile = currentBlock[tileIndex];
 
           // Source coordinates on the tileset
-          const sx = (tile % TILES_PER_ROW) * TILE_SIZE;
-          const sy = Math.floor(tile / TILES_PER_ROW) * TILE_SIZE;
+          const sx = (tile % TILES_PER_ROW) * TILE_SIZE_PX;
+          const sy = Math.floor(tile / TILES_PER_ROW) * TILE_SIZE_PX;
 
           // Destination on the canvas
-          const dx = blockX * BLOCK_SIZE + tileX * TILE_SIZE;
-          const dy = blockY * BLOCK_SIZE + tileY * TILE_SIZE;
+          const dx = blockX * BLOCK_SIZE_PX + tileX * TILE_SIZE_PX;
+          const dy = blockY * BLOCK_SIZE_PX + tileY * TILE_SIZE_PX;
 
           ctx?.drawImage(
             tileset,
             sx,
             sy,
-            TILE_SIZE,
-            TILE_SIZE,
+            TILE_SIZE_PX,
+            TILE_SIZE_PX,
             dx,
             dy,
-            TILE_SIZE,
-            TILE_SIZE
+            TILE_SIZE_PX,
+            TILE_SIZE_PX
           );
         }
       }

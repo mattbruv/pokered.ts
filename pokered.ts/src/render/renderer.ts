@@ -3,14 +3,14 @@ import { ImageCache } from "../gfx/images";
 import { getMapImage, renderOverworld } from "./map";
 import { Map } from "../map";
 import { getMap } from "../mapLookup";
+import { getObjectsImage } from "./objects";
 
 const SCREEN_WIDTH = 160;
 const SCREEN_HEIGHT = 144;
 
 export type MapCache = {
   mapImage: OffscreenCanvas;
-  // TODO: objects
-  //objectImage: OffscreenCanvas;
+  objectsImage: OffscreenCanvas;
 };
 
 export type OverworldCache = {
@@ -33,9 +33,10 @@ export class Renderer {
   constructor(images: ImageCache, screen: HTMLCanvasElement) {
     this.#overworldCache = {
       current: {
-        mapImage: new OffscreenCanvas(0, 0)
+        mapImage: new OffscreenCanvas(0, 0),
+        objectsImage: new OffscreenCanvas(0, 0)
       },
-      outOfBounds: new OffscreenCanvas(SCREEN_WIDTH, SCREEN_HEIGHT)
+      outOfBounds: new OffscreenCanvas(0, 0)
     };
 
     this.#screen = screen;
@@ -63,6 +64,11 @@ export class Renderer {
       this.#images
     );
 
+    this.#overworldCache.current.objectsImage = getObjectsImage(
+      map,
+      this.#images
+    );
+
     const directions = ["north", "east", "south", "west"] as const;
 
     for (const dir of directions) {
@@ -76,7 +82,8 @@ export class Renderer {
             connMap.tileset,
             connMap.blocks,
             this.#images
-          )
+          ),
+          objectsImage: getObjectsImage(connMap, this.#images)
         };
       } else {
         this.#overworldCache[dir] = undefined; // clear cache if no connection
@@ -98,8 +105,6 @@ export class Renderer {
       oobBlocks,
       this.#images
     );
-
-    console.log(this.#overworldCache);
   }
 
   render(game: GameData) {

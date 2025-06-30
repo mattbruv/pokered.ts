@@ -192,7 +192,7 @@ class PokemonRed {
   }
 
   #loadGame(): GameData {
-    const mapName = MapName.ViridianForestNorthGate;
+    const mapName = MapName.PalletTown;
     const map = getMap(mapName);
     const data: GameData = {
       map: {
