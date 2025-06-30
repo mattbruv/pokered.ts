@@ -3,8 +3,8 @@ import { Tileset } from "../tileset";
 import { VIRIDIAN_FOREST_BLOCKS } from "../data/blocks/ViridianForest";
 
 export const ViridianForest: Map = {
-  width: 5,
-  height: 4,
+  width: 17,
+  height: 24,
   borderBlock: 3,
   blocks: VIRIDIAN_FOREST_BLOCKS,
   tileset: Tileset.FOREST,

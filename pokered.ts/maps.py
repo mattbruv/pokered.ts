@@ -59,7 +59,7 @@ with open("../pokered/constants/map_constants.asm") as f:
     const_data = f.readlines()
     for map in data:
         name = data[map]["id"]
-        entry = next(filter(lambda x: "map_const " + name in x, const_data))
+        entry = next(filter(lambda x: "map_const " + name  + "," in x, const_data))
         entry = entry.split()
         width = int(entry[2].replace(",", ""))
         height = int(entry[3].replace(",", ""))
