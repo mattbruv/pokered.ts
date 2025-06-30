@@ -15,7 +15,7 @@ export const Route15Gate1F: Map = {
       { x: 0, y: 5, toMap: "LAST_MAP", warpId: 2 },
       { x: 7, y: 4, toMap: "LAST_MAP", warpId: 3 },
       { x: 7, y: 5, toMap: "LAST_MAP", warpId: 4 },
-      { x: 6, y: 8, toMap: "ROUTE_15_GATE_2F", warpId: 1 }
+      { x: 6, y: 8, toMap: MapName.Route15Gate2F, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

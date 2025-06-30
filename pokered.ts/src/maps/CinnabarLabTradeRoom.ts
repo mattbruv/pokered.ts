@@ -11,8 +11,8 @@ export const CinnabarLabTradeRoom: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "CINNABAR_LAB", warpId: 3 },
-      { x: 3, y: 7, toMap: "CINNABAR_LAB", warpId: 3 }
+      { x: 2, y: 7, toMap: MapName.CinnabarLab, warpId: 3 },
+      { x: 3, y: 7, toMap: MapName.CinnabarLab, warpId: 3 }
     ],
     backgroundItems: [],
     objects: [

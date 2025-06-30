@@ -11,17 +11,17 @@ export const SSAnne1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 26, y: 0, toMap: "VERMILION_DOCK", warpId: 2 },
-      { x: 27, y: 0, toMap: "VERMILION_DOCK", warpId: 2 },
-      { x: 31, y: 8, toMap: "SS_ANNE_1F_ROOMS", warpId: 1 },
-      { x: 23, y: 8, toMap: "SS_ANNE_1F_ROOMS", warpId: 2 },
-      { x: 19, y: 8, toMap: "SS_ANNE_1F_ROOMS", warpId: 3 },
-      { x: 15, y: 8, toMap: "SS_ANNE_1F_ROOMS", warpId: 4 },
-      { x: 11, y: 8, toMap: "SS_ANNE_1F_ROOMS", warpId: 5 },
-      { x: 7, y: 8, toMap: "SS_ANNE_1F_ROOMS", warpId: 6 },
-      { x: 2, y: 6, toMap: "SS_ANNE_2F", warpId: 7 },
-      { x: 37, y: 15, toMap: "SS_ANNE_B1F", warpId: 6 },
-      { x: 3, y: 16, toMap: "SS_ANNE_KITCHEN", warpId: 1 }
+      { x: 26, y: 0, toMap: MapName.VermilionDock, warpId: 2 },
+      { x: 27, y: 0, toMap: MapName.VermilionDock, warpId: 2 },
+      { x: 31, y: 8, toMap: MapName.SSAnne1FRooms, warpId: 1 },
+      { x: 23, y: 8, toMap: MapName.SSAnne1FRooms, warpId: 2 },
+      { x: 19, y: 8, toMap: MapName.SSAnne1FRooms, warpId: 3 },
+      { x: 15, y: 8, toMap: MapName.SSAnne1FRooms, warpId: 4 },
+      { x: 11, y: 8, toMap: MapName.SSAnne1FRooms, warpId: 5 },
+      { x: 7, y: 8, toMap: MapName.SSAnne1FRooms, warpId: 6 },
+      { x: 2, y: 6, toMap: MapName.SSAnne2F, warpId: 7 },
+      { x: 37, y: 15, toMap: MapName.SSAnneB1F, warpId: 6 },
+      { x: 3, y: 16, toMap: MapName.SSAnneKitchen, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

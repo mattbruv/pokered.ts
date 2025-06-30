@@ -10,7 +10,7 @@ export const Route11Gate2F: Map = {
   tileset: Tileset.GATE,
   connections: {},
   objects: {
-    warps: [{ x: 7, y: 7, toMap: "ROUTE_11_GATE_1F", warpId: 5 }],
+    warps: [{ x: 7, y: 7, toMap: MapName.Route11Gate1F, warpId: 5 }],
     backgroundItems: [
       { x: 1, y: 2, signId: "TEXT_ROUTE11GATE2F_LEFT_BINOCULARS" },
       { x: 6, y: 2, signId: "TEXT_ROUTE11GATE2F_RIGHT_BINOCULARS" }

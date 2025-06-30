@@ -13,7 +13,7 @@ export const Route22: Map = {
     east: { map: MapName.ViridianCity, xOffset: -4 }
   },
   objects: {
-    warps: [{ x: 8, y: 5, toMap: "ROUTE_22_GATE", warpId: 1 }],
+    warps: [{ x: 8, y: 5, toMap: MapName.Route22Gate, warpId: 1 }],
     backgroundItems: [
       { x: 7, y: 11, signId: "TEXT_ROUTE22_POKEMON_LEAGUE_SIGN" }
     ],

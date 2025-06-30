@@ -16,14 +16,14 @@ export const SaffronCity: Map = {
   },
   objects: {
     warps: [
-      { x: 7, y: 5, toMap: "COPYCATS_HOUSE_1F", warpId: 1 },
-      { x: 26, y: 3, toMap: "FIGHTING_DOJO", warpId: 1 },
-      { x: 34, y: 3, toMap: "SAFFRON_GYM", warpId: 1 },
-      { x: 13, y: 11, toMap: "SAFFRON_PIDGEY_HOUSE", warpId: 1 },
-      { x: 25, y: 11, toMap: "SAFFRON_MART", warpId: 1 },
-      { x: 18, y: 21, toMap: "SILPH_CO_1F", warpId: 1 },
-      { x: 9, y: 29, toMap: "SAFFRON_POKECENTER", warpId: 1 },
-      { x: 29, y: 29, toMap: "MR_PSYCHICS_HOUSE", warpId: 1 }
+      { x: 7, y: 5, toMap: MapName.CopycatsHouse1F, warpId: 1 },
+      { x: 26, y: 3, toMap: MapName.FightingDojo, warpId: 1 },
+      { x: 34, y: 3, toMap: MapName.SaffronGym, warpId: 1 },
+      { x: 13, y: 11, toMap: MapName.SaffronPidgeyHouse, warpId: 1 },
+      { x: 25, y: 11, toMap: MapName.SaffronMart, warpId: 1 },
+      { x: 18, y: 21, toMap: MapName.SilphCo1F, warpId: 1 },
+      { x: 9, y: 29, toMap: MapName.SaffronPokecenter, warpId: 1 },
+      { x: 29, y: 29, toMap: MapName.MrPsychicsHouse, warpId: 1 }
     ],
     backgroundItems: [
       { x: 17, y: 5, signId: "TEXT_SAFFRONCITY_SIGN" },

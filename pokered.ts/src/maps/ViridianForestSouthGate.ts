@@ -11,8 +11,8 @@ export const ViridianForestSouthGate: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 0, toMap: "VIRIDIAN_FOREST", warpId: 4 },
-      { x: 5, y: 0, toMap: "VIRIDIAN_FOREST", warpId: 5 },
+      { x: 4, y: 0, toMap: MapName.ViridianForest, warpId: 4 },
+      { x: 5, y: 0, toMap: MapName.ViridianForest, warpId: 5 },
       { x: 4, y: 7, toMap: "LAST_MAP", warpId: 6 },
       { x: 5, y: 7, toMap: "LAST_MAP", warpId: 6 }
     ],

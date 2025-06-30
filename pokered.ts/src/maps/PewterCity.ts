@@ -14,13 +14,13 @@ export const PewterCity: Map = {
   },
   objects: {
     warps: [
-      { x: 14, y: 7, toMap: "MUSEUM_1F", warpId: 1 },
-      { x: 19, y: 5, toMap: "MUSEUM_1F", warpId: 3 },
-      { x: 16, y: 17, toMap: "PEWTER_GYM", warpId: 1 },
-      { x: 29, y: 13, toMap: "PEWTER_NIDORAN_HOUSE", warpId: 1 },
-      { x: 23, y: 17, toMap: "PEWTER_MART", warpId: 1 },
-      { x: 7, y: 29, toMap: "PEWTER_SPEECH_HOUSE", warpId: 1 },
-      { x: 13, y: 25, toMap: "PEWTER_POKECENTER", warpId: 1 }
+      { x: 14, y: 7, toMap: MapName.Museum1F, warpId: 1 },
+      { x: 19, y: 5, toMap: MapName.Museum1F, warpId: 3 },
+      { x: 16, y: 17, toMap: MapName.PewterGym, warpId: 1 },
+      { x: 29, y: 13, toMap: MapName.PewterNidoranHouse, warpId: 1 },
+      { x: 23, y: 17, toMap: MapName.PewterMart, warpId: 1 },
+      { x: 7, y: 29, toMap: MapName.PewterSpeechHouse, warpId: 1 },
+      { x: 13, y: 25, toMap: MapName.PewterPokecenter, warpId: 1 }
     ],
     backgroundItems: [
       { x: 19, y: 29, signId: "TEXT_PEWTERCITY_TRAINER_TIPS" },

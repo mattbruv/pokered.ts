@@ -13,9 +13,9 @@ export const CinnabarLab: Map = {
     warps: [
       { x: 2, y: 7, toMap: "LAST_MAP", warpId: 3 },
       { x: 3, y: 7, toMap: "LAST_MAP", warpId: 3 },
-      { x: 8, y: 4, toMap: "CINNABAR_LAB_TRADE_ROOM", warpId: 1 },
-      { x: 12, y: 4, toMap: "CINNABAR_LAB_METRONOME_ROOM", warpId: 1 },
-      { x: 16, y: 4, toMap: "CINNABAR_LAB_FOSSIL_ROOM", warpId: 1 }
+      { x: 8, y: 4, toMap: MapName.CinnabarLabTradeRoom, warpId: 1 },
+      { x: 12, y: 4, toMap: MapName.CinnabarLabMetronomeRoom, warpId: 1 },
+      { x: 16, y: 4, toMap: MapName.CinnabarLabFossilRoom, warpId: 1 }
     ],
     backgroundItems: [
       { x: 3, y: 2, signId: "TEXT_CINNABARLAB_PHOTO" },

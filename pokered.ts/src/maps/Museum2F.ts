@@ -10,7 +10,7 @@ export const Museum2F: Map = {
   tileset: Tileset.MUSEUM,
   connections: {},
   objects: {
-    warps: [{ x: 7, y: 7, toMap: "MUSEUM_1F", warpId: 5 }],
+    warps: [{ x: 7, y: 7, toMap: MapName.Museum1F, warpId: 5 }],
     backgroundItems: [
       { x: 11, y: 2, signId: "TEXT_MUSEUM2F_SPACE_SHUTTLE_SIGN" },
       { x: 2, y: 5, signId: "TEXT_MUSEUM2F_MOON_STONE_SIGN" }

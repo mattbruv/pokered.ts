@@ -2,7 +2,11 @@ import { ImageCache, loadImageBitmaps } from "./gfx/images";
 import { GameInput } from "./input";
 import { Map, MapName } from "./map";
 import { getMap } from "./mapLookup";
-import { checkMapConnections, canWalkOnTile } from "./overworld/map";
+import {
+  checkMapConnections,
+  canWalkOnTile,
+  getWarpAtPos
+} from "./overworld/map";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, SpriteData } from "./render/sprite";
 
@@ -22,6 +26,8 @@ export type GameData = {
 
 export type MapData = {
   currentMap: Map;
+  currentMapName: MapName;
+  previousMapName: MapName;
 };
 
 const SCREEN_REFRESH_RATE = 1000 / 60; // 16.666 MS per tick, GameBoy refreshes as 60 hertz
@@ -39,6 +45,7 @@ class PokemonRed {
     this.#renderer = new Renderer(cache, canvas);
     this.#input = new GameInput();
     this.#data = this.#loadGame();
+    this.#loadMap(this.#data.map.currentMapName);
   }
 
   #gameLoop = (timestamp: DOMHighResTimeStamp) => {
@@ -125,30 +132,55 @@ class PokemonRed {
         if (player.facing == FacingDirection.Down) player.position.y++;
 
         player.movementStatus = MovementStatus.Ready;
+
         console.log(player.position);
 
+        const { x, y } = player.position;
+
         // If we have moved into a new map, load it.
-        const connection = checkMapConnections(
-          this.#data.map.currentMap,
-          player.position.x,
-          player.position.y
-        );
+        const connection = checkMapConnections(this.#data.map.currentMap, x, y);
+
         if (connection) {
           console.log(connection.dir, connection.newPosition);
           player.position = connection.newPosition;
           const nextMap = this.#data.map.currentMap.connections[connection.dir];
           if (nextMap) {
-            this.#loadMap(getMap(nextMap.map));
+            this.#loadMap(nextMap.map);
           }
+        }
+
+        // check to see if we've warped somewhere
+        const warp = getWarpAtPos(this.#data.map.currentMap, x, y);
+
+        if (warp) {
+          const nextMapName =
+            warp.toMap === "LAST_MAP" || warp.toMap === "UNUSED_MAP_ED"
+              ? this.#data.map.previousMapName
+              : warp.toMap;
+
+          // Load the warp map
+          this.#loadMap(nextMapName);
+
+          // Set the player's position to the destination warp coordinates, looked up by index
+          const destinationWarp =
+            this.#data.map.currentMap.objects.warps[warp.warpId - 1];
+
+          this.#data.player.sprite.position = {
+            x: destinationWarp.x,
+            y: destinationWarp.y
+          };
         }
       }
     }
   }
 
-  #loadMap(map: Map) {
+  #loadMap(nextMapName: MapName) {
+    const nextMap = getMap(nextMapName);
     // Load a new map
-    this.#data.map.currentMap = map;
-    this.#renderer.loadMap(map);
+    this.#data.map.previousMapName = this.#data.map.currentMapName;
+    this.#data.map.currentMapName = nextMapName;
+    this.#data.map.currentMap = nextMap;
+    this.#renderer.loadMap(nextMap);
   }
 
   #render() {
@@ -156,10 +188,13 @@ class PokemonRed {
   }
 
   #loadGame(): GameData {
-    const map = getMap(MapName.PalletTown);
+    const mapName = MapName.PalletTown;
+    const map = getMap(mapName);
     const data: GameData = {
       map: {
-        currentMap: map
+        currentMap: map,
+        currentMapName: mapName,
+        previousMapName: mapName
       },
       player: {
         name: "Red",
@@ -175,9 +210,6 @@ class PokemonRed {
         }
       }
     };
-
-    // cache loaded map in renderer
-    this.#renderer.loadMap(map);
 
     return data;
   }

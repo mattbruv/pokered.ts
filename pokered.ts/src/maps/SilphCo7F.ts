@@ -11,12 +11,12 @@ export const SilphCo7F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 16, y: 0, toMap: "SILPH_CO_8F", warpId: 2 },
-      { x: 22, y: 0, toMap: "SILPH_CO_6F", warpId: 1 },
-      { x: 18, y: 0, toMap: "SILPH_CO_ELEVATOR", warpId: 1 },
-      { x: 5, y: 7, toMap: "SILPH_CO_11F", warpId: 4 },
-      { x: 5, y: 3, toMap: "SILPH_CO_3F", warpId: 9 },
-      { x: 21, y: 15, toMap: "SILPH_CO_5F", warpId: 4 }
+      { x: 16, y: 0, toMap: MapName.SilphCo8F, warpId: 2 },
+      { x: 22, y: 0, toMap: MapName.SilphCo6F, warpId: 1 },
+      { x: 18, y: 0, toMap: MapName.SilphCoElevator, warpId: 1 },
+      { x: 5, y: 7, toMap: MapName.SilphCo11F, warpId: 4 },
+      { x: 5, y: 3, toMap: MapName.SilphCo3F, warpId: 9 },
+      { x: 21, y: 15, toMap: MapName.SilphCo5F, warpId: 4 }
     ],
     backgroundItems: [],
     objects: [

@@ -16,16 +16,16 @@ export const CeruleanCity: Map = {
   },
   objects: {
     warps: [
-      { x: 27, y: 11, toMap: "CERULEAN_TRASHED_HOUSE", warpId: 1 },
-      { x: 13, y: 15, toMap: "CERULEAN_TRADE_HOUSE", warpId: 1 },
-      { x: 19, y: 17, toMap: "CERULEAN_POKECENTER", warpId: 1 },
-      { x: 30, y: 19, toMap: "CERULEAN_GYM", warpId: 1 },
-      { x: 13, y: 25, toMap: "BIKE_SHOP", warpId: 1 },
-      { x: 25, y: 25, toMap: "CERULEAN_MART", warpId: 1 },
-      { x: 4, y: 11, toMap: "CERULEAN_CAVE_1F", warpId: 1 },
-      { x: 27, y: 9, toMap: "CERULEAN_TRASHED_HOUSE", warpId: 3 },
-      { x: 9, y: 11, toMap: "CERULEAN_BADGE_HOUSE", warpId: 2 },
-      { x: 9, y: 9, toMap: "CERULEAN_BADGE_HOUSE", warpId: 1 }
+      { x: 27, y: 11, toMap: MapName.CeruleanTrashedHouse, warpId: 1 },
+      { x: 13, y: 15, toMap: MapName.CeruleanTradeHouse, warpId: 1 },
+      { x: 19, y: 17, toMap: MapName.CeruleanPokecenter, warpId: 1 },
+      { x: 30, y: 19, toMap: MapName.CeruleanGym, warpId: 1 },
+      { x: 13, y: 25, toMap: MapName.BikeShop, warpId: 1 },
+      { x: 25, y: 25, toMap: MapName.CeruleanMart, warpId: 1 },
+      { x: 4, y: 11, toMap: MapName.CeruleanCave1F, warpId: 1 },
+      { x: 27, y: 9, toMap: MapName.CeruleanTrashedHouse, warpId: 3 },
+      { x: 9, y: 11, toMap: MapName.CeruleanBadgeHouse, warpId: 2 },
+      { x: 9, y: 9, toMap: MapName.CeruleanBadgeHouse, warpId: 1 }
     ],
     backgroundItems: [
       { x: 23, y: 19, signId: "TEXT_CERULEANCITY_SIGN" },

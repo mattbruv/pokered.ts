@@ -14,12 +14,12 @@ export const Route2: Map = {
   },
   objects: {
     warps: [
-      { x: 12, y: 9, toMap: "DIGLETTS_CAVE_ROUTE_2", warpId: 1 },
-      { x: 3, y: 11, toMap: "VIRIDIAN_FOREST_NORTH_GATE", warpId: 2 },
-      { x: 15, y: 19, toMap: "ROUTE_2_TRADE_HOUSE", warpId: 1 },
-      { x: 16, y: 35, toMap: "ROUTE_2_GATE", warpId: 2 },
-      { x: 15, y: 39, toMap: "ROUTE_2_GATE", warpId: 3 },
-      { x: 3, y: 43, toMap: "VIRIDIAN_FOREST_SOUTH_GATE", warpId: 3 }
+      { x: 12, y: 9, toMap: MapName.DiglettsCaveRoute2, warpId: 1 },
+      { x: 3, y: 11, toMap: MapName.ViridianForestNorthGate, warpId: 2 },
+      { x: 15, y: 19, toMap: MapName.Route2TradeHouse, warpId: 1 },
+      { x: 16, y: 35, toMap: MapName.Route2Gate, warpId: 2 },
+      { x: 15, y: 39, toMap: MapName.Route2Gate, warpId: 3 },
+      { x: 3, y: 43, toMap: MapName.ViridianForestSouthGate, warpId: 3 }
     ],
     backgroundItems: [
       { x: 5, y: 65, signId: "TEXT_ROUTE2_SIGN" },

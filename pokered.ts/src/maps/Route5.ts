@@ -14,11 +14,11 @@ export const Route5: Map = {
   },
   objects: {
     warps: [
-      { x: 10, y: 29, toMap: "ROUTE_5_GATE", warpId: 4 },
-      { x: 9, y: 29, toMap: "ROUTE_5_GATE", warpId: 3 },
-      { x: 10, y: 33, toMap: "ROUTE_5_GATE", warpId: 1 },
-      { x: 17, y: 27, toMap: "UNDERGROUND_PATH_ROUTE_5", warpId: 1 },
-      { x: 10, y: 21, toMap: "DAYCARE", warpId: 1 }
+      { x: 10, y: 29, toMap: MapName.Route5Gate, warpId: 4 },
+      { x: 9, y: 29, toMap: MapName.Route5Gate, warpId: 3 },
+      { x: 10, y: 33, toMap: MapName.Route5Gate, warpId: 1 },
+      { x: 17, y: 27, toMap: MapName.UndergroundPathRoute5, warpId: 1 },
+      { x: 10, y: 21, toMap: MapName.Daycare, warpId: 1 }
     ],
     backgroundItems: [
       { x: 17, y: 29, signId: "TEXT_ROUTE5_UNDERGROUND_PATH_SIGN" }

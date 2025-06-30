@@ -14,11 +14,11 @@ export const CinnabarIsland: Map = {
   },
   objects: {
     warps: [
-      { x: 6, y: 3, toMap: "POKEMON_MANSION_1F", warpId: 2 },
-      { x: 18, y: 3, toMap: "CINNABAR_GYM", warpId: 1 },
-      { x: 6, y: 9, toMap: "CINNABAR_LAB", warpId: 1 },
-      { x: 11, y: 11, toMap: "CINNABAR_POKECENTER", warpId: 1 },
-      { x: 15, y: 11, toMap: "CINNABAR_MART", warpId: 1 }
+      { x: 6, y: 3, toMap: MapName.PokemonMansion1F, warpId: 2 },
+      { x: 18, y: 3, toMap: MapName.CinnabarGym, warpId: 1 },
+      { x: 6, y: 9, toMap: MapName.CinnabarLab, warpId: 1 },
+      { x: 11, y: 11, toMap: MapName.CinnabarPokecenter, warpId: 1 },
+      { x: 15, y: 11, toMap: MapName.CinnabarMart, warpId: 1 }
     ],
     backgroundItems: [
       { x: 9, y: 5, signId: "TEXT_CINNABARISLAND_SIGN" },

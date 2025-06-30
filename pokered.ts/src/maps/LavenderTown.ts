@@ -15,12 +15,12 @@ export const LavenderTown: Map = {
   },
   objects: {
     warps: [
-      { x: 3, y: 5, toMap: "LAVENDER_POKECENTER", warpId: 1 },
-      { x: 14, y: 5, toMap: "POKEMON_TOWER_1F", warpId: 1 },
-      { x: 7, y: 9, toMap: "MR_FUJIS_HOUSE", warpId: 1 },
-      { x: 15, y: 13, toMap: "LAVENDER_MART", warpId: 1 },
-      { x: 3, y: 13, toMap: "LAVENDER_CUBONE_HOUSE", warpId: 1 },
-      { x: 7, y: 13, toMap: "NAME_RATERS_HOUSE", warpId: 1 }
+      { x: 3, y: 5, toMap: MapName.LavenderPokecenter, warpId: 1 },
+      { x: 14, y: 5, toMap: MapName.PokemonTower1F, warpId: 1 },
+      { x: 7, y: 9, toMap: MapName.MrFujisHouse, warpId: 1 },
+      { x: 15, y: 13, toMap: MapName.LavenderMart, warpId: 1 },
+      { x: 3, y: 13, toMap: MapName.LavenderCuboneHouse, warpId: 1 },
+      { x: 7, y: 13, toMap: MapName.NameRatersHouse, warpId: 1 }
     ],
     backgroundItems: [
       { x: 11, y: 9, signId: "TEXT_LAVENDERTOWN_SIGN" },

@@ -13,8 +13,8 @@ export const SafariZoneGate: Map = {
     warps: [
       { x: 3, y: 5, toMap: "LAST_MAP", warpId: 5 },
       { x: 4, y: 5, toMap: "LAST_MAP", warpId: 5 },
-      { x: 3, y: 0, toMap: "SAFARI_ZONE_CENTER", warpId: 1 },
-      { x: 4, y: 0, toMap: "SAFARI_ZONE_CENTER", warpId: 2 }
+      { x: 3, y: 0, toMap: MapName.SafariZoneCenter, warpId: 1 },
+      { x: 4, y: 0, toMap: MapName.SafariZoneCenter, warpId: 2 }
     ],
     backgroundItems: [],
     objects: [

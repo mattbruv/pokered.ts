@@ -15,9 +15,9 @@ export const SeafoamIslands1F: Map = {
       { x: 5, y: 17, toMap: "LAST_MAP", warpId: 1 },
       { x: 26, y: 17, toMap: "LAST_MAP", warpId: 2 },
       { x: 27, y: 17, toMap: "LAST_MAP", warpId: 2 },
-      { x: 7, y: 5, toMap: "SEAFOAM_ISLANDS_B1F", warpId: 2 },
-      { x: 25, y: 3, toMap: "SEAFOAM_ISLANDS_B1F", warpId: 7 },
-      { x: 23, y: 15, toMap: "SEAFOAM_ISLANDS_B1F", warpId: 5 }
+      { x: 7, y: 5, toMap: MapName.SeafoamIslandsB1F, warpId: 2 },
+      { x: 25, y: 3, toMap: MapName.SeafoamIslandsB1F, warpId: 7 },
+      { x: 23, y: 15, toMap: MapName.SeafoamIslandsB1F, warpId: 5 }
     ],
     backgroundItems: [],
     objects: [

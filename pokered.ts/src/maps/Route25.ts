@@ -12,7 +12,7 @@ export const Route25: Map = {
     west: { map: MapName.Route24, xOffset: 0 }
   },
   objects: {
-    warps: [{ x: 45, y: 3, toMap: "BILLS_HOUSE", warpId: 1 }],
+    warps: [{ x: 45, y: 3, toMap: MapName.BillsHouse, warpId: 1 }],
     backgroundItems: [{ x: 43, y: 3, signId: "TEXT_ROUTE25_BILL_SIGN" }],
     objects: [
       {

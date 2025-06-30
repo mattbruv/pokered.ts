@@ -15,7 +15,7 @@ export const Museum1F: Map = {
       { x: 11, y: 7, toMap: "LAST_MAP", warpId: 1 },
       { x: 16, y: 7, toMap: "LAST_MAP", warpId: 2 },
       { x: 17, y: 7, toMap: "LAST_MAP", warpId: 2 },
-      { x: 7, y: 7, toMap: "MUSEUM_2F", warpId: 1 }
+      { x: 7, y: 7, toMap: MapName.Museum2F, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

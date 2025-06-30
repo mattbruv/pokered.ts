@@ -10,7 +10,7 @@ export const PokemonMansionB1F: Map = {
   tileset: Tileset.FACILITY,
   connections: {},
   objects: {
-    warps: [{ x: 23, y: 22, toMap: "POKEMON_MANSION_1F", warpId: 6 }],
+    warps: [{ x: 23, y: 22, toMap: MapName.PokemonMansion1F, warpId: 6 }],
     backgroundItems: [],
     objects: [
       {

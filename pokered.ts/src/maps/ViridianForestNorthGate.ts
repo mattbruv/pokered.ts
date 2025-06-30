@@ -13,8 +13,8 @@ export const ViridianForestNorthGate: Map = {
     warps: [
       { x: 4, y: 0, toMap: "LAST_MAP", warpId: 2 },
       { x: 5, y: 0, toMap: "LAST_MAP", warpId: 2 },
-      { x: 4, y: 7, toMap: "VIRIDIAN_FOREST", warpId: 1 },
-      { x: 5, y: 7, toMap: "VIRIDIAN_FOREST", warpId: 1 }
+      { x: 4, y: 7, toMap: MapName.ViridianForest, warpId: 1 },
+      { x: 5, y: 7, toMap: MapName.ViridianForest, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

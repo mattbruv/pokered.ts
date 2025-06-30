@@ -11,13 +11,13 @@ export const SeafoamIslandsB1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 2, toMap: "SEAFOAM_ISLANDS_B2F", warpId: 1 },
-      { x: 7, y: 5, toMap: "SEAFOAM_ISLANDS_1F", warpId: 5 },
-      { x: 13, y: 7, toMap: "SEAFOAM_ISLANDS_B2F", warpId: 3 },
-      { x: 19, y: 15, toMap: "SEAFOAM_ISLANDS_B2F", warpId: 4 },
-      { x: 23, y: 15, toMap: "SEAFOAM_ISLANDS_1F", warpId: 7 },
-      { x: 25, y: 11, toMap: "SEAFOAM_ISLANDS_B2F", warpId: 6 },
-      { x: 25, y: 3, toMap: "SEAFOAM_ISLANDS_1F", warpId: 6 }
+      { x: 4, y: 2, toMap: MapName.SeafoamIslandsB2F, warpId: 1 },
+      { x: 7, y: 5, toMap: MapName.SeafoamIslands1F, warpId: 5 },
+      { x: 13, y: 7, toMap: MapName.SeafoamIslandsB2F, warpId: 3 },
+      { x: 19, y: 15, toMap: MapName.SeafoamIslandsB2F, warpId: 4 },
+      { x: 23, y: 15, toMap: MapName.SeafoamIslands1F, warpId: 7 },
+      { x: 25, y: 11, toMap: MapName.SeafoamIslandsB2F, warpId: 6 },
+      { x: 25, y: 3, toMap: MapName.SeafoamIslands1F, warpId: 6 }
     ],
     backgroundItems: [],
     objects: [

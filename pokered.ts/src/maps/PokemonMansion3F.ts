@@ -11,9 +11,9 @@ export const PokemonMansion3F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 7, y: 10, toMap: "POKEMON_MANSION_2F", warpId: 2 },
-      { x: 6, y: 1, toMap: "POKEMON_MANSION_2F", warpId: 4 },
-      { x: 25, y: 14, toMap: "POKEMON_MANSION_2F", warpId: 3 }
+      { x: 7, y: 10, toMap: MapName.PokemonMansion2F, warpId: 2 },
+      { x: 6, y: 1, toMap: MapName.PokemonMansion2F, warpId: 4 },
+      { x: 25, y: 14, toMap: MapName.PokemonMansion2F, warpId: 3 }
     ],
     backgroundItems: [],
     objects: [

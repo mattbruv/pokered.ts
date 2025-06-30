@@ -10,7 +10,7 @@ export const CeruleanCaveB1F: Map = {
   tileset: Tileset.CAVERN,
   connections: {},
   objects: {
-    warps: [{ x: 3, y: 6, toMap: "CERULEAN_CAVE_1F", warpId: 9 }],
+    warps: [{ x: 3, y: 6, toMap: MapName.CeruleanCave1F, warpId: 9 }],
     backgroundItems: [],
     objects: [
       {

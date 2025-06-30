@@ -11,9 +11,9 @@ export const CeladonMansionRoof: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 6, y: 1, toMap: "CELADON_MANSION_3F", warpId: 2 },
-      { x: 2, y: 1, toMap: "CELADON_MANSION_3F", warpId: 3 },
-      { x: 2, y: 7, toMap: "CELADON_MANSION_ROOF_HOUSE", warpId: 1 }
+      { x: 6, y: 1, toMap: MapName.CeladonMansion3F, warpId: 2 },
+      { x: 2, y: 1, toMap: MapName.CeladonMansion3F, warpId: 3 },
+      { x: 2, y: 7, toMap: MapName.CeladonMansionRoofHouse, warpId: 1 }
     ],
     backgroundItems: [
       { x: 3, y: 7, signId: "TEXT_CELADONMANSIONROOF_HOUSE_SIGN" }

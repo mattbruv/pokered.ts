@@ -13,7 +13,7 @@ export const UndergroundPathRoute7Copy: Map = {
     warps: [
       { x: 3, y: 7, toMap: "LAST_MAP", warpId: 6 },
       { x: 4, y: 7, toMap: "LAST_MAP", warpId: 6 },
-      { x: 4, y: 4, toMap: "UNDERGROUND_PATH_WEST_EAST", warpId: 1 }
+      { x: 4, y: 4, toMap: MapName.UndergroundPathWestEast, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

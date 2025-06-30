@@ -14,9 +14,9 @@ export const PalletTown: Map = {
   },
   objects: {
     warps: [
-      { x: 5, y: 5, toMap: "REDS_HOUSE_1F", warpId: 1 },
-      { x: 13, y: 5, toMap: "BLUES_HOUSE", warpId: 1 },
-      { x: 12, y: 11, toMap: "OAKS_LAB", warpId: 2 }
+      { x: 5, y: 5, toMap: MapName.RedsHouse1F, warpId: 1 },
+      { x: 13, y: 5, toMap: MapName.BluesHouse, warpId: 1 },
+      { x: 12, y: 11, toMap: MapName.OaksLab, warpId: 2 }
     ],
     backgroundItems: [
       { x: 13, y: 13, signId: "TEXT_PALLETTOWN_OAKSLAB_SIGN" },

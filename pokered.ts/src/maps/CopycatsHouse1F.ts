@@ -13,7 +13,7 @@ export const CopycatsHouse1F: Map = {
     warps: [
       { x: 2, y: 7, toMap: "LAST_MAP", warpId: 1 },
       { x: 3, y: 7, toMap: "LAST_MAP", warpId: 1 },
-      { x: 7, y: 1, toMap: "COPYCATS_HOUSE_2F", warpId: 1 }
+      { x: 7, y: 1, toMap: MapName.CopycatsHouse2F, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

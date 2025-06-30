@@ -13,7 +13,7 @@ export const DiglettsCaveRoute2: Map = {
     warps: [
       { x: 2, y: 7, toMap: "LAST_MAP", warpId: 1 },
       { x: 3, y: 7, toMap: "LAST_MAP", warpId: 1 },
-      { x: 4, y: 4, toMap: "DIGLETTS_CAVE", warpId: 1 }
+      { x: 4, y: 4, toMap: MapName.DiglettsCave, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

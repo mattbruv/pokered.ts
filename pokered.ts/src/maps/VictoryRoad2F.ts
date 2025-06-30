@@ -11,13 +11,13 @@ export const VictoryRoad2F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 0, y: 8, toMap: "VICTORY_ROAD_1F", warpId: 3 },
+      { x: 0, y: 8, toMap: MapName.VictoryRoad1F, warpId: 3 },
       { x: 29, y: 7, toMap: "LAST_MAP", warpId: 4 },
       { x: 29, y: 8, toMap: "LAST_MAP", warpId: 4 },
-      { x: 23, y: 7, toMap: "VICTORY_ROAD_3F", warpId: 1 },
-      { x: 25, y: 14, toMap: "VICTORY_ROAD_3F", warpId: 3 },
-      { x: 27, y: 7, toMap: "VICTORY_ROAD_3F", warpId: 2 },
-      { x: 1, y: 1, toMap: "VICTORY_ROAD_3F", warpId: 4 }
+      { x: 23, y: 7, toMap: MapName.VictoryRoad3F, warpId: 1 },
+      { x: 25, y: 14, toMap: MapName.VictoryRoad3F, warpId: 3 },
+      { x: 27, y: 7, toMap: MapName.VictoryRoad3F, warpId: 2 },
+      { x: 1, y: 1, toMap: MapName.VictoryRoad3F, warpId: 4 }
     ],
     backgroundItems: [],
     objects: [

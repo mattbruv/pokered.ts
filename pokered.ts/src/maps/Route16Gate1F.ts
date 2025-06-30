@@ -19,7 +19,7 @@ export const Route16Gate1F: Map = {
       { x: 0, y: 3, toMap: "LAST_MAP", warpId: 6 },
       { x: 7, y: 2, toMap: "LAST_MAP", warpId: 7 },
       { x: 7, y: 3, toMap: "LAST_MAP", warpId: 8 },
-      { x: 6, y: 12, toMap: "ROUTE_16_GATE_2F", warpId: 1 }
+      { x: 6, y: 12, toMap: MapName.Route16Gate2F, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

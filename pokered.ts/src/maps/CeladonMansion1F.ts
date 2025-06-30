@@ -14,8 +14,8 @@ export const CeladonMansion1F: Map = {
       { x: 4, y: 11, toMap: "LAST_MAP", warpId: 3 },
       { x: 5, y: 11, toMap: "LAST_MAP", warpId: 3 },
       { x: 4, y: 0, toMap: "LAST_MAP", warpId: 5 },
-      { x: 7, y: 1, toMap: "CELADON_MANSION_2F", warpId: 2 },
-      { x: 2, y: 1, toMap: "CELADON_MANSION_2F", warpId: 3 }
+      { x: 7, y: 1, toMap: MapName.CeladonMansion2F, warpId: 2 },
+      { x: 2, y: 1, toMap: MapName.CeladonMansion2F, warpId: 3 }
     ],
     backgroundItems: [
       { x: 4, y: 9, signId: "TEXT_CELADONMANSION1F_MANAGERS_SUITE_SIGN" }

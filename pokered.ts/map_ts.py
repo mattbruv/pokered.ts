@@ -1,5 +1,11 @@
 import json
 import os
+import re
+
+### BE WARNED
+### The code in this file is hacky, vibe-coded dog shit
+### I don't really care because it's just used during development to help me generate
+### map files, so in theory once the map files are done I don't need this anymore.
 
 INPUT_PATH = "maps.json"
 OUTPUT_DIR = "src/maps"
@@ -81,6 +87,10 @@ def main():
 
         connections = format_connections(value.get("connections", {}))
 
+        map_object_json = json.dumps(map_objects)
+        # Regex to remove quotes around toMap values
+        map_object_json = re.sub(r'"(MapName[^"]+)"', r'\1', map_object_json)
+
         file_contents = (
             MAP_TS_HEADER.format(blocks_const=blocks_const, block_file=map_name) +
             TS_BODY_TEMPLATE.format(
@@ -92,7 +102,7 @@ def main():
                 tileset=tileset,
                 border=border,
                 connections=connections,
-                objects=json.dumps(map_objects)
+                objects=map_object_json
             )
         )
 

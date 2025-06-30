@@ -11,8 +11,8 @@ export const SSAnne3F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 0, y: 3, toMap: "SS_ANNE_BOW", warpId: 1 },
-      { x: 19, y: 3, toMap: "SS_ANNE_2F", warpId: 8 }
+      { x: 0, y: 3, toMap: MapName.SSAnneBow, warpId: 1 },
+      { x: 19, y: 3, toMap: MapName.SSAnne2F, warpId: 8 }
     ],
     backgroundItems: [],
     objects: [

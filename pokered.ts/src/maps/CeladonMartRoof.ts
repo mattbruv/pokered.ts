@@ -10,7 +10,7 @@ export const CeladonMartRoof: Map = {
   tileset: Tileset.LOBBY,
   connections: {},
   objects: {
-    warps: [{ x: 15, y: 2, toMap: "CELADON_MART_5F", warpId: 1 }],
+    warps: [{ x: 15, y: 2, toMap: MapName.CeladonMart5F, warpId: 1 }],
     backgroundItems: [
       { x: 10, y: 1, signId: "TEXT_CELADONMARTROOF_VENDING_MACHINE1" },
       { x: 11, y: 1, signId: "TEXT_CELADONMARTROOF_VENDING_MACHINE2" },

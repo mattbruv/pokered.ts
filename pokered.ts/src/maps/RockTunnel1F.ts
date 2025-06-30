@@ -15,10 +15,10 @@ export const RockTunnel1F: Map = {
       { x: 15, y: 0, toMap: "LAST_MAP", warpId: 2 },
       { x: 15, y: 33, toMap: "LAST_MAP", warpId: 3 },
       { x: 15, y: 35, toMap: "LAST_MAP", warpId: 3 },
-      { x: 37, y: 3, toMap: "ROCK_TUNNEL_B1F", warpId: 1 },
-      { x: 5, y: 3, toMap: "ROCK_TUNNEL_B1F", warpId: 2 },
-      { x: 17, y: 11, toMap: "ROCK_TUNNEL_B1F", warpId: 3 },
-      { x: 37, y: 17, toMap: "ROCK_TUNNEL_B1F", warpId: 4 }
+      { x: 37, y: 3, toMap: MapName.RockTunnelB1F, warpId: 1 },
+      { x: 5, y: 3, toMap: MapName.RockTunnelB1F, warpId: 2 },
+      { x: 17, y: 11, toMap: MapName.RockTunnelB1F, warpId: 3 },
+      { x: 37, y: 17, toMap: MapName.RockTunnelB1F, warpId: 4 }
     ],
     backgroundItems: [{ x: 11, y: 29, signId: "TEXT_ROCKTUNNEL1F_SIGN" }],
     objects: [

@@ -13,7 +13,7 @@ export const VictoryRoad1F: Map = {
     warps: [
       { x: 8, y: 17, toMap: "LAST_MAP", warpId: 3 },
       { x: 9, y: 17, toMap: "LAST_MAP", warpId: 3 },
-      { x: 1, y: 1, toMap: "VICTORY_ROAD_2F", warpId: 1 }
+      { x: 1, y: 1, toMap: MapName.VictoryRoad2F, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

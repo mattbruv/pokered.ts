@@ -14,11 +14,11 @@ export const Route11: Map = {
   },
   objects: {
     warps: [
-      { x: 49, y: 8, toMap: "ROUTE_11_GATE_1F", warpId: 1 },
-      { x: 49, y: 9, toMap: "ROUTE_11_GATE_1F", warpId: 2 },
-      { x: 58, y: 8, toMap: "ROUTE_11_GATE_1F", warpId: 3 },
-      { x: 58, y: 9, toMap: "ROUTE_11_GATE_1F", warpId: 4 },
-      { x: 4, y: 5, toMap: "DIGLETTS_CAVE_ROUTE_11", warpId: 1 }
+      { x: 49, y: 8, toMap: MapName.Route11Gate1F, warpId: 1 },
+      { x: 49, y: 9, toMap: MapName.Route11Gate1F, warpId: 2 },
+      { x: 58, y: 8, toMap: MapName.Route11Gate1F, warpId: 3 },
+      { x: 58, y: 9, toMap: MapName.Route11Gate1F, warpId: 4 },
+      { x: 4, y: 5, toMap: MapName.DiglettsCaveRoute11, warpId: 1 }
     ],
     backgroundItems: [{ x: 1, y: 5, signId: "TEXT_ROUTE11_DIGLETTSCAVE_SIGN" }],
     objects: [

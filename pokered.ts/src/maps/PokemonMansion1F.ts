@@ -15,8 +15,8 @@ export const PokemonMansion1F: Map = {
       { x: 5, y: 27, toMap: "LAST_MAP", warpId: 1 },
       { x: 6, y: 27, toMap: "LAST_MAP", warpId: 1 },
       { x: 7, y: 27, toMap: "LAST_MAP", warpId: 1 },
-      { x: 5, y: 10, toMap: "POKEMON_MANSION_2F", warpId: 1 },
-      { x: 21, y: 23, toMap: "POKEMON_MANSION_B1F", warpId: 1 },
+      { x: 5, y: 10, toMap: MapName.PokemonMansion2F, warpId: 1 },
+      { x: 21, y: 23, toMap: MapName.PokemonMansionB1F, warpId: 1 },
       { x: 26, y: 27, toMap: "LAST_MAP", warpId: 1 },
       { x: 27, y: 27, toMap: "LAST_MAP", warpId: 1 }
     ],

@@ -11,8 +11,8 @@ export const RocketHideoutElevator: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 1, toMap: "ROCKET_HIDEOUT_B1F", warpId: 3 },
-      { x: 3, y: 1, toMap: "ROCKET_HIDEOUT_B1F", warpId: 5 }
+      { x: 2, y: 1, toMap: MapName.RocketHideoutB1F, warpId: 3 },
+      { x: 3, y: 1, toMap: MapName.RocketHideoutB1F, warpId: 5 }
     ],
     backgroundItems: [{ x: 1, y: 1, signId: "TEXT_ROCKETHIDEOUTELEVATOR" }],
     objects: []

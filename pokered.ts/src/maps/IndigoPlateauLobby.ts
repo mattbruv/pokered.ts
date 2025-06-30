@@ -13,7 +13,7 @@ export const IndigoPlateauLobby: Map = {
     warps: [
       { x: 7, y: 11, toMap: "LAST_MAP", warpId: 1 },
       { x: 8, y: 11, toMap: "LAST_MAP", warpId: 2 },
-      { x: 8, y: 0, toMap: "LORELEIS_ROOM", warpId: 1 }
+      { x: 8, y: 0, toMap: MapName.LoreleisRoom, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

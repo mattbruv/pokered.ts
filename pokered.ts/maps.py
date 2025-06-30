@@ -70,6 +70,12 @@ with open("../pokered/constants/map_constants.asm") as f:
 maps = glob.glob("../pokered/data/maps/objects/*.asm", recursive=True)
 cmds = set()
 
+def find_first_with_property(d, prop, value):
+    for key, obj in d.items():
+        if obj.get(prop) == value:
+            return key, obj
+    return None, None
+
 for map_path in maps:
     with open(map_path, "r") as map:
         content = map.readlines()
@@ -101,6 +107,9 @@ for map_path in maps:
                 x = int(x.replace(",", ""))
                 y = int(y.replace(",", ""))
                 toMap = toMap.replace(",","")
+                mapName, _rest = find_first_with_property(data, "id", toMap)
+                if mapName is not None:
+                    toMap = "MapName." + mapName
                 toWarp = int(toWarp.replace(",",""))
                 #print(tag, x, y, toMap, toWarp)
                 entry = {

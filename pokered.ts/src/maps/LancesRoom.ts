@@ -11,9 +11,9 @@ export const LancesRoom: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 24, y: 16, toMap: "AGATHAS_ROOM", warpId: 3 },
-      { x: 5, y: 0, toMap: "CHAMPIONS_ROOM", warpId: 1 },
-      { x: 6, y: 0, toMap: "CHAMPIONS_ROOM", warpId: 1 }
+      { x: 24, y: 16, toMap: MapName.AgathasRoom, warpId: 3 },
+      { x: 5, y: 0, toMap: MapName.ChampionsRoom, warpId: 1 },
+      { x: 6, y: 0, toMap: MapName.ChampionsRoom, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

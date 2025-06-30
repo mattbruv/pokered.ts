@@ -11,10 +11,10 @@ export const ChampionsRoom: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 3, y: 7, toMap: "LANCES_ROOM", warpId: 2 },
-      { x: 4, y: 7, toMap: "LANCES_ROOM", warpId: 3 },
-      { x: 3, y: 0, toMap: "HALL_OF_FAME", warpId: 1 },
-      { x: 4, y: 0, toMap: "HALL_OF_FAME", warpId: 1 }
+      { x: 3, y: 7, toMap: MapName.LancesRoom, warpId: 2 },
+      { x: 4, y: 7, toMap: MapName.LancesRoom, warpId: 3 },
+      { x: 3, y: 0, toMap: MapName.HallOfFame, warpId: 1 },
+      { x: 4, y: 0, toMap: MapName.HallOfFame, warpId: 1 }
     ],
     backgroundItems: [],
     objects: [

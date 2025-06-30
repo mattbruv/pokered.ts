@@ -14,15 +14,15 @@ export const VermilionCity: Map = {
   },
   objects: {
     warps: [
-      { x: 11, y: 3, toMap: "VERMILION_POKECENTER", warpId: 1 },
-      { x: 9, y: 13, toMap: "POKEMON_FAN_CLUB", warpId: 1 },
-      { x: 23, y: 13, toMap: "VERMILION_MART", warpId: 1 },
-      { x: 12, y: 19, toMap: "VERMILION_GYM", warpId: 1 },
-      { x: 23, y: 19, toMap: "VERMILION_PIDGEY_HOUSE", warpId: 1 },
-      { x: 18, y: 31, toMap: "VERMILION_DOCK", warpId: 1 },
-      { x: 19, y: 31, toMap: "VERMILION_DOCK", warpId: 1 },
-      { x: 15, y: 13, toMap: "VERMILION_TRADE_HOUSE", warpId: 1 },
-      { x: 7, y: 3, toMap: "VERMILION_OLD_ROD_HOUSE", warpId: 1 }
+      { x: 11, y: 3, toMap: MapName.VermilionPokecenter, warpId: 1 },
+      { x: 9, y: 13, toMap: MapName.PokemonFanClub, warpId: 1 },
+      { x: 23, y: 13, toMap: MapName.VermilionMart, warpId: 1 },
+      { x: 12, y: 19, toMap: MapName.VermilionGym, warpId: 1 },
+      { x: 23, y: 19, toMap: MapName.VermilionPidgeyHouse, warpId: 1 },
+      { x: 18, y: 31, toMap: MapName.VermilionDock, warpId: 1 },
+      { x: 19, y: 31, toMap: MapName.VermilionDock, warpId: 1 },
+      { x: 15, y: 13, toMap: MapName.VermilionTradeHouse, warpId: 1 },
+      { x: 7, y: 3, toMap: MapName.VermilionOldRodHouse, warpId: 1 }
     ],
     backgroundItems: [
       { x: 27, y: 3, signId: "TEXT_VERMILIONCITY_SIGN" },

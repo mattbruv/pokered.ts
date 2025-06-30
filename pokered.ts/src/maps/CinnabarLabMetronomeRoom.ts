@@ -11,8 +11,8 @@ export const CinnabarLabMetronomeRoom: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "CINNABAR_LAB", warpId: 4 },
-      { x: 3, y: 7, toMap: "CINNABAR_LAB", warpId: 4 }
+      { x: 2, y: 7, toMap: MapName.CinnabarLab, warpId: 4 },
+      { x: 3, y: 7, toMap: MapName.CinnabarLab, warpId: 4 }
     ],
     backgroundItems: [
       { x: 0, y: 4, signId: "TEXT_CINNABARLABMETRONOMEROOM_PC_KEYBOARD" },

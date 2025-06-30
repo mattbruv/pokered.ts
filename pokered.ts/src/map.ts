@@ -23,7 +23,7 @@ export type Map = {
 export type Warp = {
   x: number;
   y: number;
-  toMap: string;
+  toMap: MapName | "LAST_MAP" | "UNUSED_MAP_ED";
   warpId: number;
 };
 

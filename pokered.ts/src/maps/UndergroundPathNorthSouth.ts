@@ -11,8 +11,8 @@ export const UndergroundPathNorthSouth: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 5, y: 4, toMap: "UNDERGROUND_PATH_ROUTE_5", warpId: 3 },
-      { x: 2, y: 41, toMap: "UNDERGROUND_PATH_ROUTE_6", warpId: 3 }
+      { x: 5, y: 4, toMap: MapName.UndergroundPathRoute5, warpId: 3 },
+      { x: 2, y: 41, toMap: MapName.UndergroundPathRoute6, warpId: 3 }
     ],
     backgroundItems: [],
     objects: []

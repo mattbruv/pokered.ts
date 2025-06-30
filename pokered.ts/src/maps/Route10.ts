@@ -14,10 +14,10 @@ export const Route10: Map = {
   },
   objects: {
     warps: [
-      { x: 11, y: 19, toMap: "ROCK_TUNNEL_POKECENTER", warpId: 1 },
-      { x: 8, y: 17, toMap: "ROCK_TUNNEL_1F", warpId: 1 },
-      { x: 8, y: 53, toMap: "ROCK_TUNNEL_1F", warpId: 3 },
-      { x: 6, y: 39, toMap: "POWER_PLANT", warpId: 1 }
+      { x: 11, y: 19, toMap: MapName.RockTunnelPokecenter, warpId: 1 },
+      { x: 8, y: 17, toMap: MapName.RockTunnel1F, warpId: 1 },
+      { x: 8, y: 53, toMap: MapName.RockTunnel1F, warpId: 3 },
+      { x: 6, y: 39, toMap: MapName.PowerPlant, warpId: 1 }
     ],
     backgroundItems: [
       { x: 7, y: 19, signId: "TEXT_ROUTE10_ROCKTUNNEL_NORTH_SIGN" },

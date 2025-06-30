@@ -12,7 +12,7 @@ export const VermilionDock: Map = {
   objects: {
     warps: [
       { x: 14, y: 0, toMap: "LAST_MAP", warpId: 6 },
-      { x: 14, y: 2, toMap: "SS_ANNE_1F", warpId: 2 }
+      { x: 14, y: 2, toMap: MapName.SSAnne1F, warpId: 2 }
     ],
     backgroundItems: [],
     objects: []

@@ -13,7 +13,7 @@ export const UndergroundPathRoute8: Map = {
     warps: [
       { x: 3, y: 7, toMap: "LAST_MAP", warpId: 5 },
       { x: 4, y: 7, toMap: "LAST_MAP", warpId: 5 },
-      { x: 4, y: 4, toMap: "UNDERGROUND_PATH_WEST_EAST", warpId: 2 }
+      { x: 4, y: 4, toMap: MapName.UndergroundPathWestEast, warpId: 2 }
     ],
     backgroundItems: [],
     objects: [

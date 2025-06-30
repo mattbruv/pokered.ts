@@ -1,4 +1,4 @@
-import { Map, MapConnections } from "../map";
+import { Map, MapConnections, Warp } from "../map";
 import { getMap } from "../mapLookup";
 import { getBlockSet, getTileCollisions } from "../tileset";
 
@@ -9,6 +9,10 @@ type ConnectionDir = {
     y: number;
   };
 };
+
+export function getWarpAtPos(map: Map, x: number, y: number): Warp | undefined {
+  return map.objects.warps.find((warp) => warp.x === x && warp.y === y);
+}
 
 export function getBlockIndexAtPosition(
   map: Map,

@@ -11,9 +11,9 @@ export const CeladonMart2F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 12, y: 1, toMap: "CELADON_MART_1F", warpId: 5 },
-      { x: 16, y: 1, toMap: "CELADON_MART_3F", warpId: 2 },
-      { x: 1, y: 1, toMap: "CELADON_MART_ELEVATOR", warpId: 1 }
+      { x: 12, y: 1, toMap: MapName.CeladonMart1F, warpId: 5 },
+      { x: 16, y: 1, toMap: MapName.CeladonMart3F, warpId: 2 },
+      { x: 1, y: 1, toMap: MapName.CeladonMartElevator, warpId: 1 }
     ],
     backgroundItems: [
       { x: 14, y: 1, signId: "TEXT_CELADONMART2F_CURRENT_FLOOR_SIGN" }
