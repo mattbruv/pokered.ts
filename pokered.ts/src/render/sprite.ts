@@ -1,6 +1,5 @@
 import { ImageCache } from "../gfx/images";
-
-type SpriteName = Extract<keyof ImageCache, `sprites-${string}`>;
+import { SpriteName } from "../sprite";
 
 export enum MovementStatus {
   Uninitialized,
