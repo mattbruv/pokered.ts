@@ -177,6 +177,7 @@ class PokemonRed {
 
   #loadMap(nextMapName: MapName) {
     const nextMap = getMap(nextMapName);
+    console.log(MapName[nextMapName]);
     // Load a new map
     if (this.#data.map.currentMap.tileset === Tileset.OVERWORLD) {
       this.#data.map.previousOutdoorMapName = this.#data.map.currentMapName;
@@ -191,13 +192,13 @@ class PokemonRed {
   }
 
   #loadGame(): GameData {
-    const mapName = MapName.PalletTown;
+    const mapName = MapName.ViridianForestNorthGate;
     const map = getMap(mapName);
     const data: GameData = {
       map: {
         currentMap: map,
         currentMapName: mapName,
-        previousOutdoorMapName: mapName
+        previousOutdoorMapName: MapName.PalletTown
       },
       player: {
         name: "Red",
@@ -206,8 +207,8 @@ class PokemonRed {
           movementStatus: MovementStatus.Ready,
           animationFrameCounter: 0,
           position: {
-            x: 5,
-            y: 6
+            x: 2,
+            y: 2
           },
           image: "sprites-red"
         }

@@ -36,7 +36,7 @@ const TILESET_BLOCKSET_LOOKUP: Record<Tileset, keyof typeof BLOCKSETS> = {
   [Tileset.DOJO]: "gym",
   [Tileset.FACILITY]: "facility",
   [Tileset.FOREST]: "forest",
-  [Tileset.FOREST_GATE]: "overworld", // TODO
+  [Tileset.FOREST_GATE]: "gate", // shared blockset with gate
   [Tileset.GATE]: "gate",
   [Tileset.GYM]: "gym",
   [Tileset.HOUSE]: "house",
@@ -44,8 +44,8 @@ const TILESET_BLOCKSET_LOOKUP: Record<Tileset, keyof typeof BLOCKSETS> = {
   [Tileset.LAB]: "lab",
   [Tileset.LOBBY]: "lobby",
   [Tileset.MANSION]: "mansion",
-  [Tileset.MART]: "cavern", // TODO
-  [Tileset.MUSEUM]: "cavern", // TODO
+  [Tileset.MART]: "pokecenter", // shared blockset with pokecenter
+  [Tileset.MUSEUM]: "gate", // shared blockset with gate
   [Tileset.OVERWORLD]: "overworld",
   [Tileset.PLATEAU]: "plateau",
   [Tileset.POKECENTER]: "pokecenter",
@@ -127,7 +127,7 @@ export function getTilesetImage(
     [Tileset.DOJO]: images["tilesets-gym"],
     [Tileset.FACILITY]: images["tilesets-facility"],
     [Tileset.FOREST]: images["tilesets-forest"],
-    [Tileset.FOREST_GATE]: images["tilesets-overworld"],
+    [Tileset.FOREST_GATE]: images["tilesets-gate"],
     [Tileset.GATE]: images["tilesets-gate"],
     [Tileset.GYM]: images["tilesets-gym"],
     [Tileset.HOUSE]: images["tilesets-house"],
@@ -135,8 +135,8 @@ export function getTilesetImage(
     [Tileset.LAB]: images["tilesets-lab"],
     [Tileset.LOBBY]: images["tilesets-lobby"],
     [Tileset.MANSION]: images["tilesets-mansion"],
-    [Tileset.MART]: images["tilesets-overworld"],
-    [Tileset.MUSEUM]: images["tilesets-overworld"],
+    [Tileset.MART]: images["tilesets-pokecenter"],
+    [Tileset.MUSEUM]: images["tilesets-gate"],
     [Tileset.OVERWORLD]: images["tilesets-overworld"],
     [Tileset.PLATEAU]: images["tilesets-plateau"],
     [Tileset.POKECENTER]: images["tilesets-pokecenter"],
