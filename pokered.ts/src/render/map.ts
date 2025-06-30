@@ -1,7 +1,7 @@
 import { ImageCache } from "../gfx/images";
 import { Map } from "../map";
 import { getBlockIndexAtPosition } from "../overworld/map";
-import { getBlockSet, getTilesetImage } from "../tileset";
+import { getBlockSet, getTilesetImage, Tileset } from "../tileset";
 import { OverworldCache } from "./renderer";
 import { drawSprite, FacingDirection, SpriteData } from "./sprite";
 
@@ -36,6 +36,14 @@ export function renderOverworld(
     dx += walkXDelta;
     dy += walkYDelta;
   }
+
+  // First step: Cover background with the border block image.
+  // Don't ask me how this works. I basically just spammed numbers until no magenta leaked through,
+  // and I used the modulo of the relative offsets so that it appears that
+  // the background is moving with the player as he walks. If you don't use modulo,
+  // the background tiles stay in the same spot and they move independently of the map and it looks weird
+  // we mod by 32 because that's the height/width of a block
+  screen.drawImage(cache.outOfBounds, -32 + (dx % 32), -32 + (dy % 32));
 
   const temp = new OffscreenCanvas(
     cache.current.mapImage.width,
@@ -112,11 +120,15 @@ export function renderOverworld(
     Maps are also read from top-left to bottom-right
 */
 
-export function getMapImage(map: Map, images: ImageCache): OffscreenCanvas {
-  const { width, height } = map;
-
-  const blockset = getBlockSet(map.tileset);
-  const tileset = getTilesetImage(map.tileset, images);
+export function getMapImage(
+  width: number,
+  height: number,
+  tilesetName: Tileset,
+  blocks: number[],
+  images: ImageCache
+): OffscreenCanvas {
+  const blockset = getBlockSet(tilesetName);
+  const tileset = getTilesetImage(tilesetName, images);
 
   const TILE_SIZE = 8;
   const BLOCK_SIZE = TILE_SIZE * 4;
@@ -128,7 +140,7 @@ export function getMapImage(map: Map, images: ImageCache): OffscreenCanvas {
   for (let blockY = 0; blockY < height; blockY++) {
     for (let blockX = 0; blockX < width; blockX++) {
       const blockIndex = blockY * width + blockX;
-      const mapBlock = map.blocks[blockIndex];
+      const mapBlock = blocks[blockIndex];
       const currentBlock = blockset[mapBlock];
 
       for (let tileY = 0; tileY < 4; tileY++) {
@@ -162,5 +174,3 @@ export function getMapImage(map: Map, images: ImageCache): OffscreenCanvas {
 
   return canvas;
 }
-
-//const TILESET_BLOCKSET_LOOKUP: Record<Tileset, keyof typeof BLOCKSETS> = {
