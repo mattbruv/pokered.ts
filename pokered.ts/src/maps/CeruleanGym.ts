@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CERULEAN_GYM_BLOCKS } from "../data/blocks/CeruleanGym";
+import { OverworldSprite } from "../sprite";
 
 export const CeruleanGym: Map = {
   width: 5,
@@ -20,7 +21,7 @@ export const CeruleanGym: Map = {
         type: "trainer",
         x: 4,
         y: 2,
-        sprite: "SPRITE_BRUNETTE_GIRL",
+        sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_CERULEANGYM_MISTY",
         trainerId: "OPP_MISTY",
@@ -30,7 +31,7 @@ export const CeruleanGym: Map = {
         type: "trainer",
         x: 2,
         y: 3,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_CERULEANGYM_COOLTRAINER_F",
         trainerId: "OPP_JR_TRAINER_F",
@@ -40,7 +41,7 @@ export const CeruleanGym: Map = {
         type: "trainer",
         x: 8,
         y: 7,
-        sprite: "SPRITE_SWIMMER",
+        sprite: OverworldSprite.SPRITE_SWIMMER,
         movement: "STAY",
         textId: "TEXT_CERULEANGYM_SWIMMER",
         trainerId: "OPP_SWIMMER",
@@ -50,7 +51,7 @@ export const CeruleanGym: Map = {
         type: "sprite",
         x: 7,
         y: 10,
-        sprite: "SPRITE_GYM_GUIDE",
+        sprite: OverworldSprite.SPRITE_GYM_GUIDE,
         movement: "STAY",
         textId: "TEXT_CERULEANGYM_GYM_GUIDE"
       }

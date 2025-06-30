@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VIRIDIAN_MART_BLOCKS } from "../data/blocks/ViridianMart";
+import { OverworldSprite } from "../sprite";
 
 export const ViridianMart: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const ViridianMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
-        sprite: "SPRITE_CLERK",
+        sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_VIRIDIANMART_CLERK"
       },
@@ -28,7 +29,7 @@ export const ViridianMart: Map = {
         type: "sprite",
         x: 5,
         y: 5,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_VIRIDIANMART_YOUNGSTER"
       },
@@ -36,7 +37,7 @@ export const ViridianMart: Map = {
         type: "sprite",
         x: 3,
         y: 3,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_VIRIDIANMART_COOLTRAINER_M"
       }

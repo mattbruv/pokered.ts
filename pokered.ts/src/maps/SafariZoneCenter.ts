@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SAFARI_ZONE_CENTER_BLOCKS } from "../data/blocks/SafariZoneCenter";
+import { OverworldSprite } from "../sprite";
 
 export const SafariZoneCenter: Map = {
   width: 15,
@@ -30,7 +31,7 @@ export const SafariZoneCenter: Map = {
         type: "item",
         x: 14,
         y: 10,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SAFARIZONECENTER_NUGGET",
         itemId: "NUGGET"

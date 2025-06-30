@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { MT_MOON_B2F_BLOCKS } from "../data/blocks/MtMoonB2F";
+import { OverworldSprite } from "../sprite";
 
 export const MtMoonB2F: Map = {
   width: 20,
@@ -22,7 +23,7 @@ export const MtMoonB2F: Map = {
         type: "trainer",
         x: 12,
         y: 8,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_MTMOONB2F_SUPER_NERD",
         trainerId: "OPP_SUPER_NERD",
@@ -32,7 +33,7 @@ export const MtMoonB2F: Map = {
         type: "trainer",
         x: 11,
         y: 16,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_MTMOONB2F_ROCKET1",
         trainerId: "OPP_ROCKET",
@@ -42,7 +43,7 @@ export const MtMoonB2F: Map = {
         type: "trainer",
         x: 15,
         y: 22,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_MTMOONB2F_ROCKET2",
         trainerId: "OPP_ROCKET",
@@ -52,7 +53,7 @@ export const MtMoonB2F: Map = {
         type: "trainer",
         x: 29,
         y: 11,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_MTMOONB2F_ROCKET3",
         trainerId: "OPP_ROCKET",
@@ -62,7 +63,7 @@ export const MtMoonB2F: Map = {
         type: "trainer",
         x: 29,
         y: 17,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_MTMOONB2F_ROCKET4",
         trainerId: "OPP_ROCKET",
@@ -72,7 +73,7 @@ export const MtMoonB2F: Map = {
         type: "sprite",
         x: 12,
         y: 6,
-        sprite: "SPRITE_FOSSIL",
+        sprite: OverworldSprite.SPRITE_FOSSIL,
         movement: "STAY",
         textId: "TEXT_MTMOONB2F_DOME_FOSSIL"
       },
@@ -80,7 +81,7 @@ export const MtMoonB2F: Map = {
         type: "sprite",
         x: 13,
         y: 6,
-        sprite: "SPRITE_FOSSIL",
+        sprite: OverworldSprite.SPRITE_FOSSIL,
         movement: "STAY",
         textId: "TEXT_MTMOONB2F_HELIX_FOSSIL"
       },
@@ -88,7 +89,7 @@ export const MtMoonB2F: Map = {
         type: "item",
         x: 25,
         y: 21,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_MTMOONB2F_HP_UP",
         itemId: "HP_UP"
@@ -97,7 +98,7 @@ export const MtMoonB2F: Map = {
         type: "item",
         x: 29,
         y: 5,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_MTMOONB2F_TM_MEGA_PUNCH",
         itemId: "TM_MEGA_PUNCH"

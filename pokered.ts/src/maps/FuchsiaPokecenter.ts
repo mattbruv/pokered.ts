@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { FUCHSIA_POKECENTER_BLOCKS } from "../data/blocks/FuchsiaPokecenter";
+import { OverworldSprite } from "../sprite";
 
 export const FuchsiaPokecenter: Map = {
   width: 7,
@@ -20,7 +21,7 @@ export const FuchsiaPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
-        sprite: "SPRITE_NURSE",
+        sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_FUCHSIAPOKECENTER_NURSE"
       },
@@ -28,7 +29,7 @@ export const FuchsiaPokecenter: Map = {
         type: "sprite",
         x: 2,
         y: 3,
-        sprite: "SPRITE_ROCKER",
+        sprite: OverworldSprite.SPRITE_ROCKER,
         movement: "STAY",
         textId: "TEXT_FUCHSIAPOKECENTER_ROCKER"
       },
@@ -36,7 +37,7 @@ export const FuchsiaPokecenter: Map = {
         type: "sprite",
         x: 6,
         y: 5,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_FUCHSIAPOKECENTER_COOLTRAINER_F"
       },
@@ -44,7 +45,7 @@ export const FuchsiaPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
-        sprite: "SPRITE_LINK_RECEPTIONIST",
+        sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_FUCHSIAPOKECENTER_LINK_RECEPTIONIST"
       }

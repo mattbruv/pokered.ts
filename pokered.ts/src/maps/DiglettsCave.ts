@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { DIGLETTS_CAVE_BLOCKS } from "../data/blocks/DiglettsCave";
+import { OverworldSprite } from "../sprite";
 
 export const DiglettsCave: Map = {
   width: 20,

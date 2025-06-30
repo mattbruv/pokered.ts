@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { PEWTER_MART_BLOCKS } from "../data/blocks/PewterMart";
+import { OverworldSprite } from "../sprite";
 
 export const PewterMart: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const PewterMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
-        sprite: "SPRITE_CLERK",
+        sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_PEWTERMART_CLERK"
       },
@@ -28,7 +29,7 @@ export const PewterMart: Map = {
         type: "sprite",
         x: 3,
         y: 3,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_PEWTERMART_YOUNGSTER"
       },
@@ -36,7 +37,7 @@ export const PewterMart: Map = {
         type: "sprite",
         x: 5,
         y: 5,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_PEWTERMART_SUPER_NERD"
       }

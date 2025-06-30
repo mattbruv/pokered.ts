@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { INDIGO_PLATEAU_LOBBY_BLOCKS } from "../data/blocks/IndigoPlateauLobby";
+import { OverworldSprite } from "../sprite";
 
 export const IndigoPlateauLobby: Map = {
   width: 8,
@@ -21,7 +22,7 @@ export const IndigoPlateauLobby: Map = {
         type: "sprite",
         x: 7,
         y: 5,
-        sprite: "SPRITE_NURSE",
+        sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_INDIGOPLATEAULOBBY_NURSE"
       },
@@ -29,7 +30,7 @@ export const IndigoPlateauLobby: Map = {
         type: "sprite",
         x: 4,
         y: 9,
-        sprite: "SPRITE_GYM_GUIDE",
+        sprite: OverworldSprite.SPRITE_GYM_GUIDE,
         movement: "STAY",
         textId: "TEXT_INDIGOPLATEAULOBBY_GYM_GUIDE"
       },
@@ -37,7 +38,7 @@ export const IndigoPlateauLobby: Map = {
         type: "sprite",
         x: 5,
         y: 1,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_INDIGOPLATEAULOBBY_COOLTRAINER_F"
       },
@@ -45,7 +46,7 @@ export const IndigoPlateauLobby: Map = {
         type: "sprite",
         x: 0,
         y: 5,
-        sprite: "SPRITE_CLERK",
+        sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_INDIGOPLATEAULOBBY_CLERK"
       },
@@ -53,7 +54,7 @@ export const IndigoPlateauLobby: Map = {
         type: "sprite",
         x: 13,
         y: 6,
-        sprite: "SPRITE_LINK_RECEPTIONIST",
+        sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_INDIGOPLATEAULOBBY_LINK_RECEPTIONIST"
       }

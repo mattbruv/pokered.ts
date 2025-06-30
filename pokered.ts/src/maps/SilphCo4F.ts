@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SILPH_CO_4F_BLOCKS } from "../data/blocks/SilphCo4F";
+import { OverworldSprite } from "../sprite";
 
 export const SilphCo4F: Map = {
   width: 15,
@@ -25,7 +26,7 @@ export const SilphCo4F: Map = {
         type: "sprite",
         x: 6,
         y: 2,
-        sprite: "SPRITE_SILPH_WORKER_M",
+        sprite: OverworldSprite.SPRITE_SILPH_WORKER_M,
         movement: "STAY",
         textId: "TEXT_SILPHCO4F_SILPH_WORKER_M"
       },
@@ -33,7 +34,7 @@ export const SilphCo4F: Map = {
         type: "trainer",
         x: 9,
         y: 14,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_SILPHCO4F_ROCKET1",
         trainerId: "OPP_ROCKET",
@@ -43,7 +44,7 @@ export const SilphCo4F: Map = {
         type: "trainer",
         x: 14,
         y: 6,
-        sprite: "SPRITE_SCIENTIST",
+        sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_SILPHCO4F_SCIENTIST",
         trainerId: "OPP_SCIENTIST",
@@ -53,7 +54,7 @@ export const SilphCo4F: Map = {
         type: "trainer",
         x: 26,
         y: 10,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_SILPHCO4F_ROCKET2",
         trainerId: "OPP_ROCKET",
@@ -63,7 +64,7 @@ export const SilphCo4F: Map = {
         type: "item",
         x: 3,
         y: 9,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SILPHCO4F_FULL_HEAL",
         itemId: "FULL_HEAL"
@@ -72,7 +73,7 @@ export const SilphCo4F: Map = {
         type: "item",
         x: 4,
         y: 7,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SILPHCO4F_MAX_REVIVE",
         itemId: "MAX_REVIVE"
@@ -81,7 +82,7 @@ export const SilphCo4F: Map = {
         type: "item",
         x: 5,
         y: 8,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SILPHCO4F_ESCAPE_ROPE",
         itemId: "ESCAPE_ROPE"

@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CINNABAR_LAB_METRONOME_ROOM_BLOCKS } from "../data/blocks/CinnabarLabMetronomeRoom";
+import { OverworldSprite } from "../sprite";
 
 export const CinnabarLabMetronomeRoom: Map = {
   width: 4,
@@ -24,7 +25,7 @@ export const CinnabarLabMetronomeRoom: Map = {
         type: "sprite",
         x: 7,
         y: 2,
-        sprite: "SPRITE_SCIENTIST",
+        sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_CINNABARLABMETRONOMEROOM_SCIENTIST1"
       },
@@ -32,7 +33,7 @@ export const CinnabarLabMetronomeRoom: Map = {
         type: "sprite",
         x: 2,
         y: 3,
-        sprite: "SPRITE_SCIENTIST",
+        sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "WALK",
         textId: "TEXT_CINNABARLABMETRONOMEROOM_SCIENTIST2"
       }

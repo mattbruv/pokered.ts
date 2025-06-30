@@ -1,3 +1,4 @@
+import { OverworldSprite, SpriteName } from "./sprite";
 import { Tileset } from "./tileset";
 
 export type Map = {
@@ -44,7 +45,7 @@ type BaseObject = {
   type: "sprite" | "trainer" | "item";
   x: number;
   y: number;
-  sprite: string; // e.g., "SPRITE_YOUNGSTER", "SPRITE_POKE_BALL"
+  sprite: OverworldSprite; // e.g., "SPRITE_YOUNGSTER", "SPRITE_POKE_BALL"
   movement: MovementType;
   textId: string; // e.g., "TEXT_VIRIDIANFOREST_YOUNGSTER1"
 };

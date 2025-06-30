@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { MT_MOON_B1F_BLOCKS } from "../data/blocks/MtMoonB1F";
+import { OverworldSprite } from "../sprite";
 
 export const MtMoonB1F: Map = {
   width: 14,

@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_8_GATE_BLOCKS } from "../data/blocks/Route8Gate";
+import { OverworldSprite } from "../sprite";
 
 export const Route8Gate: Map = {
   width: 3,
@@ -22,7 +23,7 @@ export const Route8Gate: Map = {
         type: "sprite",
         x: 2,
         y: 1,
-        sprite: "SPRITE_GUARD",
+        sprite: OverworldSprite.SPRITE_GUARD,
         movement: "STAY",
         textId: "TEXT_ROUTE8GATE_GUARD"
       }

@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VIRIDIAN_FOREST_NORTH_GATE_BLOCKS } from "../data/blocks/ViridianForestNorthGate";
+import { OverworldSprite } from "../sprite";
 
 export const ViridianForestNorthGate: Map = {
   width: 5,
@@ -22,7 +23,7 @@ export const ViridianForestNorthGate: Map = {
         type: "sprite",
         x: 3,
         y: 2,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_VIRIDIANFORESTNORTHGATE_SUPER_NERD"
       },
@@ -30,7 +31,7 @@ export const ViridianForestNorthGate: Map = {
         type: "sprite",
         x: 2,
         y: 5,
-        sprite: "SPRITE_GRAMPS",
+        sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_VIRIDIANFORESTNORTHGATE_GRAMPS"
       }

@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { GAME_CORNER_BLOCKS } from "../data/blocks/GameCorner";
+import { OverworldSprite } from "../sprite";
 
 export const GameCorner: Map = {
   width: 10,
@@ -21,7 +22,7 @@ export const GameCorner: Map = {
         type: "sprite",
         x: 2,
         y: 6,
-        sprite: "SPRITE_BEAUTY",
+        sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "STAY",
         textId: "TEXT_GAMECORNER_BEAUTY1"
       },
@@ -29,7 +30,7 @@ export const GameCorner: Map = {
         type: "sprite",
         x: 5,
         y: 6,
-        sprite: "SPRITE_CLERK",
+        sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_GAMECORNER_CLERK1"
       },
@@ -37,7 +38,7 @@ export const GameCorner: Map = {
         type: "sprite",
         x: 2,
         y: 10,
-        sprite: "SPRITE_MIDDLE_AGED_MAN",
+        sprite: OverworldSprite.SPRITE_MIDDLE_AGED_MAN,
         movement: "STAY",
         textId: "TEXT_GAMECORNER_MIDDLE_AGED_MAN1"
       },
@@ -45,7 +46,7 @@ export const GameCorner: Map = {
         type: "sprite",
         x: 2,
         y: 13,
-        sprite: "SPRITE_BEAUTY",
+        sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "STAY",
         textId: "TEXT_GAMECORNER_BEAUTY2"
       },
@@ -53,7 +54,7 @@ export const GameCorner: Map = {
         type: "sprite",
         x: 5,
         y: 11,
-        sprite: "SPRITE_FISHING_GURU",
+        sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_GAMECORNER_FISHING_GURU"
       },
@@ -61,7 +62,7 @@ export const GameCorner: Map = {
         type: "sprite",
         x: 8,
         y: 11,
-        sprite: "SPRITE_MIDDLE_AGED_WOMAN",
+        sprite: OverworldSprite.SPRITE_MIDDLE_AGED_WOMAN,
         movement: "STAY",
         textId: "TEXT_GAMECORNER_MIDDLE_AGED_WOMAN"
       },
@@ -69,7 +70,7 @@ export const GameCorner: Map = {
         type: "sprite",
         x: 8,
         y: 14,
-        sprite: "SPRITE_GYM_GUIDE",
+        sprite: OverworldSprite.SPRITE_GYM_GUIDE,
         movement: "STAY",
         textId: "TEXT_GAMECORNER_GYM_GUIDE"
       },
@@ -77,7 +78,7 @@ export const GameCorner: Map = {
         type: "sprite",
         x: 11,
         y: 15,
-        sprite: "SPRITE_GAMBLER",
+        sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_GAMECORNER_GAMBLER"
       },
@@ -85,7 +86,7 @@ export const GameCorner: Map = {
         type: "sprite",
         x: 14,
         y: 11,
-        sprite: "SPRITE_CLERK",
+        sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_GAMECORNER_CLERK2"
       },
@@ -93,7 +94,7 @@ export const GameCorner: Map = {
         type: "sprite",
         x: 17,
         y: 13,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_GAMECORNER_GENTLEMAN"
       },
@@ -101,7 +102,7 @@ export const GameCorner: Map = {
         type: "trainer",
         x: 9,
         y: 5,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_GAMECORNER_ROCKET",
         trainerId: "OPP_ROCKET",

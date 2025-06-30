@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { BILLS_HOUSE_BLOCKS } from "../data/blocks/BillsHouse";
+import { OverworldSprite } from "../sprite";
 
 export const BillsHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const BillsHouse: Map = {
         type: "sprite",
         x: 6,
         y: 5,
-        sprite: "SPRITE_MONSTER",
+        sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_BILLSHOUSE_BILL_POKEMON"
       },
@@ -28,7 +29,7 @@ export const BillsHouse: Map = {
         type: "sprite",
         x: 4,
         y: 4,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_BILLSHOUSE_BILL_SS_TICKET"
       },
@@ -36,7 +37,7 @@ export const BillsHouse: Map = {
         type: "sprite",
         x: 6,
         y: 5,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_BILLSHOUSE_BILL_CHECK_OUT_MY_RARE_POKEMON"
       }

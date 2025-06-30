@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VERMILION_DOCK_BLOCKS } from "../data/blocks/VermilionDock";
+import { OverworldSprite } from "../sprite";
 
 export const VermilionDock: Map = {
   width: 14,

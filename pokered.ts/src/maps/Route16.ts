@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_16_BLOCKS } from "../data/blocks/Route16";
+import { OverworldSprite } from "../sprite";
 
 export const Route16: Map = {
   width: 20,
@@ -33,7 +34,7 @@ export const Route16: Map = {
         type: "trainer",
         x: 17,
         y: 12,
-        sprite: "SPRITE_BIKER",
+        sprite: OverworldSprite.SPRITE_BIKER,
         movement: "STAY",
         textId: "TEXT_ROUTE16_BIKER1",
         trainerId: "OPP_BIKER",
@@ -43,7 +44,7 @@ export const Route16: Map = {
         type: "trainer",
         x: 14,
         y: 13,
-        sprite: "SPRITE_BIKER",
+        sprite: OverworldSprite.SPRITE_BIKER,
         movement: "STAY",
         textId: "TEXT_ROUTE16_BIKER2",
         trainerId: "OPP_CUE_BALL",
@@ -53,7 +54,7 @@ export const Route16: Map = {
         type: "trainer",
         x: 11,
         y: 12,
-        sprite: "SPRITE_BIKER",
+        sprite: OverworldSprite.SPRITE_BIKER,
         movement: "STAY",
         textId: "TEXT_ROUTE16_BIKER3",
         trainerId: "OPP_CUE_BALL",
@@ -63,7 +64,7 @@ export const Route16: Map = {
         type: "trainer",
         x: 9,
         y: 11,
-        sprite: "SPRITE_BIKER",
+        sprite: OverworldSprite.SPRITE_BIKER,
         movement: "STAY",
         textId: "TEXT_ROUTE16_BIKER4",
         trainerId: "OPP_BIKER",
@@ -73,7 +74,7 @@ export const Route16: Map = {
         type: "trainer",
         x: 6,
         y: 10,
-        sprite: "SPRITE_BIKER",
+        sprite: OverworldSprite.SPRITE_BIKER,
         movement: "STAY",
         textId: "TEXT_ROUTE16_BIKER5",
         trainerId: "OPP_CUE_BALL",
@@ -83,7 +84,7 @@ export const Route16: Map = {
         type: "trainer",
         x: 3,
         y: 12,
-        sprite: "SPRITE_BIKER",
+        sprite: OverworldSprite.SPRITE_BIKER,
         movement: "STAY",
         textId: "TEXT_ROUTE16_BIKER6",
         trainerId: "OPP_BIKER",
@@ -93,7 +94,7 @@ export const Route16: Map = {
         type: "sprite",
         x: 26,
         y: 10,
-        sprite: "SPRITE_SNORLAX",
+        sprite: OverworldSprite.SPRITE_SNORLAX,
         movement: "STAY",
         textId: "TEXT_ROUTE16_SNORLAX"
       }

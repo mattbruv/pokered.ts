@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_12_SUPER_ROD_HOUSE_BLOCKS } from "../data/blocks/Route12SuperRodHouse";
+import { OverworldSprite } from "../sprite";
 
 export const Route12SuperRodHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const Route12SuperRodHouse: Map = {
         type: "sprite",
         x: 2,
         y: 4,
-        sprite: "SPRITE_FISHING_GURU",
+        sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_ROUTE12SUPERRODHOUSE_FISHING_GURU"
       }

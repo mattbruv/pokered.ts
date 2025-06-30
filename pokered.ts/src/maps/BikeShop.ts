@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { BIKE_SHOP_BLOCKS } from "../data/blocks/BikeShop";
+import { OverworldSprite } from "../sprite";
 
 export const BikeShop: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const BikeShop: Map = {
         type: "sprite",
         x: 6,
         y: 2,
-        sprite: "SPRITE_BIKE_SHOP_CLERK",
+        sprite: OverworldSprite.SPRITE_BIKE_SHOP_CLERK,
         movement: "STAY",
         textId: "TEXT_BIKESHOP_CLERK"
       },
@@ -28,7 +29,7 @@ export const BikeShop: Map = {
         type: "sprite",
         x: 5,
         y: 6,
-        sprite: "SPRITE_MIDDLE_AGED_WOMAN",
+        sprite: OverworldSprite.SPRITE_MIDDLE_AGED_WOMAN,
         movement: "WALK",
         textId: "TEXT_BIKESHOP_MIDDLE_AGED_WOMAN"
       },
@@ -36,7 +37,7 @@ export const BikeShop: Map = {
         type: "sprite",
         x: 1,
         y: 3,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_BIKESHOP_YOUNGSTER"
       }

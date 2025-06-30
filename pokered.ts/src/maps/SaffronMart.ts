@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SAFFRON_MART_BLOCKS } from "../data/blocks/SaffronMart";
+import { OverworldSprite } from "../sprite";
 
 export const SaffronMart: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const SaffronMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
-        sprite: "SPRITE_CLERK",
+        sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_SAFFRONMART_CLERK"
       },
@@ -28,7 +29,7 @@ export const SaffronMart: Map = {
         type: "sprite",
         x: 4,
         y: 2,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_SAFFRONMART_SUPER_NERD"
       },
@@ -36,7 +37,7 @@ export const SaffronMart: Map = {
         type: "sprite",
         x: 6,
         y: 5,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_SAFFRONMART_COOLTRAINER_F"
       }

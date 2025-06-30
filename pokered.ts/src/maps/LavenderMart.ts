@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { LAVENDER_MART_BLOCKS } from "../data/blocks/LavenderMart";
+import { OverworldSprite } from "../sprite";
 
 export const LavenderMart: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const LavenderMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
-        sprite: "SPRITE_CLERK",
+        sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_LAVENDERMART_CLERK"
       },
@@ -28,7 +29,7 @@ export const LavenderMart: Map = {
         type: "sprite",
         x: 3,
         y: 4,
-        sprite: "SPRITE_BALDING_GUY",
+        sprite: OverworldSprite.SPRITE_BALDING_GUY,
         movement: "STAY",
         textId: "TEXT_LAVENDERMART_BALDING_GUY"
       },
@@ -36,7 +37,7 @@ export const LavenderMart: Map = {
         type: "sprite",
         x: 7,
         y: 2,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_LAVENDERMART_COOLTRAINER_M"
       }

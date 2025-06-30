@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { LAVENDER_POKECENTER_BLOCKS } from "../data/blocks/LavenderPokecenter";
+import { OverworldSprite } from "../sprite";
 
 export const LavenderPokecenter: Map = {
   width: 7,
@@ -20,7 +21,7 @@ export const LavenderPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
-        sprite: "SPRITE_NURSE",
+        sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_LAVENDERPOKECENTER_NURSE"
       },
@@ -28,7 +29,7 @@ export const LavenderPokecenter: Map = {
         type: "sprite",
         x: 5,
         y: 3,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_LAVENDERPOKECENTER_GENTLEMAN"
       },
@@ -36,7 +37,7 @@ export const LavenderPokecenter: Map = {
         type: "sprite",
         x: 2,
         y: 6,
-        sprite: "SPRITE_LITTLE_GIRL",
+        sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_LAVENDERPOKECENTER_LITTLE_GIRL"
       },
@@ -44,7 +45,7 @@ export const LavenderPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
-        sprite: "SPRITE_LINK_RECEPTIONIST",
+        sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_LAVENDERPOKECENTER_LINK_RECEPTIONIST"
       }

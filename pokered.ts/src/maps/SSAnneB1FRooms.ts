@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SS_ANNE_B1F_ROOMS_BLOCKS } from "../data/blocks/SSAnneB1FRooms";
+import { OverworldSprite } from "../sprite";
 
 export const SSAnneB1FRooms: Map = {
   width: 12,
@@ -28,7 +29,7 @@ export const SSAnneB1FRooms: Map = {
         type: "trainer",
         x: 0,
         y: 13,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_SSANNEB1FROOMS_SAILOR1",
         trainerId: "OPP_SAILOR",
@@ -38,7 +39,7 @@ export const SSAnneB1FRooms: Map = {
         type: "trainer",
         x: 2,
         y: 11,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_SSANNEB1FROOMS_SAILOR2",
         trainerId: "OPP_SAILOR",
@@ -48,7 +49,7 @@ export const SSAnneB1FRooms: Map = {
         type: "trainer",
         x: 12,
         y: 3,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_SSANNEB1FROOMS_SAILOR3",
         trainerId: "OPP_SAILOR",
@@ -58,7 +59,7 @@ export const SSAnneB1FRooms: Map = {
         type: "trainer",
         x: 22,
         y: 2,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_SSANNEB1FROOMS_SAILOR4",
         trainerId: "OPP_SAILOR",
@@ -68,7 +69,7 @@ export const SSAnneB1FRooms: Map = {
         type: "trainer",
         x: 0,
         y: 2,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_SSANNEB1FROOMS_SAILOR5",
         trainerId: "OPP_SAILOR",
@@ -78,7 +79,7 @@ export const SSAnneB1FRooms: Map = {
         type: "trainer",
         x: 0,
         y: 4,
-        sprite: "SPRITE_FISHER",
+        sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_SSANNEB1FROOMS_FISHER",
         trainerId: "OPP_FISHER",
@@ -88,7 +89,7 @@ export const SSAnneB1FRooms: Map = {
         type: "sprite",
         x: 10,
         y: 13,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_SSANNEB1FROOMS_SUPER_NERD"
       },
@@ -96,7 +97,7 @@ export const SSAnneB1FRooms: Map = {
         type: "sprite",
         x: 11,
         y: 12,
-        sprite: "SPRITE_MONSTER",
+        sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_SSANNEB1FROOMS_MACHOKE"
       },
@@ -104,7 +105,7 @@ export const SSAnneB1FRooms: Map = {
         type: "item",
         x: 20,
         y: 2,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SSANNEB1FROOMS_ETHER",
         itemId: "ETHER"
@@ -113,7 +114,7 @@ export const SSAnneB1FRooms: Map = {
         type: "item",
         x: 10,
         y: 2,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SSANNEB1FROOMS_TM_REST",
         itemId: "TM_REST"
@@ -122,7 +123,7 @@ export const SSAnneB1FRooms: Map = {
         type: "item",
         x: 12,
         y: 11,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SSANNEB1FROOMS_MAX_POTION",
         itemId: "MAX_POTION"

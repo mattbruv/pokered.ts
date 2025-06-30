@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { POKEMON_MANSION_3F_BLOCKS } from "../data/blocks/PokemonMansion3F";
+import { OverworldSprite } from "../sprite";
 
 export const PokemonMansion3F: Map = {
   width: 15,
@@ -21,7 +22,7 @@ export const PokemonMansion3F: Map = {
         type: "trainer",
         x: 5,
         y: 11,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "WALK",
         textId: "TEXT_POKEMONMANSION3F_SUPER_NERD",
         trainerId: "OPP_BURGLAR",
@@ -31,7 +32,7 @@ export const PokemonMansion3F: Map = {
         type: "trainer",
         x: 20,
         y: 11,
-        sprite: "SPRITE_SCIENTIST",
+        sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSION3F_SCIENTIST",
         trainerId: "OPP_SCIENTIST",
@@ -41,7 +42,7 @@ export const PokemonMansion3F: Map = {
         type: "item",
         x: 1,
         y: 16,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSION3F_MAX_POTION",
         itemId: "MAX_POTION"
@@ -50,7 +51,7 @@ export const PokemonMansion3F: Map = {
         type: "item",
         x: 25,
         y: 5,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSION3F_IRON",
         itemId: "IRON"
@@ -59,7 +60,7 @@ export const PokemonMansion3F: Map = {
         type: "sprite",
         x: 6,
         y: 12,
-        sprite: "SPRITE_POKEDEX",
+        sprite: OverworldSprite.SPRITE_POKEDEX,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSION3F_DIARY"
       }

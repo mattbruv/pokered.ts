@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SAFARI_ZONE_GATE_BLOCKS } from "../data/blocks/SafariZoneGate";
+import { OverworldSprite } from "../sprite";
 
 export const SafariZoneGate: Map = {
   width: 4,
@@ -22,7 +23,7 @@ export const SafariZoneGate: Map = {
         type: "sprite",
         x: 6,
         y: 2,
-        sprite: "SPRITE_SAFARI_ZONE_WORKER",
+        sprite: OverworldSprite.SPRITE_SAFARI_ZONE_WORKER,
         movement: "STAY",
         textId: "TEXT_SAFARIZONEGATE_SAFARI_ZONE_WORKER1"
       },
@@ -30,7 +31,7 @@ export const SafariZoneGate: Map = {
         type: "sprite",
         x: 1,
         y: 4,
-        sprite: "SPRITE_SAFARI_ZONE_WORKER",
+        sprite: OverworldSprite.SPRITE_SAFARI_ZONE_WORKER,
         movement: "STAY",
         textId: "TEXT_SAFARIZONEGATE_SAFARI_ZONE_WORKER2"
       }

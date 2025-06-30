@@ -23,7 +23,7 @@ export function getObjectsImage(
         sprite.position.x,
         sprite.position.y,
         0,
-        0
+        -4 // All sprites are offset by 4 like the player.
       );
     }
   }

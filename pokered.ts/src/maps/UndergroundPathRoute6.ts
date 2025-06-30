@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { UNDERGROUND_PATH_ROUTE_6_BLOCKS } from "../data/blocks/UndergroundPathRoute6";
+import { OverworldSprite } from "../sprite";
 
 export const UndergroundPathRoute6: Map = {
   width: 4,
@@ -21,7 +22,7 @@ export const UndergroundPathRoute6: Map = {
         type: "sprite",
         x: 2,
         y: 3,
-        sprite: "SPRITE_GIRL",
+        sprite: OverworldSprite.SPRITE_GIRL,
         movement: "STAY",
         textId: "TEXT_UNDERGROUNDPATHROUTE6_GIRL"
       }

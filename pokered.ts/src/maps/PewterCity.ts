@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { PEWTER_CITY_BLOCKS } from "../data/blocks/PewterCity";
+import { OverworldSprite } from "../sprite";
 
 export const PewterCity: Map = {
   width: 20,
@@ -36,7 +37,7 @@ export const PewterCity: Map = {
         type: "sprite",
         x: 8,
         y: 15,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_PEWTERCITY_COOLTRAINER_F"
       },
@@ -44,7 +45,7 @@ export const PewterCity: Map = {
         type: "sprite",
         x: 17,
         y: 25,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_PEWTERCITY_COOLTRAINER_M"
       },
@@ -52,7 +53,7 @@ export const PewterCity: Map = {
         type: "sprite",
         x: 27,
         y: 17,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_PEWTERCITY_SUPER_NERD1"
       },
@@ -60,7 +61,7 @@ export const PewterCity: Map = {
         type: "sprite",
         x: 26,
         y: 25,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "WALK",
         textId: "TEXT_PEWTERCITY_SUPER_NERD2"
       },
@@ -68,7 +69,7 @@ export const PewterCity: Map = {
         type: "sprite",
         x: 35,
         y: 16,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_PEWTERCITY_YOUNGSTER"
       }

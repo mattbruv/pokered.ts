@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { AGATHAS_ROOM_BLOCKS } from "../data/blocks/AgathasRoom";
+import { OverworldSprite } from "../sprite";
 
 export const AgathasRoom: Map = {
   width: 5,
@@ -22,7 +23,7 @@ export const AgathasRoom: Map = {
         type: "trainer",
         x: 5,
         y: 2,
-        sprite: "SPRITE_AGATHA",
+        sprite: OverworldSprite.SPRITE_AGATHA,
         movement: "STAY",
         textId: "TEXT_AGATHASROOM_AGATHA",
         trainerId: "OPP_AGATHA",

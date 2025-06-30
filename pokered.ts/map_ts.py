@@ -14,6 +14,7 @@ BLOCKS_OUT_DIR = "src/data/blocks"
 MAP_TS_HEADER = """import {{ Map, MapName }} from "../map";
 import {{ Tileset }} from "../tileset";
 import {{ {blocks_const} }} from "../data/blocks/{block_file}";
+import {{ OverworldSprite }} from "../sprite";
 
 """
 
@@ -90,6 +91,8 @@ def main():
         map_object_json = json.dumps(map_objects)
         # Regex to remove quotes around toMap values
         map_object_json = re.sub(r'"(MapName[^"]+)"', r'\1', map_object_json)
+        # replace sprites with enum
+        map_object_json = re.sub(r'"(SPRITE_[^"]+)"', r'OverworldSprite.\1', map_object_json)
 
         file_contents = (
             MAP_TS_HEADER.format(blocks_const=blocks_const, block_file=map_name) +

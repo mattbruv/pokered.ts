@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VERMILION_OLD_ROD_HOUSE_BLOCKS } from "../data/blocks/VermilionOldRodHouse";
+import { OverworldSprite } from "../sprite";
 
 export const VermilionOldRodHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const VermilionOldRodHouse: Map = {
         type: "sprite",
         x: 2,
         y: 4,
-        sprite: "SPRITE_FISHING_GURU",
+        sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_VERMILIONOLDRODHOUSE_FISHING_GURU"
       }

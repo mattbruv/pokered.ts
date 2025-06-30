@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_10_BLOCKS } from "../data/blocks/Route10";
+import { OverworldSprite } from "../sprite";
 
 export const Route10: Map = {
   width: 10,
@@ -30,7 +31,7 @@ export const Route10: Map = {
         type: "trainer",
         x: 10,
         y: 44,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_ROUTE10_SUPER_NERD1",
         trainerId: "OPP_POKEMANIAC",
@@ -40,7 +41,7 @@ export const Route10: Map = {
         type: "trainer",
         x: 3,
         y: 57,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_ROUTE10_HIKER1",
         trainerId: "OPP_HIKER",
@@ -50,7 +51,7 @@ export const Route10: Map = {
         type: "trainer",
         x: 14,
         y: 64,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_ROUTE10_SUPER_NERD2",
         trainerId: "OPP_POKEMANIAC",
@@ -60,7 +61,7 @@ export const Route10: Map = {
         type: "trainer",
         x: 7,
         y: 25,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_ROUTE10_COOLTRAINER_F1",
         trainerId: "OPP_JR_TRAINER_F",
@@ -70,7 +71,7 @@ export const Route10: Map = {
         type: "trainer",
         x: 3,
         y: 61,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_ROUTE10_HIKER2",
         trainerId: "OPP_HIKER",
@@ -80,7 +81,7 @@ export const Route10: Map = {
         type: "trainer",
         x: 7,
         y: 54,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_ROUTE10_COOLTRAINER_F2",
         trainerId: "OPP_JR_TRAINER_F",

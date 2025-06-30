@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { WARDENS_HOUSE_BLOCKS } from "../data/blocks/WardensHouse";
+import { OverworldSprite } from "../sprite";
 
 export const WardensHouse: Map = {
   width: 5,
@@ -23,7 +24,7 @@ export const WardensHouse: Map = {
         type: "sprite",
         x: 2,
         y: 3,
-        sprite: "SPRITE_WARDEN",
+        sprite: OverworldSprite.SPRITE_WARDEN,
         movement: "STAY",
         textId: "TEXT_WARDENSHOUSE_WARDEN"
       },
@@ -31,7 +32,7 @@ export const WardensHouse: Map = {
         type: "item",
         x: 8,
         y: 3,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_WARDENSHOUSE_RARE_CANDY",
         itemId: "RARE_CANDY"
@@ -40,7 +41,7 @@ export const WardensHouse: Map = {
         type: "sprite",
         x: 8,
         y: 4,
-        sprite: "SPRITE_BOULDER",
+        sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_WARDENSHOUSE_BOULDER"
       }

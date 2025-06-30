@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CERULEAN_CAVE_1F_BLOCKS } from "../data/blocks/CeruleanCave1F";
+import { OverworldSprite } from "../sprite";
 
 export const CeruleanCave1F: Map = {
   width: 15,
@@ -27,7 +28,7 @@ export const CeruleanCave1F: Map = {
         type: "item",
         x: 7,
         y: 13,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_CERULEANCAVE1F_FULL_RESTORE",
         itemId: "FULL_RESTORE"
@@ -36,7 +37,7 @@ export const CeruleanCave1F: Map = {
         type: "item",
         x: 19,
         y: 3,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_CERULEANCAVE1F_MAX_ELIXER",
         itemId: "MAX_ELIXER"
@@ -45,7 +46,7 @@ export const CeruleanCave1F: Map = {
         type: "item",
         x: 5,
         y: 0,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_CERULEANCAVE1F_NUGGET",
         itemId: "NUGGET"

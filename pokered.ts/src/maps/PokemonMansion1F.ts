@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { POKEMON_MANSION_1F_BLOCKS } from "../data/blocks/PokemonMansion1F";
+import { OverworldSprite } from "../sprite";
 
 export const PokemonMansion1F: Map = {
   width: 15,
@@ -26,7 +27,7 @@ export const PokemonMansion1F: Map = {
         type: "trainer",
         x: 17,
         y: 17,
-        sprite: "SPRITE_SCIENTIST",
+        sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSION1F_SCIENTIST",
         trainerId: "OPP_SCIENTIST",
@@ -36,7 +37,7 @@ export const PokemonMansion1F: Map = {
         type: "item",
         x: 14,
         y: 3,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSION1F_ESCAPE_ROPE",
         itemId: "ESCAPE_ROPE"
@@ -45,7 +46,7 @@ export const PokemonMansion1F: Map = {
         type: "item",
         x: 18,
         y: 21,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSION1F_CARBOS",
         itemId: "CARBOS"

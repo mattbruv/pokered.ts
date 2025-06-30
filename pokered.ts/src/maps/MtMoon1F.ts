@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { MT_MOON_1F_BLOCKS } from "../data/blocks/MtMoon1F";
+import { OverworldSprite } from "../sprite";
 
 export const MtMoon1F: Map = {
   width: 20,
@@ -25,7 +26,7 @@ export const MtMoon1F: Map = {
         type: "trainer",
         x: 5,
         y: 6,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_HIKER",
         trainerId: "OPP_HIKER",
@@ -35,7 +36,7 @@ export const MtMoon1F: Map = {
         type: "trainer",
         x: 12,
         y: 16,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_YOUNGSTER1",
         trainerId: "OPP_YOUNGSTER",
@@ -45,7 +46,7 @@ export const MtMoon1F: Map = {
         type: "trainer",
         x: 30,
         y: 4,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_COOLTRAINER_F1",
         trainerId: "OPP_LASS",
@@ -55,7 +56,7 @@ export const MtMoon1F: Map = {
         type: "trainer",
         x: 24,
         y: 31,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_SUPER_NERD",
         trainerId: "OPP_SUPER_NERD",
@@ -65,7 +66,7 @@ export const MtMoon1F: Map = {
         type: "trainer",
         x: 16,
         y: 23,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_COOLTRAINER_F2",
         trainerId: "OPP_LASS",
@@ -75,7 +76,7 @@ export const MtMoon1F: Map = {
         type: "trainer",
         x: 7,
         y: 22,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_YOUNGSTER2",
         trainerId: "OPP_BUG_CATCHER",
@@ -85,7 +86,7 @@ export const MtMoon1F: Map = {
         type: "trainer",
         x: 30,
         y: 27,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_YOUNGSTER3",
         trainerId: "OPP_BUG_CATCHER",
@@ -95,7 +96,7 @@ export const MtMoon1F: Map = {
         type: "item",
         x: 2,
         y: 20,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_POTION1",
         itemId: "POTION"
@@ -104,7 +105,7 @@ export const MtMoon1F: Map = {
         type: "item",
         x: 2,
         y: 2,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_MOON_STONE",
         itemId: "MOON_STONE"
@@ -113,7 +114,7 @@ export const MtMoon1F: Map = {
         type: "item",
         x: 35,
         y: 31,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_RARE_CANDY",
         itemId: "RARE_CANDY"
@@ -122,7 +123,7 @@ export const MtMoon1F: Map = {
         type: "item",
         x: 36,
         y: 23,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_ESCAPE_ROPE",
         itemId: "ESCAPE_ROPE"
@@ -131,7 +132,7 @@ export const MtMoon1F: Map = {
         type: "item",
         x: 20,
         y: 33,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_POTION2",
         itemId: "POTION"
@@ -140,7 +141,7 @@ export const MtMoon1F: Map = {
         type: "item",
         x: 5,
         y: 32,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_MTMOON1F_TM_WATER_GUN",
         itemId: "TM_WATER_GUN"

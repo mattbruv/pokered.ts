@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SS_ANNE_1F_BLOCKS } from "../data/blocks/SSAnne1F";
+import { OverworldSprite } from "../sprite";
 
 export const SSAnne1F: Map = {
   width: 20,
@@ -29,7 +30,7 @@ export const SSAnne1F: Map = {
         type: "sprite",
         x: 12,
         y: 6,
-        sprite: "SPRITE_WAITER",
+        sprite: OverworldSprite.SPRITE_WAITER,
         movement: "WALK",
         textId: "TEXT_SSANNE1F_WAITER"
       },
@@ -37,7 +38,7 @@ export const SSAnne1F: Map = {
         type: "sprite",
         x: 27,
         y: 5,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_SSANNE1F_SAILOR"
       }

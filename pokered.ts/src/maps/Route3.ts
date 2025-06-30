@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_3_BLOCKS } from "../data/blocks/Route3";
+import { OverworldSprite } from "../sprite";
 
 export const Route3: Map = {
   width: 35,
@@ -20,7 +21,7 @@ export const Route3: Map = {
         type: "sprite",
         x: 57,
         y: 11,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_ROUTE3_SUPER_NERD"
       },
@@ -28,7 +29,7 @@ export const Route3: Map = {
         type: "trainer",
         x: 10,
         y: 6,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_ROUTE3_YOUNGSTER1",
         trainerId: "OPP_BUG_CATCHER",
@@ -38,7 +39,7 @@ export const Route3: Map = {
         type: "trainer",
         x: 14,
         y: 4,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_ROUTE3_YOUNGSTER2",
         trainerId: "OPP_YOUNGSTER",
@@ -48,7 +49,7 @@ export const Route3: Map = {
         type: "trainer",
         x: 16,
         y: 9,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_ROUTE3_COOLTRAINER_F1",
         trainerId: "OPP_LASS",
@@ -58,7 +59,7 @@ export const Route3: Map = {
         type: "trainer",
         x: 19,
         y: 5,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_ROUTE3_YOUNGSTER3",
         trainerId: "OPP_BUG_CATCHER",
@@ -68,7 +69,7 @@ export const Route3: Map = {
         type: "trainer",
         x: 23,
         y: 4,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_ROUTE3_COOLTRAINER_F2",
         trainerId: "OPP_LASS",
@@ -78,7 +79,7 @@ export const Route3: Map = {
         type: "trainer",
         x: 22,
         y: 9,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_ROUTE3_YOUNGSTER4",
         trainerId: "OPP_YOUNGSTER",
@@ -88,7 +89,7 @@ export const Route3: Map = {
         type: "trainer",
         x: 24,
         y: 6,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_ROUTE3_YOUNGSTER5",
         trainerId: "OPP_BUG_CATCHER",
@@ -98,7 +99,7 @@ export const Route3: Map = {
         type: "trainer",
         x: 33,
         y: 10,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_ROUTE3_COOLTRAINER_F3",
         trainerId: "OPP_LASS",

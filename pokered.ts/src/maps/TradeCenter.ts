@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { TRADE_CENTER_BLOCKS } from "../data/blocks/TradeCenter";
+import { OverworldSprite } from "../sprite";
 
 export const TradeCenter: Map = {
   width: 5,
@@ -17,7 +18,7 @@ export const TradeCenter: Map = {
         type: "sprite",
         x: 2,
         y: 2,
-        sprite: "SPRITE_RED",
+        sprite: OverworldSprite.SPRITE_RED,
         movement: "STAY",
         textId: "TEXT_TRADECENTER_OPPONENT"
       }

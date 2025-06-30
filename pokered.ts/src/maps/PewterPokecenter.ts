@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { PEWTER_POKECENTER_BLOCKS } from "../data/blocks/PewterPokecenter";
+import { OverworldSprite } from "../sprite";
 
 export const PewterPokecenter: Map = {
   width: 7,
@@ -20,7 +21,7 @@ export const PewterPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
-        sprite: "SPRITE_NURSE",
+        sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_PEWTERPOKECENTER_NURSE"
       },
@@ -28,7 +29,7 @@ export const PewterPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 7,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_PEWTERPOKECENTER_GENTLEMAN"
       },
@@ -36,7 +37,7 @@ export const PewterPokecenter: Map = {
         type: "sprite",
         x: 1,
         y: 3,
-        sprite: "SPRITE_FAIRY",
+        sprite: OverworldSprite.SPRITE_FAIRY,
         movement: "STAY",
         textId: "TEXT_PEWTERPOKECENTER_JIGGLYPUFF"
       },
@@ -44,7 +45,7 @@ export const PewterPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
-        sprite: "SPRITE_LINK_RECEPTIONIST",
+        sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_PEWTERPOKECENTER_LINK_RECEPTIONIST"
       }

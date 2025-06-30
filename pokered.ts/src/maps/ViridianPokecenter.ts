@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VIRIDIAN_POKECENTER_BLOCKS } from "../data/blocks/ViridianPokecenter";
+import { OverworldSprite } from "../sprite";
 
 export const ViridianPokecenter: Map = {
   width: 7,
@@ -20,7 +21,7 @@ export const ViridianPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
-        sprite: "SPRITE_NURSE",
+        sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_VIRIDIANPOKECENTER_NURSE"
       },
@@ -28,7 +29,7 @@ export const ViridianPokecenter: Map = {
         type: "sprite",
         x: 10,
         y: 5,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "WALK",
         textId: "TEXT_VIRIDIANPOKECENTER_GENTLEMAN"
       },
@@ -36,7 +37,7 @@ export const ViridianPokecenter: Map = {
         type: "sprite",
         x: 4,
         y: 3,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_VIRIDIANPOKECENTER_COOLTRAINER_M"
       },
@@ -44,7 +45,7 @@ export const ViridianPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
-        sprite: "SPRITE_LINK_RECEPTIONIST",
+        sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_VIRIDIANPOKECENTER_LINK_RECEPTIONIST"
       }

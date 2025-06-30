@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_5_BLOCKS } from "../data/blocks/Route5";
+import { OverworldSprite } from "../sprite";
 
 export const Route5: Map = {
   width: 10,

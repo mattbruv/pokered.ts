@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_2_GATE_BLOCKS } from "../data/blocks/Route2Gate";
+import { OverworldSprite } from "../sprite";
 
 export const Route2Gate: Map = {
   width: 5,
@@ -22,7 +23,7 @@ export const Route2Gate: Map = {
         type: "sprite",
         x: 1,
         y: 4,
-        sprite: "SPRITE_SCIENTIST",
+        sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_ROUTE2GATE_OAKS_AIDE"
       },
@@ -30,7 +31,7 @@ export const Route2Gate: Map = {
         type: "sprite",
         x: 5,
         y: 4,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_ROUTE2GATE_YOUNGSTER"
       }

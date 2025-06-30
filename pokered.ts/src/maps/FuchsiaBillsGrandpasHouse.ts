@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { FUCHSIA_BILLS_GRANDPAS_HOUSE_BLOCKS } from "../data/blocks/FuchsiaBillsGrandpasHouse";
+import { OverworldSprite } from "../sprite";
 
 export const FuchsiaBillsGrandpasHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const FuchsiaBillsGrandpasHouse: Map = {
         type: "sprite",
         x: 2,
         y: 3,
-        sprite: "SPRITE_MIDDLE_AGED_WOMAN",
+        sprite: OverworldSprite.SPRITE_MIDDLE_AGED_WOMAN,
         movement: "STAY",
         textId: "TEXT_FUCHSIABILLSGRANDPASHOUSE_MIDDLE_AGED_WOMAN"
       },
@@ -28,7 +29,7 @@ export const FuchsiaBillsGrandpasHouse: Map = {
         type: "sprite",
         x: 7,
         y: 2,
-        sprite: "SPRITE_GAMBLER",
+        sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_FUCHSIABILLSGRANDPASHOUSE_BILLS_GRANDPA"
       },
@@ -36,7 +37,7 @@ export const FuchsiaBillsGrandpasHouse: Map = {
         type: "sprite",
         x: 5,
         y: 5,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_FUCHSIABILLSGRANDPASHOUSE_YOUNGSTER"
       }

@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CERULEAN_TRASHED_HOUSE_BLOCKS } from "../data/blocks/CeruleanTrashedHouse";
+import { OverworldSprite } from "../sprite";
 
 export const CeruleanTrashedHouse: Map = {
   width: 4,
@@ -23,7 +24,7 @@ export const CeruleanTrashedHouse: Map = {
         type: "sprite",
         x: 2,
         y: 1,
-        sprite: "SPRITE_FISHING_GURU",
+        sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_CERULEANTRASHEDHOUSE_FISHING_GURU"
       },
@@ -31,7 +32,7 @@ export const CeruleanTrashedHouse: Map = {
         type: "sprite",
         x: 5,
         y: 6,
-        sprite: "SPRITE_GIRL",
+        sprite: OverworldSprite.SPRITE_GIRL,
         movement: "WALK",
         textId: "TEXT_CERULEANTRASHEDHOUSE_GIRL"
       }

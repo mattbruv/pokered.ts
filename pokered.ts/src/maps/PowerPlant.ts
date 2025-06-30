@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { POWER_PLANT_BLOCKS } from "../data/blocks/PowerPlant";
+import { OverworldSprite } from "../sprite";
 
 export const PowerPlant: Map = {
   width: 20,
@@ -21,7 +22,7 @@ export const PowerPlant: Map = {
         type: "trainer",
         x: 9,
         y: 20,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_VOLTORB1",
         trainerId: "VOLTORB",
@@ -31,7 +32,7 @@ export const PowerPlant: Map = {
         type: "trainer",
         x: 32,
         y: 18,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_VOLTORB2",
         trainerId: "VOLTORB",
@@ -41,7 +42,7 @@ export const PowerPlant: Map = {
         type: "trainer",
         x: 21,
         y: 25,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_VOLTORB3",
         trainerId: "VOLTORB",
@@ -51,7 +52,7 @@ export const PowerPlant: Map = {
         type: "trainer",
         x: 25,
         y: 18,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_ELECTRODE1",
         trainerId: "ELECTRODE",
@@ -61,7 +62,7 @@ export const PowerPlant: Map = {
         type: "trainer",
         x: 23,
         y: 34,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_VOLTORB4",
         trainerId: "VOLTORB",
@@ -71,7 +72,7 @@ export const PowerPlant: Map = {
         type: "trainer",
         x: 26,
         y: 28,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_VOLTORB5",
         trainerId: "VOLTORB",
@@ -81,7 +82,7 @@ export const PowerPlant: Map = {
         type: "trainer",
         x: 21,
         y: 14,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_ELECTRODE2",
         trainerId: "ELECTRODE",
@@ -91,7 +92,7 @@ export const PowerPlant: Map = {
         type: "trainer",
         x: 37,
         y: 32,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_VOLTORB6",
         trainerId: "VOLTORB",
@@ -101,7 +102,7 @@ export const PowerPlant: Map = {
         type: "trainer",
         x: 4,
         y: 9,
-        sprite: "SPRITE_BIRD",
+        sprite: OverworldSprite.SPRITE_BIRD,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_ZAPDOS",
         trainerId: "ZAPDOS",
@@ -111,7 +112,7 @@ export const PowerPlant: Map = {
         type: "item",
         x: 7,
         y: 25,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_CARBOS",
         itemId: "CARBOS"
@@ -120,7 +121,7 @@ export const PowerPlant: Map = {
         type: "item",
         x: 28,
         y: 3,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_HP_UP",
         itemId: "HP_UP"
@@ -129,7 +130,7 @@ export const PowerPlant: Map = {
         type: "item",
         x: 34,
         y: 3,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_RARE_CANDY",
         itemId: "RARE_CANDY"
@@ -138,7 +139,7 @@ export const PowerPlant: Map = {
         type: "item",
         x: 26,
         y: 32,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_TM_THUNDER",
         itemId: "TM_THUNDER"
@@ -147,7 +148,7 @@ export const PowerPlant: Map = {
         type: "item",
         x: 20,
         y: 32,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POWERPLANT_TM_REFLECT",
         itemId: "TM_REFLECT"

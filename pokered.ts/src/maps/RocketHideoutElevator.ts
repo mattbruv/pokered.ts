@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROCKET_HIDEOUT_ELEVATOR_BLOCKS } from "../data/blocks/RocketHideoutElevator";
+import { OverworldSprite } from "../sprite";
 
 export const RocketHideoutElevator: Map = {
   width: 3,

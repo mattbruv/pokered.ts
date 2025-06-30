@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { REDS_HOUSE_1F_BLOCKS } from "../data/blocks/RedsHouse1F";
+import { OverworldSprite } from "../sprite";
 
 export const RedsHouse1F: Map = {
   width: 4,
@@ -21,7 +22,7 @@ export const RedsHouse1F: Map = {
         type: "sprite",
         x: 5,
         y: 4,
-        sprite: "SPRITE_MOM",
+        sprite: OverworldSprite.SPRITE_MOM,
         movement: "STAY",
         textId: "TEXT_REDSHOUSE1F_MOM"
       }

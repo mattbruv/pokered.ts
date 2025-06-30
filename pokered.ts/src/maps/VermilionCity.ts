@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VERMILION_CITY_BLOCKS } from "../data/blocks/VermilionCity";
+import { OverworldSprite } from "../sprite";
 
 export const VermilionCity: Map = {
   width: 20,
@@ -38,7 +39,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 19,
         y: 7,
-        sprite: "SPRITE_BEAUTY",
+        sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "WALK",
         textId: "TEXT_VERMILIONCITY_BEAUTY"
       },
@@ -46,7 +47,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 14,
         y: 6,
-        sprite: "SPRITE_GAMBLER",
+        sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_VERMILIONCITY_GAMBLER1"
       },
@@ -54,7 +55,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 19,
         y: 30,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_VERMILIONCITY_SAILOR1"
       },
@@ -62,7 +63,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 30,
         y: 7,
-        sprite: "SPRITE_GAMBLER",
+        sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_VERMILIONCITY_GAMBLER2"
       },
@@ -70,7 +71,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 29,
         y: 9,
-        sprite: "SPRITE_MONSTER",
+        sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "WALK",
         textId: "TEXT_VERMILIONCITY_MACHOP"
       },
@@ -78,7 +79,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 25,
         y: 27,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "WALK",
         textId: "TEXT_VERMILIONCITY_SAILOR2"
       }

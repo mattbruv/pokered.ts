@@ -9,7 +9,7 @@ import {
 } from "./overworld/map";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, Sprite } from "./render/sprite";
-import { SpriteName } from "./sprite";
+import { getOverworldSpriteKey, SpriteName } from "./sprite";
 import { Tileset } from "./tileset";
 
 export type PokemonRedOptions = {
@@ -190,7 +190,7 @@ class PokemonRed {
     this.#data.map.currentMapSprites = nextMap.objects.objects.map(
       (obj): Sprite => {
         return {
-          image: obj.sprite as SpriteName,
+          image: getOverworldSpriteKey(obj.sprite),
           facing: FacingDirection.Down,
           movementStatus: MovementStatus.Ready,
           animationFrameCounter: 0,

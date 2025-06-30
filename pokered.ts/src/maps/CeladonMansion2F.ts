@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CELADON_MANSION_2F_BLOCKS } from "../data/blocks/CeladonMansion2F";
+import { OverworldSprite } from "../sprite";
 
 export const CeladonMansion2F: Map = {
   width: 4,

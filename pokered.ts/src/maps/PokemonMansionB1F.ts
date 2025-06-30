@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { POKEMON_MANSION_B1F_BLOCKS } from "../data/blocks/PokemonMansionB1F";
+import { OverworldSprite } from "../sprite";
 
 export const PokemonMansionB1F: Map = {
   width: 15,
@@ -17,7 +18,7 @@ export const PokemonMansionB1F: Map = {
         type: "trainer",
         x: 16,
         y: 23,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSIONB1F_BURGLAR",
         trainerId: "OPP_BURGLAR",
@@ -27,7 +28,7 @@ export const PokemonMansionB1F: Map = {
         type: "trainer",
         x: 27,
         y: 11,
-        sprite: "SPRITE_SCIENTIST",
+        sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSIONB1F_SCIENTIST",
         trainerId: "OPP_SCIENTIST",
@@ -37,7 +38,7 @@ export const PokemonMansionB1F: Map = {
         type: "item",
         x: 10,
         y: 2,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSIONB1F_RARE_CANDY",
         itemId: "RARE_CANDY"
@@ -46,7 +47,7 @@ export const PokemonMansionB1F: Map = {
         type: "item",
         x: 1,
         y: 22,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSIONB1F_FULL_RESTORE",
         itemId: "FULL_RESTORE"
@@ -55,7 +56,7 @@ export const PokemonMansionB1F: Map = {
         type: "item",
         x: 19,
         y: 25,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSIONB1F_TM_BLIZZARD",
         itemId: "TM_BLIZZARD"
@@ -64,7 +65,7 @@ export const PokemonMansionB1F: Map = {
         type: "item",
         x: 5,
         y: 4,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSIONB1F_TM_SOLARBEAM",
         itemId: "TM_SOLARBEAM"
@@ -73,7 +74,7 @@ export const PokemonMansionB1F: Map = {
         type: "sprite",
         x: 16,
         y: 20,
-        sprite: "SPRITE_POKEDEX",
+        sprite: OverworldSprite.SPRITE_POKEDEX,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSIONB1F_DIARY"
       },
@@ -81,7 +82,7 @@ export const PokemonMansionB1F: Map = {
         type: "item",
         x: 5,
         y: 13,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSIONB1F_SECRET_KEY",
         itemId: "SECRET_KEY"

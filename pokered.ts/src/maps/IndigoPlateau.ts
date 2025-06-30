@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { INDIGO_PLATEAU_BLOCKS } from "../data/blocks/IndigoPlateau";
+import { OverworldSprite } from "../sprite";
 
 export const IndigoPlateau: Map = {
   width: 10,

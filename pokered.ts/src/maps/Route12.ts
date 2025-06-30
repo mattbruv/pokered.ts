@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_12_BLOCKS } from "../data/blocks/Route12";
+import { OverworldSprite } from "../sprite";
 
 export const Route12: Map = {
   width: 10,
@@ -29,7 +30,7 @@ export const Route12: Map = {
         type: "sprite",
         x: 10,
         y: 62,
-        sprite: "SPRITE_SNORLAX",
+        sprite: OverworldSprite.SPRITE_SNORLAX,
         movement: "STAY",
         textId: "TEXT_ROUTE12_SNORLAX"
       },
@@ -37,7 +38,7 @@ export const Route12: Map = {
         type: "trainer",
         x: 14,
         y: 31,
-        sprite: "SPRITE_FISHER",
+        sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_ROUTE12_FISHER1",
         trainerId: "OPP_FISHER",
@@ -47,7 +48,7 @@ export const Route12: Map = {
         type: "trainer",
         x: 5,
         y: 39,
-        sprite: "SPRITE_FISHER",
+        sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_ROUTE12_FISHER2",
         trainerId: "OPP_FISHER",
@@ -57,7 +58,7 @@ export const Route12: Map = {
         type: "trainer",
         x: 11,
         y: 92,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_ROUTE12_COOLTRAINER_M",
         trainerId: "OPP_JR_TRAINER_M",
@@ -67,7 +68,7 @@ export const Route12: Map = {
         type: "trainer",
         x: 14,
         y: 76,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_ROUTE12_SUPER_NERD",
         trainerId: "OPP_ROCKER",
@@ -77,7 +78,7 @@ export const Route12: Map = {
         type: "trainer",
         x: 12,
         y: 40,
-        sprite: "SPRITE_FISHER",
+        sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_ROUTE12_FISHER3",
         trainerId: "OPP_FISHER",
@@ -87,7 +88,7 @@ export const Route12: Map = {
         type: "trainer",
         x: 9,
         y: 52,
-        sprite: "SPRITE_FISHER",
+        sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_ROUTE12_FISHER4",
         trainerId: "OPP_FISHER",
@@ -97,7 +98,7 @@ export const Route12: Map = {
         type: "trainer",
         x: 6,
         y: 87,
-        sprite: "SPRITE_FISHER",
+        sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_ROUTE12_FISHER5",
         trainerId: "OPP_FISHER",
@@ -107,7 +108,7 @@ export const Route12: Map = {
         type: "item",
         x: 14,
         y: 35,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROUTE12_TM_PAY_DAY",
         itemId: "TM_PAY_DAY"
@@ -116,7 +117,7 @@ export const Route12: Map = {
         type: "item",
         x: 5,
         y: 89,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROUTE12_IRON",
         itemId: "IRON"

@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { DAYCARE_BLOCKS } from "../data/blocks/Daycare";
+import { OverworldSprite } from "../sprite";
 
 export const Daycare: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const Daycare: Map = {
         type: "sprite",
         x: 2,
         y: 3,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_DAYCARE_GENTLEMAN"
       }

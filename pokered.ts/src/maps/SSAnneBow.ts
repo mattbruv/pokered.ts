@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SS_ANNE_BOW_BLOCKS } from "../data/blocks/SSAnneBow";
+import { OverworldSprite } from "../sprite";
 
 export const SSAnneBow: Map = {
   width: 10,
@@ -20,7 +21,7 @@ export const SSAnneBow: Map = {
         type: "sprite",
         x: 5,
         y: 2,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_SSANNEBOW_SUPER_NERD"
       },
@@ -28,7 +29,7 @@ export const SSAnneBow: Map = {
         type: "sprite",
         x: 4,
         y: 9,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_SSANNEBOW_SAILOR1"
       },
@@ -36,7 +37,7 @@ export const SSAnneBow: Map = {
         type: "sprite",
         x: 7,
         y: 11,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_SSANNEBOW_COOLTRAINER_M"
       },
@@ -44,7 +45,7 @@ export const SSAnneBow: Map = {
         type: "trainer",
         x: 4,
         y: 4,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_SSANNEBOW_SAILOR2",
         trainerId: "OPP_SAILOR",
@@ -54,7 +55,7 @@ export const SSAnneBow: Map = {
         type: "trainer",
         x: 10,
         y: 8,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_SSANNEBOW_SAILOR3",
         trainerId: "OPP_SAILOR",

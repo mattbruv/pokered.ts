@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { POKEMON_TOWER_7F_BLOCKS } from "../data/blocks/PokemonTower7F";
+import { OverworldSprite } from "../sprite";
 
 export const PokemonTower7F: Map = {
   width: 10,
@@ -17,7 +18,7 @@ export const PokemonTower7F: Map = {
         type: "trainer",
         x: 9,
         y: 11,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER7F_ROCKET1",
         trainerId: "OPP_ROCKET",
@@ -27,7 +28,7 @@ export const PokemonTower7F: Map = {
         type: "trainer",
         x: 12,
         y: 9,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER7F_ROCKET2",
         trainerId: "OPP_ROCKET",
@@ -37,7 +38,7 @@ export const PokemonTower7F: Map = {
         type: "trainer",
         x: 9,
         y: 7,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER7F_ROCKET3",
         trainerId: "OPP_ROCKET",
@@ -47,7 +48,7 @@ export const PokemonTower7F: Map = {
         type: "sprite",
         x: 10,
         y: 3,
-        sprite: "SPRITE_MR_FUJI",
+        sprite: OverworldSprite.SPRITE_MR_FUJI,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER7F_MR_FUJI"
       }

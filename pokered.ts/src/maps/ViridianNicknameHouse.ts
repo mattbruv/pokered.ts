@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VIRIDIAN_NICKNAME_HOUSE_BLOCKS } from "../data/blocks/ViridianNicknameHouse";
+import { OverworldSprite } from "../sprite";
 
 export const ViridianNicknameHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const ViridianNicknameHouse: Map = {
         type: "sprite",
         x: 5,
         y: 3,
-        sprite: "SPRITE_BALDING_GUY",
+        sprite: OverworldSprite.SPRITE_BALDING_GUY,
         movement: "STAY",
         textId: "TEXT_VIRIDIANNICKNAMEHOUSE_BALDING_GUY"
       },
@@ -28,7 +29,7 @@ export const ViridianNicknameHouse: Map = {
         type: "sprite",
         x: 1,
         y: 4,
-        sprite: "SPRITE_LITTLE_GIRL",
+        sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_VIRIDIANNICKNAMEHOUSE_LITTLE_GIRL"
       },
@@ -36,7 +37,7 @@ export const ViridianNicknameHouse: Map = {
         type: "sprite",
         x: 5,
         y: 5,
-        sprite: "SPRITE_BIRD",
+        sprite: OverworldSprite.SPRITE_BIRD,
         movement: "WALK",
         textId: "TEXT_VIRIDIANNICKNAMEHOUSE_SPEAROW"
       },
@@ -44,7 +45,7 @@ export const ViridianNicknameHouse: Map = {
         type: "sprite",
         x: 4,
         y: 0,
-        sprite: "SPRITE_CLIPBOARD",
+        sprite: OverworldSprite.SPRITE_CLIPBOARD,
         movement: "STAY",
         textId: "TEXT_VIRIDIANNICKNAMEHOUSE_SPEARY_SIGN"
       }

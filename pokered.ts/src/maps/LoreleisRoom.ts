@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { LORELEIS_ROOM_BLOCKS } from "../data/blocks/LoreleisRoom";
+import { OverworldSprite } from "../sprite";
 
 export const LoreleisRoom: Map = {
   width: 5,
@@ -22,7 +23,7 @@ export const LoreleisRoom: Map = {
         type: "trainer",
         x: 5,
         y: 2,
-        sprite: "SPRITE_LORELEI",
+        sprite: OverworldSprite.SPRITE_LORELEI,
         movement: "STAY",
         textId: "TEXT_LORELEISROOM_LORELEI",
         trainerId: "OPP_LORELEI",

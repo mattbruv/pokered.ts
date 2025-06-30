@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VERMILION_GYM_BLOCKS } from "../data/blocks/VermilionGym";
+import { OverworldSprite } from "../sprite";
 
 export const VermilionGym: Map = {
   width: 5,
@@ -20,7 +21,7 @@ export const VermilionGym: Map = {
         type: "trainer",
         x: 5,
         y: 1,
-        sprite: "SPRITE_ROCKER",
+        sprite: OverworldSprite.SPRITE_ROCKER,
         movement: "STAY",
         textId: "TEXT_VERMILIONGYM_LT_SURGE",
         trainerId: "OPP_LT_SURGE",
@@ -30,7 +31,7 @@ export const VermilionGym: Map = {
         type: "trainer",
         x: 9,
         y: 6,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_VERMILIONGYM_GENTLEMAN",
         trainerId: "OPP_GENTLEMAN",
@@ -40,7 +41,7 @@ export const VermilionGym: Map = {
         type: "trainer",
         x: 3,
         y: 8,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_VERMILIONGYM_SUPER_NERD",
         trainerId: "OPP_ROCKER",
@@ -50,7 +51,7 @@ export const VermilionGym: Map = {
         type: "trainer",
         x: 0,
         y: 10,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_VERMILIONGYM_SAILOR",
         trainerId: "OPP_SAILOR",
@@ -60,7 +61,7 @@ export const VermilionGym: Map = {
         type: "sprite",
         x: 4,
         y: 14,
-        sprite: "SPRITE_GYM_GUIDE",
+        sprite: OverworldSprite.SPRITE_GYM_GUIDE,
         movement: "STAY",
         textId: "TEXT_VERMILIONGYM_GYM_GUIDE"
       }

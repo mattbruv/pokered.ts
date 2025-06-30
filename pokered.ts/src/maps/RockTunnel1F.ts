@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROCK_TUNNEL_1F_BLOCKS } from "../data/blocks/RockTunnel1F";
+import { OverworldSprite } from "../sprite";
 
 export const RockTunnel1F: Map = {
   width: 20,
@@ -26,7 +27,7 @@ export const RockTunnel1F: Map = {
         type: "trainer",
         x: 7,
         y: 5,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_ROCKTUNNEL1F_HIKER1",
         trainerId: "OPP_HIKER",
@@ -36,7 +37,7 @@ export const RockTunnel1F: Map = {
         type: "trainer",
         x: 5,
         y: 16,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_ROCKTUNNEL1F_HIKER2",
         trainerId: "OPP_HIKER",
@@ -46,7 +47,7 @@ export const RockTunnel1F: Map = {
         type: "trainer",
         x: 17,
         y: 15,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_ROCKTUNNEL1F_HIKER3",
         trainerId: "OPP_HIKER",
@@ -56,7 +57,7 @@ export const RockTunnel1F: Map = {
         type: "trainer",
         x: 23,
         y: 8,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_ROCKTUNNEL1F_SUPER_NERD",
         trainerId: "OPP_POKEMANIAC",
@@ -66,7 +67,7 @@ export const RockTunnel1F: Map = {
         type: "trainer",
         x: 37,
         y: 21,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_ROCKTUNNEL1F_COOLTRAINER_F1",
         trainerId: "OPP_JR_TRAINER_F",
@@ -76,7 +77,7 @@ export const RockTunnel1F: Map = {
         type: "trainer",
         x: 22,
         y: 24,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_ROCKTUNNEL1F_COOLTRAINER_F2",
         trainerId: "OPP_JR_TRAINER_F",
@@ -86,7 +87,7 @@ export const RockTunnel1F: Map = {
         type: "trainer",
         x: 32,
         y: 24,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_ROCKTUNNEL1F_COOLTRAINER_F3",
         trainerId: "OPP_JR_TRAINER_F",

@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { POKEMON_TOWER_4F_BLOCKS } from "../data/blocks/PokemonTower4F";
+import { OverworldSprite } from "../sprite";
 
 export const PokemonTower4F: Map = {
   width: 10,
@@ -20,7 +21,7 @@ export const PokemonTower4F: Map = {
         type: "trainer",
         x: 5,
         y: 10,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER4F_CHANNELER1",
         trainerId: "OPP_CHANNELER",
@@ -30,7 +31,7 @@ export const PokemonTower4F: Map = {
         type: "trainer",
         x: 15,
         y: 7,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER4F_CHANNELER2",
         trainerId: "OPP_CHANNELER",
@@ -40,7 +41,7 @@ export const PokemonTower4F: Map = {
         type: "trainer",
         x: 14,
         y: 12,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER4F_CHANNELER3",
         trainerId: "OPP_CHANNELER",
@@ -50,7 +51,7 @@ export const PokemonTower4F: Map = {
         type: "item",
         x: 12,
         y: 10,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER4F_ELIXER",
         itemId: "ELIXER"
@@ -59,7 +60,7 @@ export const PokemonTower4F: Map = {
         type: "item",
         x: 9,
         y: 10,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER4F_AWAKENING",
         itemId: "AWAKENING"
@@ -68,7 +69,7 @@ export const PokemonTower4F: Map = {
         type: "item",
         x: 12,
         y: 16,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER4F_HP_UP",
         itemId: "HP_UP"

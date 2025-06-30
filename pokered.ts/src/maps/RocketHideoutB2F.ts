@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROCKET_HIDEOUT_B2F_BLOCKS } from "../data/blocks/RocketHideoutB2F";
+import { OverworldSprite } from "../sprite";
 
 export const RocketHideoutB2F: Map = {
   width: 15,
@@ -23,7 +24,7 @@ export const RocketHideoutB2F: Map = {
         type: "trainer",
         x: 20,
         y: 12,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB2F_ROCKET",
         trainerId: "OPP_ROCKET",
@@ -33,7 +34,7 @@ export const RocketHideoutB2F: Map = {
         type: "item",
         x: 1,
         y: 11,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB2F_MOON_STONE",
         itemId: "MOON_STONE"
@@ -42,7 +43,7 @@ export const RocketHideoutB2F: Map = {
         type: "item",
         x: 16,
         y: 8,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB2F_NUGGET",
         itemId: "NUGGET"
@@ -51,7 +52,7 @@ export const RocketHideoutB2F: Map = {
         type: "item",
         x: 6,
         y: 12,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB2F_TM_HORN_DRILL",
         itemId: "TM_HORN_DRILL"
@@ -60,7 +61,7 @@ export const RocketHideoutB2F: Map = {
         type: "item",
         x: 3,
         y: 21,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB2F_SUPER_POTION",
         itemId: "SUPER_POTION"

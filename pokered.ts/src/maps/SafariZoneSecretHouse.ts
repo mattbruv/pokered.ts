@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SAFARI_ZONE_SECRET_HOUSE_BLOCKS } from "../data/blocks/SafariZoneSecretHouse";
+import { OverworldSprite } from "../sprite";
 
 export const SafariZoneSecretHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const SafariZoneSecretHouse: Map = {
         type: "sprite",
         x: 3,
         y: 3,
-        sprite: "SPRITE_FISHING_GURU",
+        sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_SAFARIZONESECRETHOUSE_FISHING_GURU"
       }

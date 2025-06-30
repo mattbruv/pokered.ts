@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VIRIDIAN_SCHOOL_HOUSE_BLOCKS } from "../data/blocks/ViridianSchoolHouse";
+import { OverworldSprite } from "../sprite";
 
 export const ViridianSchoolHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const ViridianSchoolHouse: Map = {
         type: "sprite",
         x: 3,
         y: 5,
-        sprite: "SPRITE_BRUNETTE_GIRL",
+        sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_VIRIDIANSCHOOLHOUSE_BRUNETTE_GIRL"
       },
@@ -28,7 +29,7 @@ export const ViridianSchoolHouse: Map = {
         type: "sprite",
         x: 4,
         y: 1,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_VIRIDIANSCHOOLHOUSE_COOLTRAINER_F"
       }

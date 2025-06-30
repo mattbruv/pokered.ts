@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { UNDERGROUND_PATH_ROUTE_7_BLOCKS } from "../data/blocks/UndergroundPathRoute7Copy";
+import { OverworldSprite } from "../sprite";
 
 export const UndergroundPathRoute7Copy: Map = {
   width: 4,
@@ -21,7 +22,7 @@ export const UndergroundPathRoute7Copy: Map = {
         type: "sprite",
         x: 3,
         y: 2,
-        sprite: "SPRITE_GIRL",
+        sprite: OverworldSprite.SPRITE_GIRL,
         movement: "STAY",
         textId: "TEXT_UNDERGROUNDPATHROUTE7COPY_UNUSED_GIRL"
       },
@@ -29,7 +30,7 @@ export const UndergroundPathRoute7Copy: Map = {
         type: "sprite",
         x: 2,
         y: 4,
-        sprite: "SPRITE_MIDDLE_AGED_MAN",
+        sprite: OverworldSprite.SPRITE_MIDDLE_AGED_MAN,
         movement: "STAY",
         textId: "TEXT_UNDERGROUNDPATHROUTE7COPY_UNUSED_MIDDLE_AGED_MAN"
       }

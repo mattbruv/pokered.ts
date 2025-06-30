@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { POKEMON_FAN_CLUB_BLOCKS } from "../data/blocks/PokemonFanClub";
+import { OverworldSprite } from "../sprite";
 
 export const PokemonFanClub: Map = {
   width: 4,
@@ -23,7 +24,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 6,
         y: 3,
-        sprite: "SPRITE_FISHER",
+        sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_PIKACHU_FAN"
       },
@@ -31,7 +32,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 1,
         y: 3,
-        sprite: "SPRITE_GIRL",
+        sprite: OverworldSprite.SPRITE_GIRL,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_SEEL_FAN"
       },
@@ -39,7 +40,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 6,
         y: 4,
-        sprite: "SPRITE_FAIRY",
+        sprite: OverworldSprite.SPRITE_FAIRY,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_PIKACHU"
       },
@@ -47,7 +48,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 1,
         y: 4,
-        sprite: "SPRITE_SEEL",
+        sprite: OverworldSprite.SPRITE_SEEL,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_SEEL"
       },
@@ -55,7 +56,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 3,
         y: 1,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_CHAIRMAN"
       },
@@ -63,7 +64,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 5,
         y: 1,
-        sprite: "SPRITE_LINK_RECEPTIONIST",
+        sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_RECEPTIONIST"
       }

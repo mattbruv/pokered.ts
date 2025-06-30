@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { POKEMON_TOWER_2F_BLOCKS } from "../data/blocks/PokemonTower2F";
+import { OverworldSprite } from "../sprite";
 
 export const PokemonTower2F: Map = {
   width: 10,
@@ -20,7 +21,7 @@ export const PokemonTower2F: Map = {
         type: "sprite",
         x: 14,
         y: 5,
-        sprite: "SPRITE_BLUE",
+        sprite: OverworldSprite.SPRITE_BLUE,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER2F_RIVAL"
       },
@@ -28,7 +29,7 @@ export const PokemonTower2F: Map = {
         type: "sprite",
         x: 3,
         y: 7,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER2F_CHANNELER"
       }

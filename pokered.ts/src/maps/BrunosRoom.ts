@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { BRUNOS_ROOM_BLOCKS } from "../data/blocks/BrunosRoom";
+import { OverworldSprite } from "../sprite";
 
 export const BrunosRoom: Map = {
   width: 5,
@@ -22,7 +23,7 @@ export const BrunosRoom: Map = {
         type: "trainer",
         x: 5,
         y: 2,
-        sprite: "SPRITE_BRUNO",
+        sprite: OverworldSprite.SPRITE_BRUNO,
         movement: "STAY",
         textId: "TEXT_BRUNOSROOM_BRUNO",
         trainerId: "OPP_BRUNO",

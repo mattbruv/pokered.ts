@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { PALLET_TOWN_BLOCKS } from "../data/blocks/PalletTown";
+import { OverworldSprite } from "../sprite";
 
 export const PalletTown: Map = {
   width: 10,
@@ -29,7 +30,7 @@ export const PalletTown: Map = {
         type: "sprite",
         x: 8,
         y: 5,
-        sprite: "SPRITE_OAK",
+        sprite: OverworldSprite.SPRITE_OAK,
         movement: "STAY",
         textId: "TEXT_PALLETTOWN_OAK"
       },
@@ -37,7 +38,7 @@ export const PalletTown: Map = {
         type: "sprite",
         x: 3,
         y: 8,
-        sprite: "SPRITE_GIRL",
+        sprite: OverworldSprite.SPRITE_GIRL,
         movement: "WALK",
         textId: "TEXT_PALLETTOWN_GIRL"
       },
@@ -45,7 +46,7 @@ export const PalletTown: Map = {
         type: "sprite",
         x: 11,
         y: 14,
-        sprite: "SPRITE_FISHER",
+        sprite: OverworldSprite.SPRITE_FISHER,
         movement: "WALK",
         textId: "TEXT_PALLETTOWN_FISHER"
       }

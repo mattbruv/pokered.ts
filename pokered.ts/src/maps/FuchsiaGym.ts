@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { FUCHSIA_GYM_BLOCKS } from "../data/blocks/FuchsiaGym";
+import { OverworldSprite } from "../sprite";
 
 export const FuchsiaGym: Map = {
   width: 5,
@@ -20,7 +21,7 @@ export const FuchsiaGym: Map = {
         type: "trainer",
         x: 4,
         y: 10,
-        sprite: "SPRITE_KOGA",
+        sprite: OverworldSprite.SPRITE_KOGA,
         movement: "STAY",
         textId: "TEXT_FUCHSIAGYM_KOGA",
         trainerId: "OPP_KOGA",
@@ -30,7 +31,7 @@ export const FuchsiaGym: Map = {
         type: "trainer",
         x: 8,
         y: 13,
-        sprite: "SPRITE_ROCKER",
+        sprite: OverworldSprite.SPRITE_ROCKER,
         movement: "STAY",
         textId: "TEXT_FUCHSIAGYM_ROCKER1",
         trainerId: "OPP_JUGGLER",
@@ -40,7 +41,7 @@ export const FuchsiaGym: Map = {
         type: "trainer",
         x: 7,
         y: 8,
-        sprite: "SPRITE_ROCKER",
+        sprite: OverworldSprite.SPRITE_ROCKER,
         movement: "STAY",
         textId: "TEXT_FUCHSIAGYM_ROCKER2",
         trainerId: "OPP_JUGGLER",
@@ -50,7 +51,7 @@ export const FuchsiaGym: Map = {
         type: "trainer",
         x: 1,
         y: 12,
-        sprite: "SPRITE_ROCKER",
+        sprite: OverworldSprite.SPRITE_ROCKER,
         movement: "STAY",
         textId: "TEXT_FUCHSIAGYM_ROCKER3",
         trainerId: "OPP_JUGGLER",
@@ -60,7 +61,7 @@ export const FuchsiaGym: Map = {
         type: "trainer",
         x: 3,
         y: 5,
-        sprite: "SPRITE_ROCKER",
+        sprite: OverworldSprite.SPRITE_ROCKER,
         movement: "STAY",
         textId: "TEXT_FUCHSIAGYM_ROCKER4",
         trainerId: "OPP_TAMER",
@@ -70,7 +71,7 @@ export const FuchsiaGym: Map = {
         type: "trainer",
         x: 8,
         y: 2,
-        sprite: "SPRITE_ROCKER",
+        sprite: OverworldSprite.SPRITE_ROCKER,
         movement: "STAY",
         textId: "TEXT_FUCHSIAGYM_ROCKER5",
         trainerId: "OPP_TAMER",
@@ -80,7 +81,7 @@ export const FuchsiaGym: Map = {
         type: "trainer",
         x: 2,
         y: 7,
-        sprite: "SPRITE_ROCKER",
+        sprite: OverworldSprite.SPRITE_ROCKER,
         movement: "STAY",
         textId: "TEXT_FUCHSIAGYM_ROCKER6",
         trainerId: "OPP_JUGGLER",
@@ -90,7 +91,7 @@ export const FuchsiaGym: Map = {
         type: "sprite",
         x: 7,
         y: 15,
-        sprite: "SPRITE_GYM_GUIDE",
+        sprite: OverworldSprite.SPRITE_GYM_GUIDE,
         movement: "STAY",
         textId: "TEXT_FUCHSIAGYM_GYM_GUIDE"
       }

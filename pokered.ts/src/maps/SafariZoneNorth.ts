@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SAFARI_ZONE_NORTH_BLOCKS } from "../data/blocks/SafariZoneNorth";
+import { OverworldSprite } from "../sprite";
 
 export const SafariZoneNorth: Map = {
   width: 20,
@@ -33,7 +34,7 @@ export const SafariZoneNorth: Map = {
         type: "item",
         x: 25,
         y: 1,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SAFARIZONENORTH_PROTEIN",
         itemId: "PROTEIN"
@@ -42,7 +43,7 @@ export const SafariZoneNorth: Map = {
         type: "item",
         x: 19,
         y: 7,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SAFARIZONENORTH_TM_SKULL_BASH",
         itemId: "TM_SKULL_BASH"

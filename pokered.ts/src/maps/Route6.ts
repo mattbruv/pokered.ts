@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_6_BLOCKS } from "../data/blocks/Route6";
+import { OverworldSprite } from "../sprite";
 
 export const Route6: Map = {
   width: 10,
@@ -27,7 +28,7 @@ export const Route6: Map = {
         type: "trainer",
         x: 10,
         y: 21,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_ROUTE6_COOLTRAINER_M1",
         trainerId: "OPP_JR_TRAINER_M",
@@ -37,7 +38,7 @@ export const Route6: Map = {
         type: "trainer",
         x: 11,
         y: 21,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_ROUTE6_COOLTRAINER_F1",
         trainerId: "OPP_JR_TRAINER_F",
@@ -47,7 +48,7 @@ export const Route6: Map = {
         type: "trainer",
         x: 0,
         y: 15,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_ROUTE6_YOUNGSTER1",
         trainerId: "OPP_BUG_CATCHER",
@@ -57,7 +58,7 @@ export const Route6: Map = {
         type: "trainer",
         x: 11,
         y: 31,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_ROUTE6_COOLTRAINER_M2",
         trainerId: "OPP_JR_TRAINER_M",
@@ -67,7 +68,7 @@ export const Route6: Map = {
         type: "trainer",
         x: 11,
         y: 30,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_ROUTE6_COOLTRAINER_F2",
         trainerId: "OPP_JR_TRAINER_F",
@@ -77,7 +78,7 @@ export const Route6: Map = {
         type: "trainer",
         x: 19,
         y: 26,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_ROUTE6_YOUNGSTER2",
         trainerId: "OPP_BUG_CATCHER",

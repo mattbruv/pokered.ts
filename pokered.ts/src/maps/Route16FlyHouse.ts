@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_16_FLY_HOUSE_BLOCKS } from "../data/blocks/Route16FlyHouse";
+import { OverworldSprite } from "../sprite";
 
 export const Route16FlyHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const Route16FlyHouse: Map = {
         type: "sprite",
         x: 2,
         y: 3,
-        sprite: "SPRITE_BRUNETTE_GIRL",
+        sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_ROUTE16FLYHOUSE_BRUNETTE_GIRL"
       },
@@ -28,7 +29,7 @@ export const Route16FlyHouse: Map = {
         type: "sprite",
         x: 6,
         y: 4,
-        sprite: "SPRITE_BIRD",
+        sprite: OverworldSprite.SPRITE_BIRD,
         movement: "WALK",
         textId: "TEXT_ROUTE16FLYHOUSE_FEAROW"
       }

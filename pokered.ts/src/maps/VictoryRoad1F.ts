@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VICTORY_ROAD_1F_BLOCKS } from "../data/blocks/VictoryRoad1F";
+import { OverworldSprite } from "../sprite";
 
 export const VictoryRoad1F: Map = {
   width: 10,
@@ -21,7 +22,7 @@ export const VictoryRoad1F: Map = {
         type: "trainer",
         x: 7,
         y: 5,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD1F_COOLTRAINER_F",
         trainerId: "OPP_COOLTRAINER_F",
@@ -31,7 +32,7 @@ export const VictoryRoad1F: Map = {
         type: "trainer",
         x: 3,
         y: 2,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD1F_COOLTRAINER_M",
         trainerId: "OPP_COOLTRAINER_M",
@@ -41,7 +42,7 @@ export const VictoryRoad1F: Map = {
         type: "item",
         x: 11,
         y: 0,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD1F_TM_SKY_ATTACK",
         itemId: "TM_SKY_ATTACK"
@@ -50,7 +51,7 @@ export const VictoryRoad1F: Map = {
         type: "item",
         x: 9,
         y: 2,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD1F_RARE_CANDY",
         itemId: "RARE_CANDY"
@@ -59,7 +60,7 @@ export const VictoryRoad1F: Map = {
         type: "sprite",
         x: 5,
         y: 15,
-        sprite: "SPRITE_BOULDER",
+        sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD1F_BOULDER1"
       },
@@ -67,7 +68,7 @@ export const VictoryRoad1F: Map = {
         type: "sprite",
         x: 14,
         y: 2,
-        sprite: "SPRITE_BOULDER",
+        sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD1F_BOULDER2"
       },
@@ -75,7 +76,7 @@ export const VictoryRoad1F: Map = {
         type: "sprite",
         x: 2,
         y: 10,
-        sprite: "SPRITE_BOULDER",
+        sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD1F_BOULDER3"
       }

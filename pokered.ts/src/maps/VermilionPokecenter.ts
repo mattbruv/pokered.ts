@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VERMILION_POKECENTER_BLOCKS } from "../data/blocks/VermilionPokecenter";
+import { OverworldSprite } from "../sprite";
 
 export const VermilionPokecenter: Map = {
   width: 7,
@@ -20,7 +21,7 @@ export const VermilionPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
-        sprite: "SPRITE_NURSE",
+        sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_VERMILIONPOKECENTER_NURSE"
       },
@@ -28,7 +29,7 @@ export const VermilionPokecenter: Map = {
         type: "sprite",
         x: 10,
         y: 5,
-        sprite: "SPRITE_FISHING_GURU",
+        sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_VERMILIONPOKECENTER_FISHING_GURU"
       },
@@ -36,7 +37,7 @@ export const VermilionPokecenter: Map = {
         type: "sprite",
         x: 5,
         y: 4,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_VERMILIONPOKECENTER_SAILOR"
       },
@@ -44,7 +45,7 @@ export const VermilionPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
-        sprite: "SPRITE_LINK_RECEPTIONIST",
+        sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_VERMILIONPOKECENTER_LINK_RECEPTIONIST"
       }

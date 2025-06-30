@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SS_ANNE_2F_ROOMS_BLOCKS } from "../data/blocks/SSAnne2FRooms";
+import { OverworldSprite } from "../sprite";
 
 export const SSAnne2FRooms: Map = {
   width: 12,
@@ -30,7 +31,7 @@ export const SSAnne2FRooms: Map = {
         type: "trainer",
         x: 10,
         y: 2,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GENTLEMAN1",
         trainerId: "OPP_GENTLEMAN",
@@ -40,7 +41,7 @@ export const SSAnne2FRooms: Map = {
         type: "trainer",
         x: 13,
         y: 4,
-        sprite: "SPRITE_FISHER",
+        sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_FISHER",
         trainerId: "OPP_FISHER",
@@ -50,7 +51,7 @@ export const SSAnne2FRooms: Map = {
         type: "trainer",
         x: 0,
         y: 14,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GENTLEMAN2",
         trainerId: "OPP_GENTLEMAN",
@@ -60,7 +61,7 @@ export const SSAnne2FRooms: Map = {
         type: "trainer",
         x: 2,
         y: 11,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_COOLTRAINER_F",
         trainerId: "OPP_LASS",
@@ -70,7 +71,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 1,
         y: 2,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GENTLEMAN3"
       },
@@ -78,7 +79,7 @@ export const SSAnne2FRooms: Map = {
         type: "item",
         x: 12,
         y: 1,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_MAX_ETHER",
         itemId: "MAX_ETHER"
@@ -87,7 +88,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 21,
         y: 2,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GENTLEMAN4"
       },
@@ -95,7 +96,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 22,
         y: 1,
-        sprite: "SPRITE_GRAMPS",
+        sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GRAMPS"
       },
@@ -103,7 +104,7 @@ export const SSAnne2FRooms: Map = {
         type: "item",
         x: 0,
         y: 12,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_RARE_CANDY",
         itemId: "RARE_CANDY"
@@ -112,7 +113,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 12,
         y: 12,
-        sprite: "SPRITE_GENTLEMAN",
+        sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GENTLEMAN5"
       },
@@ -120,7 +121,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 11,
         y: 14,
-        sprite: "SPRITE_LITTLE_BOY",
+        sprite: OverworldSprite.SPRITE_LITTLE_BOY,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_LITTLE_BOY"
       },
@@ -128,7 +129,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 22,
         y: 12,
-        sprite: "SPRITE_BRUNETTE_GIRL",
+        sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_BRUNETTE_GIRL"
       },
@@ -136,7 +137,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 20,
         y: 12,
-        sprite: "SPRITE_BEAUTY",
+        sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_BEAUTY"
       }

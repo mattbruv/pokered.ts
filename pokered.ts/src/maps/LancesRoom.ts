@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { LANCES_ROOM_BLOCKS } from "../data/blocks/LancesRoom";
+import { OverworldSprite } from "../sprite";
 
 export const LancesRoom: Map = {
   width: 13,
@@ -21,7 +22,7 @@ export const LancesRoom: Map = {
         type: "trainer",
         x: 6,
         y: 1,
-        sprite: "SPRITE_LANCE",
+        sprite: OverworldSprite.SPRITE_LANCE,
         movement: "STAY",
         textId: "TEXT_LANCESROOM_LANCE",
         trainerId: "OPP_LANCE",

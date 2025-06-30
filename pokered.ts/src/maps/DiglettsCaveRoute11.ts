@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { DIGLETTS_CAVE_ROUTE_11_BLOCKS } from "../data/blocks/DiglettsCaveRoute11";
+import { OverworldSprite } from "../sprite";
 
 export const DiglettsCaveRoute11: Map = {
   width: 4,
@@ -21,7 +22,7 @@ export const DiglettsCaveRoute11: Map = {
         type: "sprite",
         x: 2,
         y: 3,
-        sprite: "SPRITE_GAMBLER",
+        sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_DIGLETTSCAVEROUTE11_GAMBLER"
       }

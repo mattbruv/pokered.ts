@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { NAME_RATERS_HOUSE_BLOCKS } from "../data/blocks/NameRatersHouse";
+import { OverworldSprite } from "../sprite";
 
 export const NameRatersHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const NameRatersHouse: Map = {
         type: "sprite",
         x: 5,
         y: 3,
-        sprite: "SPRITE_SILPH_PRESIDENT",
+        sprite: OverworldSprite.SPRITE_SILPH_PRESIDENT,
         movement: "STAY",
         textId: "TEXT_NAMERATERSHOUSE_NAME_RATER"
       }

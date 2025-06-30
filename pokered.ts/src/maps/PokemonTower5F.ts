@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { POKEMON_TOWER_5F_BLOCKS } from "../data/blocks/PokemonTower5F";
+import { OverworldSprite } from "../sprite";
 
 export const PokemonTower5F: Map = {
   width: 10,
@@ -20,7 +21,7 @@ export const PokemonTower5F: Map = {
         type: "sprite",
         x: 12,
         y: 8,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER5F_CHANNELER1"
       },
@@ -28,7 +29,7 @@ export const PokemonTower5F: Map = {
         type: "trainer",
         x: 17,
         y: 7,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER5F_CHANNELER2",
         trainerId: "OPP_CHANNELER",
@@ -38,7 +39,7 @@ export const PokemonTower5F: Map = {
         type: "trainer",
         x: 14,
         y: 3,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER5F_CHANNELER3",
         trainerId: "OPP_CHANNELER",
@@ -48,7 +49,7 @@ export const PokemonTower5F: Map = {
         type: "trainer",
         x: 6,
         y: 10,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER5F_CHANNELER4",
         trainerId: "OPP_CHANNELER",
@@ -58,7 +59,7 @@ export const PokemonTower5F: Map = {
         type: "trainer",
         x: 9,
         y: 16,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER5F_CHANNELER5",
         trainerId: "OPP_CHANNELER",
@@ -68,7 +69,7 @@ export const PokemonTower5F: Map = {
         type: "item",
         x: 6,
         y: 14,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER5F_NUGGET",
         itemId: "NUGGET"

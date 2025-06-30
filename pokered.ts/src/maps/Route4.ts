@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_4_BLOCKS } from "../data/blocks/Route4";
+import { OverworldSprite } from "../sprite";
 
 export const Route4: Map = {
   width: 45,
@@ -28,7 +29,7 @@ export const Route4: Map = {
         type: "sprite",
         x: 9,
         y: 8,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_ROUTE4_COOLTRAINER_F1"
       },
@@ -36,7 +37,7 @@ export const Route4: Map = {
         type: "trainer",
         x: 63,
         y: 3,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_ROUTE4_COOLTRAINER_F2",
         trainerId: "OPP_LASS",
@@ -46,7 +47,7 @@ export const Route4: Map = {
         type: "item",
         x: 57,
         y: 3,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROUTE4_TM_WHIRLWIND",
         itemId: "TM_WHIRLWIND"

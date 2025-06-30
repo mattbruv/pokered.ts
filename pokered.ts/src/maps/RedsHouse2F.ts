@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { REDS_HOUSE_2F_BLOCKS } from "../data/blocks/RedsHouse2F";
+import { OverworldSprite } from "../sprite";
 
 export const RedsHouse2F: Map = {
   width: 4,

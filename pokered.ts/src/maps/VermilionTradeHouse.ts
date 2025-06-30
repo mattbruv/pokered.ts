@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VERMILION_TRADE_HOUSE_BLOCKS } from "../data/blocks/VermilionTradeHouse";
+import { OverworldSprite } from "../sprite";
 
 export const VermilionTradeHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const VermilionTradeHouse: Map = {
         type: "sprite",
         x: 3,
         y: 5,
-        sprite: "SPRITE_LITTLE_GIRL",
+        sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "STAY",
         textId: "TEXT_VERMILIONTRADEHOUSE_LITTLE_GIRL"
       }

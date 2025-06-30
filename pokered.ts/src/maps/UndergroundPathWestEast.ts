@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { UNDERGROUND_PATH_WEST_EAST_BLOCKS } from "../data/blocks/UndergroundPathWestEast";
+import { OverworldSprite } from "../sprite";
 
 export const UndergroundPathWestEast: Map = {
   width: 25,

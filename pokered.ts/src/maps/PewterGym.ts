@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { PEWTER_GYM_BLOCKS } from "../data/blocks/PewterGym";
+import { OverworldSprite } from "../sprite";
 
 export const PewterGym: Map = {
   width: 5,
@@ -20,7 +21,7 @@ export const PewterGym: Map = {
         type: "trainer",
         x: 4,
         y: 1,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_PEWTERGYM_BROCK",
         trainerId: "OPP_BROCK",
@@ -30,7 +31,7 @@ export const PewterGym: Map = {
         type: "trainer",
         x: 3,
         y: 6,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_PEWTERGYM_COOLTRAINER_M",
         trainerId: "OPP_JR_TRAINER_M",
@@ -40,7 +41,7 @@ export const PewterGym: Map = {
         type: "sprite",
         x: 7,
         y: 10,
-        sprite: "SPRITE_GYM_GUIDE",
+        sprite: OverworldSprite.SPRITE_GYM_GUIDE,
         movement: "STAY",
         textId: "TEXT_PEWTERGYM_GYM_GUIDE"
       }

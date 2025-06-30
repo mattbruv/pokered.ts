@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CINNABAR_ISLAND_BLOCKS } from "../data/blocks/CinnabarIsland";
+import { OverworldSprite } from "../sprite";
 
 export const CinnabarIsland: Map = {
   width: 10,
@@ -32,7 +33,7 @@ export const CinnabarIsland: Map = {
         type: "sprite",
         x: 12,
         y: 5,
-        sprite: "SPRITE_GIRL",
+        sprite: OverworldSprite.SPRITE_GIRL,
         movement: "WALK",
         textId: "TEXT_CINNABARISLAND_GIRL"
       },
@@ -40,7 +41,7 @@ export const CinnabarIsland: Map = {
         type: "sprite",
         x: 14,
         y: 6,
-        sprite: "SPRITE_GAMBLER",
+        sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_CINNABARISLAND_GAMBLER"
       }

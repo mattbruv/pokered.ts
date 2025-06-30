@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { OAKS_LAB_BLOCKS } from "../data/blocks/OaksLab";
+import { OverworldSprite } from "../sprite";
 
 export const OaksLab: Map = {
   width: 5,
@@ -20,7 +21,7 @@ export const OaksLab: Map = {
         type: "trainer",
         x: 4,
         y: 3,
-        sprite: "SPRITE_BLUE",
+        sprite: OverworldSprite.SPRITE_BLUE,
         movement: "STAY",
         textId: "TEXT_OAKSLAB_RIVAL",
         trainerId: "OPP_RIVAL1",
@@ -30,7 +31,7 @@ export const OaksLab: Map = {
         type: "sprite",
         x: 6,
         y: 3,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_OAKSLAB_CHARMANDER_POKE_BALL"
       },
@@ -38,7 +39,7 @@ export const OaksLab: Map = {
         type: "sprite",
         x: 7,
         y: 3,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_OAKSLAB_SQUIRTLE_POKE_BALL"
       },
@@ -46,7 +47,7 @@ export const OaksLab: Map = {
         type: "sprite",
         x: 8,
         y: 3,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_OAKSLAB_BULBASAUR_POKE_BALL"
       },
@@ -54,7 +55,7 @@ export const OaksLab: Map = {
         type: "sprite",
         x: 5,
         y: 2,
-        sprite: "SPRITE_OAK",
+        sprite: OverworldSprite.SPRITE_OAK,
         movement: "STAY",
         textId: "TEXT_OAKSLAB_OAK1"
       },
@@ -62,7 +63,7 @@ export const OaksLab: Map = {
         type: "sprite",
         x: 2,
         y: 1,
-        sprite: "SPRITE_POKEDEX",
+        sprite: OverworldSprite.SPRITE_POKEDEX,
         movement: "STAY",
         textId: "TEXT_OAKSLAB_POKEDEX1"
       },
@@ -70,7 +71,7 @@ export const OaksLab: Map = {
         type: "sprite",
         x: 3,
         y: 1,
-        sprite: "SPRITE_POKEDEX",
+        sprite: OverworldSprite.SPRITE_POKEDEX,
         movement: "STAY",
         textId: "TEXT_OAKSLAB_POKEDEX2"
       },
@@ -78,7 +79,7 @@ export const OaksLab: Map = {
         type: "sprite",
         x: 5,
         y: 10,
-        sprite: "SPRITE_OAK",
+        sprite: OverworldSprite.SPRITE_OAK,
         movement: "STAY",
         textId: "TEXT_OAKSLAB_OAK2"
       },
@@ -86,7 +87,7 @@ export const OaksLab: Map = {
         type: "sprite",
         x: 1,
         y: 9,
-        sprite: "SPRITE_GIRL",
+        sprite: OverworldSprite.SPRITE_GIRL,
         movement: "WALK",
         textId: "TEXT_OAKSLAB_GIRL"
       },
@@ -94,7 +95,7 @@ export const OaksLab: Map = {
         type: "sprite",
         x: 2,
         y: 10,
-        sprite: "SPRITE_SCIENTIST",
+        sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_OAKSLAB_SCIENTIST1"
       },
@@ -102,7 +103,7 @@ export const OaksLab: Map = {
         type: "sprite",
         x: 8,
         y: 10,
-        sprite: "SPRITE_SCIENTIST",
+        sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_OAKSLAB_SCIENTIST2"
       }

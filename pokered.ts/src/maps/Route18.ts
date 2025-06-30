@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_18_BLOCKS } from "../data/blocks/Route18";
+import { OverworldSprite } from "../sprite";
 
 export const Route18: Map = {
   width: 25,
@@ -28,7 +29,7 @@ export const Route18: Map = {
         type: "trainer",
         x: 36,
         y: 11,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_ROUTE18_COOLTRAINER_M1",
         trainerId: "OPP_BIRD_KEEPER",
@@ -38,7 +39,7 @@ export const Route18: Map = {
         type: "trainer",
         x: 40,
         y: 15,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_ROUTE18_COOLTRAINER_M2",
         trainerId: "OPP_BIRD_KEEPER",
@@ -48,7 +49,7 @@ export const Route18: Map = {
         type: "trainer",
         x: 42,
         y: 13,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_ROUTE18_COOLTRAINER_M3",
         trainerId: "OPP_BIRD_KEEPER",

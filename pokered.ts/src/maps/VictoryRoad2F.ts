@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VICTORY_ROAD_2F_BLOCKS } from "../data/blocks/VictoryRoad2F";
+import { OverworldSprite } from "../sprite";
 
 export const VictoryRoad2F: Map = {
   width: 15,
@@ -25,7 +26,7 @@ export const VictoryRoad2F: Map = {
         type: "trainer",
         x: 12,
         y: 9,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_HIKER",
         trainerId: "OPP_BLACKBELT",
@@ -35,7 +36,7 @@ export const VictoryRoad2F: Map = {
         type: "trainer",
         x: 21,
         y: 13,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_SUPER_NERD1",
         trainerId: "OPP_JUGGLER",
@@ -45,7 +46,7 @@ export const VictoryRoad2F: Map = {
         type: "trainer",
         x: 19,
         y: 8,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_COOLTRAINER_M",
         trainerId: "OPP_TAMER",
@@ -55,7 +56,7 @@ export const VictoryRoad2F: Map = {
         type: "trainer",
         x: 4,
         y: 2,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_SUPER_NERD2",
         trainerId: "OPP_POKEMANIAC",
@@ -65,7 +66,7 @@ export const VictoryRoad2F: Map = {
         type: "trainer",
         x: 26,
         y: 3,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_SUPER_NERD3",
         trainerId: "OPP_JUGGLER",
@@ -75,7 +76,7 @@ export const VictoryRoad2F: Map = {
         type: "trainer",
         x: 11,
         y: 5,
-        sprite: "SPRITE_BIRD",
+        sprite: OverworldSprite.SPRITE_BIRD,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_MOLTRES",
         trainerId: "MOLTRES",
@@ -85,7 +86,7 @@ export const VictoryRoad2F: Map = {
         type: "item",
         x: 27,
         y: 5,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_TM_SUBMISSION",
         itemId: "TM_SUBMISSION"
@@ -94,7 +95,7 @@ export const VictoryRoad2F: Map = {
         type: "item",
         x: 18,
         y: 9,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_FULL_HEAL",
         itemId: "FULL_HEAL"
@@ -103,7 +104,7 @@ export const VictoryRoad2F: Map = {
         type: "item",
         x: 9,
         y: 11,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_TM_MEGA_KICK",
         itemId: "TM_MEGA_KICK"
@@ -112,7 +113,7 @@ export const VictoryRoad2F: Map = {
         type: "item",
         x: 11,
         y: 0,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_GUARD_SPEC",
         itemId: "GUARD_SPEC"
@@ -121,7 +122,7 @@ export const VictoryRoad2F: Map = {
         type: "sprite",
         x: 4,
         y: 14,
-        sprite: "SPRITE_BOULDER",
+        sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_BOULDER1"
       },
@@ -129,7 +130,7 @@ export const VictoryRoad2F: Map = {
         type: "sprite",
         x: 5,
         y: 5,
-        sprite: "SPRITE_BOULDER",
+        sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_BOULDER2"
       },
@@ -137,7 +138,7 @@ export const VictoryRoad2F: Map = {
         type: "sprite",
         x: 23,
         y: 16,
-        sprite: "SPRITE_BOULDER",
+        sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_VICTORYROAD2F_BOULDER3"
       }

@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SILPH_CO_11F_BLOCKS } from "../data/blocks/SilphCo11F";
+import { OverworldSprite } from "../sprite";
 
 export const SilphCo11F: Map = {
   width: 9,
@@ -22,7 +23,7 @@ export const SilphCo11F: Map = {
         type: "sprite",
         x: 7,
         y: 5,
-        sprite: "SPRITE_SILPH_PRESIDENT",
+        sprite: OverworldSprite.SPRITE_SILPH_PRESIDENT,
         movement: "STAY",
         textId: "TEXT_SILPHCO11F_SILPH_PRESIDENT"
       },
@@ -30,7 +31,7 @@ export const SilphCo11F: Map = {
         type: "sprite",
         x: 10,
         y: 5,
-        sprite: "SPRITE_BEAUTY",
+        sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "STAY",
         textId: "TEXT_SILPHCO11F_BEAUTY"
       },
@@ -38,7 +39,7 @@ export const SilphCo11F: Map = {
         type: "trainer",
         x: 6,
         y: 9,
-        sprite: "SPRITE_GIOVANNI",
+        sprite: OverworldSprite.SPRITE_GIOVANNI,
         movement: "STAY",
         textId: "TEXT_SILPHCO11F_GIOVANNI",
         trainerId: "OPP_GIOVANNI",
@@ -48,7 +49,7 @@ export const SilphCo11F: Map = {
         type: "trainer",
         x: 3,
         y: 16,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_SILPHCO11F_ROCKET1",
         trainerId: "OPP_ROCKET",
@@ -58,7 +59,7 @@ export const SilphCo11F: Map = {
         type: "trainer",
         x: 15,
         y: 9,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_SILPHCO11F_ROCKET2",
         trainerId: "OPP_ROCKET",

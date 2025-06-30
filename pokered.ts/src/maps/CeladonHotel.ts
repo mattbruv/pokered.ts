@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CELADON_HOTEL_BLOCKS } from "../data/blocks/CeladonHotel";
+import { OverworldSprite } from "../sprite";
 
 export const CeladonHotel: Map = {
   width: 7,
@@ -20,7 +21,7 @@ export const CeladonHotel: Map = {
         type: "sprite",
         x: 3,
         y: 1,
-        sprite: "SPRITE_GRANNY",
+        sprite: OverworldSprite.SPRITE_GRANNY,
         movement: "STAY",
         textId: "TEXT_CELADONHOTEL_GRANNY"
       },
@@ -28,7 +29,7 @@ export const CeladonHotel: Map = {
         type: "sprite",
         x: 2,
         y: 4,
-        sprite: "SPRITE_BEAUTY",
+        sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "STAY",
         textId: "TEXT_CELADONHOTEL_BEAUTY"
       },
@@ -36,7 +37,7 @@ export const CeladonHotel: Map = {
         type: "sprite",
         x: 8,
         y: 4,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "WALK",
         textId: "TEXT_CELADONHOTEL_SUPER_NERD"
       }

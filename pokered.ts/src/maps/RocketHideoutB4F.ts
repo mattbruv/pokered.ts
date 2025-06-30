@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROCKET_HIDEOUT_B4F_BLOCKS } from "../data/blocks/RocketHideoutB4F";
+import { OverworldSprite } from "../sprite";
 
 export const RocketHideoutB4F: Map = {
   width: 15,
@@ -21,7 +22,7 @@ export const RocketHideoutB4F: Map = {
         type: "trainer",
         x: 25,
         y: 3,
-        sprite: "SPRITE_GIOVANNI",
+        sprite: OverworldSprite.SPRITE_GIOVANNI,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB4F_GIOVANNI",
         trainerId: "OPP_GIOVANNI",
@@ -31,7 +32,7 @@ export const RocketHideoutB4F: Map = {
         type: "trainer",
         x: 23,
         y: 12,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB4F_ROCKET1",
         trainerId: "OPP_ROCKET",
@@ -41,7 +42,7 @@ export const RocketHideoutB4F: Map = {
         type: "trainer",
         x: 26,
         y: 12,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB4F_ROCKET2",
         trainerId: "OPP_ROCKET",
@@ -51,7 +52,7 @@ export const RocketHideoutB4F: Map = {
         type: "trainer",
         x: 11,
         y: 2,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB4F_ROCKET3",
         trainerId: "OPP_ROCKET",
@@ -61,7 +62,7 @@ export const RocketHideoutB4F: Map = {
         type: "item",
         x: 10,
         y: 12,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB4F_HP_UP",
         itemId: "HP_UP"
@@ -70,7 +71,7 @@ export const RocketHideoutB4F: Map = {
         type: "item",
         x: 9,
         y: 4,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB4F_TM_RAZOR_WIND",
         itemId: "TM_RAZOR_WIND"
@@ -79,7 +80,7 @@ export const RocketHideoutB4F: Map = {
         type: "item",
         x: 12,
         y: 20,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB4F_IRON",
         itemId: "IRON"
@@ -88,7 +89,7 @@ export const RocketHideoutB4F: Map = {
         type: "item",
         x: 25,
         y: 2,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB4F_SILPH_SCOPE",
         itemId: "SILPH_SCOPE"
@@ -97,7 +98,7 @@ export const RocketHideoutB4F: Map = {
         type: "item",
         x: 10,
         y: 2,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB4F_LIFT_KEY",
         itemId: "LIFT_KEY"

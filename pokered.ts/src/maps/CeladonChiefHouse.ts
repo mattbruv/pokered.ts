@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CELADON_CHIEF_HOUSE_BLOCKS } from "../data/blocks/CeladonChiefHouse";
+import { OverworldSprite } from "../sprite";
 
 export const CeladonChiefHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const CeladonChiefHouse: Map = {
         type: "sprite",
         x: 4,
         y: 2,
-        sprite: "SPRITE_GRAMPS",
+        sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_CELADONCHIEFHOUSE_CHIEF"
       },
@@ -28,7 +29,7 @@ export const CeladonChiefHouse: Map = {
         type: "sprite",
         x: 1,
         y: 4,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "WALK",
         textId: "TEXT_CELADONCHIEFHOUSE_ROCKET"
       },
@@ -36,7 +37,7 @@ export const CeladonChiefHouse: Map = {
         type: "sprite",
         x: 5,
         y: 6,
-        sprite: "SPRITE_SAILOR",
+        sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_CELADONCHIEFHOUSE_SAILOR"
       }

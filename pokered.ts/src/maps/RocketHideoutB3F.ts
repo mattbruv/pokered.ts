@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROCKET_HIDEOUT_B3F_BLOCKS } from "../data/blocks/RocketHideoutB3F";
+import { OverworldSprite } from "../sprite";
 
 export const RocketHideoutB3F: Map = {
   width: 15,
@@ -20,7 +21,7 @@ export const RocketHideoutB3F: Map = {
         type: "trainer",
         x: 10,
         y: 22,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB3F_ROCKET1",
         trainerId: "OPP_ROCKET",
@@ -30,7 +31,7 @@ export const RocketHideoutB3F: Map = {
         type: "trainer",
         x: 26,
         y: 12,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB3F_ROCKET2",
         trainerId: "OPP_ROCKET",
@@ -40,7 +41,7 @@ export const RocketHideoutB3F: Map = {
         type: "item",
         x: 26,
         y: 17,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB3F_TM_DOUBLE_EDGE",
         itemId: "TM_DOUBLE_EDGE"
@@ -49,7 +50,7 @@ export const RocketHideoutB3F: Map = {
         type: "item",
         x: 20,
         y: 14,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROCKETHIDEOUTB3F_RARE_CANDY",
         itemId: "RARE_CANDY"

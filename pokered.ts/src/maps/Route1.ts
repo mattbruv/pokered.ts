@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_1_BLOCKS } from "../data/blocks/Route1";
+import { OverworldSprite } from "../sprite";
 
 export const Route1: Map = {
   width: 10,
@@ -20,7 +21,7 @@ export const Route1: Map = {
         type: "sprite",
         x: 5,
         y: 24,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_ROUTE1_YOUNGSTER1"
       },
@@ -28,7 +29,7 @@ export const Route1: Map = {
         type: "sprite",
         x: 15,
         y: 13,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_ROUTE1_YOUNGSTER2"
       }

@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SAFFRON_PIDGEY_HOUSE_BLOCKS } from "../data/blocks/SaffronPidgeyHouse";
+import { OverworldSprite } from "../sprite";
 
 export const SaffronPidgeyHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const SaffronPidgeyHouse: Map = {
         type: "sprite",
         x: 2,
         y: 3,
-        sprite: "SPRITE_BRUNETTE_GIRL",
+        sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_SAFFRONPIDGEYHOUSE_BRUNETTE_GIRL"
       },
@@ -28,7 +29,7 @@ export const SaffronPidgeyHouse: Map = {
         type: "sprite",
         x: 0,
         y: 4,
-        sprite: "SPRITE_BIRD",
+        sprite: OverworldSprite.SPRITE_BIRD,
         movement: "WALK",
         textId: "TEXT_SAFFRONPIDGEYHOUSE_PIDGEY"
       },
@@ -36,7 +37,7 @@ export const SaffronPidgeyHouse: Map = {
         type: "sprite",
         x: 4,
         y: 1,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_SAFFRONPIDGEYHOUSE_YOUNGSTER"
       },
@@ -44,7 +45,7 @@ export const SaffronPidgeyHouse: Map = {
         type: "sprite",
         x: 3,
         y: 3,
-        sprite: "SPRITE_PAPER",
+        sprite: OverworldSprite.SPRITE_PAPER,
         movement: "STAY",
         textId: "TEXT_SAFFRONPIDGEYHOUSE_PAPER"
       }

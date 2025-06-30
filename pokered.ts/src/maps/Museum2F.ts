@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { MUSEUM_2F_BLOCKS } from "../data/blocks/Museum2F";
+import { OverworldSprite } from "../sprite";
 
 export const Museum2F: Map = {
   width: 7,
@@ -20,7 +21,7 @@ export const Museum2F: Map = {
         type: "sprite",
         x: 1,
         y: 7,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_MUSEUM2F_YOUNGSTER"
       },
@@ -28,7 +29,7 @@ export const Museum2F: Map = {
         type: "sprite",
         x: 0,
         y: 5,
-        sprite: "SPRITE_GRAMPS",
+        sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_MUSEUM2F_GRAMPS"
       },
@@ -36,7 +37,7 @@ export const Museum2F: Map = {
         type: "sprite",
         x: 7,
         y: 5,
-        sprite: "SPRITE_SCIENTIST",
+        sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_MUSEUM2F_SCIENTIST"
       },
@@ -44,7 +45,7 @@ export const Museum2F: Map = {
         type: "sprite",
         x: 11,
         y: 5,
-        sprite: "SPRITE_BRUNETTE_GIRL",
+        sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_MUSEUM2F_BRUNETTE_GIRL"
       },
@@ -52,7 +53,7 @@ export const Museum2F: Map = {
         type: "sprite",
         x: 12,
         y: 5,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_MUSEUM2F_HIKER"
       }

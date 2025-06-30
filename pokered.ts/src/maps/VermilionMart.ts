@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VERMILION_MART_BLOCKS } from "../data/blocks/VermilionMart";
+import { OverworldSprite } from "../sprite";
 
 export const VermilionMart: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const VermilionMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
-        sprite: "SPRITE_CLERK",
+        sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_VERMILIONMART_CLERK"
       },
@@ -28,7 +29,7 @@ export const VermilionMart: Map = {
         type: "sprite",
         x: 5,
         y: 6,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_VERMILIONMART_COOLTRAINER_M"
       },
@@ -36,7 +37,7 @@ export const VermilionMart: Map = {
         type: "sprite",
         x: 3,
         y: 3,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_VERMILIONMART_COOLTRAINER_F"
       }

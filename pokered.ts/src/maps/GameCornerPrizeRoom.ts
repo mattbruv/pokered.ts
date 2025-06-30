@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { GAME_CORNER_PRIZE_ROOM_BLOCKS } from "../data/blocks/GameCornerPrizeRoom";
+import { OverworldSprite } from "../sprite";
 
 export const GameCornerPrizeRoom: Map = {
   width: 5,
@@ -24,7 +25,7 @@ export const GameCornerPrizeRoom: Map = {
         type: "sprite",
         x: 1,
         y: 4,
-        sprite: "SPRITE_BALDING_GUY",
+        sprite: OverworldSprite.SPRITE_BALDING_GUY,
         movement: "STAY",
         textId: "TEXT_GAMECORNERPRIZEROOM_BALDING_GUY"
       },
@@ -32,7 +33,7 @@ export const GameCornerPrizeRoom: Map = {
         type: "sprite",
         x: 7,
         y: 3,
-        sprite: "SPRITE_GAMBLER",
+        sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "WALK",
         textId: "TEXT_GAMECORNERPRIZEROOM_GAMBLER"
       }

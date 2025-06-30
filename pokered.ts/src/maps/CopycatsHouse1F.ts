@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { COPYCATS_HOUSE_1F_BLOCKS } from "../data/blocks/CopycatsHouse1F";
+import { OverworldSprite } from "../sprite";
 
 export const CopycatsHouse1F: Map = {
   width: 4,
@@ -21,7 +22,7 @@ export const CopycatsHouse1F: Map = {
         type: "sprite",
         x: 2,
         y: 2,
-        sprite: "SPRITE_MIDDLE_AGED_WOMAN",
+        sprite: OverworldSprite.SPRITE_MIDDLE_AGED_WOMAN,
         movement: "STAY",
         textId: "TEXT_COPYCATSHOUSE1F_MIDDLE_AGED_WOMAN"
       },
@@ -29,7 +30,7 @@ export const CopycatsHouse1F: Map = {
         type: "sprite",
         x: 5,
         y: 4,
-        sprite: "SPRITE_MIDDLE_AGED_MAN",
+        sprite: OverworldSprite.SPRITE_MIDDLE_AGED_MAN,
         movement: "STAY",
         textId: "TEXT_COPYCATSHOUSE1F_MIDDLE_AGED_MAN"
       },
@@ -37,7 +38,7 @@ export const CopycatsHouse1F: Map = {
         type: "sprite",
         x: 1,
         y: 4,
-        sprite: "SPRITE_FAIRY",
+        sprite: OverworldSprite.SPRITE_FAIRY,
         movement: "WALK",
         textId: "TEXT_COPYCATSHOUSE1F_CHANSEY"
       }

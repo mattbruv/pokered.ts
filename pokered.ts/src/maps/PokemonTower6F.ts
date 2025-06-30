@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { POKEMON_TOWER_6F_BLOCKS } from "../data/blocks/PokemonTower6F";
+import { OverworldSprite } from "../sprite";
 
 export const PokemonTower6F: Map = {
   width: 10,
@@ -20,7 +21,7 @@ export const PokemonTower6F: Map = {
         type: "trainer",
         x: 12,
         y: 10,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER6F_CHANNELER1",
         trainerId: "OPP_CHANNELER",
@@ -30,7 +31,7 @@ export const PokemonTower6F: Map = {
         type: "trainer",
         x: 9,
         y: 5,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER6F_CHANNELER2",
         trainerId: "OPP_CHANNELER",
@@ -40,7 +41,7 @@ export const PokemonTower6F: Map = {
         type: "trainer",
         x: 16,
         y: 5,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER6F_CHANNELER3",
         trainerId: "OPP_CHANNELER",
@@ -50,7 +51,7 @@ export const PokemonTower6F: Map = {
         type: "item",
         x: 6,
         y: 8,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER6F_RARE_CANDY",
         itemId: "RARE_CANDY"
@@ -59,7 +60,7 @@ export const PokemonTower6F: Map = {
         type: "item",
         x: 14,
         y: 14,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER6F_X_ACCURACY",
         itemId: "X_ACCURACY"

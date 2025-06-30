@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CELADON_MANSION_3F_BLOCKS } from "../data/blocks/CeladonMansion3F";
+import { OverworldSprite } from "../sprite";
 
 export const CeladonMansion3F: Map = {
   width: 4,
@@ -27,7 +28,7 @@ export const CeladonMansion3F: Map = {
         type: "sprite",
         x: 0,
         y: 4,
-        sprite: "SPRITE_BIKE_SHOP_CLERK",
+        sprite: OverworldSprite.SPRITE_BIKE_SHOP_CLERK,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION3F_PROGRAMMER"
       },
@@ -35,7 +36,7 @@ export const CeladonMansion3F: Map = {
         type: "sprite",
         x: 3,
         y: 4,
-        sprite: "SPRITE_CLERK",
+        sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION3F_GRAPHIC_ARTIST"
       },
@@ -43,7 +44,7 @@ export const CeladonMansion3F: Map = {
         type: "sprite",
         x: 0,
         y: 7,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION3F_WRITER"
       },
@@ -51,7 +52,7 @@ export const CeladonMansion3F: Map = {
         type: "sprite",
         x: 2,
         y: 3,
-        sprite: "SPRITE_SILPH_WORKER_M",
+        sprite: OverworldSprite.SPRITE_SILPH_WORKER_M,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION3F_GAME_DESIGNER"
       }

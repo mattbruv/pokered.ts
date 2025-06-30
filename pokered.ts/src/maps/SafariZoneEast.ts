@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SAFARI_ZONE_EAST_BLOCKS } from "../data/blocks/SafariZoneEast";
+import { OverworldSprite } from "../sprite";
 
 export const SafariZoneEast: Map = {
   width: 15,
@@ -27,7 +28,7 @@ export const SafariZoneEast: Map = {
         type: "item",
         x: 21,
         y: 10,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SAFARIZONEEAST_FULL_RESTORE",
         itemId: "FULL_RESTORE"
@@ -36,7 +37,7 @@ export const SafariZoneEast: Map = {
         type: "item",
         x: 3,
         y: 7,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SAFARIZONEEAST_MAX_RESTORE",
         itemId: "MAX_POTION"
@@ -45,7 +46,7 @@ export const SafariZoneEast: Map = {
         type: "item",
         x: 20,
         y: 13,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SAFARIZONEEAST_CARBOS",
         itemId: "CARBOS"
@@ -54,7 +55,7 @@ export const SafariZoneEast: Map = {
         type: "item",
         x: 15,
         y: 12,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SAFARIZONEEAST_TM_EGG_BOMB",
         itemId: "TM_EGG_BOMB"

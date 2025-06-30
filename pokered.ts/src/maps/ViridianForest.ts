@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VIRIDIAN_FOREST_BLOCKS } from "../data/blocks/ViridianForest";
+import { OverworldSprite } from "../sprite";
 
 export const ViridianForest: Map = {
   width: 17,
@@ -31,7 +32,7 @@ export const ViridianForest: Map = {
         type: "sprite",
         x: 16,
         y: 43,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_VIRIDIANFOREST_YOUNGSTER1"
       },
@@ -39,7 +40,7 @@ export const ViridianForest: Map = {
         type: "trainer",
         x: 30,
         y: 33,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_VIRIDIANFOREST_YOUNGSTER2",
         trainerId: "OPP_BUG_CATCHER",
@@ -49,7 +50,7 @@ export const ViridianForest: Map = {
         type: "trainer",
         x: 30,
         y: 19,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_VIRIDIANFOREST_YOUNGSTER3",
         trainerId: "OPP_BUG_CATCHER",
@@ -59,7 +60,7 @@ export const ViridianForest: Map = {
         type: "trainer",
         x: 2,
         y: 18,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_VIRIDIANFOREST_YOUNGSTER4",
         trainerId: "OPP_BUG_CATCHER",
@@ -69,7 +70,7 @@ export const ViridianForest: Map = {
         type: "item",
         x: 25,
         y: 11,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_VIRIDIANFOREST_ANTIDOTE",
         itemId: "ANTIDOTE"
@@ -78,7 +79,7 @@ export const ViridianForest: Map = {
         type: "item",
         x: 12,
         y: 29,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_VIRIDIANFOREST_POTION",
         itemId: "POTION"
@@ -87,7 +88,7 @@ export const ViridianForest: Map = {
         type: "item",
         x: 1,
         y: 31,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_VIRIDIANFOREST_POKE_BALL",
         itemId: "POKE_BALL"
@@ -96,7 +97,7 @@ export const ViridianForest: Map = {
         type: "sprite",
         x: 27,
         y: 40,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_VIRIDIANFOREST_YOUNGSTER5"
       }

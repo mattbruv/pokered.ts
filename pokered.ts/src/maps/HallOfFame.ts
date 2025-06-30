@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { HALL_OF_FAME_BLOCKS } from "../data/blocks/HallOfFame";
+import { OverworldSprite } from "../sprite";
 
 export const HallOfFame: Map = {
   width: 5,
@@ -20,7 +21,7 @@ export const HallOfFame: Map = {
         type: "sprite",
         x: 5,
         y: 2,
-        sprite: "SPRITE_OAK",
+        sprite: OverworldSprite.SPRITE_OAK,
         movement: "STAY",
         textId: "TEXT_HALLOFFAME_OAK"
       }

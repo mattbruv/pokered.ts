@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { ROUTE_16_GATE_2F_BLOCKS } from "../data/blocks/Route16Gate2F";
+import { OverworldSprite } from "../sprite";
 
 export const Route16Gate2F: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const Route16Gate2F: Map = {
         type: "sprite",
         x: 4,
         y: 2,
-        sprite: "SPRITE_LITTLE_BOY",
+        sprite: OverworldSprite.SPRITE_LITTLE_BOY,
         movement: "STAY",
         textId: "TEXT_ROUTE16GATE2F_LITTLE_BOY"
       },
@@ -28,7 +29,7 @@ export const Route16Gate2F: Map = {
         type: "sprite",
         x: 2,
         y: 5,
-        sprite: "SPRITE_LITTLE_GIRL",
+        sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_ROUTE16GATE2F_LITTLE_GIRL"
       }

@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SILPH_CO_ELEVATOR_BLOCKS } from "../data/blocks/SilphCoElevator";
+import { OverworldSprite } from "../sprite";
 
 export const SilphCoElevator: Map = {
   width: 2,

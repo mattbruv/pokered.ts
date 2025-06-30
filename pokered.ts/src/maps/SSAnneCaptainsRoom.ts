@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SS_ANNE_CAPTAINS_ROOM_BLOCKS } from "../data/blocks/SSAnneCaptainsRoom";
+import { OverworldSprite } from "../sprite";
 
 export const SSAnneCaptainsRoom: Map = {
   width: 3,
@@ -20,7 +21,7 @@ export const SSAnneCaptainsRoom: Map = {
         type: "sprite",
         x: 4,
         y: 2,
-        sprite: "SPRITE_CAPTAIN",
+        sprite: OverworldSprite.SPRITE_CAPTAIN,
         movement: "STAY",
         textId: "TEXT_SSANNECAPTAINSROOM_CAPTAIN"
       }

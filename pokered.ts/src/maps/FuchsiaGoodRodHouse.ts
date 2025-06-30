@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { FUCHSIA_GOOD_ROD_HOUSE_BLOCKS } from "../data/blocks/FuchsiaGoodRodHouse";
+import { OverworldSprite } from "../sprite";
 
 export const FuchsiaGoodRodHouse: Map = {
   width: 4,
@@ -21,7 +22,7 @@ export const FuchsiaGoodRodHouse: Map = {
         type: "sprite",
         x: 5,
         y: 3,
-        sprite: "SPRITE_FISHING_GURU",
+        sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_FUCHSIAGOODRODHOUSE_FISHING_GURU"
       }

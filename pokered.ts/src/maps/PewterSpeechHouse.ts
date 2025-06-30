@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { PEWTER_SPEECH_HOUSE_BLOCKS } from "../data/blocks/PewterSpeechHouse";
+import { OverworldSprite } from "../sprite";
 
 export const PewterSpeechHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const PewterSpeechHouse: Map = {
         type: "sprite",
         x: 2,
         y: 3,
-        sprite: "SPRITE_GAMBLER",
+        sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_PEWTERSPEECHHOUSE_GAMBLER"
       },
@@ -28,7 +29,7 @@ export const PewterSpeechHouse: Map = {
         type: "sprite",
         x: 4,
         y: 5,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_PEWTERSPEECHHOUSE_YOUNGSTER"
       }

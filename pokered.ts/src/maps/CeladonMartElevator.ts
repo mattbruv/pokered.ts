@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CELADON_MART_ELEVATOR_BLOCKS } from "../data/blocks/CeladonMartElevator";
+import { OverworldSprite } from "../sprite";
 
 export const CeladonMartElevator: Map = {
   width: 2,

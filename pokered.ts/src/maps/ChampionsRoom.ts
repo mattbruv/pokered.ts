@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CHAMPIONS_ROOM_BLOCKS } from "../data/blocks/ChampionsRoom";
+import { OverworldSprite } from "../sprite";
 
 export const ChampionsRoom: Map = {
   width: 4,
@@ -22,7 +23,7 @@ export const ChampionsRoom: Map = {
         type: "sprite",
         x: 4,
         y: 2,
-        sprite: "SPRITE_BLUE",
+        sprite: OverworldSprite.SPRITE_BLUE,
         movement: "STAY",
         textId: "TEXT_CHAMPIONSROOM_RIVAL"
       },
@@ -30,7 +31,7 @@ export const ChampionsRoom: Map = {
         type: "sprite",
         x: 3,
         y: 7,
-        sprite: "SPRITE_OAK",
+        sprite: OverworldSprite.SPRITE_OAK,
         movement: "STAY",
         textId: "TEXT_CHAMPIONSROOM_OAK"
       }

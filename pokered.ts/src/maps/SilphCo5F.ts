@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SILPH_CO_5F_BLOCKS } from "../data/blocks/SilphCo5F";
+import { OverworldSprite } from "../sprite";
 
 export const SilphCo5F: Map = {
   width: 15,
@@ -25,7 +26,7 @@ export const SilphCo5F: Map = {
         type: "sprite",
         x: 13,
         y: 9,
-        sprite: "SPRITE_SILPH_WORKER_M",
+        sprite: OverworldSprite.SPRITE_SILPH_WORKER_M,
         movement: "STAY",
         textId: "TEXT_SILPHCO5F_SILPH_WORKER_M"
       },
@@ -33,7 +34,7 @@ export const SilphCo5F: Map = {
         type: "trainer",
         x: 8,
         y: 16,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_SILPHCO5F_ROCKET1",
         trainerId: "OPP_ROCKET",
@@ -43,7 +44,7 @@ export const SilphCo5F: Map = {
         type: "trainer",
         x: 8,
         y: 3,
-        sprite: "SPRITE_SCIENTIST",
+        sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_SILPHCO5F_SCIENTIST",
         trainerId: "OPP_SCIENTIST",
@@ -53,7 +54,7 @@ export const SilphCo5F: Map = {
         type: "trainer",
         x: 18,
         y: 10,
-        sprite: "SPRITE_ROCKER",
+        sprite: OverworldSprite.SPRITE_ROCKER,
         movement: "STAY",
         textId: "TEXT_SILPHCO5F_ROCKER",
         trainerId: "OPP_JUGGLER",
@@ -63,7 +64,7 @@ export const SilphCo5F: Map = {
         type: "trainer",
         x: 28,
         y: 4,
-        sprite: "SPRITE_ROCKET",
+        sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_SILPHCO5F_ROCKET2",
         trainerId: "OPP_ROCKET",
@@ -73,7 +74,7 @@ export const SilphCo5F: Map = {
         type: "item",
         x: 2,
         y: 13,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SILPHCO5F_TM_TAKE_DOWN",
         itemId: "TM_TAKE_DOWN"
@@ -82,7 +83,7 @@ export const SilphCo5F: Map = {
         type: "item",
         x: 4,
         y: 6,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SILPHCO5F_PROTEIN",
         itemId: "PROTEIN"
@@ -91,7 +92,7 @@ export const SilphCo5F: Map = {
         type: "item",
         x: 21,
         y: 16,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SILPHCO5F_CARD_KEY",
         itemId: "CARD_KEY"
@@ -100,7 +101,7 @@ export const SilphCo5F: Map = {
         type: "sprite",
         x: 22,
         y: 12,
-        sprite: "SPRITE_CLIPBOARD",
+        sprite: OverworldSprite.SPRITE_CLIPBOARD,
         movement: "STAY",
         textId: "TEXT_SILPHCO5F_POKEMON_REPORT1"
       },
@@ -108,7 +109,7 @@ export const SilphCo5F: Map = {
         type: "sprite",
         x: 25,
         y: 10,
-        sprite: "SPRITE_CLIPBOARD",
+        sprite: OverworldSprite.SPRITE_CLIPBOARD,
         movement: "STAY",
         textId: "TEXT_SILPHCO5F_POKEMON_REPORT2"
       },
@@ -116,7 +117,7 @@ export const SilphCo5F: Map = {
         type: "sprite",
         x: 24,
         y: 6,
-        sprite: "SPRITE_CLIPBOARD",
+        sprite: OverworldSprite.SPRITE_CLIPBOARD,
         movement: "STAY",
         textId: "TEXT_SILPHCO5F_POKEMON_REPORT3"
       }

@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { MR_FUJIS_HOUSE_BLOCKS } from "../data/blocks/MrFujisHouse";
+import { OverworldSprite } from "../sprite";
 
 export const MrFujisHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 3,
         y: 5,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_SUPER_NERD"
       },
@@ -28,7 +29,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 6,
         y: 3,
-        sprite: "SPRITE_LITTLE_GIRL",
+        sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_LITTLE_GIRL"
       },
@@ -36,7 +37,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 6,
         y: 4,
-        sprite: "SPRITE_MONSTER",
+        sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_PSYDUCK"
       },
@@ -44,7 +45,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 1,
         y: 3,
-        sprite: "SPRITE_MONSTER",
+        sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_NIDORINO"
       },
@@ -52,7 +53,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 3,
         y: 1,
-        sprite: "SPRITE_MR_FUJI",
+        sprite: OverworldSprite.SPRITE_MR_FUJI,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_MR_FUJI"
       },
@@ -60,7 +61,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 3,
         y: 3,
-        sprite: "SPRITE_POKEDEX",
+        sprite: OverworldSprite.SPRITE_POKEDEX,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_POKEDEX"
       }

@@ -154,9 +154,6 @@ const OVERWORLD_SPRITE_LOOKUP: Record<OverworldSprite, SpriteName> = {
   [OverworldSprite.SPRITE_GAMBLER_ASLEEP]: "sprites-gambler_asleep"
 };
 
-export function getOverworldSpriteImage(
-  sprite: OverworldSprite,
-  images: ImageCache
-): ImageBitmap {
-  return images[OVERWORLD_SPRITE_LOOKUP[sprite]];
+export function getOverworldSpriteKey(sprite: OverworldSprite): SpriteName {
+  return OVERWORLD_SPRITE_LOOKUP[sprite];
 }

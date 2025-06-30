@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SEAFOAM_ISLANDS_B2F_BLOCKS } from "../data/blocks/SeafoamIslandsB2F";
+import { OverworldSprite } from "../sprite";
 
 export const SeafoamIslandsB2F: Map = {
   width: 15,
@@ -25,7 +26,7 @@ export const SeafoamIslandsB2F: Map = {
         type: "sprite",
         x: 18,
         y: 6,
-        sprite: "SPRITE_BOULDER",
+        sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_SEAFOAMISLANDSB2F_BOULDER1"
       },
@@ -33,7 +34,7 @@ export const SeafoamIslandsB2F: Map = {
         type: "sprite",
         x: 23,
         y: 6,
-        sprite: "SPRITE_BOULDER",
+        sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_SEAFOAMISLANDSB2F_BOULDER2"
       }

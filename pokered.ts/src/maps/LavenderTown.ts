@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { LAVENDER_TOWN_BLOCKS } from "../data/blocks/LavenderTown";
+import { OverworldSprite } from "../sprite";
 
 export const LavenderTown: Map = {
   width: 10,
@@ -35,7 +36,7 @@ export const LavenderTown: Map = {
         type: "sprite",
         x: 15,
         y: 9,
-        sprite: "SPRITE_LITTLE_GIRL",
+        sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_LAVENDERTOWN_LITTLE_GIRL"
       },
@@ -43,7 +44,7 @@ export const LavenderTown: Map = {
         type: "sprite",
         x: 9,
         y: 10,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_LAVENDERTOWN_COOLTRAINER_M"
       },
@@ -51,7 +52,7 @@ export const LavenderTown: Map = {
         type: "sprite",
         x: 8,
         y: 7,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "WALK",
         textId: "TEXT_LAVENDERTOWN_SUPER_NERD"
       }

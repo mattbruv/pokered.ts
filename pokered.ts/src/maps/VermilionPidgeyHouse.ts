@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { VERMILION_PIDGEY_HOUSE_BLOCKS } from "../data/blocks/VermilionPidgeyHouse";
+import { OverworldSprite } from "../sprite";
 
 export const VermilionPidgeyHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const VermilionPidgeyHouse: Map = {
         type: "sprite",
         x: 5,
         y: 3,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_VERMILIONPIDGEYHOUSE_YOUNGSTER"
       },
@@ -28,7 +29,7 @@ export const VermilionPidgeyHouse: Map = {
         type: "sprite",
         x: 3,
         y: 5,
-        sprite: "SPRITE_BIRD",
+        sprite: OverworldSprite.SPRITE_BIRD,
         movement: "WALK",
         textId: "TEXT_VERMILIONPIDGEYHOUSE_PIDGEY"
       },
@@ -36,7 +37,7 @@ export const VermilionPidgeyHouse: Map = {
         type: "sprite",
         x: 4,
         y: 3,
-        sprite: "SPRITE_PAPER",
+        sprite: OverworldSprite.SPRITE_PAPER,
         movement: "STAY",
         textId: "TEXT_VERMILIONPIDGEYHOUSE_LETTER"
       }

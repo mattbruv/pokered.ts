@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CELADON_MART_ROOF_BLOCKS } from "../data/blocks/CeladonMartRoof";
+import { OverworldSprite } from "../sprite";
 
 export const CeladonMartRoof: Map = {
   width: 10,
@@ -22,7 +23,7 @@ export const CeladonMartRoof: Map = {
         type: "sprite",
         x: 10,
         y: 4,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_CELADONMARTROOF_SUPER_NERD"
       },
@@ -30,7 +31,7 @@ export const CeladonMartRoof: Map = {
         type: "sprite",
         x: 5,
         y: 5,
-        sprite: "SPRITE_LITTLE_GIRL",
+        sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_CELADONMARTROOF_LITTLE_GIRL"
       }

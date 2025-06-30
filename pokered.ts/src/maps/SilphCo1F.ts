@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SILPH_CO_1F_BLOCKS } from "../data/blocks/SilphCo1F";
+import { OverworldSprite } from "../sprite";
 
 export const SilphCo1F: Map = {
   width: 15,
@@ -23,7 +24,7 @@ export const SilphCo1F: Map = {
         type: "sprite",
         x: 4,
         y: 2,
-        sprite: "SPRITE_LINK_RECEPTIONIST",
+        sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_SILPHCO1F_LINK_RECEPTIONIST"
       }

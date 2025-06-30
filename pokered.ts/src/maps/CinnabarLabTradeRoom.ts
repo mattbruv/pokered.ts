@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CINNABAR_LAB_TRADE_ROOM_BLOCKS } from "../data/blocks/CinnabarLabTradeRoom";
+import { OverworldSprite } from "../sprite";
 
 export const CinnabarLabTradeRoom: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const CinnabarLabTradeRoom: Map = {
         type: "sprite",
         x: 3,
         y: 2,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_CINNABARLABTRADEROOM_SUPER_NERD"
       },
@@ -28,7 +29,7 @@ export const CinnabarLabTradeRoom: Map = {
         type: "sprite",
         x: 1,
         y: 4,
-        sprite: "SPRITE_GRAMPS",
+        sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_CINNABARLABTRADEROOM_GRAMPS"
       },
@@ -36,7 +37,7 @@ export const CinnabarLabTradeRoom: Map = {
         type: "sprite",
         x: 5,
         y: 5,
-        sprite: "SPRITE_BEAUTY",
+        sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "STAY",
         textId: "TEXT_CINNABARLABTRADEROOM_BEAUTY"
       }

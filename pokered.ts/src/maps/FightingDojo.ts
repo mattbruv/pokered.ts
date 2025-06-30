@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { FIGHTING_DOJO_BLOCKS } from "../data/blocks/FightingDojo";
+import { OverworldSprite } from "../sprite";
 
 export const FightingDojo: Map = {
   width: 5,
@@ -20,7 +21,7 @@ export const FightingDojo: Map = {
         type: "trainer",
         x: 5,
         y: 3,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_FIGHTINGDOJO_KARATE_MASTER",
         trainerId: "OPP_BLACKBELT",
@@ -30,7 +31,7 @@ export const FightingDojo: Map = {
         type: "trainer",
         x: 3,
         y: 4,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_FIGHTINGDOJO_BLACKBELT1",
         trainerId: "OPP_BLACKBELT",
@@ -40,7 +41,7 @@ export const FightingDojo: Map = {
         type: "trainer",
         x: 3,
         y: 6,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_FIGHTINGDOJO_BLACKBELT2",
         trainerId: "OPP_BLACKBELT",
@@ -50,7 +51,7 @@ export const FightingDojo: Map = {
         type: "trainer",
         x: 5,
         y: 5,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_FIGHTINGDOJO_BLACKBELT3",
         trainerId: "OPP_BLACKBELT",
@@ -60,7 +61,7 @@ export const FightingDojo: Map = {
         type: "trainer",
         x: 5,
         y: 7,
-        sprite: "SPRITE_HIKER",
+        sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_FIGHTINGDOJO_BLACKBELT4",
         trainerId: "OPP_BLACKBELT",
@@ -70,7 +71,7 @@ export const FightingDojo: Map = {
         type: "sprite",
         x: 4,
         y: 1,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_FIGHTINGDOJO_HITMONLEE_POKE_BALL"
       },
@@ -78,7 +79,7 @@ export const FightingDojo: Map = {
         type: "sprite",
         x: 5,
         y: 1,
-        sprite: "SPRITE_POKE_BALL",
+        sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_FIGHTINGDOJO_HITMONCHAN_POKE_BALL"
       }

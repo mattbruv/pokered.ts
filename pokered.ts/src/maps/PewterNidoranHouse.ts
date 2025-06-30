@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { PEWTER_NIDORAN_HOUSE_BLOCKS } from "../data/blocks/PewterNidoranHouse";
+import { OverworldSprite } from "../sprite";
 
 export const PewterNidoranHouse: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const PewterNidoranHouse: Map = {
         type: "sprite",
         x: 4,
         y: 5,
-        sprite: "SPRITE_MONSTER",
+        sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_PEWTERNIDORANHOUSE_NIDORAN"
       },
@@ -28,7 +29,7 @@ export const PewterNidoranHouse: Map = {
         type: "sprite",
         x: 3,
         y: 5,
-        sprite: "SPRITE_LITTLE_BOY",
+        sprite: OverworldSprite.SPRITE_LITTLE_BOY,
         movement: "STAY",
         textId: "TEXT_PEWTERNIDORANHOUSE_LITTLE_BOY"
       },
@@ -36,7 +37,7 @@ export const PewterNidoranHouse: Map = {
         type: "sprite",
         x: 1,
         y: 2,
-        sprite: "SPRITE_MIDDLE_AGED_MAN",
+        sprite: OverworldSprite.SPRITE_MIDDLE_AGED_MAN,
         movement: "STAY",
         textId: "TEXT_PEWTERNIDORANHOUSE_MIDDLE_AGED_MAN"
       }

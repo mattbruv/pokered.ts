@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CERULEAN_MART_BLOCKS } from "../data/blocks/CeruleanMart";
+import { OverworldSprite } from "../sprite";
 
 export const CeruleanMart: Map = {
   width: 4,
@@ -20,7 +21,7 @@ export const CeruleanMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
-        sprite: "SPRITE_CLERK",
+        sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_CERULEANMART_CLERK"
       },
@@ -28,7 +29,7 @@ export const CeruleanMart: Map = {
         type: "sprite",
         x: 3,
         y: 4,
-        sprite: "SPRITE_COOLTRAINER_M",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "WALK",
         textId: "TEXT_CERULEANMART_COOLTRAINER_M"
       },
@@ -36,7 +37,7 @@ export const CeruleanMart: Map = {
         type: "sprite",
         x: 6,
         y: 2,
-        sprite: "SPRITE_COOLTRAINER_F",
+        sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_CERULEANMART_COOLTRAINER_F"
       }

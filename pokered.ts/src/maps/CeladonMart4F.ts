@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { CELADON_MART_4F_BLOCKS } from "../data/blocks/CeladonMart4F";
+import { OverworldSprite } from "../sprite";
 
 export const CeladonMart4F: Map = {
   width: 10,
@@ -23,7 +24,7 @@ export const CeladonMart4F: Map = {
         type: "sprite",
         x: 5,
         y: 7,
-        sprite: "SPRITE_CLERK",
+        sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_CELADONMART4F_CLERK"
       },
@@ -31,7 +32,7 @@ export const CeladonMart4F: Map = {
         type: "sprite",
         x: 15,
         y: 5,
-        sprite: "SPRITE_SUPER_NERD",
+        sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "WALK",
         textId: "TEXT_CELADONMART4F_SUPER_NERD"
       },
@@ -39,7 +40,7 @@ export const CeladonMart4F: Map = {
         type: "sprite",
         x: 5,
         y: 2,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_CELADONMART4F_YOUNGSTER"
       }

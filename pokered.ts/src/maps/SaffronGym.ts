@@ -1,6 +1,7 @@
 import { Map, MapName } from "../map";
 import { Tileset } from "../tileset";
 import { SAFFRON_GYM_BLOCKS } from "../data/blocks/SaffronGym";
+import { OverworldSprite } from "../sprite";
 
 export const SaffronGym: Map = {
   width: 10,
@@ -50,7 +51,7 @@ export const SaffronGym: Map = {
         type: "trainer",
         x: 9,
         y: 8,
-        sprite: "SPRITE_GIRL",
+        sprite: OverworldSprite.SPRITE_GIRL,
         movement: "STAY",
         textId: "TEXT_SAFFRONGYM_SABRINA",
         trainerId: "OPP_SABRINA",
@@ -60,7 +61,7 @@ export const SaffronGym: Map = {
         type: "trainer",
         x: 10,
         y: 1,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_SAFFRONGYM_CHANNELER1",
         trainerId: "OPP_CHANNELER",
@@ -70,7 +71,7 @@ export const SaffronGym: Map = {
         type: "trainer",
         x: 17,
         y: 1,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_SAFFRONGYM_YOUNGSTER1",
         trainerId: "OPP_PSYCHIC_TR",
@@ -80,7 +81,7 @@ export const SaffronGym: Map = {
         type: "trainer",
         x: 3,
         y: 7,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_SAFFRONGYM_CHANNELER2",
         trainerId: "OPP_CHANNELER",
@@ -90,7 +91,7 @@ export const SaffronGym: Map = {
         type: "trainer",
         x: 17,
         y: 7,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_SAFFRONGYM_YOUNGSTER2",
         trainerId: "OPP_PSYCHIC_TR",
@@ -100,7 +101,7 @@ export const SaffronGym: Map = {
         type: "trainer",
         x: 3,
         y: 13,
-        sprite: "SPRITE_CHANNELER",
+        sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_SAFFRONGYM_CHANNELER3",
         trainerId: "OPP_CHANNELER",
@@ -110,7 +111,7 @@ export const SaffronGym: Map = {
         type: "trainer",
         x: 17,
         y: 13,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_SAFFRONGYM_YOUNGSTER3",
         trainerId: "OPP_PSYCHIC_TR",
@@ -120,7 +121,7 @@ export const SaffronGym: Map = {
         type: "trainer",
         x: 3,
         y: 1,
-        sprite: "SPRITE_YOUNGSTER",
+        sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_SAFFRONGYM_YOUNGSTER4",
         trainerId: "OPP_PSYCHIC_TR",
@@ -130,7 +131,7 @@ export const SaffronGym: Map = {
         type: "sprite",
         x: 10,
         y: 15,
-        sprite: "SPRITE_GYM_GUIDE",
+        sprite: OverworldSprite.SPRITE_GYM_GUIDE,
         movement: "STAY",
         textId: "TEXT_SAFFRONGYM_GYM_GUIDE"
       }
