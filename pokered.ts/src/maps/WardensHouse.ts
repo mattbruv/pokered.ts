@@ -11,8 +11,8 @@ export const WardensHouse: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 4 },
-      { x: 5, y: 7, toMap: "LAST_MAP", warpId: 4 }
+      { x: 4, y: 7, toMap: "LAST_MAP", warpIndex: 3 },
+      { x: 5, y: 7, toMap: "LAST_MAP", warpIndex: 3 }
     ],
     backgroundItems: [
       { x: 4, y: 3, signId: "TEXT_WARDENSHOUSE_DISPLAY_LEFT" },

@@ -11,11 +11,11 @@ export const MtMoon1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 14, y: 35, toMap: "LAST_MAP", warpId: 2 },
-      { x: 15, y: 35, toMap: "LAST_MAP", warpId: 2 },
-      { x: 5, y: 5, toMap: MapName.MtMoonB1F, warpId: 1 },
-      { x: 17, y: 11, toMap: MapName.MtMoonB1F, warpId: 3 },
-      { x: 25, y: 15, toMap: MapName.MtMoonB1F, warpId: 4 }
+      { x: 14, y: 35, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 15, y: 35, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 5, y: 5, toMap: MapName.MtMoonB1F, warpIndex: 0 },
+      { x: 17, y: 11, toMap: MapName.MtMoonB1F, warpIndex: 2 },
+      { x: 25, y: 15, toMap: MapName.MtMoonB1F, warpIndex: 3 }
     ],
     backgroundItems: [
       { x: 15, y: 23, signId: "TEXT_MTMOON1F_BEWARE_ZUBAT_SIGN" }

@@ -14,10 +14,10 @@ export const Route6: Map = {
   },
   objects: {
     warps: [
-      { x: 9, y: 1, toMap: MapName.Route6Gate, warpId: 3 },
-      { x: 10, y: 1, toMap: MapName.Route6Gate, warpId: 3 },
-      { x: 10, y: 7, toMap: MapName.Route6Gate, warpId: 1 },
-      { x: 17, y: 13, toMap: MapName.UndergroundPathRoute6, warpId: 1 }
+      { x: 9, y: 1, toMap: MapName.Route6Gate, warpIndex: 2 },
+      { x: 10, y: 1, toMap: MapName.Route6Gate, warpIndex: 2 },
+      { x: 10, y: 7, toMap: MapName.Route6Gate, warpIndex: 0 },
+      { x: 17, y: 13, toMap: MapName.UndergroundPathRoute6, warpIndex: 0 }
     ],
     backgroundItems: [
       { x: 19, y: 15, signId: "TEXT_ROUTE6_UNDERGROUND_PATH_SIGN" }

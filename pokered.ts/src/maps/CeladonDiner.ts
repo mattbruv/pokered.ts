@@ -11,8 +11,8 @@ export const CeladonDiner: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 11 },
-      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 11 }
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 10 },
+      { x: 4, y: 7, toMap: "LAST_MAP", warpIndex: 10 }
     ],
     backgroundItems: [],
     objects: [

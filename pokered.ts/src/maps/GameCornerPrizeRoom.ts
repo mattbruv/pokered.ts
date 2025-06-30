@@ -11,8 +11,8 @@ export const GameCornerPrizeRoom: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 10 },
-      { x: 5, y: 7, toMap: "LAST_MAP", warpId: 10 }
+      { x: 4, y: 7, toMap: "LAST_MAP", warpIndex: 9 },
+      { x: 5, y: 7, toMap: "LAST_MAP", warpIndex: 9 }
     ],
     backgroundItems: [
       { x: 2, y: 2, signId: "TEXT_GAMECORNERPRIZEROOM_PRIZE_VENDOR_1" },

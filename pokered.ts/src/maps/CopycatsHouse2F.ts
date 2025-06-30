@@ -10,7 +10,7 @@ export const CopycatsHouse2F: Map = {
   tileset: Tileset.REDS_HOUSE_2,
   connections: {},
   objects: {
-    warps: [{ x: 7, y: 1, toMap: MapName.CopycatsHouse1F, warpId: 3 }],
+    warps: [{ x: 7, y: 1, toMap: MapName.CopycatsHouse1F, warpIndex: 2 }],
     backgroundItems: [
       { x: 3, y: 5, signId: "TEXT_COPYCATSHOUSE2F_SNES" },
       { x: 0, y: 1, signId: "TEXT_COPYCATSHOUSE2F_PC" }

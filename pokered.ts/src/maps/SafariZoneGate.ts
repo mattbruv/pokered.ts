@@ -11,10 +11,10 @@ export const SafariZoneGate: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 3, y: 5, toMap: "LAST_MAP", warpId: 5 },
-      { x: 4, y: 5, toMap: "LAST_MAP", warpId: 5 },
-      { x: 3, y: 0, toMap: MapName.SafariZoneCenter, warpId: 1 },
-      { x: 4, y: 0, toMap: MapName.SafariZoneCenter, warpId: 2 }
+      { x: 3, y: 5, toMap: "LAST_MAP", warpIndex: 4 },
+      { x: 4, y: 5, toMap: "LAST_MAP", warpIndex: 4 },
+      { x: 3, y: 0, toMap: MapName.SafariZoneCenter, warpIndex: 0 },
+      { x: 4, y: 0, toMap: MapName.SafariZoneCenter, warpIndex: 1 }
     ],
     backgroundItems: [],
     objects: [

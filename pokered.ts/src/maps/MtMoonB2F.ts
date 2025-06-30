@@ -11,10 +11,10 @@ export const MtMoonB2F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 25, y: 9, toMap: MapName.MtMoonB1F, warpId: 2 },
-      { x: 21, y: 17, toMap: MapName.MtMoonB1F, warpId: 5 },
-      { x: 15, y: 27, toMap: MapName.MtMoonB1F, warpId: 6 },
-      { x: 5, y: 7, toMap: MapName.MtMoonB1F, warpId: 7 }
+      { x: 25, y: 9, toMap: MapName.MtMoonB1F, warpIndex: 1 },
+      { x: 21, y: 17, toMap: MapName.MtMoonB1F, warpIndex: 4 },
+      { x: 15, y: 27, toMap: MapName.MtMoonB1F, warpIndex: 5 },
+      { x: 5, y: 7, toMap: MapName.MtMoonB1F, warpIndex: 6 }
     ],
     backgroundItems: [],
     objects: [

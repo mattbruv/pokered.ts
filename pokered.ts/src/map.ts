@@ -24,7 +24,7 @@ export type Warp = {
   x: number;
   y: number;
   toMap: MapName | "LAST_MAP" | "UNUSED_MAP_ED";
-  warpId: number;
+  warpIndex: number;
 };
 
 /** Represents a static background item with text, such as a sign, binoculars, etc. */

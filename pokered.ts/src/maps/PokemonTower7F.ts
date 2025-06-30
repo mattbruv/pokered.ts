@@ -10,7 +10,7 @@ export const PokemonTower7F: Map = {
   tileset: Tileset.CEMETERY,
   connections: {},
   objects: {
-    warps: [{ x: 9, y: 16, toMap: MapName.PokemonTower6F, warpId: 2 }],
+    warps: [{ x: 9, y: 16, toMap: MapName.PokemonTower6F, warpIndex: 1 }],
     backgroundItems: [],
     objects: [
       {

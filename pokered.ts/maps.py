@@ -116,7 +116,7 @@ for map_path in maps:
                     "x": x,
                     "y": y,
                     "toMap": toMap,
-                    "warpId": toWarp,
+                    "warpIndex": toWarp - 1,
                 }
                 objects["warps"].append(entry)
             

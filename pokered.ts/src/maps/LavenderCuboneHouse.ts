@@ -11,8 +11,8 @@ export const LavenderCuboneHouse: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 5 },
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 5 }
+      { x: 2, y: 7, toMap: "LAST_MAP", warpIndex: 4 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 4 }
     ],
     backgroundItems: [],
     objects: [

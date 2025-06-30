@@ -11,10 +11,10 @@ export const LoreleisRoom: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 11, toMap: MapName.IndigoPlateauLobby, warpId: 3 },
-      { x: 5, y: 11, toMap: MapName.IndigoPlateauLobby, warpId: 3 },
-      { x: 4, y: 0, toMap: MapName.BrunosRoom, warpId: 1 },
-      { x: 5, y: 0, toMap: MapName.BrunosRoom, warpId: 2 }
+      { x: 4, y: 11, toMap: MapName.IndigoPlateauLobby, warpIndex: 2 },
+      { x: 5, y: 11, toMap: MapName.IndigoPlateauLobby, warpIndex: 2 },
+      { x: 4, y: 0, toMap: MapName.BrunosRoom, warpIndex: 0 },
+      { x: 5, y: 0, toMap: MapName.BrunosRoom, warpIndex: 1 }
     ],
     backgroundItems: [],
     objects: [

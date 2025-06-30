@@ -11,9 +11,9 @@ export const PowerPlant: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 35, toMap: "LAST_MAP", warpId: 4 },
-      { x: 5, y: 35, toMap: "LAST_MAP", warpId: 4 },
-      { x: 0, y: 11, toMap: "LAST_MAP", warpId: 4 }
+      { x: 4, y: 35, toMap: "LAST_MAP", warpIndex: 3 },
+      { x: 5, y: 35, toMap: "LAST_MAP", warpIndex: 3 },
+      { x: 0, y: 11, toMap: "LAST_MAP", warpIndex: 3 }
     ],
     backgroundItems: [],
     objects: [

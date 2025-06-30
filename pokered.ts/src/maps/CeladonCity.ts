@@ -14,19 +14,19 @@ export const CeladonCity: Map = {
   },
   objects: {
     warps: [
-      { x: 8, y: 13, toMap: MapName.CeladonMart1F, warpId: 1 },
-      { x: 10, y: 13, toMap: MapName.CeladonMart1F, warpId: 3 },
-      { x: 24, y: 9, toMap: MapName.CeladonMansion1F, warpId: 1 },
-      { x: 24, y: 3, toMap: MapName.CeladonMansion1F, warpId: 3 },
-      { x: 25, y: 3, toMap: MapName.CeladonMansion1F, warpId: 3 },
-      { x: 41, y: 9, toMap: MapName.CeladonPokecenter, warpId: 1 },
-      { x: 12, y: 27, toMap: MapName.CeladonGym, warpId: 1 },
-      { x: 28, y: 19, toMap: MapName.GameCorner, warpId: 1 },
-      { x: 39, y: 19, toMap: MapName.CeladonMart5F, warpId: 1 },
-      { x: 33, y: 19, toMap: MapName.GameCornerPrizeRoom, warpId: 1 },
-      { x: 31, y: 27, toMap: MapName.CeladonDiner, warpId: 1 },
-      { x: 35, y: 27, toMap: MapName.CeladonChiefHouse, warpId: 1 },
-      { x: 43, y: 27, toMap: MapName.CeladonHotel, warpId: 1 }
+      { x: 8, y: 13, toMap: MapName.CeladonMart1F, warpIndex: 0 },
+      { x: 10, y: 13, toMap: MapName.CeladonMart1F, warpIndex: 2 },
+      { x: 24, y: 9, toMap: MapName.CeladonMansion1F, warpIndex: 0 },
+      { x: 24, y: 3, toMap: MapName.CeladonMansion1F, warpIndex: 2 },
+      { x: 25, y: 3, toMap: MapName.CeladonMansion1F, warpIndex: 2 },
+      { x: 41, y: 9, toMap: MapName.CeladonPokecenter, warpIndex: 0 },
+      { x: 12, y: 27, toMap: MapName.CeladonGym, warpIndex: 0 },
+      { x: 28, y: 19, toMap: MapName.GameCorner, warpIndex: 0 },
+      { x: 39, y: 19, toMap: MapName.CeladonMart5F, warpIndex: 0 },
+      { x: 33, y: 19, toMap: MapName.GameCornerPrizeRoom, warpIndex: 0 },
+      { x: 31, y: 27, toMap: MapName.CeladonDiner, warpIndex: 0 },
+      { x: 35, y: 27, toMap: MapName.CeladonChiefHouse, warpIndex: 0 },
+      { x: 43, y: 27, toMap: MapName.CeladonHotel, warpIndex: 0 }
     ],
     backgroundItems: [
       { x: 27, y: 15, signId: "TEXT_CELADONCITY_TRAINER_TIPS1" },

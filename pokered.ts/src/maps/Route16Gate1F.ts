@@ -11,15 +11,15 @@ export const Route16Gate1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 0, y: 8, toMap: "LAST_MAP", warpId: 1 },
-      { x: 0, y: 9, toMap: "LAST_MAP", warpId: 2 },
-      { x: 7, y: 8, toMap: "LAST_MAP", warpId: 3 },
-      { x: 7, y: 9, toMap: "LAST_MAP", warpId: 3 },
-      { x: 0, y: 2, toMap: "LAST_MAP", warpId: 5 },
-      { x: 0, y: 3, toMap: "LAST_MAP", warpId: 6 },
-      { x: 7, y: 2, toMap: "LAST_MAP", warpId: 7 },
-      { x: 7, y: 3, toMap: "LAST_MAP", warpId: 8 },
-      { x: 6, y: 12, toMap: MapName.Route16Gate2F, warpId: 1 }
+      { x: 0, y: 8, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 0, y: 9, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 7, y: 8, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 7, y: 9, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 0, y: 2, toMap: "LAST_MAP", warpIndex: 4 },
+      { x: 0, y: 3, toMap: "LAST_MAP", warpIndex: 5 },
+      { x: 7, y: 2, toMap: "LAST_MAP", warpIndex: 6 },
+      { x: 7, y: 3, toMap: "LAST_MAP", warpIndex: 7 },
+      { x: 6, y: 12, toMap: MapName.Route16Gate2F, warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

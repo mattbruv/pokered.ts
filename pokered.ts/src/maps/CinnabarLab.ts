@@ -11,11 +11,11 @@ export const CinnabarLab: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 3 },
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 3 },
-      { x: 8, y: 4, toMap: MapName.CinnabarLabTradeRoom, warpId: 1 },
-      { x: 12, y: 4, toMap: MapName.CinnabarLabMetronomeRoom, warpId: 1 },
-      { x: 16, y: 4, toMap: MapName.CinnabarLabFossilRoom, warpId: 1 }
+      { x: 2, y: 7, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 8, y: 4, toMap: MapName.CinnabarLabTradeRoom, warpIndex: 0 },
+      { x: 12, y: 4, toMap: MapName.CinnabarLabMetronomeRoom, warpIndex: 0 },
+      { x: 16, y: 4, toMap: MapName.CinnabarLabFossilRoom, warpIndex: 0 }
     ],
     backgroundItems: [
       { x: 3, y: 2, signId: "TEXT_CINNABARLAB_PHOTO" },

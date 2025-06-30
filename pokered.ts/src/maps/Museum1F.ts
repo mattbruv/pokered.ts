@@ -11,11 +11,11 @@ export const Museum1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 10, y: 7, toMap: "LAST_MAP", warpId: 1 },
-      { x: 11, y: 7, toMap: "LAST_MAP", warpId: 1 },
-      { x: 16, y: 7, toMap: "LAST_MAP", warpId: 2 },
-      { x: 17, y: 7, toMap: "LAST_MAP", warpId: 2 },
-      { x: 7, y: 7, toMap: MapName.Museum2F, warpId: 1 }
+      { x: 10, y: 7, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 11, y: 7, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 16, y: 7, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 17, y: 7, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 7, y: 7, toMap: MapName.Museum2F, warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

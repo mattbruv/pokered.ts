@@ -11,14 +11,14 @@ export const SafariZoneWest: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 20, y: 0, toMap: MapName.SafariZoneNorth, warpId: 1 },
-      { x: 21, y: 0, toMap: MapName.SafariZoneNorth, warpId: 2 },
-      { x: 26, y: 0, toMap: MapName.SafariZoneNorth, warpId: 3 },
-      { x: 27, y: 0, toMap: MapName.SafariZoneNorth, warpId: 4 },
-      { x: 29, y: 22, toMap: MapName.SafariZoneCenter, warpId: 3 },
-      { x: 29, y: 23, toMap: MapName.SafariZoneCenter, warpId: 4 },
-      { x: 3, y: 3, toMap: MapName.SafariZoneSecretHouse, warpId: 1 },
-      { x: 11, y: 11, toMap: MapName.SafariZoneWestRestHouse, warpId: 1 }
+      { x: 20, y: 0, toMap: MapName.SafariZoneNorth, warpIndex: 0 },
+      { x: 21, y: 0, toMap: MapName.SafariZoneNorth, warpIndex: 1 },
+      { x: 26, y: 0, toMap: MapName.SafariZoneNorth, warpIndex: 2 },
+      { x: 27, y: 0, toMap: MapName.SafariZoneNorth, warpIndex: 3 },
+      { x: 29, y: 22, toMap: MapName.SafariZoneCenter, warpIndex: 2 },
+      { x: 29, y: 23, toMap: MapName.SafariZoneCenter, warpIndex: 3 },
+      { x: 3, y: 3, toMap: MapName.SafariZoneSecretHouse, warpIndex: 0 },
+      { x: 11, y: 11, toMap: MapName.SafariZoneWestRestHouse, warpIndex: 0 }
     ],
     backgroundItems: [
       { x: 12, y: 12, signId: "TEXT_SAFARIZONEWEST_REST_HOUSE_SIGN" },

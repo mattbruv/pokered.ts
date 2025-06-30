@@ -163,7 +163,7 @@ class PokemonRed {
 
           // Set the player's position to the destination warp coordinates, looked up by index
           const destinationWarp =
-            this.#data.map.currentMap.objects.warps[warp.warpId - 1];
+            this.#data.map.currentMap.objects.warps[warp.warpIndex];
 
           this.#data.player.sprite.position = {
             x: destinationWarp.x,

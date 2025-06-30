@@ -11,8 +11,8 @@ export const BillsHouse: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 1 },
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 1 }
+      { x: 2, y: 7, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

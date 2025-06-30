@@ -11,8 +11,8 @@ export const DiglettsCave: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 5, y: 5, toMap: MapName.DiglettsCaveRoute2, warpId: 3 },
-      { x: 37, y: 31, toMap: MapName.DiglettsCaveRoute11, warpId: 3 }
+      { x: 5, y: 5, toMap: MapName.DiglettsCaveRoute2, warpIndex: 2 },
+      { x: 37, y: 31, toMap: MapName.DiglettsCaveRoute11, warpIndex: 2 }
     ],
     backgroundItems: [],
     objects: []

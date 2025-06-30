@@ -11,8 +11,8 @@ export const CeladonHotel: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 13 },
-      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 13 }
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 12 },
+      { x: 4, y: 7, toMap: "LAST_MAP", warpIndex: 12 }
     ],
     backgroundItems: [],
     objects: [

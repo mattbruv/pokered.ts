@@ -10,7 +10,7 @@ export const RedsHouse2F: Map = {
   tileset: Tileset.REDS_HOUSE_2,
   connections: {},
   objects: {
-    warps: [{ x: 7, y: 1, toMap: MapName.RedsHouse1F, warpId: 3 }],
+    warps: [{ x: 7, y: 1, toMap: MapName.RedsHouse1F, warpIndex: 2 }],
     backgroundItems: [],
     objects: []
   },

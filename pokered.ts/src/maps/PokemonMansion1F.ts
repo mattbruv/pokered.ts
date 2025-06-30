@@ -11,14 +11,14 @@ export const PokemonMansion1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 27, toMap: "LAST_MAP", warpId: 1 },
-      { x: 5, y: 27, toMap: "LAST_MAP", warpId: 1 },
-      { x: 6, y: 27, toMap: "LAST_MAP", warpId: 1 },
-      { x: 7, y: 27, toMap: "LAST_MAP", warpId: 1 },
-      { x: 5, y: 10, toMap: MapName.PokemonMansion2F, warpId: 1 },
-      { x: 21, y: 23, toMap: MapName.PokemonMansionB1F, warpId: 1 },
-      { x: 26, y: 27, toMap: "LAST_MAP", warpId: 1 },
-      { x: 27, y: 27, toMap: "LAST_MAP", warpId: 1 }
+      { x: 4, y: 27, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 5, y: 27, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 6, y: 27, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 7, y: 27, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 5, y: 10, toMap: MapName.PokemonMansion2F, warpIndex: 0 },
+      { x: 21, y: 23, toMap: MapName.PokemonMansionB1F, warpIndex: 0 },
+      { x: 26, y: 27, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 27, y: 27, toMap: "LAST_MAP", warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

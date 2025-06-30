@@ -11,9 +11,9 @@ export const GameCorner: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 15, y: 17, toMap: "LAST_MAP", warpId: 8 },
-      { x: 16, y: 17, toMap: "LAST_MAP", warpId: 8 },
-      { x: 17, y: 4, toMap: MapName.RocketHideoutB1F, warpId: 2 }
+      { x: 15, y: 17, toMap: "LAST_MAP", warpIndex: 7 },
+      { x: 16, y: 17, toMap: "LAST_MAP", warpIndex: 7 },
+      { x: 17, y: 4, toMap: MapName.RocketHideoutB1F, warpIndex: 1 }
     ],
     backgroundItems: [{ x: 9, y: 4, signId: "TEXT_GAMECORNER_POSTER" }],
     objects: [

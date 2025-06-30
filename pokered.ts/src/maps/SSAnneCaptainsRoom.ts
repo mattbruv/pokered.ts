@@ -10,7 +10,7 @@ export const SSAnneCaptainsRoom: Map = {
   tileset: Tileset.SHIP,
   connections: {},
   objects: {
-    warps: [{ x: 0, y: 7, toMap: MapName.SSAnne2F, warpId: 9 }],
+    warps: [{ x: 0, y: 7, toMap: MapName.SSAnne2F, warpIndex: 8 }],
     backgroundItems: [
       { x: 4, y: 1, signId: "TEXT_SSANNECAPTAINSROOM_TRASH" },
       { x: 1, y: 2, signId: "TEXT_SSANNECAPTAINSROOM_SEASICK_BOOK" }

@@ -11,8 +11,8 @@ export const PewterGym: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 13, toMap: "LAST_MAP", warpId: 3 },
-      { x: 5, y: 13, toMap: "LAST_MAP", warpId: 3 }
+      { x: 4, y: 13, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 5, y: 13, toMap: "LAST_MAP", warpIndex: 2 }
     ],
     backgroundItems: [],
     objects: [

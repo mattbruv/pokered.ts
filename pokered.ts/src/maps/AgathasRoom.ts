@@ -11,10 +11,10 @@ export const AgathasRoom: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 11, toMap: MapName.BrunosRoom, warpId: 3 },
-      { x: 5, y: 11, toMap: MapName.BrunosRoom, warpId: 4 },
-      { x: 4, y: 0, toMap: MapName.LancesRoom, warpId: 1 },
-      { x: 5, y: 0, toMap: MapName.LancesRoom, warpId: 1 }
+      { x: 4, y: 11, toMap: MapName.BrunosRoom, warpIndex: 2 },
+      { x: 5, y: 11, toMap: MapName.BrunosRoom, warpIndex: 3 },
+      { x: 4, y: 0, toMap: MapName.LancesRoom, warpIndex: 0 },
+      { x: 5, y: 0, toMap: MapName.LancesRoom, warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

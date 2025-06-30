@@ -11,11 +11,11 @@ export const SafariZoneEast: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 0, y: 4, toMap: MapName.SafariZoneNorth, warpId: 7 },
-      { x: 0, y: 5, toMap: MapName.SafariZoneNorth, warpId: 8 },
-      { x: 0, y: 22, toMap: MapName.SafariZoneCenter, warpId: 7 },
-      { x: 0, y: 23, toMap: MapName.SafariZoneCenter, warpId: 7 },
-      { x: 25, y: 9, toMap: MapName.SafariZoneEastRestHouse, warpId: 1 }
+      { x: 0, y: 4, toMap: MapName.SafariZoneNorth, warpIndex: 6 },
+      { x: 0, y: 5, toMap: MapName.SafariZoneNorth, warpIndex: 7 },
+      { x: 0, y: 22, toMap: MapName.SafariZoneCenter, warpIndex: 6 },
+      { x: 0, y: 23, toMap: MapName.SafariZoneCenter, warpIndex: 6 },
+      { x: 25, y: 9, toMap: MapName.SafariZoneEastRestHouse, warpIndex: 0 }
     ],
     backgroundItems: [
       { x: 26, y: 10, signId: "TEXT_SAFARIZONEEAST_REST_HOUSE_SIGN" },

@@ -14,15 +14,15 @@ export const Route16: Map = {
   },
   objects: {
     warps: [
-      { x: 17, y: 10, toMap: MapName.Route16Gate1F, warpId: 1 },
-      { x: 17, y: 11, toMap: MapName.Route16Gate1F, warpId: 2 },
-      { x: 24, y: 10, toMap: MapName.Route16Gate1F, warpId: 3 },
-      { x: 24, y: 11, toMap: MapName.Route16Gate1F, warpId: 4 },
-      { x: 17, y: 4, toMap: MapName.Route16Gate1F, warpId: 5 },
-      { x: 17, y: 5, toMap: MapName.Route16Gate1F, warpId: 6 },
-      { x: 24, y: 4, toMap: MapName.Route16Gate1F, warpId: 7 },
-      { x: 24, y: 5, toMap: MapName.Route16Gate1F, warpId: 8 },
-      { x: 7, y: 5, toMap: MapName.Route16FlyHouse, warpId: 1 }
+      { x: 17, y: 10, toMap: MapName.Route16Gate1F, warpIndex: 0 },
+      { x: 17, y: 11, toMap: MapName.Route16Gate1F, warpIndex: 1 },
+      { x: 24, y: 10, toMap: MapName.Route16Gate1F, warpIndex: 2 },
+      { x: 24, y: 11, toMap: MapName.Route16Gate1F, warpIndex: 3 },
+      { x: 17, y: 4, toMap: MapName.Route16Gate1F, warpIndex: 4 },
+      { x: 17, y: 5, toMap: MapName.Route16Gate1F, warpIndex: 5 },
+      { x: 24, y: 4, toMap: MapName.Route16Gate1F, warpIndex: 6 },
+      { x: 24, y: 5, toMap: MapName.Route16Gate1F, warpIndex: 7 },
+      { x: 7, y: 5, toMap: MapName.Route16FlyHouse, warpIndex: 0 }
     ],
     backgroundItems: [
       { x: 27, y: 11, signId: "TEXT_ROUTE16_CYCLING_ROAD_SIGN" },

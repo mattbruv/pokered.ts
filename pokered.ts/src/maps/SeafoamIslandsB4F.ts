@@ -11,10 +11,10 @@ export const SeafoamIslandsB4F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 20, y: 17, toMap: MapName.SeafoamIslandsB3F, warpId: 6 },
-      { x: 21, y: 17, toMap: MapName.SeafoamIslandsB3F, warpId: 7 },
-      { x: 11, y: 7, toMap: MapName.SeafoamIslandsB3F, warpId: 2 },
-      { x: 25, y: 4, toMap: MapName.SeafoamIslandsB3F, warpId: 3 }
+      { x: 20, y: 17, toMap: MapName.SeafoamIslandsB3F, warpIndex: 5 },
+      { x: 21, y: 17, toMap: MapName.SeafoamIslandsB3F, warpIndex: 6 },
+      { x: 11, y: 7, toMap: MapName.SeafoamIslandsB3F, warpIndex: 1 },
+      { x: 25, y: 4, toMap: MapName.SeafoamIslandsB3F, warpIndex: 2 }
     ],
     backgroundItems: [
       { x: 9, y: 15, signId: "TEXT_SEAFOAMISLANDSB4F_BOULDERS_SIGN" },

@@ -11,8 +11,8 @@ export const CeruleanGym: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 13, toMap: "LAST_MAP", warpId: 4 },
-      { x: 5, y: 13, toMap: "LAST_MAP", warpId: 4 }
+      { x: 4, y: 13, toMap: "LAST_MAP", warpIndex: 3 },
+      { x: 5, y: 13, toMap: "LAST_MAP", warpIndex: 3 }
     ],
     backgroundItems: [],
     objects: [

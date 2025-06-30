@@ -15,15 +15,15 @@ export const FuchsiaCity: Map = {
   },
   objects: {
     warps: [
-      { x: 5, y: 13, toMap: MapName.FuchsiaMart, warpId: 1 },
-      { x: 11, y: 27, toMap: MapName.FuchsiaBillsGrandpasHouse, warpId: 1 },
-      { x: 19, y: 27, toMap: MapName.FuchsiaPokecenter, warpId: 1 },
-      { x: 27, y: 27, toMap: MapName.WardensHouse, warpId: 1 },
-      { x: 18, y: 3, toMap: MapName.SafariZoneGate, warpId: 1 },
-      { x: 5, y: 27, toMap: MapName.FuchsiaGym, warpId: 1 },
-      { x: 22, y: 13, toMap: MapName.FuchsiaMeetingRoom, warpId: 1 },
-      { x: 31, y: 27, toMap: MapName.FuchsiaGoodRodHouse, warpId: 2 },
-      { x: 31, y: 24, toMap: MapName.FuchsiaGoodRodHouse, warpId: 1 }
+      { x: 5, y: 13, toMap: MapName.FuchsiaMart, warpIndex: 0 },
+      { x: 11, y: 27, toMap: MapName.FuchsiaBillsGrandpasHouse, warpIndex: 0 },
+      { x: 19, y: 27, toMap: MapName.FuchsiaPokecenter, warpIndex: 0 },
+      { x: 27, y: 27, toMap: MapName.WardensHouse, warpIndex: 0 },
+      { x: 18, y: 3, toMap: MapName.SafariZoneGate, warpIndex: 0 },
+      { x: 5, y: 27, toMap: MapName.FuchsiaGym, warpIndex: 0 },
+      { x: 22, y: 13, toMap: MapName.FuchsiaMeetingRoom, warpIndex: 0 },
+      { x: 31, y: 27, toMap: MapName.FuchsiaGoodRodHouse, warpIndex: 1 },
+      { x: 31, y: 24, toMap: MapName.FuchsiaGoodRodHouse, warpIndex: 0 }
     ],
     backgroundItems: [
       { x: 15, y: 23, signId: "TEXT_FUCHSIACITY_SIGN1" },

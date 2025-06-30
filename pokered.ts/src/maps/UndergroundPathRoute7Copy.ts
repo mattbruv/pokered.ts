@@ -11,9 +11,9 @@ export const UndergroundPathRoute7Copy: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 6 },
-      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 6 },
-      { x: 4, y: 4, toMap: MapName.UndergroundPathWestEast, warpId: 1 }
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 5 },
+      { x: 4, y: 7, toMap: "LAST_MAP", warpIndex: 5 },
+      { x: 4, y: 4, toMap: MapName.UndergroundPathWestEast, warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

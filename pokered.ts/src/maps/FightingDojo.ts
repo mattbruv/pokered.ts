@@ -11,8 +11,8 @@ export const FightingDojo: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 11, toMap: "LAST_MAP", warpId: 2 },
-      { x: 5, y: 11, toMap: "LAST_MAP", warpId: 2 }
+      { x: 4, y: 11, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 5, y: 11, toMap: "LAST_MAP", warpIndex: 1 }
     ],
     backgroundItems: [],
     objects: [

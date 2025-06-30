@@ -11,8 +11,8 @@ export const SafariZoneNorthRestHouse: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: MapName.SafariZoneNorth, warpId: 9 },
-      { x: 3, y: 7, toMap: MapName.SafariZoneNorth, warpId: 9 }
+      { x: 2, y: 7, toMap: MapName.SafariZoneNorth, warpIndex: 8 },
+      { x: 3, y: 7, toMap: MapName.SafariZoneNorth, warpIndex: 8 }
     ],
     backgroundItems: [],
     objects: [

@@ -11,9 +11,9 @@ export const IndigoPlateauLobby: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 7, y: 11, toMap: "LAST_MAP", warpId: 1 },
-      { x: 8, y: 11, toMap: "LAST_MAP", warpId: 2 },
-      { x: 8, y: 0, toMap: MapName.LoreleisRoom, warpId: 1 }
+      { x: 7, y: 11, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 8, y: 11, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 8, y: 0, toMap: MapName.LoreleisRoom, warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

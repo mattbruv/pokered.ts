@@ -11,8 +11,8 @@ export const CeladonMartElevator: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 1, y: 3, toMap: MapName.CeladonMart1F, warpId: 6 },
-      { x: 2, y: 3, toMap: MapName.CeladonMart1F, warpId: 6 }
+      { x: 1, y: 3, toMap: MapName.CeladonMart1F, warpIndex: 5 },
+      { x: 2, y: 3, toMap: MapName.CeladonMart1F, warpIndex: 5 }
     ],
     backgroundItems: [{ x: 3, y: 0, signId: "TEXT_CELADONMARTELEVATOR" }],
     objects: []

@@ -11,10 +11,10 @@ export const ViridianForestNorthGate: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 0, toMap: "LAST_MAP", warpId: 2 },
-      { x: 5, y: 0, toMap: "LAST_MAP", warpId: 2 },
-      { x: 4, y: 7, toMap: MapName.ViridianForest, warpId: 1 },
-      { x: 5, y: 7, toMap: MapName.ViridianForest, warpId: 1 }
+      { x: 4, y: 0, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 5, y: 0, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 4, y: 7, toMap: MapName.ViridianForest, warpIndex: 0 },
+      { x: 5, y: 7, toMap: MapName.ViridianForest, warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

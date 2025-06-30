@@ -14,11 +14,11 @@ export const Route8: Map = {
   },
   objects: {
     warps: [
-      { x: 1, y: 9, toMap: MapName.Route8Gate, warpId: 1 },
-      { x: 1, y: 10, toMap: MapName.Route8Gate, warpId: 2 },
-      { x: 8, y: 9, toMap: MapName.Route8Gate, warpId: 3 },
-      { x: 8, y: 10, toMap: MapName.Route8Gate, warpId: 4 },
-      { x: 13, y: 3, toMap: MapName.UndergroundPathRoute8, warpId: 1 }
+      { x: 1, y: 9, toMap: MapName.Route8Gate, warpIndex: 0 },
+      { x: 1, y: 10, toMap: MapName.Route8Gate, warpIndex: 1 },
+      { x: 8, y: 9, toMap: MapName.Route8Gate, warpIndex: 2 },
+      { x: 8, y: 10, toMap: MapName.Route8Gate, warpIndex: 3 },
+      { x: 13, y: 3, toMap: MapName.UndergroundPathRoute8, warpIndex: 0 }
     ],
     backgroundItems: [{ x: 17, y: 3, signId: "TEXT_ROUTE8_UNDERGROUND_SIGN" }],
     objects: [

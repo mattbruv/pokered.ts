@@ -14,9 +14,9 @@ export const Route4: Map = {
   },
   objects: {
     warps: [
-      { x: 11, y: 5, toMap: MapName.MtMoonPokecenter, warpId: 1 },
-      { x: 18, y: 5, toMap: MapName.MtMoon1F, warpId: 1 },
-      { x: 24, y: 5, toMap: MapName.MtMoonB1F, warpId: 8 }
+      { x: 11, y: 5, toMap: MapName.MtMoonPokecenter, warpIndex: 0 },
+      { x: 18, y: 5, toMap: MapName.MtMoon1F, warpIndex: 0 },
+      { x: 24, y: 5, toMap: MapName.MtMoonB1F, warpIndex: 7 }
     ],
     backgroundItems: [
       { x: 12, y: 5, signId: "TEXT_ROUTE4_POKECENTER_SIGN" },

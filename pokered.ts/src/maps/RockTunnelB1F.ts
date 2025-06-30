@@ -11,10 +11,10 @@ export const RockTunnelB1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 33, y: 25, toMap: MapName.RockTunnel1F, warpId: 5 },
-      { x: 27, y: 3, toMap: MapName.RockTunnel1F, warpId: 6 },
-      { x: 23, y: 11, toMap: MapName.RockTunnel1F, warpId: 7 },
-      { x: 3, y: 3, toMap: MapName.RockTunnel1F, warpId: 8 }
+      { x: 33, y: 25, toMap: MapName.RockTunnel1F, warpIndex: 4 },
+      { x: 27, y: 3, toMap: MapName.RockTunnel1F, warpIndex: 5 },
+      { x: 23, y: 11, toMap: MapName.RockTunnel1F, warpIndex: 6 },
+      { x: 3, y: 3, toMap: MapName.RockTunnel1F, warpIndex: 7 }
     ],
     backgroundItems: [],
     objects: [

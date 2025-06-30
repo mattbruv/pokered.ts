@@ -11,14 +11,14 @@ export const RockTunnel1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 15, y: 3, toMap: "LAST_MAP", warpId: 2 },
-      { x: 15, y: 0, toMap: "LAST_MAP", warpId: 2 },
-      { x: 15, y: 33, toMap: "LAST_MAP", warpId: 3 },
-      { x: 15, y: 35, toMap: "LAST_MAP", warpId: 3 },
-      { x: 37, y: 3, toMap: MapName.RockTunnelB1F, warpId: 1 },
-      { x: 5, y: 3, toMap: MapName.RockTunnelB1F, warpId: 2 },
-      { x: 17, y: 11, toMap: MapName.RockTunnelB1F, warpId: 3 },
-      { x: 37, y: 17, toMap: MapName.RockTunnelB1F, warpId: 4 }
+      { x: 15, y: 3, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 15, y: 0, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 15, y: 33, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 15, y: 35, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 37, y: 3, toMap: MapName.RockTunnelB1F, warpIndex: 0 },
+      { x: 5, y: 3, toMap: MapName.RockTunnelB1F, warpIndex: 1 },
+      { x: 17, y: 11, toMap: MapName.RockTunnelB1F, warpIndex: 2 },
+      { x: 37, y: 17, toMap: MapName.RockTunnelB1F, warpIndex: 3 }
     ],
     backgroundItems: [{ x: 11, y: 29, signId: "TEXT_ROCKTUNNEL1F_SIGN" }],
     objects: [

@@ -13,8 +13,8 @@ export const IndigoPlateau: Map = {
   },
   objects: {
     warps: [
-      { x: 9, y: 5, toMap: MapName.IndigoPlateauLobby, warpId: 1 },
-      { x: 10, y: 5, toMap: MapName.IndigoPlateauLobby, warpId: 1 }
+      { x: 9, y: 5, toMap: MapName.IndigoPlateauLobby, warpIndex: 0 },
+      { x: 10, y: 5, toMap: MapName.IndigoPlateauLobby, warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: []

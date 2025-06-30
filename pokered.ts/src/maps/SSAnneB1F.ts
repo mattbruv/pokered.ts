@@ -11,12 +11,12 @@ export const SSAnneB1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 23, y: 3, toMap: MapName.SSAnneB1FRooms, warpId: 9 },
-      { x: 19, y: 3, toMap: MapName.SSAnneB1FRooms, warpId: 7 },
-      { x: 15, y: 3, toMap: MapName.SSAnneB1FRooms, warpId: 5 },
-      { x: 11, y: 3, toMap: MapName.SSAnneB1FRooms, warpId: 3 },
-      { x: 7, y: 3, toMap: MapName.SSAnneB1FRooms, warpId: 1 },
-      { x: 27, y: 5, toMap: MapName.SSAnne1F, warpId: 10 }
+      { x: 23, y: 3, toMap: MapName.SSAnneB1FRooms, warpIndex: 8 },
+      { x: 19, y: 3, toMap: MapName.SSAnneB1FRooms, warpIndex: 6 },
+      { x: 15, y: 3, toMap: MapName.SSAnneB1FRooms, warpIndex: 4 },
+      { x: 11, y: 3, toMap: MapName.SSAnneB1FRooms, warpIndex: 2 },
+      { x: 7, y: 3, toMap: MapName.SSAnneB1FRooms, warpIndex: 0 },
+      { x: 27, y: 5, toMap: MapName.SSAnne1F, warpIndex: 9 }
     ],
     backgroundItems: [],
     objects: []

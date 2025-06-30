@@ -11,8 +11,8 @@ export const VermilionOldRodHouse: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 9 },
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 9 }
+      { x: 2, y: 7, toMap: "LAST_MAP", warpIndex: 8 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 8 }
     ],
     backgroundItems: [],
     objects: [

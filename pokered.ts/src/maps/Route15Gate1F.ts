@@ -11,11 +11,11 @@ export const Route15Gate1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 0, y: 4, toMap: "LAST_MAP", warpId: 1 },
-      { x: 0, y: 5, toMap: "LAST_MAP", warpId: 2 },
-      { x: 7, y: 4, toMap: "LAST_MAP", warpId: 3 },
-      { x: 7, y: 5, toMap: "LAST_MAP", warpId: 4 },
-      { x: 6, y: 8, toMap: MapName.Route15Gate2F, warpId: 1 }
+      { x: 0, y: 4, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 0, y: 5, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 7, y: 4, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 7, y: 5, toMap: "LAST_MAP", warpIndex: 3 },
+      { x: 6, y: 8, toMap: MapName.Route15Gate2F, warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

@@ -14,8 +14,8 @@ export const Route20: Map = {
   },
   objects: {
     warps: [
-      { x: 48, y: 5, toMap: MapName.SeafoamIslands1F, warpId: 1 },
-      { x: 58, y: 9, toMap: MapName.SeafoamIslands1F, warpId: 3 }
+      { x: 48, y: 5, toMap: MapName.SeafoamIslands1F, warpIndex: 0 },
+      { x: 58, y: 9, toMap: MapName.SeafoamIslands1F, warpIndex: 2 }
     ],
     backgroundItems: [
       { x: 51, y: 7, signId: "TEXT_ROUTE20_SEAFOAM_ISLANDS_WEST_SIGN" },

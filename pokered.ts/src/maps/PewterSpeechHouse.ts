@@ -11,8 +11,8 @@ export const PewterSpeechHouse: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 6 },
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 6 }
+      { x: 2, y: 7, toMap: "LAST_MAP", warpIndex: 5 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 5 }
     ],
     backgroundItems: [],
     objects: [

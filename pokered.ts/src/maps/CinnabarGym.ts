@@ -11,8 +11,8 @@ export const CinnabarGym: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 16, y: 17, toMap: "LAST_MAP", warpId: 2 },
-      { x: 17, y: 17, toMap: "LAST_MAP", warpId: 2 }
+      { x: 16, y: 17, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 17, y: 17, toMap: "LAST_MAP", warpIndex: 1 }
     ],
     backgroundItems: [],
     objects: [

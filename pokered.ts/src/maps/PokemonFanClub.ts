@@ -11,8 +11,8 @@ export const PokemonFanClub: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 2 },
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 2 }
+      { x: 2, y: 7, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 1 }
     ],
     backgroundItems: [
       { x: 1, y: 0, signId: "TEXT_POKEMONFANCLUB_SIGN_1" },

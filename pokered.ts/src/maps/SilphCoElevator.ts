@@ -11,8 +11,8 @@ export const SilphCoElevator: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 1, y: 3, toMap: "UNUSED_MAP_ED", warpId: 1 },
-      { x: 2, y: 3, toMap: "UNUSED_MAP_ED", warpId: 1 }
+      { x: 1, y: 3, toMap: "UNUSED_MAP_ED", warpIndex: 0 },
+      { x: 2, y: 3, toMap: "UNUSED_MAP_ED", warpIndex: 0 }
     ],
     backgroundItems: [{ x: 3, y: 0, signId: "TEXT_SILPHCOELEVATOR_ELEVATOR" }],
     objects: []

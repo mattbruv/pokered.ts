@@ -11,8 +11,8 @@ export const PewterMart: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 5 },
-      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 5 }
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 4 },
+      { x: 4, y: 7, toMap: "LAST_MAP", warpIndex: 4 }
     ],
     backgroundItems: [],
     objects: [

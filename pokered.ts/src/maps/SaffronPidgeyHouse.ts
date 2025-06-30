@@ -11,8 +11,8 @@ export const SaffronPidgeyHouse: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 4 },
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 4 }
+      { x: 2, y: 7, toMap: "LAST_MAP", warpIndex: 3 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 3 }
     ],
     backgroundItems: [],
     objects: [

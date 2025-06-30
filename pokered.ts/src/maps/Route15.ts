@@ -14,10 +14,10 @@ export const Route15: Map = {
   },
   objects: {
     warps: [
-      { x: 7, y: 8, toMap: MapName.Route15Gate1F, warpId: 1 },
-      { x: 7, y: 9, toMap: MapName.Route15Gate1F, warpId: 2 },
-      { x: 14, y: 8, toMap: MapName.Route15Gate1F, warpId: 3 },
-      { x: 14, y: 9, toMap: MapName.Route15Gate1F, warpId: 4 }
+      { x: 7, y: 8, toMap: MapName.Route15Gate1F, warpIndex: 0 },
+      { x: 7, y: 9, toMap: MapName.Route15Gate1F, warpIndex: 1 },
+      { x: 14, y: 8, toMap: MapName.Route15Gate1F, warpIndex: 2 },
+      { x: 14, y: 9, toMap: MapName.Route15Gate1F, warpIndex: 3 }
     ],
     backgroundItems: [{ x: 39, y: 9, signId: "TEXT_ROUTE15_SIGN" }],
     objects: [

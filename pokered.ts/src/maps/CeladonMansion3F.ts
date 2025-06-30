@@ -11,10 +11,10 @@ export const CeladonMansion3F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 6, y: 1, toMap: MapName.CeladonMansion2F, warpId: 1 },
-      { x: 7, y: 1, toMap: MapName.CeladonMansionRoof, warpId: 1 },
-      { x: 2, y: 1, toMap: MapName.CeladonMansionRoof, warpId: 2 },
-      { x: 4, y: 1, toMap: MapName.CeladonMansion2F, warpId: 4 }
+      { x: 6, y: 1, toMap: MapName.CeladonMansion2F, warpIndex: 0 },
+      { x: 7, y: 1, toMap: MapName.CeladonMansionRoof, warpIndex: 0 },
+      { x: 2, y: 1, toMap: MapName.CeladonMansionRoof, warpIndex: 1 },
+      { x: 4, y: 1, toMap: MapName.CeladonMansion2F, warpIndex: 3 }
     ],
     backgroundItems: [
       { x: 1, y: 3, signId: "TEXT_CELADONMANSION3F_GAME_PROGRAM_PC" },

@@ -11,8 +11,8 @@ export const HallOfFame: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 4, y: 7, toMap: MapName.ChampionsRoom, warpId: 3 },
-      { x: 5, y: 7, toMap: MapName.ChampionsRoom, warpId: 4 }
+      { x: 4, y: 7, toMap: MapName.ChampionsRoom, warpIndex: 2 },
+      { x: 5, y: 7, toMap: MapName.ChampionsRoom, warpIndex: 3 }
     ],
     backgroundItems: [],
     objects: [

@@ -11,8 +11,8 @@ export const SaffronPokecenter: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 7 },
-      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 7 }
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 6 },
+      { x: 4, y: 7, toMap: "LAST_MAP", warpIndex: 6 }
     ],
     backgroundItems: [],
     objects: [

@@ -14,10 +14,10 @@ export const Route23: Map = {
   },
   objects: {
     warps: [
-      { x: 7, y: 139, toMap: MapName.Route22Gate, warpId: 3 },
-      { x: 8, y: 139, toMap: MapName.Route22Gate, warpId: 4 },
-      { x: 4, y: 31, toMap: MapName.VictoryRoad1F, warpId: 1 },
-      { x: 14, y: 31, toMap: MapName.VictoryRoad2F, warpId: 2 }
+      { x: 7, y: 139, toMap: MapName.Route22Gate, warpIndex: 2 },
+      { x: 8, y: 139, toMap: MapName.Route22Gate, warpIndex: 3 },
+      { x: 4, y: 31, toMap: MapName.VictoryRoad1F, warpIndex: 0 },
+      { x: 14, y: 31, toMap: MapName.VictoryRoad2F, warpIndex: 1 }
     ],
     backgroundItems: [
       { x: 3, y: 33, signId: "TEXT_ROUTE23_VICTORY_ROAD_GATE_SIGN" }

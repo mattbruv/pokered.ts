@@ -11,9 +11,9 @@ export const RedsHouse1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 1 },
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 1 },
-      { x: 7, y: 1, toMap: MapName.RedsHouse2F, warpId: 1 }
+      { x: 2, y: 7, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 7, y: 1, toMap: MapName.RedsHouse2F, warpIndex: 0 }
     ],
     backgroundItems: [{ x: 3, y: 1, signId: "TEXT_REDSHOUSE1F_TV" }],
     objects: [

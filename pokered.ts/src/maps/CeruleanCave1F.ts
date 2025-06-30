@@ -11,15 +11,15 @@ export const CeruleanCave1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 24, y: 17, toMap: "LAST_MAP", warpId: 7 },
-      { x: 25, y: 17, toMap: "LAST_MAP", warpId: 7 },
-      { x: 27, y: 1, toMap: MapName.CeruleanCave2F, warpId: 1 },
-      { x: 23, y: 7, toMap: MapName.CeruleanCave2F, warpId: 2 },
-      { x: 18, y: 9, toMap: MapName.CeruleanCave2F, warpId: 3 },
-      { x: 7, y: 1, toMap: MapName.CeruleanCave2F, warpId: 4 },
-      { x: 1, y: 3, toMap: MapName.CeruleanCave2F, warpId: 5 },
-      { x: 3, y: 11, toMap: MapName.CeruleanCave2F, warpId: 6 },
-      { x: 0, y: 6, toMap: MapName.CeruleanCaveB1F, warpId: 1 }
+      { x: 24, y: 17, toMap: "LAST_MAP", warpIndex: 6 },
+      { x: 25, y: 17, toMap: "LAST_MAP", warpIndex: 6 },
+      { x: 27, y: 1, toMap: MapName.CeruleanCave2F, warpIndex: 0 },
+      { x: 23, y: 7, toMap: MapName.CeruleanCave2F, warpIndex: 1 },
+      { x: 18, y: 9, toMap: MapName.CeruleanCave2F, warpIndex: 2 },
+      { x: 7, y: 1, toMap: MapName.CeruleanCave2F, warpIndex: 3 },
+      { x: 1, y: 3, toMap: MapName.CeruleanCave2F, warpIndex: 4 },
+      { x: 3, y: 11, toMap: MapName.CeruleanCave2F, warpIndex: 5 },
+      { x: 0, y: 6, toMap: MapName.CeruleanCaveB1F, warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

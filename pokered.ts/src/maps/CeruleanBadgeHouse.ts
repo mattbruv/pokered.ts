@@ -11,9 +11,9 @@ export const CeruleanBadgeHouse: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 0, toMap: "LAST_MAP", warpId: 10 },
-      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 9 },
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 9 }
+      { x: 2, y: 0, toMap: "LAST_MAP", warpIndex: 9 },
+      { x: 2, y: 7, toMap: "LAST_MAP", warpIndex: 8 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 8 }
     ],
     backgroundItems: [],
     objects: [

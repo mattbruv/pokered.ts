@@ -11,8 +11,8 @@ export const VermilionDock: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 14, y: 0, toMap: "LAST_MAP", warpId: 6 },
-      { x: 14, y: 2, toMap: MapName.SSAnne1F, warpId: 2 }
+      { x: 14, y: 0, toMap: "LAST_MAP", warpIndex: 5 },
+      { x: 14, y: 2, toMap: MapName.SSAnne1F, warpIndex: 1 }
     ],
     backgroundItems: [],
     objects: []

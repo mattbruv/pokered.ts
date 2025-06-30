@@ -11,12 +11,12 @@ export const CeladonMart1F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 1 },
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 1 },
-      { x: 16, y: 7, toMap: "LAST_MAP", warpId: 2 },
-      { x: 17, y: 7, toMap: "LAST_MAP", warpId: 2 },
-      { x: 12, y: 1, toMap: MapName.CeladonMart2F, warpId: 1 },
-      { x: 1, y: 1, toMap: MapName.CeladonMartElevator, warpId: 1 }
+      { x: 2, y: 7, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 0 },
+      { x: 16, y: 7, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 17, y: 7, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 12, y: 1, toMap: MapName.CeladonMart2F, warpIndex: 0 },
+      { x: 1, y: 1, toMap: MapName.CeladonMartElevator, warpIndex: 0 }
     ],
     backgroundItems: [
       { x: 11, y: 4, signId: "TEXT_CELADONMART1F_DIRECTORY_SIGN" },

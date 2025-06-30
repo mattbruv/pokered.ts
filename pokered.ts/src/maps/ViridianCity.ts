@@ -15,11 +15,11 @@ export const ViridianCity: Map = {
   },
   objects: {
     warps: [
-      { x: 23, y: 25, toMap: MapName.ViridianPokecenter, warpId: 1 },
-      { x: 29, y: 19, toMap: MapName.ViridianMart, warpId: 1 },
-      { x: 21, y: 15, toMap: MapName.ViridianSchoolHouse, warpId: 1 },
-      { x: 21, y: 9, toMap: MapName.ViridianNicknameHouse, warpId: 1 },
-      { x: 32, y: 7, toMap: MapName.ViridianGym, warpId: 1 }
+      { x: 23, y: 25, toMap: MapName.ViridianPokecenter, warpIndex: 0 },
+      { x: 29, y: 19, toMap: MapName.ViridianMart, warpIndex: 0 },
+      { x: 21, y: 15, toMap: MapName.ViridianSchoolHouse, warpIndex: 0 },
+      { x: 21, y: 9, toMap: MapName.ViridianNicknameHouse, warpIndex: 0 },
+      { x: 32, y: 7, toMap: MapName.ViridianGym, warpIndex: 0 }
     ],
     backgroundItems: [
       { x: 17, y: 17, signId: "TEXT_VIRIDIANCITY_SIGN" },

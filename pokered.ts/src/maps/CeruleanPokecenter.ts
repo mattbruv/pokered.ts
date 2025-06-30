@@ -11,8 +11,8 @@ export const CeruleanPokecenter: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 3 },
-      { x: 4, y: 7, toMap: "LAST_MAP", warpId: 3 }
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 4, y: 7, toMap: "LAST_MAP", warpIndex: 2 }
     ],
     backgroundItems: [],
     objects: [

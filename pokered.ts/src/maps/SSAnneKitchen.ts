@@ -10,7 +10,7 @@ export const SSAnneKitchen: Map = {
   tileset: Tileset.SHIP,
   connections: {},
   objects: {
-    warps: [{ x: 6, y: 0, toMap: MapName.SSAnne1F, warpId: 11 }],
+    warps: [{ x: 6, y: 0, toMap: MapName.SSAnne1F, warpIndex: 10 }],
     backgroundItems: [],
     objects: [
       {

@@ -11,12 +11,12 @@ export const ViridianForest: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 1, y: 0, toMap: MapName.ViridianForestNorthGate, warpId: 3 },
-      { x: 2, y: 0, toMap: MapName.ViridianForestNorthGate, warpId: 4 },
-      { x: 15, y: 47, toMap: MapName.ViridianForestSouthGate, warpId: 2 },
-      { x: 16, y: 47, toMap: MapName.ViridianForestSouthGate, warpId: 2 },
-      { x: 17, y: 47, toMap: MapName.ViridianForestSouthGate, warpId: 2 },
-      { x: 18, y: 47, toMap: MapName.ViridianForestSouthGate, warpId: 2 }
+      { x: 1, y: 0, toMap: MapName.ViridianForestNorthGate, warpIndex: 2 },
+      { x: 2, y: 0, toMap: MapName.ViridianForestNorthGate, warpIndex: 3 },
+      { x: 15, y: 47, toMap: MapName.ViridianForestSouthGate, warpIndex: 1 },
+      { x: 16, y: 47, toMap: MapName.ViridianForestSouthGate, warpIndex: 1 },
+      { x: 17, y: 47, toMap: MapName.ViridianForestSouthGate, warpIndex: 1 },
+      { x: 18, y: 47, toMap: MapName.ViridianForestSouthGate, warpIndex: 1 }
     ],
     backgroundItems: [
       { x: 24, y: 40, signId: "TEXT_VIRIDIANFOREST_TRAINER_TIPS1" },

@@ -11,8 +11,8 @@ export const ViridianGym: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 16, y: 17, toMap: "LAST_MAP", warpId: 5 },
-      { x: 17, y: 17, toMap: "LAST_MAP", warpId: 5 }
+      { x: 16, y: 17, toMap: "LAST_MAP", warpIndex: 4 },
+      { x: 17, y: 17, toMap: "LAST_MAP", warpIndex: 4 }
     ],
     backgroundItems: [],
     objects: [

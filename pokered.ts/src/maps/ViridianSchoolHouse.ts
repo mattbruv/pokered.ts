@@ -11,8 +11,8 @@ export const ViridianSchoolHouse: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 2, y: 7, toMap: "LAST_MAP", warpId: 3 },
-      { x: 3, y: 7, toMap: "LAST_MAP", warpId: 3 }
+      { x: 2, y: 7, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 3, y: 7, toMap: "LAST_MAP", warpIndex: 2 }
     ],
     backgroundItems: [],
     objects: [

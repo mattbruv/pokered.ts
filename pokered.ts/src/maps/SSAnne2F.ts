@@ -11,15 +11,15 @@ export const SSAnne2F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 9, y: 11, toMap: MapName.SSAnne2FRooms, warpId: 1 },
-      { x: 13, y: 11, toMap: MapName.SSAnne2FRooms, warpId: 3 },
-      { x: 17, y: 11, toMap: MapName.SSAnne2FRooms, warpId: 5 },
-      { x: 21, y: 11, toMap: MapName.SSAnne2FRooms, warpId: 7 },
-      { x: 25, y: 11, toMap: MapName.SSAnne2FRooms, warpId: 9 },
-      { x: 29, y: 11, toMap: MapName.SSAnne2FRooms, warpId: 11 },
-      { x: 2, y: 4, toMap: MapName.SSAnne1F, warpId: 9 },
-      { x: 2, y: 12, toMap: MapName.SSAnne3F, warpId: 2 },
-      { x: 36, y: 4, toMap: MapName.SSAnneCaptainsRoom, warpId: 1 }
+      { x: 9, y: 11, toMap: MapName.SSAnne2FRooms, warpIndex: 0 },
+      { x: 13, y: 11, toMap: MapName.SSAnne2FRooms, warpIndex: 2 },
+      { x: 17, y: 11, toMap: MapName.SSAnne2FRooms, warpIndex: 4 },
+      { x: 21, y: 11, toMap: MapName.SSAnne2FRooms, warpIndex: 6 },
+      { x: 25, y: 11, toMap: MapName.SSAnne2FRooms, warpIndex: 8 },
+      { x: 29, y: 11, toMap: MapName.SSAnne2FRooms, warpIndex: 10 },
+      { x: 2, y: 4, toMap: MapName.SSAnne1F, warpIndex: 8 },
+      { x: 2, y: 12, toMap: MapName.SSAnne3F, warpIndex: 1 },
+      { x: 36, y: 4, toMap: MapName.SSAnneCaptainsRoom, warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

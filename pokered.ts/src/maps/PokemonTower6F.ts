@@ -11,8 +11,8 @@ export const PokemonTower6F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 18, y: 9, toMap: MapName.PokemonTower5F, warpId: 2 },
-      { x: 9, y: 16, toMap: MapName.PokemonTower7F, warpId: 1 }
+      { x: 18, y: 9, toMap: MapName.PokemonTower5F, warpIndex: 1 },
+      { x: 9, y: 16, toMap: MapName.PokemonTower7F, warpIndex: 0 }
     ],
     backgroundItems: [],
     objects: [

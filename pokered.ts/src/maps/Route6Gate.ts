@@ -11,10 +11,10 @@ export const Route6Gate: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 3, y: 5, toMap: "LAST_MAP", warpId: 3 },
-      { x: 4, y: 5, toMap: "LAST_MAP", warpId: 3 },
-      { x: 3, y: 0, toMap: "LAST_MAP", warpId: 2 },
-      { x: 4, y: 0, toMap: "LAST_MAP", warpId: 2 }
+      { x: 3, y: 5, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 4, y: 5, toMap: "LAST_MAP", warpIndex: 2 },
+      { x: 3, y: 0, toMap: "LAST_MAP", warpIndex: 1 },
+      { x: 4, y: 0, toMap: "LAST_MAP", warpIndex: 1 }
     ],
     backgroundItems: [],
     objects: [

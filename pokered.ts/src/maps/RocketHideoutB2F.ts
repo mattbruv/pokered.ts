@@ -11,11 +11,11 @@ export const RocketHideoutB2F: Map = {
   connections: {},
   objects: {
     warps: [
-      { x: 27, y: 8, toMap: MapName.RocketHideoutB1F, warpId: 1 },
-      { x: 21, y: 8, toMap: MapName.RocketHideoutB3F, warpId: 1 },
-      { x: 24, y: 19, toMap: MapName.RocketHideoutElevator, warpId: 1 },
-      { x: 21, y: 22, toMap: MapName.RocketHideoutB1F, warpId: 4 },
-      { x: 25, y: 19, toMap: MapName.RocketHideoutElevator, warpId: 2 }
+      { x: 27, y: 8, toMap: MapName.RocketHideoutB1F, warpIndex: 0 },
+      { x: 21, y: 8, toMap: MapName.RocketHideoutB3F, warpIndex: 0 },
+      { x: 24, y: 19, toMap: MapName.RocketHideoutElevator, warpIndex: 0 },
+      { x: 21, y: 22, toMap: MapName.RocketHideoutB1F, warpIndex: 3 },
+      { x: 25, y: 19, toMap: MapName.RocketHideoutElevator, warpIndex: 1 }
     ],
     backgroundItems: [],
     objects: [
