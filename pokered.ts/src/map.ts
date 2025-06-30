@@ -23,6 +23,9 @@ export type Map = {
 export type Warp = {
   x: number;
   y: number;
+  // Indoor maps, such as houses, use LAST_MAP in their exit warps
+  // This map ID takes the player back to the last outdoor map they were on, stored in wLastMap
+  // IDK what UNUSED_MAP_ED means, but let's just add it for now to satisfy the compiler
   toMap: MapName | "LAST_MAP" | "UNUSED_MAP_ED";
   warpIndex: number;
 };

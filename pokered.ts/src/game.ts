@@ -9,6 +9,7 @@ import {
 } from "./overworld/map";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, SpriteData } from "./render/sprite";
+import { Tileset } from "./tileset";
 
 export type PokemonRedOptions = {
   screen: HTMLCanvasElement;
@@ -27,7 +28,7 @@ export type GameData = {
 export type MapData = {
   currentMap: Map;
   currentMapName: MapName;
-  previousMapName: MapName;
+  previousOutdoorMapName: MapName;
 };
 
 const SCREEN_REFRESH_RATE = 1000 / 60; // 16.666 MS per tick, GameBoy refreshes as 60 hertz
@@ -155,7 +156,7 @@ class PokemonRed {
         if (warp) {
           const nextMapName =
             warp.toMap === "LAST_MAP" || warp.toMap === "UNUSED_MAP_ED"
-              ? this.#data.map.previousMapName
+              ? this.#data.map.previousOutdoorMapName
               : warp.toMap;
 
           // Load the warp map
@@ -177,7 +178,9 @@ class PokemonRed {
   #loadMap(nextMapName: MapName) {
     const nextMap = getMap(nextMapName);
     // Load a new map
-    this.#data.map.previousMapName = this.#data.map.currentMapName;
+    if (this.#data.map.currentMap.tileset === Tileset.OVERWORLD) {
+      this.#data.map.previousOutdoorMapName = this.#data.map.currentMapName;
+    }
     this.#data.map.currentMapName = nextMapName;
     this.#data.map.currentMap = nextMap;
     this.#renderer.loadMap(nextMap);
@@ -194,7 +197,7 @@ class PokemonRed {
       map: {
         currentMap: map,
         currentMapName: mapName,
-        previousMapName: mapName
+        previousOutdoorMapName: mapName
       },
       player: {
         name: "Red",
