@@ -4,6 +4,7 @@ import { getMapImage, renderOverworld } from "./map";
 import { Map } from "../map";
 import { getMap } from "../mapLookup";
 import { getObjectsImage } from "./objects";
+import { Sprite } from "./sprite";
 
 const SCREEN_WIDTH = 160;
 const SCREEN_HEIGHT = 144;
@@ -55,7 +56,7 @@ export class Renderer {
 
   // When the player walks into/loads a new map,
   // load the adjacent maps and cache some stuff
-  loadMap(map: Map) {
+  loadMap(map: Map, sprites: Sprite[]) {
     this.#overworldCache.current.mapImage = getMapImage(
       map.width,
       map.height,
@@ -66,6 +67,7 @@ export class Renderer {
 
     this.#overworldCache.current.objectsImage = getObjectsImage(
       map,
+      sprites,
       this.#images
     );
 
@@ -83,7 +85,7 @@ export class Renderer {
             connMap.blocks,
             this.#images
           ),
-          objectsImage: getObjectsImage(connMap, this.#images)
+          objectsImage: getObjectsImage(connMap, sprites, this.#images)
         };
       } else {
         this.#overworldCache[dir] = undefined; // clear cache if no connection

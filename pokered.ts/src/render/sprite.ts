@@ -8,7 +8,7 @@ export enum MovementStatus {
   Moving
 }
 
-export type SpriteData = {
+export type Sprite = {
   image: SpriteName;
   facing: FacingDirection;
   movementStatus: MovementStatus;
@@ -28,8 +28,8 @@ export enum FacingDirection {
 }
 
 export function drawSprite(
-  ctx: CanvasRenderingContext2D,
-  sprite: SpriteData,
+  ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
+  sprite: Sprite,
   cache: ImageCache,
   tileX: number,
   tileY: number,

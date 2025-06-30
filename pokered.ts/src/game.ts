@@ -8,7 +8,8 @@ import {
   getWarpAtPos
 } from "./overworld/map";
 import { Renderer } from "./render/renderer";
-import { FacingDirection, MovementStatus, SpriteData } from "./render/sprite";
+import { FacingDirection, MovementStatus, Sprite } from "./render/sprite";
+import { SpriteName } from "./sprite";
 import { Tileset } from "./tileset";
 
 export type PokemonRedOptions = {
@@ -17,7 +18,7 @@ export type PokemonRedOptions = {
 
 export type PlayerData = {
   name: string;
-  sprite: SpriteData;
+  sprite: Sprite;
 };
 
 export type GameData = {
@@ -27,6 +28,7 @@ export type GameData = {
 
 export type MapData = {
   currentMap: Map;
+  currentMapSprites: Sprite[];
   currentMapName: MapName;
   previousOutdoorMapName: MapName;
 };
@@ -184,7 +186,23 @@ class PokemonRed {
     }
     this.#data.map.currentMapName = nextMapName;
     this.#data.map.currentMap = nextMap;
-    this.#renderer.loadMap(nextMap);
+
+    this.#data.map.currentMapSprites = nextMap.objects.objects.map(
+      (obj): Sprite => {
+        return {
+          image: obj.sprite as SpriteName,
+          facing: FacingDirection.Down,
+          movementStatus: MovementStatus.Ready,
+          animationFrameCounter: 0,
+          position: {
+            x: obj.x,
+            y: obj.y
+          }
+        };
+      }
+    );
+
+    this.#renderer.loadMap(nextMap, this.#data.map.currentMapSprites);
   }
 
   #render() {
@@ -198,7 +216,8 @@ class PokemonRed {
       map: {
         currentMap: map,
         currentMapName: mapName,
-        previousOutdoorMapName: MapName.PalletTown
+        previousOutdoorMapName: MapName.PalletTown,
+        currentMapSprites: []
       },
       player: {
         name: "Red",

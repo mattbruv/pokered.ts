@@ -3,7 +3,7 @@ import { Map } from "../map";
 import { getBlockIndexAtPosition } from "../overworld/map";
 import { getBlockSet, getTilesetImage, Tileset } from "../tileset";
 import { OverworldCache } from "./renderer";
-import { drawSprite, FacingDirection, SpriteData } from "./sprite";
+import { drawSprite, FacingDirection, Sprite } from "./sprite";
 
 export const TILE_SIZE_PX = 8;
 export const BLOCK_SIZE_PX = TILE_SIZE_PX * 4;
@@ -13,7 +13,7 @@ export function renderOverworld(
   images: ImageCache,
   currentMap: Map,
   cache: OverworldCache,
-  playerSprite: SpriteData
+  playerSprite: Sprite
 ) {
   const PLAYER_OFFSET = 4;
   const TILE_SIZE = 16; // each tile is 16x16
