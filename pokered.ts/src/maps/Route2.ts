@@ -5,7 +5,7 @@ import { ROUTE_2_BLOCKS } from "../data/blocks/Route2";
 export const Route2: Map = {
   width: 10,
   height: 36,
-  borderBlock: 18,
+  borderBlock: 15,
   blocks: ROUTE_2_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {

@@ -95,9 +95,10 @@ for map_path in maps:
             if name not in cmd:
                 cmds.add(cmd)
             #background tile
-            if obj[0] == "db":
+            if obj[0] == "db" and "border block" in line:
                 # extract hex number to int
-                objects["border_block"] = int(obj[1].replace("$", "").replace(",", ""), 16)
+                val = obj[1].replace("$", "").replace(",", "")
+                objects["border_block"] = int(val, 16)
             if obj[0] == "warp_event":
                 #\1 x position
                 #\2 y position
