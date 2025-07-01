@@ -2,14 +2,10 @@ import { ImageCache, loadImageBitmaps } from "./gfx/images";
 import { GameInput } from "./input";
 import { Map, MapName } from "./map";
 import { getMap } from "./mapLookup";
-import {
-  checkMapConnections,
-  canWalkOnTile,
-  getWarpAtPos
-} from "./overworld/map";
+import { checkMapConnections, probeTile, getWarpAtPos } from "./overworld/map";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, Sprite } from "./render/sprite";
-import { getOverworldSpriteKey, SpriteName } from "./sprite";
+import { getOverworldSpriteKey } from "./sprite";
 import { Tileset } from "./tileset";
 
 export type PokemonRedOptions = {
@@ -106,9 +102,11 @@ class PokemonRed {
       const dy = player.position.y + yDiff;
 
       if (xDiff || yDiff) {
-        //console.log(player.position);
-        const canWalkForward = canWalkOnTile(this.#data.map.currentMap, dx, dy);
-        if (canWalkForward) {
+        const nextTile = probeTile(this.#data.map.currentMap, dx, dy);
+
+        if (nextTile.canWalk || nextTile.canSurf) {
+          player.image = nextTile.canSurf ? "sprites-seel" : "sprites-red";
+
           if (xDiff) {
             player.movementStatus = MovementStatus.Moving;
             player.facing =
@@ -135,8 +133,6 @@ class PokemonRed {
         if (player.facing == FacingDirection.Down) player.position.y++;
 
         player.movementStatus = MovementStatus.Ready;
-
-        console.log(player.position);
 
         const { x, y } = player.position;
 

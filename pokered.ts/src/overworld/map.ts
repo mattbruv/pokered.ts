@@ -34,22 +34,38 @@ export function isInBounds(map: Map, tileX: number, tileY: number) {
   );
 }
 
-export function canWalkOnTile(map: Map, tileX: number, tileY: number): boolean {
+export type TileProbe =
+  | { inBounds: true; canWalk: boolean; tileId: number; canSurf: boolean }
+  | { inBounds: false; canWalk: false; canSurf: false };
+
+const SURF_TILES = [50, 20];
+
+export function probeTile(map: Map, tileX: number, tileY: number): TileProbe {
   // If the user is about to walk about of bounds,
   // it means that they are about to walk over to a connecting map
   if (!isInBounds(map, tileX, tileY)) {
     // If we're not in bounds, we are probably walking to a connection, or walking OOB.
     // If this returns null, we are walking out of bounds, so prevent that.
     const connection = checkMapConnections(map, tileX, tileY);
-    if (!connection) return false;
+    if (!connection)
+      return {
+        canWalk: false,
+        canSurf: false,
+        inBounds: false
+      };
     // If there is a connection, we have to verify that we aren't walking onto a block which
     // isn't allowed to be walked on, AKA call this recursively with the connecting map.
     // Maybe not the best way to do this, but it's what's coming to mind right now.
     // An example of this is in the southwest of pallet town near the lake
     const connectingMapName = map.connections[connection.dir]?.map;
-    if (!connectingMapName) return false;
+    if (!connectingMapName)
+      return {
+        canWalk: false,
+        canSurf: false,
+        inBounds: false
+      };
     const { x, y } = connection.newPosition;
-    return canWalkOnTile(getMap(connectingMapName), x, y);
+    return probeTile(getMap(connectingMapName), x, y);
   }
 
   const mapBlockIndex = getBlockIndexAtPosition(map, tileX, tileY);
@@ -71,7 +87,12 @@ export function canWalkOnTile(map: Map, tileX: number, tileY: number): boolean {
   const tileId = block[tileIndex];
   const passableTiles = getTileCollisions(map.tileset);
 
-  return passableTiles.includes(tileId);
+  return {
+    inBounds: true,
+    canWalk: passableTiles.includes(tileId),
+    canSurf: SURF_TILES.includes(tileId),
+    tileId: tileId
+  };
 }
 
 function getTileDimensions(map: Map) {
