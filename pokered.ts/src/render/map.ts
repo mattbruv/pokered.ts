@@ -80,26 +80,26 @@ export function renderOverworld(
 
     // If the north map has an offset, apply it
     // Offset is in blocks.
-    const offset = currentMap.connections.north.yOffset * 32;
+    const offset = currentMap.connections.north.xOffset * 32;
 
     screen.drawImage(cache.north.mapImage, dx + offset, dy - deltaY);
   }
   if (cache.south) {
     const deltaY = cache.current.mapImage.height;
-    const offset = currentMap.connections.south!.yOffset * 32;
+    const offset = currentMap.connections.south!.xOffset * 32;
     //console.log(dx, dy - deltaY);
     screen.drawImage(cache.south.mapImage, dx + offset, dy + deltaY);
     //
   }
   if (cache.east) {
     const deltaX = cache.current.mapImage.width;
-    const offset = currentMap.connections.east!.xOffset * 32;
+    const offset = currentMap.connections.east!.yOffset * 32;
     screen.drawImage(cache.east.mapImage, dx + deltaX, dy + offset);
     //
   }
   if (cache.west) {
     const deltaX = cache.west.mapImage.width;
-    const offset = currentMap.connections.west!.xOffset * 32;
+    const offset = currentMap.connections.west!.yOffset * 32;
     screen.drawImage(cache.west.mapImage, dx - deltaX, dy + offset);
     //
   }

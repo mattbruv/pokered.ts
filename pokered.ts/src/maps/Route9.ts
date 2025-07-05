@@ -10,8 +10,8 @@ export const Route9: Map = {
   blocks: ROUTE_9_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-    west: { map: MapName.CeruleanCity, xOffset: -4 },
-    east: { map: MapName.Route10, xOffset: 0 }
+    west: { map: MapName.CeruleanCity, yOffset: -4 },
+    east: { map: MapName.Route10, yOffset: 0 }
   },
   objects: {
     warps: [],

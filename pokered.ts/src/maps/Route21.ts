@@ -10,8 +10,8 @@ export const Route21: Map = {
   blocks: ROUTE_21_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-    north: { map: MapName.PalletTown, yOffset: 0 },
-    south: { map: MapName.CinnabarIsland, yOffset: 0 }
+    north: { map: MapName.PalletTown, xOffset: 0 },
+    south: { map: MapName.CinnabarIsland, xOffset: 0 }
   },
   objects: {
     warps: [],

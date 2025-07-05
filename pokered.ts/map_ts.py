@@ -33,10 +33,10 @@ TS_BODY_TEMPLATE = """export const {map_name}: Map = {{
 BLOCK_TS_TEMPLATE = "export const {blocks_const} = {blocks};\n"
 
 def format_connection(conn):
-    if "xOffset" in conn:
-        return f"{{ map: MapName.{conn['map']}, xOffset: {conn['xOffset']} }}"
-    elif "yOffset" in conn:
+    if "yOffset" in conn:
         return f"{{ map: MapName.{conn['map']}, yOffset: {conn['yOffset']} }}"
+    elif "xOffset" in conn:
+        return f"{{ map: MapName.{conn['map']}, xOffset: {conn['xOffset']} }}"
     else:
         return f"{{ map: MapName.{conn['map']} }}"
 

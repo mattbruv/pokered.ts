@@ -10,8 +10,8 @@ export const VermilionCity: Map = {
   blocks: VERMILION_CITY_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-    north: { map: MapName.Route6, yOffset: 5 },
-    east: { map: MapName.Route11, xOffset: 4 }
+    north: { map: MapName.Route6, xOffset: 5 },
+    east: { map: MapName.Route11, yOffset: 4 }
   },
   objects: {
     warps: [

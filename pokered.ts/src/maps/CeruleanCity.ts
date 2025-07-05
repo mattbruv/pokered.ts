@@ -10,10 +10,10 @@ export const CeruleanCity: Map = {
   blocks: CERULEAN_CITY_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-    north: { map: MapName.Route24, yOffset: 5 },
-    south: { map: MapName.Route5, yOffset: 5 },
-    west: { map: MapName.Route4, xOffset: 4 },
-    east: { map: MapName.Route9, xOffset: 4 }
+    north: { map: MapName.Route24, xOffset: 5 },
+    south: { map: MapName.Route5, xOffset: 5 },
+    west: { map: MapName.Route4, yOffset: 4 },
+    east: { map: MapName.Route9, yOffset: 4 }
   },
   objects: {
     warps: [

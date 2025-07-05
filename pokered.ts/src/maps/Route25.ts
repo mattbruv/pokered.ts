@@ -10,7 +10,7 @@ export const Route25: Map = {
   blocks: ROUTE_25_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-    west: { map: MapName.Route24, xOffset: 0 }
+    west: { map: MapName.Route24, yOffset: 0 }
   },
   objects: {
     warps: [{ x: 45, y: 3, toMap: MapName.BillsHouse, warpIndex: 0 }],

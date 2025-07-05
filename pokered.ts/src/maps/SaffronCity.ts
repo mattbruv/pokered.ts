@@ -10,10 +10,10 @@ export const SaffronCity: Map = {
   blocks: SAFFRON_CITY_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-    north: { map: MapName.Route5, yOffset: 5 },
-    south: { map: MapName.Route6, yOffset: 5 },
-    west: { map: MapName.Route7, xOffset: 4 },
-    east: { map: MapName.Route8, xOffset: 4 }
+    north: { map: MapName.Route5, xOffset: 5 },
+    south: { map: MapName.Route6, xOffset: 5 },
+    west: { map: MapName.Route7, yOffset: 4 },
+    east: { map: MapName.Route8, yOffset: 4 }
   },
   objects: {
     warps: [

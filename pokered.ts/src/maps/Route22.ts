@@ -10,8 +10,8 @@ export const Route22: Map = {
   blocks: ROUTE_22_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-    north: { map: MapName.Route23, yOffset: 0 },
-    east: { map: MapName.ViridianCity, xOffset: -4 }
+    north: { map: MapName.Route23, xOffset: 0 },
+    east: { map: MapName.ViridianCity, yOffset: -4 }
   },
   objects: {
     warps: [{ x: 8, y: 5, toMap: MapName.Route22Gate, warpIndex: 0 }],

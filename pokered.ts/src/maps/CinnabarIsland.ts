@@ -10,8 +10,8 @@ export const CinnabarIsland: Map = {
   blocks: CINNABAR_ISLAND_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-    north: { map: MapName.Route21, yOffset: 0 },
-    east: { map: MapName.Route20, xOffset: 0 }
+    north: { map: MapName.Route21, xOffset: 0 },
+    east: { map: MapName.Route20, yOffset: 0 }
   },
   objects: {
     warps: [

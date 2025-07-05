@@ -10,8 +10,8 @@ export const PalletTown: Map = {
   blocks: PALLET_TOWN_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-    north: { map: MapName.Route1, yOffset: 0 },
-    south: { map: MapName.Route21, yOffset: 0 }
+    north: { map: MapName.Route1, xOffset: 0 },
+    south: { map: MapName.Route21, xOffset: 0 }
   },
   objects: {
     warps: [

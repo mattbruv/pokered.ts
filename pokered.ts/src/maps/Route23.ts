@@ -10,8 +10,8 @@ export const Route23: Map = {
   blocks: ROUTE_23_BLOCKS,
   tileset: Tileset.PLATEAU,
   connections: {
-    north: { map: MapName.IndigoPlateau, yOffset: 0 },
-    south: { map: MapName.Route22, yOffset: 0 }
+    north: { map: MapName.IndigoPlateau, xOffset: 0 },
+    south: { map: MapName.Route22, xOffset: 0 }
   },
   objects: {
     warps: [

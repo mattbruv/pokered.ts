@@ -10,7 +10,7 @@ export const IndigoPlateau: Map = {
   blocks: INDIGO_PLATEAU_BLOCKS,
   tileset: Tileset.PLATEAU,
   connections: {
-    south: { map: MapName.Route23, yOffset: 0 }
+    south: { map: MapName.Route23, xOffset: 0 }
   },
   objects: {
     warps: [

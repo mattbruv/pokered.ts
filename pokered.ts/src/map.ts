@@ -78,11 +78,11 @@ type BaseConnection = {
 };
 
 export type VerticalConnection = BaseConnection & {
-  yOffset: number;
+  xOffset: number;
 };
 
 export type HorizontalConnection = BaseConnection & {
-  xOffset: number;
+  yOffset: number;
 };
 
 export type MapConnections = {

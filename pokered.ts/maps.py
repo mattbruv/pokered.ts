@@ -36,9 +36,9 @@ for map_path in maps:
                     #"offset": int(offset)
                 }
                 if direc == "north" or direc == "south":
-                    data[name]["connections"][direc]["yOffset"] = int(offset)
-                else:
                     data[name]["connections"][direc]["xOffset"] = int(offset)
+                else:
+                    data[name]["connections"][direc]["yOffset"] = int(offset)
 
                 print(rest, direc)
             if first == "end_map_header":

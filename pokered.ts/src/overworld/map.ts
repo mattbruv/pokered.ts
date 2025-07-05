@@ -116,21 +116,21 @@ export function checkMapConnections(
 
   if (tileX < 0 && map.connections.west) {
     const west = getTileDimensions(getMap(map.connections.west.map));
-    let offset = map.connections.west.xOffset * 2 * -1; // tiles
+    let offset = map.connections.west.yOffset * 2 * -1; // tiles
     return {
       dir: "west",
       newPosition: { x: west.tileWidth - 1, y: tileY + offset }
     };
   }
   if (tileX >= tileWidth && map.connections.east) {
-    let offset = map.connections.east.xOffset * 2 * -1; // tiles
+    let offset = map.connections.east.yOffset * 2 * -1; // tiles
     return {
       dir: "east",
       newPosition: { x: 0, y: tileY + offset }
     };
   }
   if (tileY >= tileHeight && map.connections.south) {
-    let offset = map.connections.south.yOffset * 2 * -1;
+    let offset = map.connections.south.xOffset * 2 * -1;
     return {
       dir: "south",
       newPosition: { x: tileX + offset, y: 0 }
@@ -139,7 +139,7 @@ export function checkMapConnections(
   if (tileY < 0 && map.connections.north) {
     const north = getMap(map.connections.north.map);
     const northTile = getTileDimensions(north);
-    let offset = map.connections.north.yOffset * 2;
+    let offset = map.connections.north.xOffset * 2;
 
     return {
       dir: "north",

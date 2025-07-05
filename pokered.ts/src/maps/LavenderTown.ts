@@ -10,9 +10,9 @@ export const LavenderTown: Map = {
   blocks: LAVENDER_TOWN_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-    north: { map: MapName.Route10, yOffset: 0 },
-    south: { map: MapName.Route12, yOffset: 0 },
-    west: { map: MapName.Route8, xOffset: 0 }
+    north: { map: MapName.Route10, xOffset: 0 },
+    south: { map: MapName.Route12, xOffset: 0 },
+    west: { map: MapName.Route8, yOffset: 0 }
   },
   objects: {
     warps: [

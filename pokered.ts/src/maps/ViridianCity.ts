@@ -10,9 +10,9 @@ export const ViridianCity: Map = {
   blocks: VIRIDIAN_CITY_BLOCKS,
   tileset: Tileset.OVERWORLD,
   connections: {
-    north: { map: MapName.Route2, yOffset: 5 },
-    south: { map: MapName.Route1, yOffset: 5 },
-    west: { map: MapName.Route22, xOffset: 4 }
+    north: { map: MapName.Route2, xOffset: 5 },
+    south: { map: MapName.Route1, xOffset: 5 },
+    west: { map: MapName.Route22, yOffset: 4 }
   },
   objects: {
     warps: [
