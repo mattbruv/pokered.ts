@@ -7,6 +7,7 @@ import { createGame } from "pokered.ts";
 import { useEffect, useRef } from "react";
 
 import "./app.css";
+import GameDebugPanel from "./Debug";
 
 function App() {
   const canvas = useRef<HTMLCanvasElement | null>(null);
@@ -26,11 +27,11 @@ function App() {
   return (
     <MantineProvider>
       <Flex direction="row" h="100vh" w="100vw">
-        <Box p={"md"} w="50%" h="100%">
+        <Box p={"sm"} w="50%" h="100%">
           <canvas ref={canvas} className="pixel-canvas" />
         </Box>
-        <Box bg="green" w="50%" h="100%">
-          {/* Right column content here */}
+        <Box p={"sm"} w="50%" h="100%">
+          <GameDebugPanel />
         </Box>
       </Flex>
       <div className="container">
