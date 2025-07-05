@@ -1,5 +1,11 @@
+// Import styles of packages that you've installed.
+// All packages except `@mantine/hooks` require styles imports
+import "@mantine/core/styles.css";
+import { Box, Flex, MantineProvider } from "@mantine/core";
+
 import { createGame } from "pokered.ts";
 import { useEffect, useRef } from "react";
+
 import "./app.css";
 
 function App() {
@@ -18,14 +24,19 @@ function App() {
     }
   }, []);
   return (
-    <>
-      <div className="container">
-        <div className="column">
+    <MantineProvider>
+      <Flex direction="row" h="100vh" w="100vw">
+        <Box p={"md"} w="50%" h="100%">
           <canvas ref={canvas} className="pixel-canvas" />
-        </div>
+        </Box>
+        <Box bg="green" w="50%" h="100%">
+          {/* Right column content here */}
+        </Box>
+      </Flex>
+      <div className="container">
         <div className="column"></div>
       </div>
-    </>
+    </MantineProvider>
   );
 }
 

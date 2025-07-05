@@ -9,7 +9,7 @@ body {
     background-color: pink;
 }
 
-.container {
+/* .container {
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .pixel-canvas {
   width: 100%;
