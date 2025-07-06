@@ -122,7 +122,11 @@ class PokemonRed {
       if (xDiff || yDiff) {
         const nextTile = probeTile(this.#data.map.currentMap, dx, dy);
 
-        if (nextTile.canWalk || nextTile.canSurf) {
+        if (
+          this.#data.debug.walkOnWalls ||
+          nextTile.canWalk ||
+          nextTile.canSurf
+        ) {
           player.image = nextTile.canSurf ? player.imageSurf : player.imageWalk;
 
           if (xDiff) {

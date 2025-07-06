@@ -20,11 +20,6 @@ type DebugProps = {
 };
 
 export default function GameDebugPanel({ state, callbacks }: DebugProps) {
-  const [walkThroughWalls, setWalkThroughWalls] = useState(false);
-  const [selectedSprite, setSelectedSprite] = useState<string | null>(
-    "SPRITE_RED"
-  );
-  const [blockOutlines, setBlockOutlines] = useState(false);
   const [warpMap, setWarpMap] = useState<MapName>(MapName.AgathasRoom);
   const [warpX, setWarpX] = useState(0);
   const [warpY, setWarpY] = useState(0);
@@ -57,12 +52,12 @@ export default function GameDebugPanel({ state, callbacks }: DebugProps) {
           <Checkbox
             label="Walk Through Walls"
             checked={state.walkOnWalls}
-            onChange={(e) => setWalkThroughWalls(e.currentTarget.checked)}
+            onChange={(e) => callbacks.setWalkOnWalls(e.currentTarget.checked)}
           />
           <Checkbox
             label="Show Block/Map Outlines"
             checked={state.showMapOutlines}
-            onChange={(e) => setBlockOutlines(e.currentTarget.checked)}
+            onChange={(e) => callbacks.setWalkOnWalls(e.currentTarget.checked)}
             mt="xs"
           />
         </Card>
@@ -74,8 +69,8 @@ export default function GameDebugPanel({ state, callbacks }: DebugProps) {
           </Text>
           <Select
             data={spriteOptions}
-            value={selectedSprite}
-            onChange={setSelectedSprite}
+            value={state.player.sprite}
+            onChange={() => {}}
             placeholder="Select Sprite"
             mt="xs"
           />
