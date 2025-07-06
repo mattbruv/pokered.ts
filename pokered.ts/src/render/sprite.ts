@@ -9,6 +9,8 @@ export enum MovementStatus {
 }
 
 export type Sprite = {
+  imageWalk: SpriteName;
+  imageSurf: SpriteName;
   image: SpriteName;
   facing: FacingDirection;
   movementStatus: MovementStatus;

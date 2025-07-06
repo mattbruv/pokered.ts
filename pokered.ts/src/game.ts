@@ -1,3 +1,4 @@
+import { DebugCallbacks, DebugState, getDebugState } from "./debug";
 import { ImageCache, loadImageBitmaps } from "./gfx/images";
 import { GameInput } from "./input";
 import { Map, MapName } from "./map";
@@ -8,8 +9,13 @@ import { FacingDirection, MovementStatus, Sprite } from "./render/sprite";
 import { getOverworldSpriteKey } from "./sprite";
 import { Tileset } from "./tileset";
 
+type PokemonRedCallbacks = {
+  onDebugStateChange(newState: DebugState): void;
+};
+
 export type PokemonRedOptions = {
   screen: HTMLCanvasElement;
+  debug?: PokemonRedCallbacks;
 };
 
 export type PlayerData = {
@@ -17,9 +23,15 @@ export type PlayerData = {
   sprite: Sprite;
 };
 
+export type DebugData = {
+  showMapOutlines: boolean;
+  walkOnWalls: boolean;
+};
+
 export type GameData = {
   player: PlayerData;
   map: MapData;
+  debug: DebugData;
 };
 
 export type MapData = {
@@ -35,15 +47,21 @@ class PokemonRed {
   #renderer: Renderer;
   #input: GameInput;
   #data: GameData;
+  #callbacks: PokemonRedCallbacks | undefined;
 
   #animationFrameId: number | null = null;
   #lastTimeStep = 0;
   #lag = 0;
 
-  constructor(canvas: HTMLCanvasElement, cache: ImageCache) {
+  constructor(
+    canvas: HTMLCanvasElement,
+    cache: ImageCache,
+    callbacks: PokemonRedCallbacks | undefined
+  ) {
     this.#renderer = new Renderer(cache, canvas);
     this.#input = new GameInput();
     this.#data = this.#loadGame();
+    this.#callbacks = callbacks;
     this.#loadMap(this.#data.map.currentMapName);
   }
 
@@ -105,7 +123,7 @@ class PokemonRed {
         const nextTile = probeTile(this.#data.map.currentMap, dx, dy);
 
         if (nextTile.canWalk || nextTile.canSurf) {
-          player.image = nextTile.canSurf ? "sprites-seel" : "sprites-red";
+          player.image = nextTile.canSurf ? player.imageSurf : player.imageWalk;
 
           if (xDiff) {
             player.movementStatus = MovementStatus.Moving;
@@ -169,7 +187,15 @@ class PokemonRed {
             y: destinationWarp.y
           };
         }
+
+        this.#updateDebugState();
       }
+    }
+  }
+
+  #updateDebugState() {
+    if (this.#callbacks?.onDebugStateChange) {
+      this.#callbacks.onDebugStateChange(getDebugState(this.#data));
     }
   }
 
@@ -185,8 +211,11 @@ class PokemonRed {
 
     this.#data.map.currentMapSprites = nextMap.objects.objects.map(
       (obj): Sprite => {
+        const img = getOverworldSpriteKey(obj.sprite);
         return {
-          image: getOverworldSpriteKey(obj.sprite),
+          imageWalk: img,
+          imageSurf: img,
+          image: img,
           facing: FacingDirection.Down,
           movementStatus: MovementStatus.Ready,
           animationFrameCounter: 0,
@@ -225,12 +254,37 @@ class PokemonRed {
             x: 2,
             y: 2
           },
-          image: "sprites-red"
+          image: "sprites-red",
+          imageWalk: "sprites-red",
+          imageSurf: "sprites-seel"
         }
+      },
+      debug: {
+        showMapOutlines: false,
+        walkOnWalls: false
       }
     };
 
     return data;
+  }
+
+  getDebugCallbacks(): DebugCallbacks {
+    return {
+      setMap: (map, x, y) => {
+        this.#data.player.sprite.position.x = x;
+        this.#data.player.sprite.position.y = y;
+        this.#loadMap(map);
+        this.#updateDebugState();
+      },
+      setWalkOnWalls: (value) => {
+        this.#data.debug.walkOnWalls = value;
+        this.#updateDebugState();
+      },
+      setSprite: (sprite) => {
+        console.log("Set player sprite: ", sprite);
+        this.#updateDebugState();
+      }
+    };
   }
 }
 
@@ -238,5 +292,5 @@ export async function createGame(
   options: PokemonRedOptions
 ): Promise<PokemonRed> {
   const cache = await loadImageBitmaps();
-  return new PokemonRed(options.screen, cache);
+  return new PokemonRed(options.screen, cache, options.debug);
 }

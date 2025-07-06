@@ -1,7 +1,5 @@
 import { useState } from "react";
 import {
-  Flex,
-  Box,
   Stack,
   Button,
   Text,
@@ -12,23 +10,24 @@ import {
   Select,
   TextInput,
   Group,
+  NumberInput,
 } from "@mantine/core";
+import { MapName, type DebugCallbacks, type DebugState } from "pokered.ts";
 
-export default function GameDebugPanel() {
+type DebugProps = {
+  state: DebugState;
+  callbacks: DebugCallbacks;
+};
+
+export default function GameDebugPanel({ state, callbacks }: DebugProps) {
   const [walkThroughWalls, setWalkThroughWalls] = useState(false);
   const [selectedSprite, setSelectedSprite] = useState<string | null>(
     "SPRITE_RED"
   );
   const [blockOutlines, setBlockOutlines] = useState(false);
-  const [warpMap, setWarpMap] = useState("");
-  const [warpX, setWarpX] = useState("");
-  const [warpY, setWarpY] = useState("");
-
-  // Mock live state
-  const currentMap = "Pallet Town";
-  const playerBlock = "(12, 8)";
-  const playerTile = "(96, 64)";
-  const currentTileId = 23;
+  const [warpMap, setWarpMap] = useState<MapName>(MapName.AgathasRoom);
+  const [warpX, setWarpX] = useState(0);
+  const [warpY, setWarpY] = useState(0);
 
   // Mock sprite options
   const spriteOptions = [
@@ -38,18 +37,17 @@ export default function GameDebugPanel() {
   ];
 
   const handleWarp = () => {
-    if (!warpMap || warpX === "" || warpY === "") {
-      alert("Fill in map, X, and Y");
+    if (!warpMap) {
+      alert("Fill in warp map");
       return;
     }
-    console.log(`Warping to ${warpMap} at (${warpX}, ${warpY})`);
-    // Call your game warp function here
+    callbacks.setMap(warpMap, warpX, warpY);
   };
 
   return (
     <ScrollArea h="100%">
       <Stack>
-        <Title order={4}>Debug Controls</Title>
+        <Title order={4}>Debug Controls {state.block.id}</Title>
 
         {/* Gameplay Toggles */}
         <Card withBorder>
@@ -58,12 +56,12 @@ export default function GameDebugPanel() {
           </Text>
           <Checkbox
             label="Walk Through Walls"
-            checked={walkThroughWalls}
+            checked={state.walkOnWalls}
             onChange={(e) => setWalkThroughWalls(e.currentTarget.checked)}
           />
           <Checkbox
             label="Show Block/Map Outlines"
-            checked={blockOutlines}
+            checked={state.showMapOutlines}
             onChange={(e) => setBlockOutlines(e.currentTarget.checked)}
             mt="xs"
           />
@@ -88,10 +86,14 @@ export default function GameDebugPanel() {
           <Text size="sm" fw={500}>
             Live State
           </Text>
-          <Text size="xs">Map: {currentMap}</Text>
-          <Text size="xs">Block Position: {playerBlock}</Text>
-          <Text size="xs">Tile Position: {playerTile}</Text>
-          <Text size="xs">Current Tile ID: {currentTileId}</Text>
+          <Text size="xs">Map: {MapName[state.map.name]}</Text>
+          <Text size="xs">
+            Block Position: (x: {state.block.x}, y: {state.block.y})
+          </Text>
+          <Text size="xs">
+            Block Index: {state.block.index}, Id: {state.block.id}
+          </Text>
+          <Text size="xs">Current Tile ID: {state.map.name}</Text>
         </Card>
 
         {/* Warp To Map */}
@@ -103,20 +105,20 @@ export default function GameDebugPanel() {
             label="Map"
             placeholder="Map name"
             value={warpMap}
-            onChange={(e) => setWarpMap(e.currentTarget.value)}
+            onChange={(e) => setWarpMap(e.currentTarget.value as any)}
           />
           <Group grow mt="xs">
-            <TextInput
+            <NumberInput
               label="X"
               placeholder="X pos"
               value={warpX}
-              onChange={(e) => setWarpX(e.currentTarget.value)}
+              onChange={(e) => setWarpX(Number(e))}
             />
-            <TextInput
+            <NumberInput
               label="Y"
               placeholder="Y pos"
               value={warpY}
-              onChange={(e) => setWarpY(e.currentTarget.value)}
+              onChange={(e) => setWarpY(Number(e))}
             />
           </Group>
           <Button fullWidth mt="sm" onClick={handleWarp}>

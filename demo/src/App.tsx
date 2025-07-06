@@ -3,14 +3,18 @@
 import "@mantine/core/styles.css";
 import { Box, Flex, MantineProvider } from "@mantine/core";
 
-import { createGame } from "pokered.ts";
-import { useEffect, useRef } from "react";
+import { createGame, type DebugCallbacks, type DebugState } from "pokered.ts";
+import { useEffect, useRef, useState } from "react";
 
 import "./app.css";
 import GameDebugPanel from "./Debug";
 
 function App() {
   const canvas = useRef<HTMLCanvasElement | null>(null);
+  const [debugCallbacks, setDebugCallbacks] = useState<DebugCallbacks | null>(
+    null
+  );
+  const [debugState, setDebugState] = useState<DebugState | null>(null);
   const hasInitialized = useRef(false);
 
   useEffect(() => {
@@ -19,8 +23,14 @@ function App() {
     if (canvas.current) {
       createGame({
         screen: canvas.current,
-      }).then((x) => {
-        x.start();
+        debug: {
+          onDebugStateChange(newState) {
+            setDebugState(newState);
+          },
+        },
+      }).then((game) => {
+        setDebugCallbacks(game.getDebugCallbacks());
+        game.start();
       });
     }
   }, []);
@@ -31,7 +41,9 @@ function App() {
           <canvas ref={canvas} className="pixel-canvas" />
         </Box>
         <Box p={"sm"} w="50%" h="100%">
-          <GameDebugPanel />
+          {debugCallbacks && debugState && (
+            <GameDebugPanel callbacks={debugCallbacks} state={debugState} />
+          )}
         </Box>
       </Flex>
       <div className="container">
