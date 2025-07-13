@@ -1,13 +1,13 @@
 import { GameData } from "./game";
 import { MapName } from "./map";
 import { getBlockIndexAtPosition } from "./overworld/map";
-import { SpriteName } from "./sprite";
+import { OverworldSprite, SpriteName } from "./sprite";
 
 export type DebugCallbacks = {
   setMap: (map: MapName, x: number, y: number) => void;
   setWalkOnWalls: (value: boolean) => void;
   setShowMapOutlines: (value: boolean) => void;
-  setSprite: (sprite: SpriteName) => void;
+  setSprite: (sprite: OverworldSprite) => void;
 };
 
 export type DebugState = {

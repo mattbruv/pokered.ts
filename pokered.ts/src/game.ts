@@ -285,8 +285,11 @@ class PokemonRed {
         this.#updateDebugState();
       },
       setSprite: (sprite) => {
-        console.log("Set player sprite: ", sprite);
+        const img = getOverworldSpriteKey(sprite);
+        this.#data.player.sprite.imageWalk = img;
+        this.#data.player.sprite.image = img;
         this.#updateDebugState();
+        this.#render();
       },
       setShowMapOutlines: (value) => {
         this.#data.debug.showMapOutlines = value;

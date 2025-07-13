@@ -6,9 +6,16 @@ import {
   Title,
   Checkbox,
   Select,
+  type ComboboxItem,
 } from "@mantine/core";
-import { MapName, type DebugCallbacks, type DebugState } from "pokered.ts";
+import {
+  MapName,
+  OverworldSprite,
+  type DebugCallbacks,
+  type DebugState,
+} from "pokered.ts";
 import { WarpTo } from "./debug/WarpTo";
+import { SetSprite } from "./debug/SetSprite";
 
 type DebugProps = {
   state: DebugState;
@@ -16,13 +23,6 @@ type DebugProps = {
 };
 
 export default function GameDebugPanel({ state, callbacks }: DebugProps) {
-  // Mock sprite options
-  const spriteOptions = [
-    { value: "SPRITE_RED", label: "Red" },
-    { value: "SPRITE_BLUE", label: "Blue" },
-    { value: "SPRITE_PIKACHU", label: "Pikachu" },
-  ];
-
   return (
     <ScrollArea h="100%">
       <Stack>
@@ -48,20 +48,6 @@ export default function GameDebugPanel({ state, callbacks }: DebugProps) {
           />
         </Card>
 
-        {/* Sprite Selector */}
-        <Card withBorder>
-          <Text size="sm" fw={500}>
-            Player Sprite
-          </Text>
-          <Select
-            data={spriteOptions}
-            value={state.player.sprite}
-            onChange={() => {}}
-            placeholder="Select Sprite"
-            mt="xs"
-          />
-        </Card>
-
         {/* Live State */}
         <Card withBorder>
           <Text size="sm" fw={500}>
@@ -80,6 +66,7 @@ export default function GameDebugPanel({ state, callbacks }: DebugProps) {
         {/* Warp To Map */}
         <Card withBorder>
           <WarpTo warpCallback={callbacks.setMap} />
+          <SetSprite spriteCallback={callbacks.setSprite} />
         </Card>
       </Stack>
     </ScrollArea>
