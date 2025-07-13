@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import {
   Stack,
   Button,
@@ -8,11 +8,12 @@ import {
   Title,
   Checkbox,
   Select,
-  TextInput,
   Group,
   NumberInput,
+  type ComboboxItem,
 } from "@mantine/core";
 import { MapName, type DebugCallbacks, type DebugState } from "pokered.ts";
+import { WarpTo } from "./debug/WarpTo";
 
 type DebugProps = {
   state: DebugState;
@@ -20,10 +21,6 @@ type DebugProps = {
 };
 
 export default function GameDebugPanel({ state, callbacks }: DebugProps) {
-  const [warpMap, setWarpMap] = useState<MapName>(MapName.AgathasRoom);
-  const [warpX, setWarpX] = useState(0);
-  const [warpY, setWarpY] = useState(0);
-
   // Mock sprite options
   const spriteOptions = [
     { value: "SPRITE_RED", label: "Red" },
@@ -31,18 +28,10 @@ export default function GameDebugPanel({ state, callbacks }: DebugProps) {
     { value: "SPRITE_PIKACHU", label: "Pikachu" },
   ];
 
-  const handleWarp = () => {
-    if (!warpMap) {
-      alert("Fill in warp map");
-      return;
-    }
-    callbacks.setMap(warpMap, warpX, warpY);
-  };
-
   return (
     <ScrollArea h="100%">
       <Stack>
-        <Title order={4}>Debug Controls {state.block.id}</Title>
+        <Title order={4}>Debug (may cause lag)</Title>
 
         {/* Gameplay Toggles */}
         <Card withBorder>
@@ -93,32 +82,7 @@ export default function GameDebugPanel({ state, callbacks }: DebugProps) {
 
         {/* Warp To Map */}
         <Card withBorder>
-          <Text size="sm" fw={500}>
-            Warp To
-          </Text>
-          <TextInput
-            label="Map"
-            placeholder="Map name"
-            value={warpMap}
-            onChange={(e) => setWarpMap(e.currentTarget.value as any)}
-          />
-          <Group grow mt="xs">
-            <NumberInput
-              label="X"
-              placeholder="X pos"
-              value={warpX}
-              onChange={(e) => setWarpX(Number(e))}
-            />
-            <NumberInput
-              label="Y"
-              placeholder="Y pos"
-              value={warpY}
-              onChange={(e) => setWarpY(Number(e))}
-            />
-          </Group>
-          <Button fullWidth mt="sm" onClick={handleWarp}>
-            Warp
-          </Button>
+          <WarpTo warpCallback={callbacks.setMap} />
         </Card>
       </Stack>
     </ScrollArea>

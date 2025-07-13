@@ -1,7 +1,7 @@
 // Import styles of packages that you've installed.
 // All packages except `@mantine/hooks` require styles imports
 import "@mantine/core/styles.css";
-import { Box, Flex, MantineProvider } from "@mantine/core";
+import { Box, Flex, MantineProvider, Switch } from "@mantine/core";
 
 import { createGame, type DebugCallbacks, type DebugState } from "pokered.ts";
 import { useEffect, useRef, useState } from "react";
@@ -15,6 +15,8 @@ function App() {
     null
   );
   const [debugState, setDebugState] = useState<DebugState | null>(null);
+  const [showDebug, setShowDebug] = useState(false);
+
   const hasInitialized = useRef(false);
 
   useEffect(() => {
@@ -41,9 +43,16 @@ function App() {
           <canvas ref={canvas} className="pixel-canvas" />
         </Box>
         <Box p={"sm"} w="50%" h="100%">
-          {debugCallbacks && debugState && (
-            <GameDebugPanel callbacks={debugCallbacks} state={debugState} />
-          )}
+          <div>
+            <Switch
+              label="Debug Menu"
+              checked={showDebug}
+              onChange={(e) => setShowDebug(e.currentTarget.checked)}
+            />
+            {showDebug && debugCallbacks && debugState && (
+              <GameDebugPanel callbacks={debugCallbacks} state={debugState} />
+            )}
+          </div>
         </Box>
       </Flex>
       <div className="container">
