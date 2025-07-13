@@ -47,10 +47,10 @@ export function WarpTo({ warpCallback }: { warpCallback: WarpCallback }) {
 
   return (
     <>
-      <Modal opened={opened} onClose={close} title="Authentication">
+      <Modal opened={opened} onClose={close} title="Warp to Map">
         {/* Modal content */}
         <Text size="sm" fw={500}>
-          Warp To
+          Map
         </Text>
         <Select
           data={warpData}

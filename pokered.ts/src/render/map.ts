@@ -1,3 +1,4 @@
+import { DebugData } from "../game";
 import { ImageCache } from "../gfx/images";
 import { Map } from "../map";
 import { getBlockIndexAtPosition } from "../overworld/map";
@@ -13,7 +14,8 @@ export function renderOverworld(
   images: ImageCache,
   currentMap: Map,
   cache: OverworldCache,
-  playerSprite: Sprite
+  playerSprite: Sprite,
+  debug: DebugData
 ) {
   const PLAYER_OFFSET = 4;
   const TILE_SIZE = 16; // each tile is 16x16
@@ -52,11 +54,6 @@ export function renderOverworld(
     cache.current.mapImage.width,
     cache.current.mapImage.height
   );
-  // draw current block outline
-  const { x, y } = playerSprite.position;
-  const block = getBlockIndexAtPosition(currentMap, x, y);
-  const xOff = (block % currentMap.width) * 32;
-  const yOffset = Math.floor(block / currentMap.width) * 32;
 
   const ct = temp.getContext("2d");
   if (ct) {
@@ -65,10 +62,27 @@ export function renderOverworld(
     // draw map objects to image
     ct.drawImage(cache.current.objectsImage, 0, 0);
 
-    ct.strokeStyle = "red";
-    ct.lineWidth = 1;
-    //console.log(xOff, yOffset);
-    ct.strokeRect(xOff, yOffset, 32, 32);
+    // draw current block outline if we are debugging
+    if (debug.showMapOutlines) {
+      const { x, y } = playerSprite.position;
+      const block = getBlockIndexAtPosition(currentMap, x, y);
+      const xOff = (block % currentMap.width) * 32;
+      const yOffset = Math.floor(block / currentMap.width) * 32;
+      ct.strokeStyle = "red";
+      ct.lineWidth = 1;
+      //console.log(xOff, yOffset);
+      ct.strokeRect(xOff, yOffset, 32, 32);
+      // stroke whole map
+      ct.strokeStyle = "purple";
+      ct.lineWidth = 2;
+      ct.strokeRect(
+        0,
+        0,
+        cache.current.mapImage.width,
+        cache.current.mapImage.height
+      );
+    }
+
     // Draw the map relative to the player's position within it.
     screen.drawImage(temp, dx, dy);
   }
@@ -104,11 +118,14 @@ export function renderOverworld(
     //
   }
 
+  // If walking on walls, draw the player at half opacity to make it obvious
+  if (debug.walkOnWalls) screen.globalAlpha = 0.5;
   // Finally, draw the player sprite to the screen on top of everything.
   // The map is seemingly always rendered relative to the player.
   // The player is centered 4 tiles over, and 4 tiles down
   // The player is also offset by 4(?) pixels in the Y direction, so he's not perfectly centered.
   drawSprite(screen, playerSprite, images, PLAYER_OFFSET, PLAYER_OFFSET, 0, -4);
+  if (debug.walkOnWalls) screen.globalAlpha = 1;
 }
 
 /*

@@ -287,6 +287,10 @@ class PokemonRed {
       setSprite: (sprite) => {
         console.log("Set player sprite: ", sprite);
         this.#updateDebugState();
+      },
+      setShowMapOutlines: (value) => {
+        this.#data.debug.showMapOutlines = value;
+        this.#updateDebugState();
       }
     };
   }

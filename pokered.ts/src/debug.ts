@@ -6,6 +6,7 @@ import { SpriteName } from "./sprite";
 export type DebugCallbacks = {
   setMap: (map: MapName, x: number, y: number) => void;
   setWalkOnWalls: (value: boolean) => void;
+  setShowMapOutlines: (value: boolean) => void;
   setSprite: (sprite: SpriteName) => void;
 };
 

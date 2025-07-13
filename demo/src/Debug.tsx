@@ -1,16 +1,11 @@
-import { useCallback, useState } from "react";
 import {
   Stack,
-  Button,
   Text,
   Card,
   ScrollArea,
   Title,
   Checkbox,
   Select,
-  Group,
-  NumberInput,
-  type ComboboxItem,
 } from "@mantine/core";
 import { MapName, type DebugCallbacks, type DebugState } from "pokered.ts";
 import { WarpTo } from "./debug/WarpTo";
@@ -46,7 +41,9 @@ export default function GameDebugPanel({ state, callbacks }: DebugProps) {
           <Checkbox
             label="Show Block/Map Outlines"
             checked={state.showMapOutlines}
-            onChange={(e) => callbacks.setWalkOnWalls(e.currentTarget.checked)}
+            onChange={(e) =>
+              callbacks.setShowMapOutlines(e.currentTarget.checked)
+            }
             mt="xs"
           />
         </Card>

@@ -121,7 +121,8 @@ export class Renderer {
         this.#images,
         game.map.currentMap,
         this.#overworldCache,
-        game.player.sprite
+        game.player.sprite,
+        game.debug
       );
     }
   }
