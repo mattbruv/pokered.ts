@@ -4,7 +4,7 @@ import { Map } from "../map";
 import { getBlockIndexAtPosition } from "../overworld/map";
 import { getBlockSet, getTilesetImage, Tileset } from "../tileset";
 import { OverworldCache } from "./renderer";
-import { drawSprite, FacingDirection, Sprite } from "./sprite";
+import { drawSprite, FacingDirection, MovementStatus, Sprite } from "./sprite";
 
 export const TILE_SIZE_PX = 8;
 export const BLOCK_SIZE_PX = TILE_SIZE_PX * 4;
@@ -68,9 +68,32 @@ export function renderOverworld(
       const block = getBlockIndexAtPosition(currentMap, x, y);
       const xOff = (block % currentMap.width) * 32;
       const yOffset = Math.floor(block / currentMap.width) * 32;
-      ct.strokeStyle = "red";
-      ct.lineWidth = 1;
       //console.log(xOff, yOffset);
+      // Let's render tiles we are debugging and the player isn't walking.
+      if (playerSprite.movementStatus === MovementStatus.Ready) {
+        ct.globalAlpha = 0.5;
+        if (debug.currentTile && debug.currentTile.inBounds) {
+          ct.fillStyle = "cyan";
+          const baseX = (debug.currentTile.blockIndex % currentMap.width) * 32;
+          const baseY =
+            Math.floor(debug.currentTile.blockIndex / currentMap.width) * 32;
+          const dx = debug.currentTile.blockX * 16;
+          const dy = debug.currentTile.blockY * 16;
+          ct.fillRect(baseX + dx, baseY + dy, 8, 8);
+        }
+        if (debug.nextTile && debug.nextTile.inBounds) {
+          ct.fillStyle = "magenta";
+          const baseX = (debug.nextTile.blockIndex % currentMap.width) * 32;
+          const baseY =
+            Math.floor(debug.nextTile.blockIndex / currentMap.width) * 32;
+          const dx = debug.nextTile.blockX * 16;
+          const dy = debug.nextTile.blockY * 16;
+          ct.fillRect(baseX + dx, baseY + dy, 8, 8);
+        }
+        ct.globalAlpha = 1;
+      }
+      ct.lineWidth = 1;
+      ct.strokeStyle = "red";
       ct.strokeRect(xOff, yOffset, 32, 32);
       // stroke whole map
       ct.strokeStyle = "purple";

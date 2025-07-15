@@ -35,6 +35,9 @@ export function isInBounds(map: Map, tileX: number, tileY: number) {
 }
 
 type TileMeta = {
+  blockIndex: number;
+  blockX: number;
+  blockY: number;
   tileId: number;
 };
 
@@ -99,7 +102,10 @@ export function probeTile(map: Map, tileX: number, tileY: number): TileProbe {
     inBounds: true,
     canWalk: passableTiles.includes(tileId),
     canSurf: SURF_TILES.includes(tileId),
-    tileId: tileId
+    tileId: tileId,
+    blockIndex: mapBlockIndex,
+    blockX,
+    blockY
   };
 }
 
