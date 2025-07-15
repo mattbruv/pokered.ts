@@ -1,6 +1,6 @@
 import { GameData } from "./game";
 import { MapName } from "./map";
-import { getBlockIndexAtPosition } from "./overworld/map";
+import { getBlockIndexAtPosition, TileProbe } from "./overworld/map";
 import { OverworldSprite, SpriteName } from "./sprite";
 
 export type DebugCallbacks = {
@@ -21,6 +21,8 @@ export type DebugState = {
   map: {
     name: MapName;
   };
+  currentTile: TileProbe | null;
+  nextTile: TileProbe | null;
   block: {
     index: number;
     id: number;
@@ -40,6 +42,8 @@ export function getDebugState(data: GameData): DebugState {
     map: {
       name: data.map.currentMapName
     },
+    currentTile: data.debug.currentTile,
+    nextTile: data.debug.nextTile,
     block: {
       id: 0,
       index: getBlockIndexAtPosition(data.map.currentMap, pos.x, pos.y),

@@ -34,8 +34,16 @@ export function isInBounds(map: Map, tileX: number, tileY: number) {
   );
 }
 
+type TileMeta = {
+  tileId: number;
+};
+
 export type TileProbe =
-  | { inBounds: true; canWalk: boolean; tileId: number; canSurf: boolean }
+  | ({
+      inBounds: true;
+      canWalk: boolean;
+      canSurf: boolean;
+    } & TileMeta)
   | { inBounds: false; canWalk: false; canSurf: false };
 
 const SURF_TILES = [50, 20];

@@ -3,7 +3,12 @@ import { ImageCache, loadImageBitmaps } from "./gfx/images";
 import { GameInput } from "./input";
 import { Map, MapName } from "./map";
 import { getMap } from "./mapLookup";
-import { checkMapConnections, probeTile, getWarpAtPos } from "./overworld/map";
+import {
+  checkMapConnections,
+  probeTile,
+  getWarpAtPos,
+  TileProbe
+} from "./overworld/map";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, Sprite } from "./render/sprite";
 import { getOverworldSpriteKey } from "./sprite";
@@ -26,6 +31,8 @@ export type PlayerData = {
 export type DebugData = {
   showMapOutlines: boolean;
   walkOnWalls: boolean;
+  currentTile: TileProbe | null;
+  nextTile: TileProbe | null;
 };
 
 export type GameData = {
@@ -121,6 +128,13 @@ class PokemonRed {
 
       if (xDiff || yDiff) {
         const nextTile = probeTile(this.#data.map.currentMap, dx, dy);
+        const nextNextTile = probeTile(
+          this.#data.map.currentMap,
+          dx + xDiff,
+          dy + yDiff
+        );
+        this.#data.debug.currentTile = nextTile;
+        this.#data.debug.nextTile = nextNextTile;
 
         if (
           this.#data.debug.walkOnWalls ||
@@ -213,6 +227,9 @@ class PokemonRed {
     this.#data.map.currentMapName = nextMapName;
     this.#data.map.currentMap = nextMap;
 
+    this.#data.debug.currentTile = null;
+    this.#data.debug.nextTile = null;
+
     this.#data.map.currentMapSprites = nextMap.objects.objects.map(
       (obj): Sprite => {
         const img = getOverworldSpriteKey(obj.sprite);
@@ -265,7 +282,9 @@ class PokemonRed {
       },
       debug: {
         showMapOutlines: false,
-        walkOnWalls: false
+        walkOnWalls: false,
+        currentTile: null,
+        nextTile: null
       }
     };
 

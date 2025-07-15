@@ -1,18 +1,6 @@
 import { useDisclosure } from "@mantine/hooks";
-import {
-  Modal,
-  Button,
-  Select,
-  Text,
-  Group,
-  NumberInput,
-  type ComboboxItem,
-} from "@mantine/core";
-import { MapName, OverworldSprite } from "pokered.ts";
-import { useState } from "react";
-import { useCallback } from "react";
-
-type WarpCallback = (map: MapName, x: number, y: number) => void;
+import { Modal, Button, Select, Text, type ComboboxItem } from "@mantine/core";
+import { OverworldSprite } from "pokered.ts";
 
 const spriteData: ComboboxItem[] = Object.keys(OverworldSprite)
   .filter((key) => isNaN(Number(key))) // keep string keys only
