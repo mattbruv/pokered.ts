@@ -17,7 +17,15 @@ type DebugProps = {
   callbacks: DebugCallbacks;
 };
 
-function Tile({ tile, name }: { tile: TileProbe; name: string }) {
+function Tile({
+  tile,
+  name,
+  color,
+}: {
+  tile: TileProbe;
+  name: string;
+  color: string;
+}) {
   return (
     <div>
       <Text fw={500}>{name} Tile</Text>
@@ -28,7 +36,11 @@ function Tile({ tile, name }: { tile: TileProbe; name: string }) {
         Surf: {tile.canSurf ? "true" : "false"}
       </Text>
       <Text size="sm">In Bounds: {tile.inBounds ? "true" : "false"}</Text>
-      {tile.inBounds && <Text size="sm">Tile Id: {tile.tileId}</Text>}
+      {tile.inBounds && (
+        <Text style={{ color }} size="sm">
+          Tile Id: {tile.tileId}
+        </Text>
+      )}
     </div>
   );
 }
@@ -76,9 +88,11 @@ export default function GameDebugPanel({ state, callbacks }: DebugProps) {
               <Text size="xs">Current Tile ID: {state.map.name}</Text>
             </Stack>
             {state.currentTile && (
-              <Tile name="Current" tile={state.currentTile} />
+              <Tile color="blue" name="Current" tile={state.currentTile} />
             )}
-            {state.nextTile && <Tile name="Next" tile={state.nextTile} />}
+            {state.nextTile && (
+              <Tile color="magenta" name="Next" tile={state.nextTile} />
+            )}
           </Group>
         </Card>
 

@@ -70,15 +70,15 @@ export function renderOverworld(
       const yOffset = Math.floor(block / currentMap.width) * 32;
       //console.log(xOff, yOffset);
       // Let's render tiles we are debugging and the player isn't walking.
-      if (playerSprite.movementStatus === MovementStatus.Ready) {
+      if (true) {
         ct.globalAlpha = 0.5;
         if (debug.currentTile && debug.currentTile.inBounds) {
-          ct.fillStyle = "cyan";
+          ct.fillStyle = "blue";
           const baseX = (debug.currentTile.blockIndex % currentMap.width) * 32;
           const baseY =
             Math.floor(debug.currentTile.blockIndex / currentMap.width) * 32;
           const dx = debug.currentTile.blockX * 16;
-          const dy = debug.currentTile.blockY * 16;
+          const dy = debug.currentTile.blockY * 16 + 8;
           ct.fillRect(baseX + dx, baseY + dy, 8, 8);
         }
         if (debug.nextTile && debug.nextTile.inBounds) {
@@ -87,13 +87,13 @@ export function renderOverworld(
           const baseY =
             Math.floor(debug.nextTile.blockIndex / currentMap.width) * 32;
           const dx = debug.nextTile.blockX * 16;
-          const dy = debug.nextTile.blockY * 16;
+          const dy = debug.nextTile.blockY * 16 + 8;
           ct.fillRect(baseX + dx, baseY + dy, 8, 8);
         }
         ct.globalAlpha = 1;
       }
       ct.lineWidth = 1;
-      ct.strokeStyle = "red";
+      ct.strokeStyle = "yellow";
       ct.strokeRect(xOff, yOffset, 32, 32);
       // stroke whole map
       ct.strokeStyle = "purple";

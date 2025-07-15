@@ -133,14 +133,14 @@ class PokemonRed {
           dx + xDiff,
           dy + yDiff
         );
-        this.#data.debug.currentTile = nextTile;
-        this.#data.debug.nextTile = nextNextTile;
 
         if (
           this.#data.debug.walkOnWalls ||
           nextTile.canWalk ||
           nextTile.canSurf
         ) {
+          this.#data.debug.currentTile = nextTile;
+          this.#data.debug.nextTile = nextNextTile;
           player.image = nextTile.canSurf ? player.imageSurf : player.imageWalk;
 
           if (xDiff) {
