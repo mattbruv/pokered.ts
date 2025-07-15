@@ -126,7 +126,8 @@ class PokemonRed {
       const dx = player.position.x + xDiff;
       const dy = player.position.y + yDiff;
 
-      if (xDiff || yDiff) {
+      // Only allow the player to press one key at a time to register walking
+      if ((xDiff && !yDiff) || (yDiff && !xDiff)) {
         const nextTile = probeTile(this.#data.map.currentMap, dx, dy);
         const nextNextTile = probeTile(
           this.#data.map.currentMap,
