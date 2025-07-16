@@ -15,7 +15,7 @@ function App() {
     null
   );
   const [debugState, setDebugState] = useState<DebugState | null>(null);
-  const [showDebug, setShowDebug] = useState(false);
+  const [showDebug, setShowDebug] = useState(true);
 
   const hasInitialized = useRef(false);
 

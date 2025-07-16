@@ -9,16 +9,24 @@ const KEY_MAP: Record<GameKey, Set<string>> = {
   Right: new Set(["ArrowRight"])
 };
 
+type DebugCallbacks = {
+  toggleWalkOnWalls: () => void;
+};
+
 export class GameInput {
   #pressed = new Set<string>();
 
-  constructor() {
+  constructor(callbacks: DebugCallbacks) {
     window.addEventListener("keydown", (e) => {
       this.#pressed.add(e.key);
     });
 
     window.addEventListener("keyup", (e) => {
       this.#pressed.delete(e.key);
+
+      if (e.key == "w") {
+        callbacks.toggleWalkOnWalls();
+      }
     });
   }
 

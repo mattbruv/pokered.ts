@@ -38,7 +38,7 @@ function Tile({
       <Text size="sm">In Bounds: {tile.inBounds ? "true" : "false"}</Text>
       {tile.inBounds && (
         <Text style={{ color }} size="sm">
-          Tile Id: {tile.tileId}
+          Tile Id: {tile.tileId} (${tile.tileId.toString(16)})
         </Text>
       )}
     </div>

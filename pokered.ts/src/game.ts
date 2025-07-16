@@ -66,7 +66,12 @@ class PokemonRed {
     callbacks: PokemonRedCallbacks | undefined
   ) {
     this.#renderer = new Renderer(cache, canvas);
-    this.#input = new GameInput();
+    this.#input = new GameInput({
+      toggleWalkOnWalls: () => {
+        this.#data.debug.walkOnWalls = !this.#data.debug.walkOnWalls;
+        this.#updateDebugState();
+      }
+    });
     this.#data = this.#loadGame();
     this.#callbacks = callbacks;
     this.#loadMap(this.#data.map.currentMapName);
