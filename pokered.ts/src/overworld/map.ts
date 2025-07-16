@@ -99,9 +99,10 @@ function checkForJumpingAndTilePairCollisions(
 
   // If the player is currently surfing,
   // there is a different tile pair set
-  const tilePairs = currentTile.canSurf
-    ? TILE_PAIR_COLLISIONS_WATER
-    : TILE_PAIR_COLLISIONS_LAND;
+  const tilePairs =
+    currentTile.canSurf || nextTile.canSurf
+      ? TILE_PAIR_COLLISIONS_WATER
+      : TILE_PAIR_COLLISIONS_LAND;
 
   // Check to see if the tileset/tile/next tile combo is in collidable combos
   return tilePairs.some(
