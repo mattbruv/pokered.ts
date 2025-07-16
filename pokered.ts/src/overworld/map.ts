@@ -1,6 +1,6 @@
 import { Map, MapConnections, Warp } from "../map";
 import { getMap } from "../mapLookup";
-import { getBlockSet, getTileCollisions } from "../tileset";
+import { getBlockSet, getTileCollisions, Tileset } from "../tileset";
 
 type ConnectionDir = {
   dir: keyof MapConnections;
@@ -49,7 +49,18 @@ export type TileProbe =
     } & TileMeta)
   | { inBounds: false; canWalk: false; canSurf: false };
 
-const SURF_TILES = [50, 20];
+// See IsNextTileShoreOrWater
+const WATER_TILESETS: Tileset[] = [
+  Tileset.OVERWORLD,
+  Tileset.FOREST,
+  Tileset.DOJO,
+  Tileset.GYM,
+  Tileset.SHIP,
+  Tileset.SHIP_PORT,
+  Tileset.CAVERN,
+  Tileset.FACILITY,
+  Tileset.PLATEAU
+];
 
 export function probeTile(map: Map, tileX: number, tileY: number): TileProbe {
   // If the user is about to walk about of bounds,
@@ -98,10 +109,20 @@ export function probeTile(map: Map, tileX: number, tileY: number): TileProbe {
   const tileId = block[tileIndex];
   const passableTiles = getTileCollisions(map.tileset);
 
+  // See CollisionCheckOnWater
+  const isWaterTile =
+    tileId == 20 ||
+    // either the left tile of the S.S. Anne boarding platform
+    // or the tile on eastern coastlines (depending on the current tileset)
+    (tileId == 50 && map.tileset !== Tileset.SHIP_PORT) ||
+    tileId == 72; // tile on right on coast lines in Safari Zone
+
+  const canSurf = WATER_TILESETS.includes(map.tileset) && isWaterTile;
+
   return {
     inBounds: true,
     canWalk: passableTiles.includes(tileId),
-    canSurf: SURF_TILES.includes(tileId),
+    canSurf,
     tileId: tileId,
     blockIndex: mapBlockIndex,
     blockX,
