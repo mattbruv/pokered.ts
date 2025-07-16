@@ -70,28 +70,35 @@ export function renderOverworld(
       const yOffset = Math.floor(block / currentMap.width) * 32;
       //console.log(xOff, yOffset);
       // Let's render tiles we are debugging and the player isn't walking.
-      if (true) {
-        ct.globalAlpha = 0.5;
-        if (debug.currentTile && debug.currentTile.inBounds) {
-          ct.fillStyle = "blue";
-          const baseX = (debug.currentTile.blockIndex % currentMap.width) * 32;
-          const baseY =
-            Math.floor(debug.currentTile.blockIndex / currentMap.width) * 32;
-          const dx = debug.currentTile.blockX * 16;
-          const dy = debug.currentTile.blockY * 16 + 8;
-          ct.fillRect(baseX + dx, baseY + dy, 8, 8);
-        }
-        if (debug.nextTile && debug.nextTile.inBounds) {
-          ct.fillStyle = "magenta";
-          const baseX = (debug.nextTile.blockIndex % currentMap.width) * 32;
-          const baseY =
-            Math.floor(debug.nextTile.blockIndex / currentMap.width) * 32;
-          const dx = debug.nextTile.blockX * 16;
-          const dy = debug.nextTile.blockY * 16 + 8;
-          ct.fillRect(baseX + dx, baseY + dy, 8, 8);
-        }
-        ct.globalAlpha = 1;
+      ct.globalAlpha = 0.5;
+
+      // render warps
+      ct.strokeStyle = "cyan";
+      ct.lineWidth = 1;
+      for (const warp of currentMap.objects.warps) {
+        const { x, y } = warp;
+        ct.strokeRect(x * 16, y * 16, 16, 16);
       }
+
+      if (debug.currentTile && debug.currentTile.inBounds) {
+        ct.fillStyle = "blue";
+        const baseX = (debug.currentTile.blockIndex % currentMap.width) * 32;
+        const baseY =
+          Math.floor(debug.currentTile.blockIndex / currentMap.width) * 32;
+        const dx = debug.currentTile.blockX * 16;
+        const dy = debug.currentTile.blockY * 16 + 8;
+        ct.fillRect(baseX + dx, baseY + dy, 8, 8);
+      }
+      if (debug.nextTile && debug.nextTile.inBounds) {
+        ct.fillStyle = "magenta";
+        const baseX = (debug.nextTile.blockIndex % currentMap.width) * 32;
+        const baseY =
+          Math.floor(debug.nextTile.blockIndex / currentMap.width) * 32;
+        const dx = debug.nextTile.blockX * 16;
+        const dy = debug.nextTile.blockY * 16 + 8;
+        ct.fillRect(baseX + dx, baseY + dy, 8, 8);
+      }
+      ct.globalAlpha = 1;
       ct.lineWidth = 1;
       ct.strokeStyle = "yellow";
       ct.strokeRect(xOff, yOffset, 32, 32);
