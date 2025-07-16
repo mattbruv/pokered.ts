@@ -97,10 +97,21 @@ function checkForJumpingAndTilePairCollisions(
   // Return OK if there is no next tile
   if (!currentTile.inBounds || !nextTile.inBounds) return false;
 
+  // If the player is currently surfing,
+  // there is a different tile pair set
+  const tilePairs = currentTile.canSurf
+    ? TILE_PAIR_COLLISIONS_WATER
+    : TILE_PAIR_COLLISIONS_LAND;
+
   // Check to see if the tileset/tile/next tile combo is in collidable combos
-  return TILE_PAIR_COLLISIONS_LAND.some(
+  return tilePairs.some(
     ([t1, t2, t3]) =>
-      t1 == tileset && t2 == currentTile.tileId && t3 == nextTile.tileId
+      (t1 == tileset && t2 == currentTile.tileId && t3 == nextTile.tileId) ||
+      // also the game seems to check inverse
+      // For example, the above checks A -> B
+      // but we also want to check if we're going from B -> A
+      // SeafoamIslandsB2F has examples of these elevation changes in both directions
+      (t1 == tileset && t3 == currentTile.tileId && t2 == nextTile.tileId)
   );
 }
 
