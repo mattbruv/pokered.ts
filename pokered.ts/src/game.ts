@@ -7,7 +7,8 @@ import {
   checkMapConnections,
   probeTile,
   getWarpAtPos,
-  TileProbe
+  TileProbe,
+  collisionLandCheck
 } from "./overworld/map";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, Sprite } from "./render/sprite";
@@ -128,11 +129,13 @@ class PokemonRed {
       // get position offset at x/y diff
       // get tile at that pos
       // if in collidables, don't move
+      const { x, y } = player.position;
       const dx = player.position.x + xDiff;
       const dy = player.position.y + yDiff;
 
       // Only allow the player to press one key at a time to register walking
       if ((xDiff && !yDiff) || (yDiff && !xDiff)) {
+        const currentTile = probeTile(this.#data.map.currentMap, x, y);
         const nextTile = probeTile(this.#data.map.currentMap, dx, dy);
         const nextNextTile = probeTile(
           this.#data.map.currentMap,
@@ -140,11 +143,13 @@ class PokemonRed {
           dy + yDiff
         );
 
-        if (
-          this.#data.debug.walkOnWalls ||
-          nextTile.canWalk ||
-          nextTile.canSurf
-        ) {
+        const collisionCheck = collisionLandCheck(
+          this.#data.map.currentMap.tileset,
+          currentTile,
+          nextTile
+        );
+
+        if (!collisionCheck || this.#data.debug.walkOnWalls) {
           this.#data.debug.currentTile = nextTile;
           this.#data.debug.nextTile = nextNextTile;
           player.image = nextTile.canSurf ? player.imageSurf : player.imageWalk;

@@ -62,6 +62,66 @@ const WATER_TILESETS: Tileset[] = [
   Tileset.PLATEAU
 ];
 
+type TilePair = [Tileset, number, number];
+
+const TILE_PAIR_COLLISIONS_LAND: TilePair[] = [
+  [Tileset.CAVERN, 0x20, 0x05],
+  [Tileset.CAVERN, 0x41, 0x05],
+  [Tileset.FOREST, 0x30, 0x2e],
+  [Tileset.CAVERN, 0x2a, 0x05],
+  [Tileset.CAVERN, 0x05, 0x21],
+  [Tileset.FOREST, 0x52, 0x2e],
+  [Tileset.FOREST, 0x55, 0x2e],
+  [Tileset.FOREST, 0x56, 0x2e],
+  [Tileset.FOREST, 0x20, 0x2e],
+  [Tileset.FOREST, 0x5e, 0x2e],
+  [Tileset.FOREST, 0x5f, 0x2e]
+];
+
+const TILE_PAIR_COLLISIONS_WATER: TilePair[] = [
+  [Tileset.FOREST, 0x14, 0x2e],
+  [Tileset.FOREST, 0x48, 0x2e],
+  [Tileset.CAVERN, 0x14, 0x05]
+];
+
+/**
+ * checks if the player is going to jump down a small ledge
+ * and check for collisions that only occur between certain pairs of tiles
+ * @returns True if there is a collision
+ */
+function checkForJumpingAndTilePairCollisions(
+  tileset: Tileset,
+  currentTile: TileProbe,
+  nextTile: TileProbe
+): boolean {
+  // Return OK if there is no next tile
+  if (!currentTile.inBounds || !nextTile.inBounds) return false;
+
+  // Check to see if the tileset/tile/next tile combo is in collidable combos
+  return TILE_PAIR_COLLISIONS_LAND.some(
+    ([t1, t2, t3]) =>
+      t1 == tileset && t2 == currentTile.tileId && t3 == nextTile.tileId
+  );
+}
+
+// See CollisionCheckOnLand
+export function collisionLandCheck(
+  tileset: Tileset,
+  currentTile: TileProbe,
+  nextTile: TileProbe
+): boolean {
+  // Check for ledge jumps or special tile pairs
+  if (checkForJumpingAndTilePairCollisions(tileset, currentTile, nextTile)) {
+    return true;
+  }
+
+  // Do single tile collision
+  if (nextTile.canWalk) return false;
+  if (nextTile.canSurf) return false;
+
+  return true;
+}
+
 export function probeTile(map: Map, tileX: number, tileY: number): TileProbe {
   // If the user is about to walk about of bounds,
   // it means that they are about to walk over to a connecting map

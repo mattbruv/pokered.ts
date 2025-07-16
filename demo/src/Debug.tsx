@@ -57,7 +57,7 @@ export default function GameDebugPanel({ state, callbacks }: DebugProps) {
             Toggles
           </Text>
           <Checkbox
-            label="Walk Through Walls"
+            label="Walk Through Walls (w)"
             checked={state.walkOnWalls}
             onChange={(e) => callbacks.setWalkOnWalls(e.currentTarget.checked)}
           />
