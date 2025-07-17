@@ -149,20 +149,18 @@ class PokemonRed {
           nextTile
         );
 
+        if (xDiff) {
+          player.facing =
+            xDiff > 0 ? FacingDirection.Right : FacingDirection.Left;
+        } else if (yDiff) {
+          player.facing = yDiff > 0 ? FacingDirection.Down : FacingDirection.Up;
+        }
+
         if (!collisionCheck || this.#data.debug.walkOnWalls) {
           this.#data.debug.currentTile = nextTile;
           this.#data.debug.nextTile = nextNextTile;
           player.image = nextTile.canSurf ? player.imageSurf : player.imageWalk;
-
-          if (xDiff) {
-            player.movementStatus = MovementStatus.Moving;
-            player.facing =
-              xDiff > 0 ? FacingDirection.Right : FacingDirection.Left;
-          } else if (yDiff) {
-            player.movementStatus = MovementStatus.Moving;
-            player.facing =
-              yDiff > 0 ? FacingDirection.Down : FacingDirection.Up;
-          }
+          player.movementStatus = MovementStatus.Moving;
         }
       }
     }
