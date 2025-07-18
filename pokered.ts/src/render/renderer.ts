@@ -1,6 +1,6 @@
 import { GameData } from "../game";
 import { ImageCache } from "../gfx/images";
-import { getMapImage, renderOverworld } from "./map";
+import { getMapRender, renderOverworld } from "./map";
 import { Map } from "../map";
 import { getMap } from "../mapLookup";
 import { getObjectsImage } from "./objects";
@@ -11,6 +11,7 @@ const SCREEN_HEIGHT = 144;
 
 export type MapCache = {
   mapImage: OffscreenCanvas;
+  flowers: [OffscreenCanvas, OffscreenCanvas, OffscreenCanvas] | null;
   objectsImage: OffscreenCanvas;
 };
 
@@ -35,6 +36,7 @@ export class Renderer {
     this.#overworldCache = {
       current: {
         mapImage: new OffscreenCanvas(0, 0),
+        flowers: null,
         objectsImage: new OffscreenCanvas(0, 0)
       },
       outOfBounds: new OffscreenCanvas(0, 0)
@@ -57,13 +59,15 @@ export class Renderer {
   // When the player walks into/loads a new map,
   // load the adjacent maps and cache some stuff
   loadMap(map: Map, sprites: Sprite[]) {
-    this.#overworldCache.current.mapImage = getMapImage(
+    const mapImage = getMapRender(
       map.width,
       map.height,
       map.tileset,
       map.blocks,
       this.#images
     );
+
+    this.#overworldCache.current.mapImage = mapImage.map;
 
     this.#overworldCache.current.objectsImage = getObjectsImage(
       map,
@@ -77,14 +81,17 @@ export class Renderer {
       const connection = map.connections[dir];
       if (connection?.map) {
         const connMap = getMap(connection.map);
+        const mapRender = getMapRender(
+          connMap.width,
+          connMap.height,
+          connMap.tileset,
+          connMap.blocks,
+          this.#images
+        );
+
         this.#overworldCache[dir] = {
-          mapImage: getMapImage(
-            connMap.width,
-            connMap.height,
-            connMap.tileset,
-            connMap.blocks,
-            this.#images
-          ),
+          mapImage: mapRender.map,
+          flowers: mapRender.flowers,
           objectsImage: getObjectsImage(connMap, sprites, this.#images)
         };
       } else {
@@ -100,13 +107,8 @@ export class Renderer {
     const w = 7;
     const h = 7;
     const oobBlocks = Array.from({ length: w * h }, (_) => map.borderBlock);
-    this.#overworldCache.outOfBounds = getMapImage(
-      w,
-      h,
-      map.tileset,
-      oobBlocks,
-      this.#images
-    );
+    const mapRender = getMapRender(w, h, map.tileset, oobBlocks, this.#images);
+    this.#overworldCache.outOfBounds = mapRender.map;
   }
 
   render(game: GameData) {

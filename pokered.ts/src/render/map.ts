@@ -2,6 +2,7 @@ import { DebugData } from "../game";
 import { ImageCache } from "../gfx/images";
 import { Map } from "../map";
 import { getBlockIndexAtPosition } from "../overworld/map";
+import { SpriteName } from "../sprite";
 import { getBlockSet, getTilesetImage, Tileset } from "../tileset";
 import { OverworldCache } from "./renderer";
 import { drawSprite, FacingDirection, MovementStatus, Sprite } from "./sprite";
@@ -158,6 +159,19 @@ export function renderOverworld(
   if (debug.walkOnWalls) screen.globalAlpha = 1;
 }
 
+export type FlowerCache = [OffscreenCanvas, OffscreenCanvas, OffscreenCanvas];
+
+const FLOWER_SPRITES: (keyof ImageCache)[] = [
+  "tilesets-flower-flower1",
+  "tilesets-flower-flower2",
+  "tilesets-flower-flower3"
+];
+
+export type MapRender = {
+  map: OffscreenCanvas;
+  flowers: FlowerCache | null;
+};
+
 /*
 1. Find its tileset in its header (stored at data/maps/headers/
 2. Read the tileset in as a 2 bits per pixel format file.
@@ -173,22 +187,34 @@ export function renderOverworld(
     Each byte in the map file is an index into the blockset for the block to show at that location.
     Maps are also read from top-left to bottom-right
 */
-export function getMapImage(
+export function getMapRender(
   width: number,
   height: number,
   tilesetName: Tileset,
   blocks: number[],
   images: ImageCache
-): OffscreenCanvas {
+): MapRender {
   const blockset = getBlockSet(tilesetName);
   const tileset = getTilesetImage(tilesetName, images);
 
   const TILES_PER_ROW = tileset.width / TILE_SIZE_PX;
 
-  const canvas = new OffscreenCanvas(
-    width * BLOCK_SIZE_PX,
-    height * BLOCK_SIZE_PX
-  );
+  const newMapCanvas = () =>
+    new OffscreenCanvas(width * BLOCK_SIZE_PX, height * BLOCK_SIZE_PX);
+
+  const canvas = newMapCanvas();
+
+  // also we want to render out each flower animation
+  const flower1 = newMapCanvas();
+  const flower2 = newMapCanvas();
+  const flower3 = newMapCanvas();
+
+  const inOverworld = tilesetName === Tileset.OVERWORLD;
+
+  const mapFlowers: FlowerCache | null = inOverworld
+    ? [flower1, flower2, flower3]
+    : null;
+
   const ctx = canvas.getContext("2d");
 
   for (let blockY = 0; blockY < height; blockY++) {
@@ -221,10 +247,23 @@ export function getMapImage(
             TILE_SIZE_PX,
             TILE_SIZE_PX
           );
+
+          // If this is a flower tile, render out our flowers.
+          if (inOverworld && mapFlowers && tile === 3) {
+            for (let i = 0; i < 3; i++) {
+              const flowerMap = mapFlowers[i];
+              const flowerImage = images[FLOWER_SPRITES[i]];
+              const flowerCtx = flowerMap.getContext("2d");
+              flowerCtx?.drawImage(flowerImage, 0, 0, 8, 8, dx, dy, 8, 8);
+            }
+          }
         }
       }
     }
   }
 
-  return canvas;
+  return {
+    map: canvas,
+    flowers: mapFlowers
+  };
 }
