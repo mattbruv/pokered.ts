@@ -2,7 +2,6 @@ import { DebugData } from "../game";
 import { ImageCache } from "../gfx/images";
 import { Map } from "../map";
 import { getBlockIndexAtPosition } from "../overworld/map";
-import { SpriteName } from "../sprite";
 import { getBlockSet, getTilesetImage, Tileset } from "../tileset";
 import { OverworldCache } from "./renderer";
 import { drawSprite, FacingDirection, MovementStatus, Sprite } from "./sprite";
@@ -16,6 +15,7 @@ export function renderOverworld(
   currentMap: Map,
   cache: OverworldCache,
   playerSprite: Sprite,
+  flowerIndex: number,
   debug: DebugData
 ) {
   const PLAYER_OFFSET = 4;
@@ -59,6 +59,12 @@ export function renderOverworld(
   const ct = temp.getContext("2d");
   if (ct) {
     ct.drawImage(cache.current.mapImage, 0, 0);
+
+    // If we have flowers, draw their current animation
+    if (cache.current.flowers) {
+      const flower = cache.current.flowers[flowerIndex];
+      ct.drawImage(flower, 0, 0);
+    }
 
     // draw map objects to image
     ct.drawImage(cache.current.objectsImage, 0, 0);
@@ -168,7 +174,7 @@ const FLOWER_SPRITES: (keyof ImageCache)[] = [
 ];
 
 export type MapRender = {
-  map: OffscreenCanvas;
+  mapImage: OffscreenCanvas;
   flowers: FlowerCache | null;
 };
 
@@ -263,7 +269,7 @@ export function getMapRender(
   }
 
   return {
-    map: canvas,
+    mapImage: canvas,
     flowers: mapFlowers
   };
 }

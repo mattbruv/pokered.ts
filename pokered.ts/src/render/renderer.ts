@@ -59,7 +59,7 @@ export class Renderer {
   // When the player walks into/loads a new map,
   // load the adjacent maps and cache some stuff
   loadMap(map: Map, sprites: Sprite[]) {
-    const mapImage = getMapRender(
+    const mapRender = getMapRender(
       map.width,
       map.height,
       map.tileset,
@@ -67,7 +67,8 @@ export class Renderer {
       this.#images
     );
 
-    this.#overworldCache.current.mapImage = mapImage.map;
+    this.#overworldCache.current.mapImage = mapRender.mapImage;
+    this.#overworldCache.current.flowers = mapRender.flowers;
 
     this.#overworldCache.current.objectsImage = getObjectsImage(
       map,
@@ -90,7 +91,7 @@ export class Renderer {
         );
 
         this.#overworldCache[dir] = {
-          mapImage: mapRender.map,
+          mapImage: mapRender.mapImage,
           flowers: mapRender.flowers,
           objectsImage: getObjectsImage(connMap, sprites, this.#images)
         };
@@ -107,8 +108,8 @@ export class Renderer {
     const w = 7;
     const h = 7;
     const oobBlocks = Array.from({ length: w * h }, (_) => map.borderBlock);
-    const mapRender = getMapRender(w, h, map.tileset, oobBlocks, this.#images);
-    this.#overworldCache.outOfBounds = mapRender.map;
+    const oobRender = getMapRender(w, h, map.tileset, oobBlocks, this.#images);
+    this.#overworldCache.outOfBounds = oobRender.mapImage;
   }
 
   render(game: GameData) {
@@ -124,6 +125,7 @@ export class Renderer {
         game.map.currentMap,
         this.#overworldCache,
         game.player.sprite,
+        game.map.flowerAnimIndex,
         game.debug
       );
     }

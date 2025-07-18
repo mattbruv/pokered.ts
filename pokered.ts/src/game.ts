@@ -43,6 +43,8 @@ export type GameData = {
 };
 
 export type MapData = {
+  flowerAnimCounter: number;
+  flowerAnimIndex: number;
   currentMap: Map;
   currentMapSprites: Sprite[];
   currentMapName: MapName;
@@ -113,6 +115,14 @@ class PokemonRed {
 
   // Game update logic
   #update() {
+    // blow the flowers in the wind
+    this.#data.map.flowerAnimCounter++;
+    if (this.#data.map.flowerAnimCounter >= 21) {
+      this.#data.map.flowerAnimCounter = 0;
+      this.#data.map.flowerAnimIndex++;
+      this.#data.map.flowerAnimIndex %= 3; // limit to three frames
+    }
+
     const keys = this.#input.getInput();
     const player = this.#data.player.sprite;
 
@@ -272,7 +282,9 @@ class PokemonRed {
         currentMap: map,
         currentMapName: mapName,
         previousOutdoorMapName: MapName.PalletTown,
-        currentMapSprites: []
+        currentMapSprites: [],
+        flowerAnimCounter: 0,
+        flowerAnimIndex: 0
       },
       player: {
         name: "Red",
