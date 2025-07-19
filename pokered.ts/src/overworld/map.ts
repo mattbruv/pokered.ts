@@ -1,4 +1,4 @@
-import { GameInput, GameKey } from "../input";
+import { GameInput, GameKey } from "../input/input";
 import { Map, MapConnections, Warp } from "../map";
 import { getMap } from "../mapLookup";
 import { FacingDirection } from "../render/sprite";
@@ -86,17 +86,17 @@ const TILE_PAIR_COLLISIONS_WATER: TilePair[] = [
   [Tileset.CAVERN, 0x14, 0x05]
 ];
 
-type Ledge = [FacingDirection, number, number];
+type Ledge = [FacingDirection, number, number, GameKey];
 
 const LEDGES: Ledge[] = [
-  [FacingDirection.Down, 0x2c, 0x37],
-  [FacingDirection.Down, 0x39, 0x36],
-  [FacingDirection.Down, 0x39, 0x37],
-  [FacingDirection.Left, 0x2c, 0x27],
-  [FacingDirection.Left, 0x39, 0x27],
-  [FacingDirection.Right, 0x2c, 0x0d],
-  [FacingDirection.Right, 0x2c, 0x1d],
-  [FacingDirection.Right, 0x39, 0x0d]
+  [FacingDirection.Down, 0x2c, 0x37, "Down"],
+  [FacingDirection.Down, 0x39, 0x36, "Down"],
+  [FacingDirection.Down, 0x39, 0x37, "Down"],
+  [FacingDirection.Left, 0x2c, 0x27, "Left"],
+  [FacingDirection.Left, 0x39, 0x27, "Left"],
+  [FacingDirection.Right, 0x2c, 0x0d, "Right"],
+  [FacingDirection.Right, 0x2c, 0x1d, "Right"],
+  [FacingDirection.Right, 0x39, 0x0d, "Right"]
 ];
 
 /** Check to see if the player is about to jump over a ledge */
@@ -104,9 +104,11 @@ export function isJumpingLedge(
   facing: FacingDirection,
   currentTileId: number,
   nextTileId: number
-): boolean {
-  return LEDGES.some(
-    ([t1, t2, t3]) => t1 == facing && t2 == currentTileId && t3 == nextTileId
+): Ledge | false {
+  return (
+    LEDGES.find(
+      ([t1, t2, t3]) => t1 == facing && t2 == currentTileId && t3 == nextTileId
+    ) ?? false
   );
 }
 

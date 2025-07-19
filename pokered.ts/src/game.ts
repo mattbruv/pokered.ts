@@ -1,6 +1,7 @@
 import { DebugCallbacks, DebugState, getDebugState } from "./debug";
 import { ImageCache, loadImageBitmaps } from "./gfx/images";
-import { GameInput } from "./input";
+import { GameInput, GameKey } from "./input/input";
+import { JoypadState, SimulateJoypad } from "./input/joypad";
 import { Map, MapName } from "./map";
 import { getMap } from "./mapLookup";
 import {
@@ -38,6 +39,7 @@ export type DebugData = {
 };
 
 export type GameData = {
+  joypad: JoypadState;
   player: PlayerData;
   map: MapData;
   debug: DebugData;
@@ -124,7 +126,7 @@ class PokemonRed {
       this.#data.map.flowerAnimIndex %= 3; // limit to three frames
     }
 
-    const keys = this.#input.getInput();
+    const keys = this.#input.getInput(this.#data.joypad, this.#data.player);
     const player = this.#data.player.sprite;
 
     // If the player is not moving and we are pressing a key, move him
@@ -167,7 +169,11 @@ class PokemonRed {
           player.facing = yDiff > 0 ? FacingDirection.Down : FacingDirection.Up;
         }
 
-        if (!collisionCheck || this.#data.debug.walkOnWalls) {
+        if (
+          this.#data.joypad.scripted ||
+          !collisionCheck ||
+          this.#data.debug.walkOnWalls
+        ) {
           this.#data.debug.currentTile = nextTile;
           this.#data.debug.nextTile = nextNextTile;
           player.image = nextTile.canSurf ? player.imageSurf : player.imageWalk;
@@ -175,14 +181,20 @@ class PokemonRed {
         }
 
         // Process ledges
-        if (currentTile.inBounds && nextTile.inBounds) {
-          const doJump = isJumpingLedge(
+        if (
+          !this.#data.debug.walkOnWalls &&
+          currentTile.inBounds &&
+          nextTile.inBounds
+        ) {
+          const ledge = isJumpingLedge(
             player.facing,
             currentTile.tileId,
             nextTile.tileId
           );
-          if (doJump) {
-            console.log("JUMP LEDGE!");
+          if (ledge && !this.#data.joypad.scripted) {
+            const key = ledge[3];
+            SimulateJoypad(this.#data.joypad, [key, key]);
+            console.log("JUMP LEDGE!", this.#data.joypad.joypadStates);
           }
         }
       }
@@ -319,6 +331,10 @@ class PokemonRed {
         walkOnWalls: false,
         currentTile: null,
         nextTile: null
+      },
+      joypad: {
+        scripted: false,
+        joypadStates: []
       }
     };
 
