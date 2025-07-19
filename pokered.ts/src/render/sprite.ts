@@ -12,6 +12,7 @@ export type Sprite = {
   imageWalk: SpriteName;
   imageSurf: SpriteName;
   image: SpriteName;
+  hoppingLedge: boolean;
   facing: FacingDirection;
   movementStatus: MovementStatus;
   animationFrameCounter: number;

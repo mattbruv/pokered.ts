@@ -192,9 +192,13 @@ class PokemonRed {
             nextTile.tileId
           );
           if (ledge && !this.#data.joypad.scripted) {
-            const key = ledge[3];
-            SimulateJoypad(this.#data.joypad, [key, key]);
             console.log("JUMP LEDGE!", this.#data.joypad.joypadStates);
+            const key = ledge[3];
+            this.#data.player.sprite.hoppingLedge = true;
+            SimulateJoypad(this.#data.joypad, [key, key], () => {
+              console.log("ledge jump finished");
+              this.#data.player.sprite.hoppingLedge = false;
+            });
           }
         }
       }
@@ -287,7 +291,8 @@ class PokemonRed {
           position: {
             x: obj.x,
             y: obj.y
-          }
+          },
+          hoppingLedge: false
         };
       }
     );
@@ -323,7 +328,8 @@ class PokemonRed {
           },
           image: "sprites-red",
           imageWalk: "sprites-red",
-          imageSurf: "sprites-seel"
+          imageSurf: "sprites-seel",
+          hoppingLedge: false
         }
       },
       debug: {
@@ -334,7 +340,8 @@ class PokemonRed {
       },
       joypad: {
         scripted: false,
-        joypadStates: []
+        joypadStates: [],
+        onSimulationEnd: () => {}
       }
     };
 
