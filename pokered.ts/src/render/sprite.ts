@@ -67,6 +67,21 @@ export function drawSprite(
   const dWidth = 16;
   const dHeight = 16;
 
+  // If we're hopping a ledge, draw the player's shadow
+  if (sprite.hoppingLedge) {
+    ctx.drawImage(
+      cache["overworld-shadow"],
+      0,
+      0,
+      8,
+      8,
+      dx + 10,
+      dy + 10,
+      8,
+      8
+    );
+  }
+
   // If the sprite is facing right, we will be drawing a mirrored version of the left image
   // since they are both identical, it made sense for them to not include it in the sprite sheet.
   if (sprite.facing === FacingDirection.Right) {
