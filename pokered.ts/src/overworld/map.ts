@@ -1,5 +1,7 @@
+import { GameInput, GameKey } from "../input";
 import { Map, MapConnections, Warp } from "../map";
 import { getMap } from "../mapLookup";
+import { FacingDirection } from "../render/sprite";
 import { getBlockSet, getTileCollisions, Tileset } from "../tileset";
 
 type ConnectionDir = {
@@ -83,6 +85,30 @@ const TILE_PAIR_COLLISIONS_WATER: TilePair[] = [
   [Tileset.FOREST, 0x48, 0x2e],
   [Tileset.CAVERN, 0x14, 0x05]
 ];
+
+type Ledge = [FacingDirection, number, number];
+
+const LEDGES: Ledge[] = [
+  [FacingDirection.Down, 0x2c, 0x37],
+  [FacingDirection.Down, 0x39, 0x36],
+  [FacingDirection.Down, 0x39, 0x37],
+  [FacingDirection.Left, 0x2c, 0x27],
+  [FacingDirection.Left, 0x39, 0x27],
+  [FacingDirection.Right, 0x2c, 0x0d],
+  [FacingDirection.Right, 0x2c, 0x1d],
+  [FacingDirection.Right, 0x39, 0x0d]
+];
+
+/** Check to see if the player is about to jump over a ledge */
+export function isJumpingLedge(
+  facing: FacingDirection,
+  currentTileId: number,
+  nextTileId: number
+): boolean {
+  return LEDGES.some(
+    ([t1, t2, t3]) => t1 == facing && t2 == currentTileId && t3 == nextTileId
+  );
+}
 
 /**
  * checks if the player is going to jump down a small ledge

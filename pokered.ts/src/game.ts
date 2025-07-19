@@ -8,7 +8,8 @@ import {
   probeTile,
   getWarpAtPos,
   TileProbe,
-  collisionLandCheck
+  collisionLandCheck,
+  isJumpingLedge
 } from "./overworld/map";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, Sprite } from "./render/sprite";
@@ -171,6 +172,18 @@ class PokemonRed {
           this.#data.debug.nextTile = nextNextTile;
           player.image = nextTile.canSurf ? player.imageSurf : player.imageWalk;
           player.movementStatus = MovementStatus.Moving;
+        }
+
+        // Process ledges
+        if (currentTile.inBounds && nextTile.inBounds) {
+          const doJump = isJumpingLedge(
+            player.facing,
+            currentTile.tileId,
+            nextTile.tileId
+          );
+          if (doJump) {
+            console.log("JUMP LEDGE!");
+          }
         }
       }
     }
