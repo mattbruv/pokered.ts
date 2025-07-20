@@ -48,6 +48,7 @@ export function drawSprite(
   cache: ImageCache,
   tileX: number,
   tileY: number,
+  onlyTopHalf: boolean,
   offsetX: number = 0,
   offsetY: number = 0
 ) {
@@ -72,7 +73,7 @@ export function drawSprite(
   const sx = 0; // sprite will always be at leftmost part of image
   const sy = facingIndex * 16;
   const sWidth = 16;
-  const sHeight = 16;
+  const sHeight = onlyTopHalf ? 8 : 16;
 
   const jumpOffset = sprite.hoppingLedge
     ? PLAYER_JUMP_Y_OFFSETS[sprite.ledgeAnimationCounter]

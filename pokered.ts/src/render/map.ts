@@ -170,13 +170,32 @@ export function renderOverworld(
   // The map is seemingly always rendered relative to the player.
   // The player is centered 4 tiles over, and 4 tiles down
   // The player is also offset by 4(?) pixels in the Y direction, so he's not perfectly centered.
-  drawSprite(screen, playerSprite, images, PLAYER_OFFSET, PLAYER_OFFSET, 0, -4);
+  drawSprite(
+    screen,
+    playerSprite,
+    images,
+    PLAYER_OFFSET,
+    PLAYER_OFFSET,
+    false,
+    0,
+    -4
+  );
   if (debug.walkOnWalls) screen.globalAlpha = 1;
 
   // if grass, draw it overtop everything and then draw the sprites.
   if (cache.current.grass) {
     const grass = cache.current.grass;
     screen.drawImage(grass, dx, dy);
+    drawSprite(
+      screen,
+      playerSprite,
+      images,
+      PLAYER_OFFSET,
+      PLAYER_OFFSET,
+      true,
+      0,
+      -4
+    );
   }
 }
 
