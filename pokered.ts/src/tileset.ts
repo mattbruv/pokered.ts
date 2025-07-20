@@ -29,6 +29,141 @@ export enum Tileset {
   UNDERGROUND
 }
 
+type TilesetMetadata = {
+  counterTiles: number[];
+  grassTile: number | null;
+  animation: TileAnimation;
+};
+
+enum TileAnimation {
+  None,
+  Water,
+  WaterFlower
+}
+
+const TILESET_METADATA: Record<Tileset, TilesetMetadata> = {
+  [Tileset.CAVERN]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.CEMETERY]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.CLUB]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.DOJO]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.FACILITY]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.FOREST]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.FOREST_GATE]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.GATE]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.GYM]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.HOUSE]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.INTERIOR]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.LAB]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.LOBBY]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.MANSION]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.MART]: {
+    counterTiles: [0x18, 0x19, 0x1e],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.MUSEUM]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.OVERWORLD]: {
+    counterTiles: [],
+    grassTile: 0x52,
+    animation: TileAnimation.WaterFlower
+  },
+  [Tileset.PLATEAU]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.POKECENTER]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.REDS_HOUSE_1]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.REDS_HOUSE_2]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.SHIP]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.SHIP_PORT]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  },
+  [Tileset.UNDERGROUND]: {
+    counterTiles: [],
+    grassTile: null,
+    animation: TileAnimation.None
+  }
+};
+
 const TILESET_BLOCKSET_LOOKUP: Record<Tileset, keyof typeof BLOCKSETS> = {
   [Tileset.CAVERN]: "cavern",
   [Tileset.CEMETERY]: "cemetery",
@@ -107,6 +242,10 @@ const TILESET_COLLISION_LOOKUP: Record<Tileset, number[]> = {
   [Tileset.SHIP_PORT]: [0x0a, 0x1a, 0x32, 0x3b],
   [Tileset.UNDERGROUND]: [0x0b, 0x0c, 0x13, 0x15, 0x18]
 };
+
+export function getTilesetMetadata(tileset: Tileset): TilesetMetadata {
+  return TILESET_METADATA[tileset];
+}
 
 export function getTileCollisions(tileset: Tileset): Readonly<number[]> {
   return TILESET_COLLISION_LOOKUP[tileset];
