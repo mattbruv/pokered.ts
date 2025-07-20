@@ -62,15 +62,6 @@ export class GameInput {
         throw Error("The joypad is being scripted but no keys remain!");
 
       state[nextKey] = true;
-      // remove the key we just consumed
-      joypad.joypadStates.splice(0, 1);
-
-      // Stop scripting the player if we ran out of joypad states
-      if (!joypad.joypadStates.length) {
-        joypad.scripted = false;
-        // call the user defined callback function at the end of scripting
-        joypad.onSimulationEnd();
-      }
 
       return state;
     }

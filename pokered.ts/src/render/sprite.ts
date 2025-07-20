@@ -9,6 +9,7 @@ export enum MovementStatus {
 }
 
 export type Sprite = {
+  ledgeAnimationCounter: number;
   imageWalk: SpriteName;
   imageSurf: SpriteName;
   image: SpriteName;
@@ -30,11 +31,16 @@ export enum FacingDirection {
   Right
 }
 
+const GB_PLAYER_SPRITE_X = 0x40;
+const GB_PLAYER_SPRITE_Y = 0x3c;
+
 // Sequence of y screen coordinates for player's sprite when jumping over a ledge.
 const PLAYER_JUMP_Y_OFFSETS = [
   0x38, 0x36, 0x34, 0x32, 0x31, 0x30, 0x30, 0x30, 0x31, 0x32, 0x33, 0x34, 0x36,
   0x38, 0x3c, 0x3c
-].map((x) => x - 0x38);
+]
+  // We want these offsets relative to where we draw the player, not the original GB offsets
+  .map((y) => y - GB_PLAYER_SPRITE_Y);
 
 export function drawSprite(
   ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
@@ -69,17 +75,18 @@ export function drawSprite(
   const sHeight = 16;
 
   const jumpOffset = sprite.hoppingLedge
-    ? PLAYER_JUMP_Y_OFFSETS[sprite.animationFrameCounter]
+    ? PLAYER_JUMP_Y_OFFSETS[sprite.ledgeAnimationCounter]
     : 0;
 
   const dx = 16 * tileX + offsetX;
-  const dy = 16 * tileY + offsetY;
+  const spriteDy = 16 * tileY + offsetY;
+  const spriteDyJump = spriteDy + jumpOffset;
   const dWidth = 16;
   const dHeight = 16;
 
   // If we're hopping a ledge, draw the player's shadow
   if (sprite.hoppingLedge) {
-    console.log(sprite.animationFrameCounter, jumpOffset);
+    //console.log(jumpOffset, sprite.ledgeAnimationCounter);
     ctx.drawImage(
       cache["sprites-shadow_full"],
       0,
@@ -87,7 +94,7 @@ export function drawSprite(
       16,
       16,
       dx,
-      dy + 8,
+      spriteDy + 8,
       16,
       16
     );
@@ -105,7 +112,7 @@ export function drawSprite(
       sWidth,
       sHeight,
       -dx - dWidth,
-      dy + jumpOffset,
+      spriteDyJump,
       dWidth,
       dHeight
     );
@@ -118,7 +125,7 @@ export function drawSprite(
       sWidth,
       sHeight,
       dx,
-      dy + jumpOffset,
+      spriteDyJump,
       dWidth,
       dHeight
     );

@@ -197,6 +197,7 @@ class PokemonRed {
             this.#data.player.sprite.hoppingLedge = true;
             SimulateJoypad(this.#data.joypad, [key, key], () => {
               console.log("ledge jump finished");
+              this.#data.player.sprite.ledgeAnimationCounter = 0;
               this.#data.player.sprite.hoppingLedge = false;
             });
           }
@@ -207,9 +208,30 @@ class PokemonRed {
     // If the player is moving, update the animation
     if (player.movementStatus === MovementStatus.Moving) {
       player.animationFrameCounter++;
+      if (player.hoppingLedge) {
+        // The original game has 16 different unique y-value offsets for the jump animation.
+        // Each step is 16 frames, so we increment the ledge animation index (0-15) at half the rate
+        // because the ledge jump animation is walking 2 steps (16 * 2)
+        if (player.animationFrameCounter % 2 == 0)
+          player.ledgeAnimationCounter++;
+      }
       // If we finished the animation
       if (player.animationFrameCounter >= 16) {
         player.animationFrameCounter = 0;
+
+        const joypad = this.#data.joypad;
+
+        if (joypad.scripted) {
+          // remove the key we just consumed
+          joypad.joypadStates.splice(0, 1);
+
+          // Stop scripting the player if we ran out of joypad states
+          if (!joypad.joypadStates.length) {
+            joypad.scripted = false;
+            // call the user defined callback function at the end of scripting
+            joypad.onSimulationEnd();
+          }
+        }
 
         if (player.facing == FacingDirection.Left) player.position.x--;
         if (player.facing == FacingDirection.Right) player.position.x++;
@@ -287,6 +309,7 @@ class PokemonRed {
           image: img,
           facing: FacingDirection.Down,
           movementStatus: MovementStatus.Ready,
+          ledgeAnimationCounter: 0,
           animationFrameCounter: 0,
           position: {
             x: obj.x,
@@ -305,13 +328,13 @@ class PokemonRed {
   }
 
   #loadGame(): GameData {
-    const mapName = MapName.PalletTown;
+    const mapName = MapName.Route1;
     const map = getMap(mapName);
     const data: GameData = {
       map: {
         currentMap: map,
         currentMapName: mapName,
-        previousOutdoorMapName: MapName.PalletTown,
+        previousOutdoorMapName: MapName.Route1,
         currentMapSprites: [],
         flowerAnimCounter: 0,
         flowerAnimIndex: 0
@@ -322,14 +345,15 @@ class PokemonRed {
           facing: FacingDirection.Down,
           movementStatus: MovementStatus.Ready,
           animationFrameCounter: 0,
+          ledgeAnimationCounter: 0,
+          hoppingLedge: false,
           position: {
-            x: 2,
-            y: 2
+            x: 5,
+            y: 26
           },
           image: "sprites-red",
           imageWalk: "sprites-red",
-          imageSurf: "sprites-seel",
-          hoppingLedge: false
+          imageSurf: "sprites-seel"
         }
       },
       debug: {
