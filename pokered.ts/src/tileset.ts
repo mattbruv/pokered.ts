@@ -34,7 +34,7 @@ type TilesetMetadata = {
   counterTiles: number[];
   grassTile: {
     tileId: number;
-    imageKey: SpriteName;
+    imageKey: keyof ImageCache;
   } | null;
   animation: TileAnimation;
 };
@@ -129,7 +129,7 @@ const TILESET_METADATA: Record<Tileset, TilesetMetadata> = {
   [Tileset.OVERWORLD]: {
     counterTiles: [],
     grassTile: {
-      imageKey: "sprites-grass_overworld",
+      imageKey: "tilesets-grass_overworld",
       tileId: 0x52
     },
     animation: TileAnimation.WaterFlower

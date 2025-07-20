@@ -94,7 +94,7 @@ def copy_pngs(src_root, json_path):
             print(key)
             img = Image.open(file_path)
             img = fix_sprite(img)
-            img = gbc_colors(img, False)
+            img = gbc_colors(img, "grass_" in key)
             buffer = BytesIO()
             img.save(buffer, format="PNG")
             encoded = base64.b64encode(buffer.getvalue()).decode('ascii')
@@ -170,9 +170,9 @@ def generate_shadow():
 
 # Example usage
 
-extract_tile_make_white_transparent("../pokered/gfx/tilesets/overworld.png", 2, 5, "../pokered/gfx/sprites/grass_overworld.png")
-extract_tile_make_white_transparent("../pokered/gfx/tilesets/forest.png", 0, 2, "../pokered/gfx/sprites/grass_forest.png")
-extract_tile_make_white_transparent("../pokered/gfx/tilesets/plateau.png", 5, 4, "../pokered/gfx/sprites/grass_plateau.png")
+extract_tile_make_white_transparent("../pokered/gfx/tilesets/overworld.png", 2, 5, "../pokered/gfx/tilesets/grass_overworld.png")
+extract_tile_make_white_transparent("../pokered/gfx/tilesets/forest.png", 0, 2, "../pokered/gfx/tilesets/grass_forest.png")
+extract_tile_make_white_transparent("../pokered/gfx/tilesets/plateau.png", 5, 4, "../pokered/gfx/tilesets/grass_plateau.png")
 # pre-bake the player's shadow, it's not 1996, we can afford a 16x16 pixel image in memory
 # instead of creating it at runtime
 generate_shadow()

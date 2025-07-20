@@ -71,10 +71,6 @@ export function renderOverworld(
       ct.drawImage(flower, 0, 0);
     }
 
-    // If we are in grass, subtract the grass tiles
-    if (cache.current.grass) {
-    }
-
     // draw map objects to image
     ct.drawImage(cache.current.objectsImage, 0, 0);
 
@@ -186,16 +182,18 @@ export function renderOverworld(
   if (cache.current.grass) {
     const grass = cache.current.grass;
     screen.drawImage(grass, dx, dy);
-    drawSprite(
-      screen,
-      playerSprite,
-      images,
-      PLAYER_OFFSET,
-      PLAYER_OFFSET,
-      true,
-      0,
-      -4
-    );
+    if (!debug.walkOnWalls) {
+      drawSprite(
+        screen,
+        playerSprite,
+        images,
+        PLAYER_OFFSET,
+        PLAYER_OFFSET,
+        true,
+        0,
+        -4
+      );
+    }
   }
 }
 
