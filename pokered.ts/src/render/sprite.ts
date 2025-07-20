@@ -83,7 +83,7 @@ export function drawSprite(
   const spriteDy = 16 * tileY + offsetY;
   const spriteDyJump = spriteDy + jumpOffset;
   const dWidth = 16;
-  const dHeight = 16;
+  const dHeight = onlyTopHalf ? 8 : 16;
 
   // If we're hopping a ledge, draw the player's shadow
   if (sprite.hoppingLedge) {
