@@ -38,7 +38,7 @@ function App() {
     }
   }, []);
   return (
-    <MantineProvider>
+    <MantineProvider defaultColorScheme={"dark"}>
       <AppShell header={{ height: 50, offset: true }}>
         <AppShell.Header>
           <PokeredTopBar />
