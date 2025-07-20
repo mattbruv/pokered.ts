@@ -117,6 +117,36 @@ def copy_pngs(src_root, json_path):
     print(f"Created JSON file with {len(data)} images at: {json_path}")
 
 
+def extract_tile_make_white_transparent(input_path, tile_x, tile_y, output_path):
+    """
+    Opens input_path, extracts 8x8 tile at tile_x, tile_y (tile coords, each 8 pixels),
+    makes white pixels transparent, saves to output_path.
+    """
+    with Image.open(input_path) as img:
+        # Calculate pixel coordinates
+        left = tile_x * 8
+        upper = tile_y * 8
+        right = left + 8
+        lower = upper + 8
+
+        # Crop the 8x8 tile
+        tile = img.crop((left, upper, right, lower)).convert("RGBA")
+
+        # Make white pixels transparent
+        datas = tile.getdata()
+        new_data = []
+        for item in datas:
+            # item is (R, G, B, A) if RGBA, (R, G, B) if RGB
+            if item[0] == 255 and item[1] == 255 and item[2] == 255:
+                # Replace white with transparency
+                new_data.append((255, 255, 255, 0))
+            else:
+                new_data.append(item)
+        tile.putdata(new_data)
+
+        # Save to output
+        tile.save(output_path, "PNG")
+
 def generate_shadow():
     # Load the image
     im = Image.open("../pokered/gfx/overworld/shadow.png")
@@ -140,6 +170,9 @@ def generate_shadow():
 
 # Example usage
 
+extract_tile_make_white_transparent("../pokered/gfx/tilesets/overworld.png", 2, 5, "../pokered/gfx/sprites/grass_overworld.png")
+extract_tile_make_white_transparent("../pokered/gfx/tilesets/forest.png", 0, 2, "../pokered/gfx/sprites/grass_forest.png")
+extract_tile_make_white_transparent("../pokered/gfx/tilesets/plateau.png", 5, 4, "../pokered/gfx/sprites/grass_plateau.png")
 # pre-bake the player's shadow, it's not 1996, we can afford a 16x16 pixel image in memory
 # instead of creating it at runtime
 generate_shadow()
