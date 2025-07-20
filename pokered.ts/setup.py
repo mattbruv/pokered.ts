@@ -33,7 +33,7 @@ def fix_sprite(img: Image.Image) -> Image.Image:
             new_data.append((255, 255, 255, 0))
         else:
             mapped = color_map.get(item, item)
-            print(item, mapped)
+            #print(item, mapped)
             new_data.append(mapped)  # replace if in mapping
 
     img.putdata(new_data)
@@ -71,7 +71,7 @@ def gbc_colors(img: Image.Image, isBackground=False) -> Image.Image:
     new_data = []
     for item in datas:
         mapped = color_map.get(item, item)
-        print(item, mapped)
+        #print(item, mapped)
         new_data.append(mapped)  # replace if in mapping
 
     img.putdata(new_data)

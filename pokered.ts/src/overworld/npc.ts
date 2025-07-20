@@ -3,7 +3,8 @@ import { BaseObjectDirection } from "../map";
 import { FacingDirection } from "../render/sprite";
 
 /**
- * Handle sprite update logic on each frame
+ * Handle sprite update logic on each frame.
+ * See: UpdateNPCSprite
  */
 export function updateNPCSprite(data: GameData) {
   //
