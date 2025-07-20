@@ -73,8 +73,6 @@ export function renderOverworld(
 
     // If we are in grass, subtract the grass tiles
     if (cache.current.grass) {
-      const grass = cache.current.grass;
-      ct.drawImage(grass, 0, 0);
     }
 
     // draw map objects to image
@@ -174,6 +172,12 @@ export function renderOverworld(
   // The player is also offset by 4(?) pixels in the Y direction, so he's not perfectly centered.
   drawSprite(screen, playerSprite, images, PLAYER_OFFSET, PLAYER_OFFSET, 0, -4);
   if (debug.walkOnWalls) screen.globalAlpha = 1;
+
+  // if grass, draw it overtop everything and then draw the sprites.
+  if (cache.current.grass) {
+    const grass = cache.current.grass;
+    screen.drawImage(grass, dx, dy);
+  }
 }
 
 export type FlowerCache = [OffscreenCanvas, OffscreenCanvas, OffscreenCanvas];

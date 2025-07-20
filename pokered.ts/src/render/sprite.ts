@@ -43,7 +43,7 @@ const PLAYER_JUMP_Y_OFFSETS = [
   .map((y) => y - GB_PLAYER_SPRITE_Y);
 
 export function drawSprite(
-  ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
+  screen: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
   sprite: Sprite,
   cache: ImageCache,
   tileX: number,
@@ -87,7 +87,7 @@ export function drawSprite(
   // If we're hopping a ledge, draw the player's shadow
   if (sprite.hoppingLedge) {
     //console.log(jumpOffset, sprite.ledgeAnimationCounter);
-    ctx.drawImage(
+    screen.drawImage(
       cache["sprites-shadow_full"],
       0,
       0,
@@ -103,9 +103,9 @@ export function drawSprite(
   // If the sprite is facing right, we will be drawing a mirrored version of the left image
   // since they are both identical, it made sense for them to not include it in the sprite sheet.
   if (sprite.facing === FacingDirection.Right) {
-    ctx.save();
-    ctx.scale(-1, 1);
-    ctx.drawImage(
+    screen.save();
+    screen.scale(-1, 1);
+    screen.drawImage(
       spriteImage,
       sx,
       sy,
@@ -116,9 +116,9 @@ export function drawSprite(
       dWidth,
       dHeight
     );
-    ctx.restore();
+    screen.restore();
   } else {
-    ctx.drawImage(
+    screen.drawImage(
       spriteImage,
       sx,
       sy,
