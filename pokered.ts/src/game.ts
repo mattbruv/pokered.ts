@@ -12,6 +12,7 @@ import {
   collisionLandCheck,
   isJumpingLedge
 } from "./overworld/map";
+import { updateNPCSprite } from "./overworld/npc";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, Sprite } from "./render/sprite";
 import { getOverworldSpriteKey } from "./sprite";
@@ -297,6 +298,9 @@ class PokemonRed {
         this.#updateDebugState();
       }
     }
+
+    // Update NPC logic
+    updateNPCSprite(this.#data);
   }
 
   #updateDebugState() {
