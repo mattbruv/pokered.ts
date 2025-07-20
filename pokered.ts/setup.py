@@ -39,6 +39,44 @@ def fix_sprite(img: Image.Image) -> Image.Image:
     img.putdata(new_data)
     return img
 
+def gbc_colors(img: Image.Image, isBackground=False) -> Image.Image:
+    img = img.convert('RGBA')
+    datas = list(img.getdata())
+
+    # Define mappings
+    source_colors = [
+        (255, 255, 255, 255),   # white
+        (170, 170, 170, 255),  # light gray
+        (85, 85, 85, 255),     # dark gray
+        (0, 0, 0, 255),        # black
+    ]
+    target_colors = [
+        (255, 255, 255, 255),  # white
+        (255, 132, 132, 255),  # light gray
+        (148, 58, 58, 255),     # dark gray
+        (0, 0, 0, 255),        # black
+    ]
+
+    if not isBackground:
+        target_colors = [
+            (255, 255, 255, 255),  # white
+            (123, 255, 49, 255),  # light gray
+            (0, 132, 0, 255),     # dark gray
+            (0, 0, 0, 255),        # black
+        ]
+
+
+    color_map = dict(zip(source_colors, target_colors))
+
+    new_data = []
+    for item in datas:
+        mapped = color_map.get(item, item)
+        print(item, mapped)
+        new_data.append(mapped)  # replace if in mapping
+
+    img.putdata(new_data)
+    return img
+
 def copy_pngs(src_root, json_path):
     png_files = glob.glob(os.path.join(src_root, '**', '*.png'), recursive=True)
 
@@ -56,13 +94,18 @@ def copy_pngs(src_root, json_path):
             print(key)
             img = Image.open(file_path)
             img = fix_sprite(img)
+            img = gbc_colors(img, False)
             buffer = BytesIO()
             img.save(buffer, format="PNG")
             encoded = base64.b64encode(buffer.getvalue()).decode('ascii')
 
         else:
             with open(file_path, 'rb') as f:
-                encoded = base64.b64encode(f.read()).decode('ascii')
+                img = Image.open(file_path)
+                img = gbc_colors(img, True)
+                buffer = BytesIO()
+                img.save(buffer, format="PNG")
+                encoded = base64.b64encode(buffer.getvalue()).decode('ascii')
 
         data[key] = encoded
 
