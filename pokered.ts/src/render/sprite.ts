@@ -70,15 +70,15 @@ export function drawSprite(
   // If we're hopping a ledge, draw the player's shadow
   if (sprite.hoppingLedge) {
     ctx.drawImage(
-      cache["overworld-shadow"],
+      cache["sprites-shadow_full"],
       0,
       0,
-      8,
-      8,
-      dx + 10,
-      dy + 10,
-      8,
-      8
+      16,
+      16,
+      dx,
+      dy + 8,
+      16,
+      16
     );
   }
 

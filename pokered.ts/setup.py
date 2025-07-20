@@ -73,5 +73,31 @@ def copy_pngs(src_root, json_path):
 
     print(f"Created JSON file with {len(data)} images at: {json_path}")
 
+
+def generate_shadow():
+    # Load the image
+    im = Image.open("../pokered/gfx/overworld/shadow.png")
+
+    # Mirror horizontally
+    im_h = im.transpose(Image.FLIP_LEFT_RIGHT)
+
+    # Stack original and horizontally mirrored side by side
+    im_double_width = Image.new(im.mode, (im.width * 2, im.height))
+    im_double_width.paste(im, (0, 0))
+    im_double_width.paste(im_h, (im.width, 0))
+
+    # Mirror vertically
+    im_v = im_double_width.transpose(Image.FLIP_TOP_BOTTOM)
+
+    # Stack original+mirror and vertically mirrored below
+    im_double_size = Image.new(im.mode, (im.width * 2, im.height * 2))
+    im_double_size.paste(im_double_width, (0, 0))
+    im_double_size.paste(im_v, (0, im.height))
+    im_double_size.save("../pokered/gfx/sprites/shadow_full.png")
+
 # Example usage
+
+# pre-bake the player's shadow, it's not 1996, we can afford a 16x16 pixel image in memory
+# instead of creating it at runtime
+generate_shadow()
 copy_pngs('../pokered/gfx/', 'src/gfx/imagesBase64.ts')
