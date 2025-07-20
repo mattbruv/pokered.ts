@@ -2,7 +2,12 @@ import { DebugData } from "../game";
 import { ImageCache } from "../gfx/images";
 import { Map } from "../map";
 import { getBlockIndexAtPosition } from "../overworld/map";
-import { getBlockSet, getTilesetImage, Tileset } from "../tileset";
+import {
+  getBlockSet,
+  getTilesetImage,
+  getTilesetMetadata,
+  Tileset
+} from "../tileset";
 import { OverworldCache } from "./renderer";
 import { drawSprite, FacingDirection, MovementStatus, Sprite } from "./sprite";
 
@@ -64,6 +69,12 @@ export function renderOverworld(
     if (cache.current.flowers) {
       const flower = cache.current.flowers[flowerIndex];
       ct.drawImage(flower, 0, 0);
+    }
+
+    // If we are in grass, subtract the grass tiles
+    if (cache.current.grass) {
+      const grass = cache.current.grass;
+      ct.drawImage(grass, 0, 0);
     }
 
     // draw map objects to image
@@ -175,6 +186,7 @@ const FLOWER_SPRITES: (keyof ImageCache)[] = [
 
 export type MapRender = {
   mapImage: OffscreenCanvas;
+  grass: OffscreenCanvas | null;
   flowers: FlowerCache | null;
 };
 
@@ -221,6 +233,12 @@ export function getMapRender(
     ? [flower1, flower2, flower3]
     : null;
 
+  const tilesetMetadata = getTilesetMetadata(tilesetName);
+
+  const grass: OffscreenCanvas | null = tilesetMetadata.grassTile
+    ? newMapCanvas()
+    : null;
+
   const ctx = canvas.getContext("2d");
 
   for (let blockY = 0; blockY < height; blockY++) {
@@ -254,6 +272,17 @@ export function getMapRender(
             TILE_SIZE_PX
           );
 
+          if (
+            grass &&
+            tilesetMetadata.grassTile &&
+            tile === tilesetMetadata?.grassTile.tileId
+          ) {
+            const grassMask = images[tilesetMetadata.grassTile.imageKey];
+            console.log(tile, tilesetName, tilesetMetadata.grassTile.imageKey);
+            const grassCtx = grass.getContext("2d");
+            grassCtx?.drawImage(grassMask, 0, 0, 8, 8, dx, dy, 8, 8);
+          }
+
           // If this is a flower tile, render out our flowers.
           if (inOverworld && mapFlowers && tile === 3) {
             for (let i = 0; i < 3; i++) {
@@ -270,6 +299,7 @@ export function getMapRender(
 
   return {
     mapImage: canvas,
+    grass,
     flowers: mapFlowers
   };
 }

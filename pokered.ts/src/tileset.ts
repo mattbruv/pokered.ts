@@ -1,6 +1,7 @@
 import { BLOCKSETS } from "./gfx/blocksets";
 import { ImageCache } from "./gfx/images";
 import { BlockSet } from "./map";
+import { SpriteName } from "./sprite";
 
 export enum Tileset {
   CAVERN,
@@ -31,7 +32,10 @@ export enum Tileset {
 
 type TilesetMetadata = {
   counterTiles: number[];
-  grassTile: number | null;
+  grassTile: {
+    tileId: number;
+    imageKey: SpriteName;
+  } | null;
   animation: TileAnimation;
 };
 
@@ -124,7 +128,10 @@ const TILESET_METADATA: Record<Tileset, TilesetMetadata> = {
   },
   [Tileset.OVERWORLD]: {
     counterTiles: [],
-    grassTile: 0x52,
+    grassTile: {
+      imageKey: "sprites-grass_overworld",
+      tileId: 0x52
+    },
     animation: TileAnimation.WaterFlower
   },
   [Tileset.PLATEAU]: {

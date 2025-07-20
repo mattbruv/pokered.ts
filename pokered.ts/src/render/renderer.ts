@@ -11,6 +11,7 @@ const SCREEN_HEIGHT = 144;
 
 export type MapCache = {
   mapImage: OffscreenCanvas;
+  grass: OffscreenCanvas | null;
   flowers: [OffscreenCanvas, OffscreenCanvas, OffscreenCanvas] | null;
   objectsImage: OffscreenCanvas;
 };
@@ -36,6 +37,7 @@ export class Renderer {
     this.#overworldCache = {
       current: {
         mapImage: new OffscreenCanvas(0, 0),
+        grass: null,
         flowers: null,
         objectsImage: new OffscreenCanvas(0, 0)
       },
@@ -69,6 +71,7 @@ export class Renderer {
 
     this.#overworldCache.current.mapImage = mapRender.mapImage;
     this.#overworldCache.current.flowers = mapRender.flowers;
+    this.#overworldCache.current.grass = mapRender.grass;
 
     this.#overworldCache.current.objectsImage = getObjectsImage(
       map,
@@ -92,6 +95,7 @@ export class Renderer {
 
         this.#overworldCache[dir] = {
           mapImage: mapRender.mapImage,
+          grass: mapRender.grass,
           flowers: mapRender.flowers,
           objectsImage: getObjectsImage(connMap, sprites, this.#images)
         };
