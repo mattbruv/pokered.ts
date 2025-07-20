@@ -30,6 +30,12 @@ export enum FacingDirection {
   Right
 }
 
+// Sequence of y screen coordinates for player's sprite when jumping over a ledge.
+const PLAYER_JUMP_Y_OFFSETS = [
+  0x38, 0x36, 0x34, 0x32, 0x31, 0x30, 0x30, 0x30, 0x31, 0x32, 0x33, 0x34, 0x36,
+  0x38, 0x3c, 0x3c
+].map((x) => x - 0x38);
+
 export function drawSprite(
   ctx: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
   sprite: Sprite,
@@ -62,6 +68,10 @@ export function drawSprite(
   const sWidth = 16;
   const sHeight = 16;
 
+  const jumpOffset = sprite.hoppingLedge
+    ? PLAYER_JUMP_Y_OFFSETS[sprite.animationFrameCounter]
+    : 0;
+
   const dx = 16 * tileX + offsetX;
   const dy = 16 * tileY + offsetY;
   const dWidth = 16;
@@ -69,6 +79,7 @@ export function drawSprite(
 
   // If we're hopping a ledge, draw the player's shadow
   if (sprite.hoppingLedge) {
+    console.log(sprite.animationFrameCounter, jumpOffset);
     ctx.drawImage(
       cache["sprites-shadow_full"],
       0,
@@ -94,7 +105,7 @@ export function drawSprite(
       sWidth,
       sHeight,
       -dx - dWidth,
-      dy,
+      dy + jumpOffset,
       dWidth,
       dHeight
     );
@@ -107,7 +118,7 @@ export function drawSprite(
       sWidth,
       sHeight,
       dx,
-      dy,
+      dy + jumpOffset,
       dWidth,
       dHeight
     );
