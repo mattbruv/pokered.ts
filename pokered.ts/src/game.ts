@@ -12,7 +12,7 @@ import {
   collisionLandCheck,
   isJumpingLedge
 } from "./overworld/map";
-import { updateNPCSprite } from "./overworld/npc";
+import { getObjectFacingDirection, updateNPCSprite } from "./overworld/npc";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, Sprite } from "./render/sprite";
 import { getOverworldSpriteKey } from "./sprite";
@@ -329,7 +329,7 @@ class PokemonRed {
           imageWalk: img,
           imageSurf: img,
           image: img,
-          facing: FacingDirection.Down,
+          facing: getObjectFacingDirection(obj.direction),
           movementStatus: MovementStatus.Ready,
           ledgeAnimationCounter: 0,
           animationFrameCounter: 0,

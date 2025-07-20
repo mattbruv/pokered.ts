@@ -41,7 +41,7 @@ export type BackgroundItem = {
 /** Represents a dynamic object in the map, such as NPCs, trainers, items, etc. */
 type MovementType = "STAY" | "WALK"; // expand as needed
 
-type BaseObjectDirection =
+export type BaseObjectDirection =
   | "UP"
   | "LEFT_RIGHT"
   | "ANY_DIR"
