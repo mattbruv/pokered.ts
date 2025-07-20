@@ -21,6 +21,7 @@ export const CinnabarPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_CINNABARPOKECENTER_NURSE"
@@ -29,6 +30,7 @@ export const CinnabarPokecenter: Map = {
         type: "sprite",
         x: 9,
         y: 4,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_CINNABARPOKECENTER_COOLTRAINER_F"
@@ -37,6 +39,7 @@ export const CinnabarPokecenter: Map = {
         type: "sprite",
         x: 2,
         y: 6,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_CINNABARPOKECENTER_GENTLEMAN"
@@ -45,6 +48,7 @@ export const CinnabarPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_CINNABARPOKECENTER_LINK_RECEPTIONIST"

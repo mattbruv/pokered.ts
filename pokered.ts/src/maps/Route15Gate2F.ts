@@ -18,6 +18,7 @@ export const Route15Gate2F: Map = {
         type: "sprite",
         x: 4,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_ROUTE15GATE2F_OAKS_AIDE"

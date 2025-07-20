@@ -21,6 +21,7 @@ export const CeladonPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_CELADONPOKECENTER_NURSE"
@@ -29,6 +30,7 @@ export const CeladonPokecenter: Map = {
         type: "sprite",
         x: 7,
         y: 3,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "WALK",
         textId: "TEXT_CELADONPOKECENTER_GENTLEMAN"
@@ -37,6 +39,7 @@ export const CeladonPokecenter: Map = {
         type: "sprite",
         x: 10,
         y: 5,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "WALK",
         textId: "TEXT_CELADONPOKECENTER_BEAUTY"
@@ -45,6 +48,7 @@ export const CeladonPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_CELADONPOKECENTER_LINK_RECEPTIONIST"

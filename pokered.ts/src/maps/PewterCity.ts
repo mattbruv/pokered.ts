@@ -37,6 +37,7 @@ export const PewterCity: Map = {
         type: "sprite",
         x: 8,
         y: 15,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_PEWTERCITY_COOLTRAINER_F"
@@ -45,6 +46,7 @@ export const PewterCity: Map = {
         type: "sprite",
         x: 17,
         y: 25,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_PEWTERCITY_COOLTRAINER_M"
@@ -53,6 +55,7 @@ export const PewterCity: Map = {
         type: "sprite",
         x: 27,
         y: 17,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_PEWTERCITY_SUPER_NERD1"
@@ -61,6 +64,7 @@ export const PewterCity: Map = {
         type: "sprite",
         x: 26,
         y: 25,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "WALK",
         textId: "TEXT_PEWTERCITY_SUPER_NERD2"
@@ -69,6 +73,7 @@ export const PewterCity: Map = {
         type: "sprite",
         x: 35,
         y: 16,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_PEWTERCITY_YOUNGSTER"

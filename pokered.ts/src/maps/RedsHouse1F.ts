@@ -22,6 +22,7 @@ export const RedsHouse1F: Map = {
         type: "sprite",
         x: 5,
         y: 4,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_MOM,
         movement: "STAY",
         textId: "TEXT_REDSHOUSE1F_MOM"

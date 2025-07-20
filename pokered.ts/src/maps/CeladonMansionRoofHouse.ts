@@ -21,6 +21,7 @@ export const CeladonMansionRoofHouse: Map = {
         type: "sprite",
         x: 2,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION_ROOF_HOUSE_HIKER"
@@ -29,6 +30,7 @@ export const CeladonMansionRoofHouse: Map = {
         type: "sprite",
         x: 4,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION_ROOF_HOUSE_EEVEE_POKEBALL"

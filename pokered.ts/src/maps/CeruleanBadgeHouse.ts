@@ -22,6 +22,7 @@ export const CeruleanBadgeHouse: Map = {
         type: "sprite",
         x: 5,
         y: 3,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_MAN,
         movement: "STAY",
         textId: "TEXT_CERULEANBADGEHOUSE_MIDDLE_AGED_MAN"

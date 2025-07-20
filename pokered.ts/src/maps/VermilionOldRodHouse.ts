@@ -21,6 +21,7 @@ export const VermilionOldRodHouse: Map = {
         type: "sprite",
         x: 2,
         y: 4,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_VERMILIONOLDRODHOUSE_FISHING_GURU"

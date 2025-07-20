@@ -32,6 +32,7 @@ export const SSAnne2FRooms: Map = {
         x: 10,
         y: 2,
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
+        direction: "RIGHT",
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GENTLEMAN1",
         trainerId: "OPP_GENTLEMAN",
@@ -42,6 +43,7 @@ export const SSAnne2FRooms: Map = {
         x: 13,
         y: 4,
         sprite: OverworldSprite.SPRITE_FISHER,
+        direction: "LEFT",
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_FISHER",
         trainerId: "OPP_FISHER",
@@ -52,6 +54,7 @@ export const SSAnne2FRooms: Map = {
         x: 0,
         y: 14,
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
+        direction: "RIGHT",
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GENTLEMAN2",
         trainerId: "OPP_GENTLEMAN",
@@ -62,6 +65,7 @@ export const SSAnne2FRooms: Map = {
         x: 2,
         y: 11,
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
+        direction: "DOWN",
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_COOLTRAINER_F",
         trainerId: "OPP_LASS",
@@ -71,6 +75,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 1,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GENTLEMAN3"
@@ -79,6 +84,7 @@ export const SSAnne2FRooms: Map = {
         type: "item",
         x: 12,
         y: 1,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_MAX_ETHER",
@@ -88,6 +94,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 21,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GENTLEMAN4"
@@ -96,6 +103,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 22,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GRAMPS"
@@ -104,6 +112,7 @@ export const SSAnne2FRooms: Map = {
         type: "item",
         x: 0,
         y: 12,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_RARE_CANDY",
@@ -113,6 +122,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 12,
         y: 12,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_GENTLEMAN5"
@@ -121,6 +131,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 11,
         y: 14,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_LITTLE_BOY,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_LITTLE_BOY"
@@ -129,6 +140,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 22,
         y: 12,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_BRUNETTE_GIRL"
@@ -137,6 +149,7 @@ export const SSAnne2FRooms: Map = {
         type: "sprite",
         x: 20,
         y: 12,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "STAY",
         textId: "TEXT_SSANNE2FROOMS_BEAUTY"

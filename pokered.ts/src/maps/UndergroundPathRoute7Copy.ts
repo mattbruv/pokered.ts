@@ -22,6 +22,7 @@ export const UndergroundPathRoute7Copy: Map = {
         type: "sprite",
         x: 3,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GIRL,
         movement: "STAY",
         textId: "TEXT_UNDERGROUNDPATHROUTE7COPY_UNUSED_GIRL"
@@ -30,6 +31,7 @@ export const UndergroundPathRoute7Copy: Map = {
         type: "sprite",
         x: 2,
         y: 4,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_MAN,
         movement: "STAY",
         textId: "TEXT_UNDERGROUNDPATHROUTE7COPY_UNUSED_MIDDLE_AGED_MAN"

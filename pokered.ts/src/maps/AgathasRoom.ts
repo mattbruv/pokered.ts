@@ -24,6 +24,7 @@ export const AgathasRoom: Map = {
         x: 5,
         y: 2,
         sprite: OverworldSprite.SPRITE_AGATHA,
+        direction: "DOWN",
         movement: "STAY",
         textId: "TEXT_AGATHASROOM_AGATHA",
         trainerId: "OPP_AGATHA",

@@ -21,6 +21,7 @@ export const Route2TradeHouse: Map = {
         type: "sprite",
         x: 2,
         y: 4,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_ROUTE2TRADEHOUSE_SCIENTIST"
@@ -29,6 +30,7 @@ export const Route2TradeHouse: Map = {
         type: "sprite",
         x: 4,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GAMEBOY_KID,
         movement: "STAY",
         textId: "TEXT_ROUTE2TRADEHOUSE_GAMEBOY_KID"

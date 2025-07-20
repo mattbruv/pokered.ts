@@ -28,6 +28,7 @@ export const CeladonMansion3F: Map = {
         type: "sprite",
         x: 0,
         y: 4,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_BIKE_SHOP_CLERK,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION3F_PROGRAMMER"
@@ -36,6 +37,7 @@ export const CeladonMansion3F: Map = {
         type: "sprite",
         x: 3,
         y: 4,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION3F_GRAPHIC_ARTIST"
@@ -44,6 +46,7 @@ export const CeladonMansion3F: Map = {
         type: "sprite",
         x: 0,
         y: 7,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION3F_WRITER"
@@ -52,6 +55,7 @@ export const CeladonMansion3F: Map = {
         type: "sprite",
         x: 2,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SILPH_WORKER_M,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION3F_GAME_DESIGNER"

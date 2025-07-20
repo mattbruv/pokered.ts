@@ -31,6 +31,7 @@ export const SafariZoneCenter: Map = {
         type: "item",
         x: 14,
         y: 10,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_SAFARIZONECENTER_NUGGET",

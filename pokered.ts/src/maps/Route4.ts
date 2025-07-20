@@ -29,6 +29,7 @@ export const Route4: Map = {
         type: "sprite",
         x: 9,
         y: 8,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_ROUTE4_COOLTRAINER_F1"
@@ -38,6 +39,7 @@ export const Route4: Map = {
         x: 63,
         y: 3,
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
+        direction: "RIGHT",
         movement: "STAY",
         textId: "TEXT_ROUTE4_COOLTRAINER_F2",
         trainerId: "OPP_LASS",
@@ -47,6 +49,7 @@ export const Route4: Map = {
         type: "item",
         x: 57,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_ROUTE4_TM_WHIRLWIND",

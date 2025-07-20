@@ -21,6 +21,7 @@ export const SaffronPidgeyHouse: Map = {
         type: "sprite",
         x: 2,
         y: 3,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_SAFFRONPIDGEYHOUSE_BRUNETTE_GIRL"
@@ -29,6 +30,7 @@ export const SaffronPidgeyHouse: Map = {
         type: "sprite",
         x: 0,
         y: 4,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_BIRD,
         movement: "WALK",
         textId: "TEXT_SAFFRONPIDGEYHOUSE_PIDGEY"
@@ -37,6 +39,7 @@ export const SaffronPidgeyHouse: Map = {
         type: "sprite",
         x: 4,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_SAFFRONPIDGEYHOUSE_YOUNGSTER"
@@ -45,6 +48,7 @@ export const SaffronPidgeyHouse: Map = {
         type: "sprite",
         x: 3,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_PAPER,
         movement: "STAY",
         textId: "TEXT_SAFFRONPIDGEYHOUSE_PAPER"

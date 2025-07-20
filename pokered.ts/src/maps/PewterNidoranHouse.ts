@@ -21,6 +21,7 @@ export const PewterNidoranHouse: Map = {
         type: "sprite",
         x: 4,
         y: 5,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_PEWTERNIDORANHOUSE_NIDORAN"
@@ -29,6 +30,7 @@ export const PewterNidoranHouse: Map = {
         type: "sprite",
         x: 3,
         y: 5,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_LITTLE_BOY,
         movement: "STAY",
         textId: "TEXT_PEWTERNIDORANHOUSE_LITTLE_BOY"
@@ -37,6 +39,7 @@ export const PewterNidoranHouse: Map = {
         type: "sprite",
         x: 1,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_MAN,
         movement: "STAY",
         textId: "TEXT_PEWTERNIDORANHOUSE_MIDDLE_AGED_MAN"

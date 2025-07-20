@@ -25,6 +25,7 @@ export const GameCornerPrizeRoom: Map = {
         type: "sprite",
         x: 1,
         y: 4,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BALDING_GUY,
         movement: "STAY",
         textId: "TEXT_GAMECORNERPRIZEROOM_BALDING_GUY"
@@ -33,6 +34,7 @@ export const GameCornerPrizeRoom: Map = {
         type: "sprite",
         x: 7,
         y: 3,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "WALK",
         textId: "TEXT_GAMECORNERPRIZEROOM_GAMBLER"

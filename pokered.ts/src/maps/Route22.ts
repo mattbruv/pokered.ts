@@ -23,6 +23,7 @@ export const Route22: Map = {
         type: "sprite",
         x: 25,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BLUE,
         movement: "STAY",
         textId: "TEXT_ROUTE22_RIVAL1"
@@ -31,6 +32,7 @@ export const Route22: Map = {
         type: "sprite",
         x: 25,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BLUE,
         movement: "STAY",
         textId: "TEXT_ROUTE22_RIVAL2"

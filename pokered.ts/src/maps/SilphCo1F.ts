@@ -24,6 +24,7 @@ export const SilphCo1F: Map = {
         type: "sprite",
         x: 4,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_SILPHCO1F_LINK_RECEPTIONIST"

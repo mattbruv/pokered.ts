@@ -93,6 +93,7 @@ def main():
         map_object_json = re.sub(r'"(MapName[^"]+)"', r'\1', map_object_json)
         # replace sprites with enum
         map_object_json = re.sub(r'"(SPRITE_[^"]+)"', r'OverworldSprite.\1', map_object_json)
+        map_object_json = map_object_json.replace("range_dir", "direction")
 
         file_contents = (
             MAP_TS_HEADER.format(blocks_const=blocks_const, block_file=map_name) +

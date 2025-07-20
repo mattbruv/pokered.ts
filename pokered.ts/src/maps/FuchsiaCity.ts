@@ -47,6 +47,7 @@ export const FuchsiaCity: Map = {
         type: "sprite",
         x: 10,
         y: 12,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_FUCHSIACITY_YOUNGSTER1"
@@ -55,6 +56,7 @@ export const FuchsiaCity: Map = {
         type: "sprite",
         x: 28,
         y: 17,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "WALK",
         textId: "TEXT_FUCHSIACITY_GAMBLER"
@@ -63,6 +65,7 @@ export const FuchsiaCity: Map = {
         type: "sprite",
         x: 30,
         y: 14,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_FUCHSIACITY_ERIK"
@@ -71,6 +74,7 @@ export const FuchsiaCity: Map = {
         type: "sprite",
         x: 24,
         y: 8,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_FUCHSIACITY_YOUNGSTER2"
@@ -79,6 +83,7 @@ export const FuchsiaCity: Map = {
         type: "sprite",
         x: 31,
         y: 5,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_FAIRY,
         movement: "WALK",
         textId: "TEXT_FUCHSIACITY_CHANSEY"
@@ -87,6 +92,7 @@ export const FuchsiaCity: Map = {
         type: "sprite",
         x: 25,
         y: 6,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_FUCHSIACITY_VOLTORB"
@@ -95,6 +101,7 @@ export const FuchsiaCity: Map = {
         type: "sprite",
         x: 12,
         y: 6,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "WALK",
         textId: "TEXT_FUCHSIACITY_KANGASKHAN"
@@ -103,6 +110,7 @@ export const FuchsiaCity: Map = {
         type: "sprite",
         x: 30,
         y: 12,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "WALK",
         textId: "TEXT_FUCHSIACITY_SLOWPOKE"
@@ -111,6 +119,7 @@ export const FuchsiaCity: Map = {
         type: "sprite",
         x: 8,
         y: 17,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_SEEL,
         movement: "WALK",
         textId: "TEXT_FUCHSIACITY_LAPRAS"
@@ -119,6 +128,7 @@ export const FuchsiaCity: Map = {
         type: "sprite",
         x: 6,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_FOSSIL,
         movement: "STAY",
         textId: "TEXT_FUCHSIACITY_FOSSIL"

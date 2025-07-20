@@ -23,6 +23,7 @@ export const LancesRoom: Map = {
         x: 6,
         y: 1,
         sprite: OverworldSprite.SPRITE_LANCE,
+        direction: "DOWN",
         movement: "STAY",
         textId: "TEXT_LANCESROOM_LANCE",
         trainerId: "OPP_LANCE",

@@ -23,6 +23,7 @@ export const ViridianForestSouthGate: Map = {
         type: "sprite",
         x: 8,
         y: 4,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_GIRL,
         movement: "STAY",
         textId: "TEXT_VIRIDIANFORESTSOUTHGATE_GIRL"
@@ -31,6 +32,7 @@ export const ViridianForestSouthGate: Map = {
         type: "sprite",
         x: 2,
         y: 4,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_VIRIDIANFORESTSOUTHGATE_LITTLE_GIRL"

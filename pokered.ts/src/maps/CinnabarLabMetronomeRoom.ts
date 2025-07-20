@@ -25,6 +25,7 @@ export const CinnabarLabMetronomeRoom: Map = {
         type: "sprite",
         x: 7,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_CINNABARLABMETRONOMEROOM_SCIENTIST1"
@@ -33,6 +34,7 @@ export const CinnabarLabMetronomeRoom: Map = {
         type: "sprite",
         x: 2,
         y: 3,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "WALK",
         textId: "TEXT_CINNABARLABMETRONOMEROOM_SCIENTIST2"

@@ -22,6 +22,7 @@ export const PewterGym: Map = {
         x: 4,
         y: 1,
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
+        direction: "DOWN",
         movement: "STAY",
         textId: "TEXT_PEWTERGYM_BROCK",
         trainerId: "OPP_BROCK",
@@ -32,6 +33,7 @@ export const PewterGym: Map = {
         x: 3,
         y: 6,
         sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
+        direction: "RIGHT",
         movement: "STAY",
         textId: "TEXT_PEWTERGYM_COOLTRAINER_M",
         trainerId: "OPP_JR_TRAINER_M",
@@ -41,6 +43,7 @@ export const PewterGym: Map = {
         type: "sprite",
         x: 7,
         y: 10,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GYM_GUIDE,
         movement: "STAY",
         textId: "TEXT_PEWTERGYM_GYM_GUIDE"

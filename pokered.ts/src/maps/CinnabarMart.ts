@@ -21,6 +21,7 @@ export const CinnabarMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_CINNABARMART_CLERK"
@@ -29,6 +30,7 @@ export const CinnabarMart: Map = {
         type: "sprite",
         x: 6,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SILPH_WORKER_F,
         movement: "STAY",
         textId: "TEXT_CINNABARMART_SILPH_WORKER_F"
@@ -37,6 +39,7 @@ export const CinnabarMart: Map = {
         type: "sprite",
         x: 3,
         y: 4,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_CINNABARMART_SCIENTIST"

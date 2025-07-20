@@ -41,6 +41,7 @@ export const CeruleanCity: Map = {
         type: "sprite",
         x: 20,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_BLUE,
         movement: "STAY",
         textId: "TEXT_CERULEANCITY_RIVAL"
@@ -50,6 +51,7 @@ export const CeruleanCity: Map = {
         x: 30,
         y: 8,
         sprite: OverworldSprite.SPRITE_ROCKET,
+        direction: "NONE",
         movement: "STAY",
         textId: "TEXT_CERULEANCITY_ROCKET",
         trainerId: "OPP_ROCKET",
@@ -59,6 +61,7 @@ export const CeruleanCity: Map = {
         type: "sprite",
         x: 31,
         y: 20,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_CERULEANCITY_COOLTRAINER_M"
@@ -67,6 +70,7 @@ export const CeruleanCity: Map = {
         type: "sprite",
         x: 15,
         y: 18,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "WALK",
         textId: "TEXT_CERULEANCITY_SUPER_NERD1"
@@ -75,6 +79,7 @@ export const CeruleanCity: Map = {
         type: "sprite",
         x: 9,
         y: 21,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "WALK",
         textId: "TEXT_CERULEANCITY_SUPER_NERD2"
@@ -83,6 +88,7 @@ export const CeruleanCity: Map = {
         type: "sprite",
         x: 28,
         y: 12,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GUARD,
         movement: "STAY",
         textId: "TEXT_CERULEANCITY_GUARD1"
@@ -91,6 +97,7 @@ export const CeruleanCity: Map = {
         type: "sprite",
         x: 29,
         y: 26,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_CERULEANCITY_COOLTRAINER_F1"
@@ -99,6 +106,7 @@ export const CeruleanCity: Map = {
         type: "sprite",
         x: 28,
         y: 26,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_CERULEANCITY_SLOWBRO"
@@ -107,6 +115,7 @@ export const CeruleanCity: Map = {
         type: "sprite",
         x: 9,
         y: 27,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_CERULEANCITY_COOLTRAINER_F2"
@@ -115,6 +124,7 @@ export const CeruleanCity: Map = {
         type: "sprite",
         x: 4,
         y: 12,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_CERULEANCITY_SUPER_NERD3"
@@ -123,6 +133,7 @@ export const CeruleanCity: Map = {
         type: "sprite",
         x: 27,
         y: 12,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GUARD,
         movement: "STAY",
         textId: "TEXT_CERULEANCITY_GUARD2"

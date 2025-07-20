@@ -21,6 +21,7 @@ export const CeruleanPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_CERULEANPOKECENTER_NURSE"
@@ -29,6 +30,7 @@ export const CeruleanPokecenter: Map = {
         type: "sprite",
         x: 10,
         y: 5,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "WALK",
         textId: "TEXT_CERULEANPOKECENTER_SUPER_NERD"
@@ -37,6 +39,7 @@ export const CeruleanPokecenter: Map = {
         type: "sprite",
         x: 4,
         y: 3,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_CERULEANPOKECENTER_GENTLEMAN"
@@ -45,6 +48,7 @@ export const CeruleanPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_CERULEANPOKECENTER_LINK_RECEPTIONIST"

@@ -18,6 +18,7 @@ export const TradeCenter: Map = {
         type: "sprite",
         x: 2,
         y: 2,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_RED,
         movement: "STAY",
         textId: "TEXT_TRADECENTER_OPPONENT"

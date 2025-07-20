@@ -21,6 +21,7 @@ export const FuchsiaBillsGrandpasHouse: Map = {
         type: "sprite",
         x: 2,
         y: 3,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_WOMAN,
         movement: "STAY",
         textId: "TEXT_FUCHSIABILLSGRANDPASHOUSE_MIDDLE_AGED_WOMAN"
@@ -29,6 +30,7 @@ export const FuchsiaBillsGrandpasHouse: Map = {
         type: "sprite",
         x: 7,
         y: 2,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_FUCHSIABILLSGRANDPASHOUSE_BILLS_GRANDPA"
@@ -37,6 +39,7 @@ export const FuchsiaBillsGrandpasHouse: Map = {
         type: "sprite",
         x: 5,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_FUCHSIABILLSGRANDPASHOUSE_YOUNGSTER"

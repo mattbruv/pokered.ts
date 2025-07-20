@@ -21,6 +21,7 @@ export const FuchsiaPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_FUCHSIAPOKECENTER_NURSE"
@@ -29,6 +30,7 @@ export const FuchsiaPokecenter: Map = {
         type: "sprite",
         x: 2,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_ROCKER,
         movement: "STAY",
         textId: "TEXT_FUCHSIAPOKECENTER_ROCKER"
@@ -37,6 +39,7 @@ export const FuchsiaPokecenter: Map = {
         type: "sprite",
         x: 6,
         y: 5,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_FUCHSIAPOKECENTER_COOLTRAINER_F"
@@ -45,6 +48,7 @@ export const FuchsiaPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_FUCHSIAPOKECENTER_LINK_RECEPTIONIST"

@@ -26,6 +26,7 @@ export const SeafoamIslandsB3F: Map = {
         type: "sprite",
         x: 5,
         y: 14,
+        direction: "BOULDER_MOVEMENT_BYTE_2",
         sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_SEAFOAMISLANDSB3F_BOULDER1"
@@ -34,6 +35,7 @@ export const SeafoamIslandsB3F: Map = {
         type: "sprite",
         x: 3,
         y: 15,
+        direction: "BOULDER_MOVEMENT_BYTE_2",
         sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_SEAFOAMISLANDSB3F_BOULDER2"
@@ -42,6 +44,7 @@ export const SeafoamIslandsB3F: Map = {
         type: "sprite",
         x: 8,
         y: 14,
+        direction: "BOULDER_MOVEMENT_BYTE_2",
         sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_SEAFOAMISLANDSB3F_BOULDER3"
@@ -50,6 +53,7 @@ export const SeafoamIslandsB3F: Map = {
         type: "sprite",
         x: 9,
         y: 14,
+        direction: "BOULDER_MOVEMENT_BYTE_2",
         sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_SEAFOAMISLANDSB3F_BOULDER4"
@@ -58,6 +62,7 @@ export const SeafoamIslandsB3F: Map = {
         type: "sprite",
         x: 18,
         y: 6,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_SEAFOAMISLANDSB3F_BOULDER5"
@@ -66,6 +71,7 @@ export const SeafoamIslandsB3F: Map = {
         type: "sprite",
         x: 19,
         y: 6,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_SEAFOAMISLANDSB3F_BOULDER6"

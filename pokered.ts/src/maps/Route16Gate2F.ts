@@ -21,6 +21,7 @@ export const Route16Gate2F: Map = {
         type: "sprite",
         x: 4,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_LITTLE_BOY,
         movement: "STAY",
         textId: "TEXT_ROUTE16GATE2F_LITTLE_BOY"
@@ -29,6 +30,7 @@ export const Route16Gate2F: Map = {
         type: "sprite",
         x: 2,
         y: 5,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_ROUTE16GATE2F_LITTLE_GIRL"

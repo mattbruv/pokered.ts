@@ -35,6 +35,7 @@ export const ViridianCity: Map = {
         type: "sprite",
         x: 13,
         y: 20,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_VIRIDIANCITY_YOUNGSTER1"
@@ -43,6 +44,7 @@ export const ViridianCity: Map = {
         type: "sprite",
         x: 30,
         y: 8,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_VIRIDIANCITY_GAMBLER1"
@@ -51,6 +53,7 @@ export const ViridianCity: Map = {
         type: "sprite",
         x: 30,
         y: 25,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_VIRIDIANCITY_YOUNGSTER2"
@@ -59,6 +62,7 @@ export const ViridianCity: Map = {
         type: "sprite",
         x: 17,
         y: 9,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_GIRL,
         movement: "STAY",
         textId: "TEXT_VIRIDIANCITY_GIRL"
@@ -67,6 +71,7 @@ export const ViridianCity: Map = {
         type: "sprite",
         x: 18,
         y: 9,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GAMBLER_ASLEEP,
         movement: "STAY",
         textId: "TEXT_VIRIDIANCITY_OLD_MAN_SLEEPY"
@@ -75,6 +80,7 @@ export const ViridianCity: Map = {
         type: "sprite",
         x: 6,
         y: 23,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_VIRIDIANCITY_FISHER"
@@ -83,6 +89,7 @@ export const ViridianCity: Map = {
         type: "sprite",
         x: 17,
         y: 5,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "WALK",
         textId: "TEXT_VIRIDIANCITY_OLD_MAN"

@@ -21,6 +21,7 @@ export const VermilionTradeHouse: Map = {
         type: "sprite",
         x: 3,
         y: 5,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "STAY",
         textId: "TEXT_VERMILIONTRADEHOUSE_LITTLE_GIRL"

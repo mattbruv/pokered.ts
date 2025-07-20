@@ -21,6 +21,7 @@ export const ViridianMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_VIRIDIANMART_CLERK"
@@ -29,6 +30,7 @@ export const ViridianMart: Map = {
         type: "sprite",
         x: 5,
         y: 5,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_VIRIDIANMART_YOUNGSTER"
@@ -37,6 +39,7 @@ export const ViridianMart: Map = {
         type: "sprite",
         x: 3,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_VIRIDIANMART_COOLTRAINER_M"

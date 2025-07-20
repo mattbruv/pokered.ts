@@ -21,6 +21,7 @@ export const CeruleanTradeHouse: Map = {
         type: "sprite",
         x: 5,
         y: 4,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_GRANNY,
         movement: "STAY",
         textId: "TEXT_CERULEANTRADEHOUSE_GRANNY"
@@ -29,6 +30,7 @@ export const CeruleanTradeHouse: Map = {
         type: "sprite",
         x: 1,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_CERULEANTRADEHOUSE_GAMBLER"

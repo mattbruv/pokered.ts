@@ -23,6 +23,7 @@ export const Route8Gate: Map = {
         type: "sprite",
         x: 2,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GUARD,
         movement: "STAY",
         textId: "TEXT_ROUTE8GATE_GUARD"

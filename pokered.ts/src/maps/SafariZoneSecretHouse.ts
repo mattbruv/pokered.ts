@@ -21,6 +21,7 @@ export const SafariZoneSecretHouse: Map = {
         type: "sprite",
         x: 3,
         y: 3,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_SAFARIZONESECRETHOUSE_FISHING_GURU"

@@ -21,6 +21,7 @@ export const BillsHouse: Map = {
         type: "sprite",
         x: 6,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_BILLSHOUSE_BILL_POKEMON"
@@ -29,6 +30,7 @@ export const BillsHouse: Map = {
         type: "sprite",
         x: 4,
         y: 4,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_BILLSHOUSE_BILL_SS_TICKET"
@@ -37,6 +39,7 @@ export const BillsHouse: Map = {
         type: "sprite",
         x: 6,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_BILLSHOUSE_BILL_CHECK_OUT_MY_RARE_POKEMON"

@@ -21,6 +21,7 @@ export const Museum2F: Map = {
         type: "sprite",
         x: 1,
         y: 7,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_MUSEUM2F_YOUNGSTER"
@@ -29,6 +30,7 @@ export const Museum2F: Map = {
         type: "sprite",
         x: 0,
         y: 5,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_MUSEUM2F_GRAMPS"
@@ -37,6 +39,7 @@ export const Museum2F: Map = {
         type: "sprite",
         x: 7,
         y: 5,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_MUSEUM2F_SCIENTIST"
@@ -45,6 +48,7 @@ export const Museum2F: Map = {
         type: "sprite",
         x: 11,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_MUSEUM2F_BRUNETTE_GIRL"
@@ -53,6 +57,7 @@ export const Museum2F: Map = {
         type: "sprite",
         x: 12,
         y: 5,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_HIKER,
         movement: "STAY",
         textId: "TEXT_MUSEUM2F_HIKER"

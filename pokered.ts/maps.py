@@ -76,6 +76,7 @@ def find_first_with_property(d, prop, value):
             return key, obj
     return None, None
 
+dirs = set()
 for map_path in maps:
     with open(map_path, "r") as map:
         content = map.readlines()
@@ -150,11 +151,13 @@ for map_path in maps:
                 count = len(obj)
                 if (count == 9):
                     tag, x, y, sprite, movement, range_dir, text_id, trainer_id, trainer_level = obj
+                    dirs.add(range_dir)
                     entry = {
                         "type": "trainer",
                         "x": int(x.replace(",", "")),
                         "y": int(y.replace(",", "")),
                         "sprite": sprite.replace(",", ""),
+                        "range_dir": range_dir.replace(",", ""),
                         "movement": movement.replace(",", ""),
                         "textId": text_id.replace(",", ""),
                         "trainerId": trainer_id.replace(",", ""),
@@ -163,10 +166,12 @@ for map_path in maps:
                     objects["objects"].append(entry)
                 if (count == 8):
                     tag, x, y, sprite, movement, range_dir, text_id, item_id = obj
+                    dirs.add(range_dir)
                     entry = {
                         "type": "item",
                         "x": int(x.replace(",", "")),
                         "y": int(y.replace(",", "")),
+                        "range_dir": range_dir.replace(",", ""),
                         "sprite": sprite.replace(",", ""),
                         "movement": movement.replace(",", ""),
                         "textId": text_id.replace(",", ""),
@@ -175,10 +180,12 @@ for map_path in maps:
                     objects["objects"].append(entry)
                 if (count == 7):
                     tag, x, y, sprite, movement, range_dir, text_id = obj
+                    dirs.add(range_dir)
                     entry = {
                         "type": "sprite",
                         "x": int(x.replace(",", "")),
                         "y": int(y.replace(",", "")),
+                        "range_dir": range_dir.replace(",", ""),
                         "sprite": sprite.replace(",", ""),
                         "movement": movement.replace(",", ""),
                         "textId": text_id.replace(",", ""),
@@ -213,3 +220,4 @@ with open("maps.json", "w") as out:
 #         f.write("},\n")
 
 #         f.write("}")
+print(dirs)

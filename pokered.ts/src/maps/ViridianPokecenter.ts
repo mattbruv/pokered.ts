@@ -21,6 +21,7 @@ export const ViridianPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_VIRIDIANPOKECENTER_NURSE"
@@ -29,6 +30,7 @@ export const ViridianPokecenter: Map = {
         type: "sprite",
         x: 10,
         y: 5,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "WALK",
         textId: "TEXT_VIRIDIANPOKECENTER_GENTLEMAN"
@@ -37,6 +39,7 @@ export const ViridianPokecenter: Map = {
         type: "sprite",
         x: 4,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_VIRIDIANPOKECENTER_COOLTRAINER_M"
@@ -45,6 +48,7 @@ export const ViridianPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_VIRIDIANPOKECENTER_LINK_RECEPTIONIST"

@@ -21,6 +21,7 @@ export const VermilionPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_VERMILIONPOKECENTER_NURSE"
@@ -29,6 +30,7 @@ export const VermilionPokecenter: Map = {
         type: "sprite",
         x: 10,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_VERMILIONPOKECENTER_FISHING_GURU"
@@ -37,6 +39,7 @@ export const VermilionPokecenter: Map = {
         type: "sprite",
         x: 5,
         y: 4,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_VERMILIONPOKECENTER_SAILOR"
@@ -45,6 +48,7 @@ export const VermilionPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_VERMILIONPOKECENTER_LINK_RECEPTIONIST"

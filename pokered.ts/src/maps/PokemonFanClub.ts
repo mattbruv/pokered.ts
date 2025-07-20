@@ -24,6 +24,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 6,
         y: 3,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_PIKACHU_FAN"
@@ -32,6 +33,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 1,
         y: 3,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_GIRL,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_SEEL_FAN"
@@ -40,6 +42,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 6,
         y: 4,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_FAIRY,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_PIKACHU"
@@ -48,6 +51,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 1,
         y: 4,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_SEEL,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_SEEL"
@@ -56,6 +60,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_CHAIRMAN"
@@ -64,6 +69,7 @@ export const PokemonFanClub: Map = {
         type: "sprite",
         x: 5,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_POKEMONFANCLUB_RECEPTIONIST"

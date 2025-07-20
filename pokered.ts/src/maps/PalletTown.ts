@@ -30,6 +30,7 @@ export const PalletTown: Map = {
         type: "sprite",
         x: 8,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_OAK,
         movement: "STAY",
         textId: "TEXT_PALLETTOWN_OAK"
@@ -38,6 +39,7 @@ export const PalletTown: Map = {
         type: "sprite",
         x: 3,
         y: 8,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_GIRL,
         movement: "WALK",
         textId: "TEXT_PALLETTOWN_GIRL"
@@ -46,6 +48,7 @@ export const PalletTown: Map = {
         type: "sprite",
         x: 11,
         y: 14,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_FISHER,
         movement: "WALK",
         textId: "TEXT_PALLETTOWN_FISHER"

@@ -21,6 +21,7 @@ export const Route1: Map = {
         type: "sprite",
         x: 5,
         y: 24,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_ROUTE1_YOUNGSTER1"
@@ -29,6 +30,7 @@ export const Route1: Map = {
         type: "sprite",
         x: 15,
         y: 13,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_ROUTE1_YOUNGSTER2"

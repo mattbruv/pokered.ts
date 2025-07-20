@@ -21,6 +21,7 @@ export const PewterSpeechHouse: Map = {
         type: "sprite",
         x: 2,
         y: 3,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_PEWTERSPEECHHOUSE_GAMBLER"
@@ -29,6 +30,7 @@ export const PewterSpeechHouse: Map = {
         type: "sprite",
         x: 4,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_PEWTERSPEECHHOUSE_YOUNGSTER"

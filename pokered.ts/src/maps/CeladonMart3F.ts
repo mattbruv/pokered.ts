@@ -35,6 +35,7 @@ export const CeladonMart3F: Map = {
         type: "sprite",
         x: 16,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_CELADONMART3F_CLERK"
@@ -43,6 +44,7 @@ export const CeladonMart3F: Map = {
         type: "sprite",
         x: 11,
         y: 6,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_GAMEBOY_KID,
         movement: "STAY",
         textId: "TEXT_CELADONMART3F_GAMEBOY_KID1"
@@ -51,6 +53,7 @@ export const CeladonMart3F: Map = {
         type: "sprite",
         x: 7,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GAMEBOY_KID,
         movement: "STAY",
         textId: "TEXT_CELADONMART3F_GAMEBOY_KID2"
@@ -59,6 +62,7 @@ export const CeladonMart3F: Map = {
         type: "sprite",
         x: 8,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GAMEBOY_KID,
         movement: "STAY",
         textId: "TEXT_CELADONMART3F_GAMEBOY_KID3"
@@ -67,6 +71,7 @@ export const CeladonMart3F: Map = {
         type: "sprite",
         x: 2,
         y: 5,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_LITTLE_BOY,
         movement: "STAY",
         textId: "TEXT_CELADONMART3F_LITTLE_BOY"

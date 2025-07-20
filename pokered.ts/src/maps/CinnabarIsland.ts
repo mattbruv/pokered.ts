@@ -33,6 +33,7 @@ export const CinnabarIsland: Map = {
         type: "sprite",
         x: 12,
         y: 5,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_GIRL,
         movement: "WALK",
         textId: "TEXT_CINNABARISLAND_GIRL"
@@ -41,6 +42,7 @@ export const CinnabarIsland: Map = {
         type: "sprite",
         x: 14,
         y: 6,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_CINNABARISLAND_GAMBLER"

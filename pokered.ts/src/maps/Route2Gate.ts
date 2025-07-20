@@ -23,6 +23,7 @@ export const Route2Gate: Map = {
         type: "sprite",
         x: 1,
         y: 4,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_ROUTE2GATE_OAKS_AIDE"
@@ -31,6 +32,7 @@ export const Route2Gate: Map = {
         type: "sprite",
         x: 5,
         y: 4,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_ROUTE2GATE_YOUNGSTER"

@@ -21,6 +21,7 @@ export const SaffronPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_SAFFRONPOKECENTER_NURSE"
@@ -29,6 +30,7 @@ export const SaffronPokecenter: Map = {
         type: "sprite",
         x: 5,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "STAY",
         textId: "TEXT_SAFFRONPOKECENTER_BEAUTY"
@@ -37,6 +39,7 @@ export const SaffronPokecenter: Map = {
         type: "sprite",
         x: 8,
         y: 3,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_SAFFRONPOKECENTER_GENTLEMAN"
@@ -45,6 +48,7 @@ export const SaffronPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_SAFFRONPOKECENTER_LINK_RECEPTIONIST"

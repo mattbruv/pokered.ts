@@ -23,6 +23,7 @@ export const CeladonMartRoof: Map = {
         type: "sprite",
         x: 10,
         y: 4,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_CELADONMARTROOF_SUPER_NERD"
@@ -31,6 +32,7 @@ export const CeladonMartRoof: Map = {
         type: "sprite",
         x: 5,
         y: 5,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_CELADONMARTROOF_LITTLE_GIRL"

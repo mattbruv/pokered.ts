@@ -21,6 +21,7 @@ export const SSAnneCaptainsRoom: Map = {
         type: "sprite",
         x: 4,
         y: 2,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_CAPTAIN,
         movement: "STAY",
         textId: "TEXT_SSANNECAPTAINSROOM_CAPTAIN"

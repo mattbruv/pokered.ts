@@ -24,6 +24,7 @@ export const Museum1F: Map = {
         type: "sprite",
         x: 12,
         y: 4,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_MUSEUM1F_SCIENTIST1"
@@ -32,6 +33,7 @@ export const Museum1F: Map = {
         type: "sprite",
         x: 1,
         y: 4,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_MUSEUM1F_GAMBLER"
@@ -40,6 +42,7 @@ export const Museum1F: Map = {
         type: "sprite",
         x: 15,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_MUSEUM1F_SCIENTIST2"
@@ -48,6 +51,7 @@ export const Museum1F: Map = {
         type: "sprite",
         x: 17,
         y: 4,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_MUSEUM1F_SCIENTIST3"
@@ -56,6 +60,7 @@ export const Museum1F: Map = {
         type: "sprite",
         x: 16,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_OLD_AMBER,
         movement: "STAY",
         textId: "TEXT_MUSEUM1F_OLD_AMBER"

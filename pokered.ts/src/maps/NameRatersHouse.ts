@@ -21,6 +21,7 @@ export const NameRatersHouse: Map = {
         type: "sprite",
         x: 5,
         y: 3,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_SILPH_PRESIDENT,
         movement: "STAY",
         textId: "TEXT_NAMERATERSHOUSE_NAME_RATER"

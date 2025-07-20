@@ -22,6 +22,7 @@ export const FuchsiaGoodRodHouse: Map = {
         type: "sprite",
         x: 5,
         y: 3,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_FUCHSIAGOODRODHOUSE_FISHING_GURU"

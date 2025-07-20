@@ -23,6 +23,7 @@ export const Route22Gate: Map = {
         type: "sprite",
         x: 6,
         y: 2,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_GUARD,
         movement: "STAY",
         textId: "TEXT_ROUTE22GATE_GUARD"

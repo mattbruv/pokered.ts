@@ -21,6 +21,7 @@ export const PewterMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_PEWTERMART_CLERK"
@@ -29,6 +30,7 @@ export const PewterMart: Map = {
         type: "sprite",
         x: 3,
         y: 3,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "WALK",
         textId: "TEXT_PEWTERMART_YOUNGSTER"
@@ -37,6 +39,7 @@ export const PewterMart: Map = {
         type: "sprite",
         x: 5,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_PEWTERMART_SUPER_NERD"

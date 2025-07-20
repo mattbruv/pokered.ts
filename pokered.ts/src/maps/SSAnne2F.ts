@@ -28,6 +28,7 @@ export const SSAnne2F: Map = {
         type: "sprite",
         x: 3,
         y: 7,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_WAITER,
         movement: "WALK",
         textId: "TEXT_SSANNE2F_WAITER"
@@ -37,6 +38,7 @@ export const SSAnne2F: Map = {
         x: 36,
         y: 4,
         sprite: OverworldSprite.SPRITE_BLUE,
+        direction: "DOWN",
         movement: "STAY",
         textId: "TEXT_SSANNE2F_RIVAL",
         trainerId: "OPP_RIVAL1",

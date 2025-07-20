@@ -21,6 +21,7 @@ export const CeladonDiner: Map = {
         type: "sprite",
         x: 8,
         y: 5,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_COOK,
         movement: "WALK",
         textId: "TEXT_CELADONDINER_COOK"
@@ -29,6 +30,7 @@ export const CeladonDiner: Map = {
         type: "sprite",
         x: 7,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_WOMAN,
         movement: "STAY",
         textId: "TEXT_CELADONDINER_MIDDLE_AGED_WOMAN"
@@ -37,6 +39,7 @@ export const CeladonDiner: Map = {
         type: "sprite",
         x: 1,
         y: 4,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_MAN,
         movement: "STAY",
         textId: "TEXT_CELADONDINER_MIDDLE_AGED_MAN"
@@ -45,6 +48,7 @@ export const CeladonDiner: Map = {
         type: "sprite",
         x: 5,
         y: 3,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_CELADONDINER_FISHER"
@@ -53,6 +57,7 @@ export const CeladonDiner: Map = {
         type: "sprite",
         x: 0,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GYM_GUIDE,
         movement: "STAY",
         textId: "TEXT_CELADONDINER_GYM_GUIDE"

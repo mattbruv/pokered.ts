@@ -21,6 +21,7 @@ export const LavenderPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_LAVENDERPOKECENTER_NURSE"
@@ -29,6 +30,7 @@ export const LavenderPokecenter: Map = {
         type: "sprite",
         x: 5,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_LAVENDERPOKECENTER_GENTLEMAN"
@@ -37,6 +39,7 @@ export const LavenderPokecenter: Map = {
         type: "sprite",
         x: 2,
         y: 6,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_LAVENDERPOKECENTER_LITTLE_GIRL"
@@ -45,6 +48,7 @@ export const LavenderPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_LAVENDERPOKECENTER_LINK_RECEPTIONIST"

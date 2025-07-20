@@ -21,6 +21,7 @@ export const VermilionMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_VERMILIONMART_CLERK"
@@ -29,6 +30,7 @@ export const VermilionMart: Map = {
         type: "sprite",
         x: 5,
         y: 6,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_VERMILIONMART_COOLTRAINER_M"
@@ -37,6 +39,7 @@ export const VermilionMart: Map = {
         type: "sprite",
         x: 3,
         y: 3,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_VERMILIONMART_COOLTRAINER_F"

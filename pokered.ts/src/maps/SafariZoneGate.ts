@@ -23,6 +23,7 @@ export const SafariZoneGate: Map = {
         type: "sprite",
         x: 6,
         y: 2,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_SAFARI_ZONE_WORKER,
         movement: "STAY",
         textId: "TEXT_SAFARIZONEGATE_SAFARI_ZONE_WORKER1"
@@ -31,6 +32,7 @@ export const SafariZoneGate: Map = {
         type: "sprite",
         x: 1,
         y: 4,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_SAFARI_ZONE_WORKER,
         movement: "STAY",
         textId: "TEXT_SAFARIZONEGATE_SAFARI_ZONE_WORKER2"

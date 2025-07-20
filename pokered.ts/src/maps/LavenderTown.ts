@@ -36,6 +36,7 @@ export const LavenderTown: Map = {
         type: "sprite",
         x: 15,
         y: 9,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_LAVENDERTOWN_LITTLE_GIRL"
@@ -44,6 +45,7 @@ export const LavenderTown: Map = {
         type: "sprite",
         x: 9,
         y: 10,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_LAVENDERTOWN_COOLTRAINER_M"
@@ -52,6 +54,7 @@ export const LavenderTown: Map = {
         type: "sprite",
         x: 8,
         y: 7,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "WALK",
         textId: "TEXT_LAVENDERTOWN_SUPER_NERD"

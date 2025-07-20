@@ -21,6 +21,7 @@ export const PewterPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_PEWTERPOKECENTER_NURSE"
@@ -29,6 +30,7 @@ export const PewterPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 7,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_PEWTERPOKECENTER_GENTLEMAN"
@@ -37,6 +39,7 @@ export const PewterPokecenter: Map = {
         type: "sprite",
         x: 1,
         y: 3,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_FAIRY,
         movement: "STAY",
         textId: "TEXT_PEWTERPOKECENTER_JIGGLYPUFF"
@@ -45,6 +48,7 @@ export const PewterPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_PEWTERPOKECENTER_LINK_RECEPTIONIST"

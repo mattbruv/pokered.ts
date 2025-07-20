@@ -24,6 +24,7 @@ export const PokemonMansion2F: Map = {
         x: 3,
         y: 17,
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
+        direction: "LEFT_RIGHT",
         movement: "WALK",
         textId: "TEXT_POKEMONMANSION2F_SUPER_NERD",
         trainerId: "OPP_BURGLAR",
@@ -33,6 +34,7 @@ export const PokemonMansion2F: Map = {
         type: "item",
         x: 28,
         y: 7,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSION2F_CALCIUM",
@@ -42,6 +44,7 @@ export const PokemonMansion2F: Map = {
         type: "sprite",
         x: 18,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKEDEX,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSION2F_DIARY1"
@@ -50,6 +53,7 @@ export const PokemonMansion2F: Map = {
         type: "sprite",
         x: 3,
         y: 22,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKEDEX,
         movement: "STAY",
         textId: "TEXT_POKEMONMANSION2F_DIARY2"

@@ -21,6 +21,7 @@ export const PokemonTower2F: Map = {
         type: "sprite",
         x: 14,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BLUE,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER2F_RIVAL"
@@ -29,6 +30,7 @@ export const PokemonTower2F: Map = {
         type: "sprite",
         x: 3,
         y: 7,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER2F_CHANNELER"

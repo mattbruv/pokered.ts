@@ -24,6 +24,7 @@ export const BrunosRoom: Map = {
         x: 5,
         y: 2,
         sprite: OverworldSprite.SPRITE_BRUNO,
+        direction: "DOWN",
         movement: "STAY",
         textId: "TEXT_BRUNOSROOM_BRUNO",
         trainerId: "OPP_BRUNO",

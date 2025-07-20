@@ -21,6 +21,7 @@ export const FuchsiaMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_FUCHSIAMART_CLERK"
@@ -29,6 +30,7 @@ export const FuchsiaMart: Map = {
         type: "sprite",
         x: 4,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_MAN,
         movement: "STAY",
         textId: "TEXT_FUCHSIAMART_MIDDLE_AGED_MAN"
@@ -37,6 +39,7 @@ export const FuchsiaMart: Map = {
         type: "sprite",
         x: 6,
         y: 5,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_FUCHSIAMART_COOLTRAINER_F"

@@ -22,6 +22,7 @@ export const DiglettsCaveRoute2: Map = {
         type: "sprite",
         x: 3,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_DIGLETTSCAVEROUTE2_FISHING_GURU"

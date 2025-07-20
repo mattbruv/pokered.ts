@@ -22,6 +22,7 @@ export const CopycatsHouse1F: Map = {
         type: "sprite",
         x: 2,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_WOMAN,
         movement: "STAY",
         textId: "TEXT_COPYCATSHOUSE1F_MIDDLE_AGED_WOMAN"
@@ -30,6 +31,7 @@ export const CopycatsHouse1F: Map = {
         type: "sprite",
         x: 5,
         y: 4,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_MAN,
         movement: "STAY",
         textId: "TEXT_COPYCATSHOUSE1F_MIDDLE_AGED_MAN"
@@ -38,6 +40,7 @@ export const CopycatsHouse1F: Map = {
         type: "sprite",
         x: 1,
         y: 4,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_FAIRY,
         movement: "WALK",
         textId: "TEXT_COPYCATSHOUSE1F_CHANSEY"

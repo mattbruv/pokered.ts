@@ -45,6 +45,7 @@ export const CeladonCity: Map = {
         type: "sprite",
         x: 8,
         y: 17,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_CELADONCITY_LITTLE_GIRL"
@@ -53,6 +54,7 @@ export const CeladonCity: Map = {
         type: "sprite",
         x: 11,
         y: 28,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_CELADONCITY_GRAMPS1"
@@ -61,6 +63,7 @@ export const CeladonCity: Map = {
         type: "sprite",
         x: 14,
         y: 19,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_GIRL,
         movement: "WALK",
         textId: "TEXT_CELADONCITY_GIRL"
@@ -69,6 +72,7 @@ export const CeladonCity: Map = {
         type: "sprite",
         x: 25,
         y: 22,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_CELADONCITY_GRAMPS2"
@@ -77,6 +81,7 @@ export const CeladonCity: Map = {
         type: "sprite",
         x: 22,
         y: 16,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_CELADONCITY_GRAMPS3"
@@ -85,6 +90,7 @@ export const CeladonCity: Map = {
         type: "sprite",
         x: 32,
         y: 12,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_FISHER,
         movement: "STAY",
         textId: "TEXT_CELADONCITY_FISHER"
@@ -93,6 +99,7 @@ export const CeladonCity: Map = {
         type: "sprite",
         x: 30,
         y: 12,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_CELADONCITY_POLIWRATH"
@@ -101,6 +108,7 @@ export const CeladonCity: Map = {
         type: "sprite",
         x: 32,
         y: 29,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "WALK",
         textId: "TEXT_CELADONCITY_ROCKET1"
@@ -109,6 +117,7 @@ export const CeladonCity: Map = {
         type: "sprite",
         x: 42,
         y: 14,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "WALK",
         textId: "TEXT_CELADONCITY_ROCKET2"

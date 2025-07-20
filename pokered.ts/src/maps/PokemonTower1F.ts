@@ -22,6 +22,7 @@ export const PokemonTower1F: Map = {
         type: "sprite",
         x: 15,
         y: 13,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER1F_RECEPTIONIST"
@@ -30,6 +31,7 @@ export const PokemonTower1F: Map = {
         type: "sprite",
         x: 6,
         y: 8,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_WOMAN,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER1F_MIDDLE_AGED_WOMAN"
@@ -38,6 +40,7 @@ export const PokemonTower1F: Map = {
         type: "sprite",
         x: 8,
         y: 12,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BALDING_GUY,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER1F_BALDING_GUY"
@@ -46,6 +49,7 @@ export const PokemonTower1F: Map = {
         type: "sprite",
         x: 13,
         y: 7,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GIRL,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER1F_GIRL"
@@ -54,6 +58,7 @@ export const PokemonTower1F: Map = {
         type: "sprite",
         x: 17,
         y: 7,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_CHANNELER,
         movement: "STAY",
         textId: "TEXT_POKEMONTOWER1F_CHANNELER"

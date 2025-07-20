@@ -21,6 +21,7 @@ export const MrPsychicsHouse: Map = {
         type: "sprite",
         x: 5,
         y: 3,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_MRPSYCHICSHOUSE_MR_PSYCHIC"

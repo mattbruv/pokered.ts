@@ -22,6 +22,7 @@ export const UndergroundPathRoute6: Map = {
         type: "sprite",
         x: 2,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GIRL,
         movement: "STAY",
         textId: "TEXT_UNDERGROUNDPATHROUTE6_GIRL"

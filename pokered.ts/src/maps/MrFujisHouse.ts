@@ -21,6 +21,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 3,
         y: 5,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_SUPER_NERD"
@@ -29,6 +30,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 6,
         y: 3,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_LITTLE_GIRL"
@@ -37,6 +39,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 6,
         y: 4,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_PSYDUCK"
@@ -45,6 +48,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 1,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_NIDORINO"
@@ -53,6 +57,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_MR_FUJI,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_MR_FUJI"
@@ -61,6 +66,7 @@ export const MrFujisHouse: Map = {
         type: "sprite",
         x: 3,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKEDEX,
         movement: "STAY",
         textId: "TEXT_MRFUJISHOUSE_POKEDEX"

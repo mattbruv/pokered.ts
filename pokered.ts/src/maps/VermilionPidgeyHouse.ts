@@ -21,6 +21,7 @@ export const VermilionPidgeyHouse: Map = {
         type: "sprite",
         x: 5,
         y: 3,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_VERMILIONPIDGEYHOUSE_YOUNGSTER"
@@ -29,6 +30,7 @@ export const VermilionPidgeyHouse: Map = {
         type: "sprite",
         x: 3,
         y: 5,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_BIRD,
         movement: "WALK",
         textId: "TEXT_VERMILIONPIDGEYHOUSE_PIDGEY"
@@ -37,6 +39,7 @@ export const VermilionPidgeyHouse: Map = {
         type: "sprite",
         x: 4,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_PAPER,
         movement: "STAY",
         textId: "TEXT_VERMILIONPIDGEYHOUSE_LETTER"

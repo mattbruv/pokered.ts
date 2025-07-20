@@ -21,6 +21,7 @@ export const LavenderMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_LAVENDERMART_CLERK"
@@ -29,6 +30,7 @@ export const LavenderMart: Map = {
         type: "sprite",
         x: 3,
         y: 4,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BALDING_GUY,
         movement: "STAY",
         textId: "TEXT_LAVENDERMART_BALDING_GUY"
@@ -37,6 +39,7 @@ export const LavenderMart: Map = {
         type: "sprite",
         x: 7,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_LAVENDERMART_COOLTRAINER_M"

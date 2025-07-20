@@ -26,6 +26,7 @@ export const CeladonMansion1F: Map = {
         type: "sprite",
         x: 0,
         y: 5,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION1F_MEOWTH"
@@ -34,6 +35,7 @@ export const CeladonMansion1F: Map = {
         type: "sprite",
         x: 1,
         y: 5,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GRANNY,
         movement: "STAY",
         textId: "TEXT_CELADONMANSION1F_GRANNY"
@@ -42,6 +44,7 @@ export const CeladonMansion1F: Map = {
         type: "sprite",
         x: 1,
         y: 8,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_FAIRY,
         movement: "WALK",
         textId: "TEXT_CELADONMANSION1F_CLEFAIRY"
@@ -50,6 +53,7 @@ export const CeladonMansion1F: Map = {
         type: "sprite",
         x: 4,
         y: 4,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "WALK",
         textId: "TEXT_CELADONMANSION1F_NIDORANF"

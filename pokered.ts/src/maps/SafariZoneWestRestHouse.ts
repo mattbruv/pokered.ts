@@ -21,6 +21,7 @@ export const SafariZoneWestRestHouse: Map = {
         type: "sprite",
         x: 4,
         y: 4,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "WALK",
         textId: "TEXT_SAFARIZONEWESTRESTHOUSE_SCIENTIST"
@@ -29,6 +30,7 @@ export const SafariZoneWestRestHouse: Map = {
         type: "sprite",
         x: 0,
         y: 2,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_SAFARIZONEWESTRESTHOUSE_COOLTRAINER_M"
@@ -37,6 +39,7 @@ export const SafariZoneWestRestHouse: Map = {
         type: "sprite",
         x: 6,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_SILPH_WORKER_F,
         movement: "STAY",
         textId: "TEXT_SAFARIZONEWESTRESTHOUSE_SILPH_WORKER_F"

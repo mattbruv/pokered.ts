@@ -24,6 +24,7 @@ export const WardensHouse: Map = {
         type: "sprite",
         x: 2,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_WARDEN,
         movement: "STAY",
         textId: "TEXT_WARDENSHOUSE_WARDEN"
@@ -32,6 +33,7 @@ export const WardensHouse: Map = {
         type: "item",
         x: 8,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKE_BALL,
         movement: "STAY",
         textId: "TEXT_WARDENSHOUSE_RARE_CANDY",
@@ -41,6 +43,7 @@ export const WardensHouse: Map = {
         type: "sprite",
         x: 8,
         y: 4,
+        direction: "BOULDER_MOVEMENT_BYTE_2",
         sprite: OverworldSprite.SPRITE_BOULDER,
         movement: "STAY",
         textId: "TEXT_WARDENSHOUSE_BOULDER"

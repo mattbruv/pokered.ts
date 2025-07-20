@@ -21,6 +21,7 @@ export const SaffronMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_SAFFRONMART_CLERK"
@@ -29,6 +30,7 @@ export const SaffronMart: Map = {
         type: "sprite",
         x: 4,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_SAFFRONMART_SUPER_NERD"
@@ -37,6 +39,7 @@ export const SaffronMart: Map = {
         type: "sprite",
         x: 6,
         y: 5,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_SAFFRONMART_COOLTRAINER_F"

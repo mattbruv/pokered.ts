@@ -21,6 +21,7 @@ export const Daycare: Map = {
         type: "sprite",
         x: 2,
         y: 3,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_DAYCARE_GENTLEMAN"

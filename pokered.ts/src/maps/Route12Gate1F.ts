@@ -24,6 +24,7 @@ export const Route12Gate1F: Map = {
         type: "sprite",
         x: 1,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GUARD,
         movement: "STAY",
         textId: "TEXT_ROUTE12GATE1F_GUARD"

@@ -21,6 +21,7 @@ export const BluesHouse: Map = {
         type: "sprite",
         x: 2,
         y: 3,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_DAISY,
         movement: "STAY",
         textId: "TEXT_BLUESHOUSE_DAISY_SITTING"
@@ -29,6 +30,7 @@ export const BluesHouse: Map = {
         type: "item",
         x: 6,
         y: 4,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_DAISY,
         movement: "WALK",
         textId: "TEXT_BLUESHOUSE_DAISY_WALKING",
@@ -38,6 +40,7 @@ export const BluesHouse: Map = {
         type: "item",
         x: 3,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_POKEDEX,
         movement: "STAY",
         textId: "TEXT_BLUESHOUSE_TOWN_MAP",

@@ -21,6 +21,7 @@ export const CeladonChiefHouse: Map = {
         type: "sprite",
         x: 4,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_CELADONCHIEFHOUSE_CHIEF"
@@ -29,6 +30,7 @@ export const CeladonChiefHouse: Map = {
         type: "sprite",
         x: 1,
         y: 4,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "WALK",
         textId: "TEXT_CELADONCHIEFHOUSE_ROCKET"
@@ -37,6 +39,7 @@ export const CeladonChiefHouse: Map = {
         type: "sprite",
         x: 5,
         y: 6,
+        direction: "LEFT",
         sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_CELADONCHIEFHOUSE_SAILOR"

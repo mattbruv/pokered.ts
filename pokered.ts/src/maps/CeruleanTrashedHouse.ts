@@ -24,6 +24,7 @@ export const CeruleanTrashedHouse: Map = {
         type: "sprite",
         x: 2,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_FISHING_GURU,
         movement: "STAY",
         textId: "TEXT_CERULEANTRASHEDHOUSE_FISHING_GURU"
@@ -32,6 +33,7 @@ export const CeruleanTrashedHouse: Map = {
         type: "sprite",
         x: 5,
         y: 6,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_GIRL,
         movement: "WALK",
         textId: "TEXT_CERULEANTRASHEDHOUSE_GIRL"

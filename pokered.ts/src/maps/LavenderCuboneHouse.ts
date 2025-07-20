@@ -21,6 +21,7 @@ export const LavenderCuboneHouse: Map = {
         type: "sprite",
         x: 3,
         y: 5,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_LAVENDERCUBONEHOUSE_CUBONE"
@@ -29,6 +30,7 @@ export const LavenderCuboneHouse: Map = {
         type: "sprite",
         x: 2,
         y: 4,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_LAVENDERCUBONEHOUSE_BRUNETTE_GIRL"

@@ -21,6 +21,7 @@ export const ViridianSchoolHouse: Map = {
         type: "sprite",
         x: 3,
         y: 5,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_VIRIDIANSCHOOLHOUSE_BRUNETTE_GIRL"
@@ -29,6 +30,7 @@ export const ViridianSchoolHouse: Map = {
         type: "sprite",
         x: 4,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "STAY",
         textId: "TEXT_VIRIDIANSCHOOLHOUSE_COOLTRAINER_F"

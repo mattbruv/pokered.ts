@@ -39,6 +39,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 19,
         y: 7,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "WALK",
         textId: "TEXT_VERMILIONCITY_BEAUTY"
@@ -47,6 +48,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 14,
         y: 6,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_VERMILIONCITY_GAMBLER1"
@@ -55,6 +57,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 19,
         y: 30,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_VERMILIONCITY_SAILOR1"
@@ -63,6 +66,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 30,
         y: 7,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GAMBLER,
         movement: "STAY",
         textId: "TEXT_VERMILIONCITY_GAMBLER2"
@@ -71,6 +75,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 29,
         y: 9,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "WALK",
         textId: "TEXT_VERMILIONCITY_MACHOP"
@@ -79,6 +84,7 @@ export const VermilionCity: Map = {
         type: "sprite",
         x: 25,
         y: 27,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "WALK",
         textId: "TEXT_VERMILIONCITY_SAILOR2"

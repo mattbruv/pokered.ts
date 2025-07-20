@@ -21,6 +21,7 @@ export const HallOfFame: Map = {
         type: "sprite",
         x: 5,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_OAK,
         movement: "STAY",
         textId: "TEXT_HALLOFFAME_OAK"

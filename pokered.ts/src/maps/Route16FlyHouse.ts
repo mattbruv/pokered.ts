@@ -21,6 +21,7 @@ export const Route16FlyHouse: Map = {
         type: "sprite",
         x: 2,
         y: 3,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "STAY",
         textId: "TEXT_ROUTE16FLYHOUSE_BRUNETTE_GIRL"
@@ -29,6 +30,7 @@ export const Route16FlyHouse: Map = {
         type: "sprite",
         x: 6,
         y: 4,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_BIRD,
         movement: "WALK",
         textId: "TEXT_ROUTE16FLYHOUSE_FEAROW"

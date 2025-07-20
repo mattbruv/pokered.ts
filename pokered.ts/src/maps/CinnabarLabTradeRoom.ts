@@ -21,6 +21,7 @@ export const CinnabarLabTradeRoom: Map = {
         type: "sprite",
         x: 3,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_CINNABARLABTRADEROOM_SUPER_NERD"
@@ -29,6 +30,7 @@ export const CinnabarLabTradeRoom: Map = {
         type: "sprite",
         x: 1,
         y: 4,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_GRAMPS,
         movement: "STAY",
         textId: "TEXT_CINNABARLABTRADEROOM_GRAMPS"
@@ -37,6 +39,7 @@ export const CinnabarLabTradeRoom: Map = {
         type: "sprite",
         x: 5,
         y: 5,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "STAY",
         textId: "TEXT_CINNABARLABTRADEROOM_BEAUTY"

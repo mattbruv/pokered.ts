@@ -21,6 +21,7 @@ export const MtMoonPokecenter: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_NURSE,
         movement: "STAY",
         textId: "TEXT_MTMOONPOKECENTER_NURSE"
@@ -29,6 +30,7 @@ export const MtMoonPokecenter: Map = {
         type: "sprite",
         x: 4,
         y: 3,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_MTMOONPOKECENTER_YOUNGSTER"
@@ -37,6 +39,7 @@ export const MtMoonPokecenter: Map = {
         type: "sprite",
         x: 7,
         y: 3,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_MTMOONPOKECENTER_GENTLEMAN"
@@ -45,6 +48,7 @@ export const MtMoonPokecenter: Map = {
         type: "sprite",
         x: 10,
         y: 6,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_MAN,
         movement: "WALK",
         textId: "TEXT_MTMOONPOKECENTER_MAGIKARP_SALESMAN"
@@ -53,6 +57,7 @@ export const MtMoonPokecenter: Map = {
         type: "sprite",
         x: 7,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_CLIPBOARD,
         movement: "STAY",
         textId: "TEXT_MTMOONPOKECENTER_CLIPBOARD"
@@ -61,6 +66,7 @@ export const MtMoonPokecenter: Map = {
         type: "sprite",
         x: 11,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_MTMOONPOKECENTER_LINK_RECEPTIONIST"

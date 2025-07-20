@@ -21,6 +21,7 @@ export const FuchsiaMeetingRoom: Map = {
         type: "sprite",
         x: 4,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_SAFARI_ZONE_WORKER,
         movement: "STAY",
         textId: "TEXT_FUCHSIAMEETINGROOM_SAFARI_ZONE_WORKER1"
@@ -29,6 +30,7 @@ export const FuchsiaMeetingRoom: Map = {
         type: "sprite",
         x: 0,
         y: 2,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_SAFARI_ZONE_WORKER,
         movement: "STAY",
         textId: "TEXT_FUCHSIAMEETINGROOM_SAFARI_ZONE_WORKER2"
@@ -37,6 +39,7 @@ export const FuchsiaMeetingRoom: Map = {
         type: "sprite",
         x: 10,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_SAFARI_ZONE_WORKER,
         movement: "STAY",
         textId: "TEXT_FUCHSIAMEETINGROOM_SAFARI_ZONE_WORKER3"

@@ -21,6 +21,7 @@ export const CopycatsHouse2F: Map = {
         type: "sprite",
         x: 4,
         y: 3,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_BRUNETTE_GIRL,
         movement: "WALK",
         textId: "TEXT_COPYCATSHOUSE2F_COPYCAT"
@@ -29,6 +30,7 @@ export const CopycatsHouse2F: Map = {
         type: "sprite",
         x: 4,
         y: 6,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_BIRD,
         movement: "WALK",
         textId: "TEXT_COPYCATSHOUSE2F_DODUO"
@@ -37,6 +39,7 @@ export const CopycatsHouse2F: Map = {
         type: "sprite",
         x: 5,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_MONSTER,
         movement: "STAY",
         textId: "TEXT_COPYCATSHOUSE2F_MONSTER"
@@ -45,6 +48,7 @@ export const CopycatsHouse2F: Map = {
         type: "sprite",
         x: 2,
         y: 0,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_BIRD,
         movement: "STAY",
         textId: "TEXT_COPYCATSHOUSE2F_BIRD"
@@ -53,6 +57,7 @@ export const CopycatsHouse2F: Map = {
         type: "sprite",
         x: 1,
         y: 6,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_FAIRY,
         movement: "STAY",
         textId: "TEXT_COPYCATSHOUSE2F_FAIRY"

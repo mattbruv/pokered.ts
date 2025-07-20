@@ -41,10 +41,22 @@ export type BackgroundItem = {
 /** Represents a dynamic object in the map, such as NPCs, trainers, items, etc. */
 type MovementType = "STAY" | "WALK"; // expand as needed
 
+type BaseObjectDirection =
+  | "UP"
+  | "LEFT_RIGHT"
+  | "ANY_DIR"
+  | "RIGHT"
+  | "DOWN"
+  | "NONE"
+  | "UP_DOWN"
+  | "BOULDER_MOVEMENT_BYTE_2"
+  | "LEFT";
+
 type BaseObject = {
   type: "sprite" | "trainer" | "item";
   x: number;
   y: number;
+  direction: BaseObjectDirection;
   sprite: OverworldSprite; // e.g., "SPRITE_YOUNGSTER", "SPRITE_POKE_BALL"
   movement: MovementType;
   textId: string; // e.g., "TEXT_VIRIDIANFOREST_YOUNGSTER1"

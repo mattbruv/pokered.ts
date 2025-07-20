@@ -21,6 +21,7 @@ export const ViridianNicknameHouse: Map = {
         type: "sprite",
         x: 5,
         y: 3,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BALDING_GUY,
         movement: "STAY",
         textId: "TEXT_VIRIDIANNICKNAMEHOUSE_BALDING_GUY"
@@ -29,6 +30,7 @@ export const ViridianNicknameHouse: Map = {
         type: "sprite",
         x: 1,
         y: 4,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_LITTLE_GIRL,
         movement: "WALK",
         textId: "TEXT_VIRIDIANNICKNAMEHOUSE_LITTLE_GIRL"
@@ -37,6 +39,7 @@ export const ViridianNicknameHouse: Map = {
         type: "sprite",
         x: 5,
         y: 5,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_BIRD,
         movement: "WALK",
         textId: "TEXT_VIRIDIANNICKNAMEHOUSE_SPEAROW"
@@ -45,6 +48,7 @@ export const ViridianNicknameHouse: Map = {
         type: "sprite",
         x: 4,
         y: 0,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_CLIPBOARD,
         movement: "STAY",
         textId: "TEXT_VIRIDIANNICKNAMEHOUSE_SPEARY_SIGN"

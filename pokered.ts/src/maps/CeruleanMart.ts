@@ -21,6 +21,7 @@ export const CeruleanMart: Map = {
         type: "sprite",
         x: 0,
         y: 5,
+        direction: "RIGHT",
         sprite: OverworldSprite.SPRITE_CLERK,
         movement: "STAY",
         textId: "TEXT_CERULEANMART_CLERK"
@@ -29,6 +30,7 @@ export const CeruleanMart: Map = {
         type: "sprite",
         x: 3,
         y: 4,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "WALK",
         textId: "TEXT_CERULEANMART_COOLTRAINER_M"
@@ -37,6 +39,7 @@ export const CeruleanMart: Map = {
         type: "sprite",
         x: 6,
         y: 2,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_F,
         movement: "WALK",
         textId: "TEXT_CERULEANMART_COOLTRAINER_F"

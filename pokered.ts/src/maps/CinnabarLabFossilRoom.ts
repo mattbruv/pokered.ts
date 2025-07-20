@@ -21,6 +21,7 @@ export const CinnabarLabFossilRoom: Map = {
         type: "sprite",
         x: 5,
         y: 2,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "WALK",
         textId: "TEXT_CINNABARLABFOSSILROOM_SCIENTIST1"
@@ -29,6 +30,7 @@ export const CinnabarLabFossilRoom: Map = {
         type: "sprite",
         x: 7,
         y: 6,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "STAY",
         textId: "TEXT_CINNABARLABFOSSILROOM_SCIENTIST2"

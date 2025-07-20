@@ -21,6 +21,7 @@ export const BikeShop: Map = {
         type: "sprite",
         x: 6,
         y: 2,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BIKE_SHOP_CLERK,
         movement: "STAY",
         textId: "TEXT_BIKESHOP_CLERK"
@@ -29,6 +30,7 @@ export const BikeShop: Map = {
         type: "sprite",
         x: 5,
         y: 6,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_MIDDLE_AGED_WOMAN,
         movement: "WALK",
         textId: "TEXT_BIKESHOP_MIDDLE_AGED_WOMAN"
@@ -37,6 +39,7 @@ export const BikeShop: Map = {
         type: "sprite",
         x: 1,
         y: 3,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_YOUNGSTER,
         movement: "STAY",
         textId: "TEXT_BIKESHOP_YOUNGSTER"

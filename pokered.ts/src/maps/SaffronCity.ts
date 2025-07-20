@@ -43,6 +43,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 7,
         y: 6,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_SAFFRONCITY_ROCKET1"
@@ -51,6 +52,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 20,
         y: 8,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "WALK",
         textId: "TEXT_SAFFRONCITY_ROCKET2"
@@ -59,6 +61,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 34,
         y: 4,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_SAFFRONCITY_ROCKET3"
@@ -67,6 +70,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 13,
         y: 12,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_SAFFRONCITY_ROCKET4"
@@ -75,6 +79,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 11,
         y: 25,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "WALK",
         textId: "TEXT_SAFFRONCITY_ROCKET5"
@@ -83,6 +88,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 32,
         y: 13,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "WALK",
         textId: "TEXT_SAFFRONCITY_ROCKET6"
@@ -91,6 +97,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 18,
         y: 30,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "WALK",
         textId: "TEXT_SAFFRONCITY_ROCKET7"
@@ -99,6 +106,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 8,
         y: 14,
+        direction: "ANY_DIR",
         sprite: OverworldSprite.SPRITE_SCIENTIST,
         movement: "WALK",
         textId: "TEXT_SAFFRONCITY_SCIENTIST"
@@ -107,6 +115,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 23,
         y: 23,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SILPH_WORKER_M,
         movement: "STAY",
         textId: "TEXT_SAFFRONCITY_SILPH_WORKER_M"
@@ -115,6 +124,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 17,
         y: 30,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_SILPH_WORKER_F,
         movement: "WALK",
         textId: "TEXT_SAFFRONCITY_SILPH_WORKER_F"
@@ -123,6 +133,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 30,
         y: 12,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GENTLEMAN,
         movement: "STAY",
         textId: "TEXT_SAFFRONCITY_GENTLEMAN"
@@ -131,6 +142,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 31,
         y: 12,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_BIRD,
         movement: "STAY",
         textId: "TEXT_SAFFRONCITY_PIDGEOT"
@@ -139,6 +151,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 18,
         y: 8,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_ROCKER,
         movement: "STAY",
         textId: "TEXT_SAFFRONCITY_ROCKER"
@@ -147,6 +160,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 18,
         y: 22,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_SAFFRONCITY_ROCKET8"
@@ -155,6 +169,7 @@ export const SaffronCity: Map = {
         type: "sprite",
         x: 19,
         y: 22,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_ROCKET,
         movement: "STAY",
         textId: "TEXT_SAFFRONCITY_ROCKET9"

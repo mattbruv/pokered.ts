@@ -28,6 +28,7 @@ export const Route23: Map = {
         type: "sprite",
         x: 4,
         y: 35,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GUARD,
         movement: "STAY",
         textId: "TEXT_ROUTE23_GUARD1"
@@ -36,6 +37,7 @@ export const Route23: Map = {
         type: "sprite",
         x: 10,
         y: 56,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GUARD,
         movement: "STAY",
         textId: "TEXT_ROUTE23_GUARD2"
@@ -44,6 +46,7 @@ export const Route23: Map = {
         type: "sprite",
         x: 8,
         y: 85,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_SWIMMER,
         movement: "STAY",
         textId: "TEXT_ROUTE23_SWIMMER1"
@@ -52,6 +55,7 @@ export const Route23: Map = {
         type: "sprite",
         x: 11,
         y: 96,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_SWIMMER,
         movement: "STAY",
         textId: "TEXT_ROUTE23_SWIMMER2"
@@ -60,6 +64,7 @@ export const Route23: Map = {
         type: "sprite",
         x: 12,
         y: 105,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GUARD,
         movement: "STAY",
         textId: "TEXT_ROUTE23_GUARD3"
@@ -68,6 +73,7 @@ export const Route23: Map = {
         type: "sprite",
         x: 8,
         y: 119,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GUARD,
         movement: "STAY",
         textId: "TEXT_ROUTE23_GUARD4"
@@ -76,6 +82,7 @@ export const Route23: Map = {
         type: "sprite",
         x: 8,
         y: 136,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GUARD,
         movement: "STAY",
         textId: "TEXT_ROUTE23_GUARD5"

@@ -21,6 +21,7 @@ export const SSAnne3F: Map = {
         type: "sprite",
         x: 9,
         y: 3,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "WALK",
         textId: "TEXT_SSANNE3F_SAILOR"

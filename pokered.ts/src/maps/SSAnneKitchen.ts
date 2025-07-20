@@ -18,6 +18,7 @@ export const SSAnneKitchen: Map = {
         type: "sprite",
         x: 1,
         y: 8,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_COOK,
         movement: "WALK",
         textId: "TEXT_SSANNEKITCHEN_COOK1"
@@ -26,6 +27,7 @@ export const SSAnneKitchen: Map = {
         type: "sprite",
         x: 5,
         y: 8,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_COOK,
         movement: "WALK",
         textId: "TEXT_SSANNEKITCHEN_COOK2"
@@ -34,6 +36,7 @@ export const SSAnneKitchen: Map = {
         type: "sprite",
         x: 9,
         y: 7,
+        direction: "UP_DOWN",
         sprite: OverworldSprite.SPRITE_COOK,
         movement: "WALK",
         textId: "TEXT_SSANNEKITCHEN_COOK3"
@@ -42,6 +45,7 @@ export const SSAnneKitchen: Map = {
         type: "sprite",
         x: 13,
         y: 6,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_COOK,
         movement: "STAY",
         textId: "TEXT_SSANNEKITCHEN_COOK4"
@@ -50,6 +54,7 @@ export const SSAnneKitchen: Map = {
         type: "sprite",
         x: 13,
         y: 8,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_COOK,
         movement: "STAY",
         textId: "TEXT_SSANNEKITCHEN_COOK5"
@@ -58,6 +63,7 @@ export const SSAnneKitchen: Map = {
         type: "sprite",
         x: 13,
         y: 10,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_COOK,
         movement: "STAY",
         textId: "TEXT_SSANNEKITCHEN_COOK6"
@@ -66,6 +72,7 @@ export const SSAnneKitchen: Map = {
         type: "sprite",
         x: 11,
         y: 13,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_COOK,
         movement: "STAY",
         textId: "TEXT_SSANNEKITCHEN_COOK7"

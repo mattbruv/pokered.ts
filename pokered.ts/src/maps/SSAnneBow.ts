@@ -21,6 +21,7 @@ export const SSAnneBow: Map = {
         type: "sprite",
         x: 5,
         y: 2,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "STAY",
         textId: "TEXT_SSANNEBOW_SUPER_NERD"
@@ -29,6 +30,7 @@ export const SSAnneBow: Map = {
         type: "sprite",
         x: 4,
         y: 9,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_SAILOR,
         movement: "STAY",
         textId: "TEXT_SSANNEBOW_SAILOR1"
@@ -37,6 +39,7 @@ export const SSAnneBow: Map = {
         type: "sprite",
         x: 7,
         y: 11,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_COOLTRAINER_M,
         movement: "STAY",
         textId: "TEXT_SSANNEBOW_COOLTRAINER_M"
@@ -46,6 +49,7 @@ export const SSAnneBow: Map = {
         x: 4,
         y: 4,
         sprite: OverworldSprite.SPRITE_SAILOR,
+        direction: "DOWN",
         movement: "STAY",
         textId: "TEXT_SSANNEBOW_SAILOR2",
         trainerId: "OPP_SAILOR",
@@ -56,6 +60,7 @@ export const SSAnneBow: Map = {
         x: 10,
         y: 8,
         sprite: OverworldSprite.SPRITE_SAILOR,
+        direction: "UP",
         movement: "STAY",
         textId: "TEXT_SSANNEBOW_SAILOR3",
         trainerId: "OPP_SAILOR",

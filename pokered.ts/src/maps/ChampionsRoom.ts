@@ -23,6 +23,7 @@ export const ChampionsRoom: Map = {
         type: "sprite",
         x: 4,
         y: 2,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_BLUE,
         movement: "STAY",
         textId: "TEXT_CHAMPIONSROOM_RIVAL"
@@ -31,6 +32,7 @@ export const ChampionsRoom: Map = {
         type: "sprite",
         x: 3,
         y: 7,
+        direction: "UP",
         sprite: OverworldSprite.SPRITE_OAK,
         movement: "STAY",
         textId: "TEXT_CHAMPIONSROOM_OAK"

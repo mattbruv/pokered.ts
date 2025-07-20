@@ -24,6 +24,7 @@ export const LoreleisRoom: Map = {
         x: 5,
         y: 2,
         sprite: OverworldSprite.SPRITE_LORELEI,
+        direction: "DOWN",
         movement: "STAY",
         textId: "TEXT_LORELEISROOM_LORELEI",
         trainerId: "OPP_LORELEI",

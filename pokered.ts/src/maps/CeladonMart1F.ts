@@ -28,6 +28,7 @@ export const CeladonMart1F: Map = {
         type: "sprite",
         x: 8,
         y: 3,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_LINK_RECEPTIONIST,
         movement: "STAY",
         textId: "TEXT_CELADONMART1F_RECEPTIONIST"

@@ -21,6 +21,7 @@ export const CeladonHotel: Map = {
         type: "sprite",
         x: 3,
         y: 1,
+        direction: "DOWN",
         sprite: OverworldSprite.SPRITE_GRANNY,
         movement: "STAY",
         textId: "TEXT_CELADONHOTEL_GRANNY"
@@ -29,6 +30,7 @@ export const CeladonHotel: Map = {
         type: "sprite",
         x: 2,
         y: 4,
+        direction: "NONE",
         sprite: OverworldSprite.SPRITE_BEAUTY,
         movement: "STAY",
         textId: "TEXT_CELADONHOTEL_BEAUTY"
@@ -37,6 +39,7 @@ export const CeladonHotel: Map = {
         type: "sprite",
         x: 8,
         y: 4,
+        direction: "LEFT_RIGHT",
         sprite: OverworldSprite.SPRITE_SUPER_NERD,
         movement: "WALK",
         textId: "TEXT_CELADONHOTEL_SUPER_NERD"
