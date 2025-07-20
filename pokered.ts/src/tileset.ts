@@ -73,7 +73,10 @@ const TILESET_METADATA: Record<Tileset, TilesetMetadata> = {
   },
   [Tileset.FOREST]: {
     counterTiles: [],
-    grassTile: null,
+    grassTile: {
+      imageKey: "tilesets-grass_forest",
+      tileId: 0x20
+    },
     animation: TileAnimation.None
   },
   [Tileset.FOREST_GATE]: {
@@ -136,7 +139,10 @@ const TILESET_METADATA: Record<Tileset, TilesetMetadata> = {
   },
   [Tileset.PLATEAU]: {
     counterTiles: [],
-    grassTile: null,
+    grassTile: {
+      imageKey: "tilesets-grass_plateau",
+      tileId: 0x45
+    },
     animation: TileAnimation.None
   },
   [Tileset.POKECENTER]: {
