@@ -40,6 +40,8 @@ type TileMeta = {
   blockIndex: number;
   blockX: number;
   blockY: number;
+  tileX: number;
+  tileY: number;
   tileId: number;
 };
 
@@ -224,6 +226,8 @@ export function probeTile(map: Map, tileX: number, tileY: number): TileProbe {
     canWalk: passableTiles.includes(tileId),
     canSurf,
     tileId: tileId,
+    tileX,
+    tileY,
     blockIndex: mapBlockIndex,
     blockX,
     blockY

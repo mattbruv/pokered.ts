@@ -29,6 +29,11 @@ function Tile({
   return (
     <div>
       <Text fw={500}>{name} Tile</Text>
+      {tile.inBounds && (
+        <Text size="sm">
+          (x: {tile.tileX}, y: {tile.tileY})
+        </Text>
+      )}
       <Text style={{ color: tile.canWalk ? "green" : "red" }} size="sm">
         Walk: {tile.canWalk ? "true" : "false"}
       </Text>
