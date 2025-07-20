@@ -32,7 +32,7 @@ export function renderOverworld(
   let dy = -(playerSprite.position.y * TILE_SIZE) + PLAYER_TILE_OFFSET;
 
   // If player walking, adjust dx/dy
-  if (playerSprite.animationFrameCounter) {
+  if (playerSprite.movementStatus !== MovementStatus.WalkingInPlace) {
     const offset = playerSprite.animationFrameCounter;
 
     const adjustmentMap: Record<FacingDirection, [number, number]> = {

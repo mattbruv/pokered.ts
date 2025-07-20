@@ -2,10 +2,9 @@ import { ImageCache } from "../gfx/images";
 import { SpriteName } from "../sprite";
 
 export enum MovementStatus {
-  Uninitialized,
   Ready,
-  Delayed,
-  Moving
+  Moving,
+  WalkingInPlace
 }
 
 export type Sprite = {

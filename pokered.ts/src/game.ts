@@ -178,6 +178,9 @@ class PokemonRed {
           this.#data.debug.nextTile = nextNextTile;
           player.image = nextTile.canSurf ? player.imageSurf : player.imageWalk;
           player.movementStatus = MovementStatus.Moving;
+        } else {
+          // we are not moving into a new tile, so just render the walking animation in place
+          player.movementStatus = MovementStatus.WalkingInPlace;
         }
 
         // Process ledges
@@ -192,6 +195,7 @@ class PokemonRed {
             nextTile.tileId
           );
           if (ledge && !this.#data.joypad.scripted) {
+            player.movementStatus = MovementStatus.Ready;
             console.log("JUMP LEDGE!", this.#data.joypad.joypadStates);
             const key = ledge[3];
             this.#data.player.sprite.hoppingLedge = true;
@@ -206,7 +210,10 @@ class PokemonRed {
     }
 
     // If the player is moving, update the animation
-    if (player.movementStatus === MovementStatus.Moving) {
+    if (
+      player.movementStatus === MovementStatus.Moving ||
+      player.movementStatus === MovementStatus.WalkingInPlace
+    ) {
       player.animationFrameCounter++;
       if (player.hoppingLedge) {
         // The original game has 16 different unique y-value offsets for the jump animation.
@@ -233,10 +240,17 @@ class PokemonRed {
           }
         }
 
-        if (player.facing == FacingDirection.Left) player.position.x--;
-        if (player.facing == FacingDirection.Right) player.position.x++;
-        if (player.facing == FacingDirection.Up) player.position.y--;
-        if (player.facing == FacingDirection.Down) player.position.y++;
+        // Only update the player's position if we
+        // are not walking in place
+        if (
+          joypad.scripted ||
+          player.movementStatus !== MovementStatus.WalkingInPlace
+        ) {
+          if (player.facing == FacingDirection.Left) player.position.x--;
+          if (player.facing == FacingDirection.Right) player.position.x++;
+          if (player.facing == FacingDirection.Up) player.position.y--;
+          if (player.facing == FacingDirection.Down) player.position.y++;
+        }
 
         player.movementStatus = MovementStatus.Ready;
 
