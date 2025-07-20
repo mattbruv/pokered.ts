@@ -82,18 +82,17 @@ export function renderOverworld(
       const yOffset = Math.floor(block / currentMap.width) * 32;
       //console.log(xOff, yOffset);
       // Let's render tiles we are debugging and the player isn't walking.
-      ct.globalAlpha = 0.5;
-
       // render warps
-      ct.strokeStyle = "cyan";
+      ct.strokeStyle = "purple";
       ct.lineWidth = 1;
       for (const warp of currentMap.objects.warps) {
         const { x, y } = warp;
         ct.strokeRect(x * 16, y * 16, 16, 16);
       }
+      ct.globalAlpha = 0.5;
 
       if (debug.currentTile && debug.currentTile.inBounds) {
-        ct.fillStyle = "blue";
+        ct.fillStyle = "cyan";
         const baseX = (debug.currentTile.blockIndex % currentMap.width) * 32;
         const baseY =
           Math.floor(debug.currentTile.blockIndex / currentMap.width) * 32;
@@ -112,7 +111,7 @@ export function renderOverworld(
       }
       ct.globalAlpha = 1;
       ct.lineWidth = 1;
-      ct.strokeStyle = "yellow";
+      ct.strokeStyle = "gray";
       ct.strokeRect(xOff, yOffset, 32, 32);
       // stroke whole map
       ct.strokeStyle = "purple";
@@ -299,7 +298,7 @@ export function getMapRender(
             tile === tilesetMetadata?.grassTile.tileId
           ) {
             const grassMask = images[tilesetMetadata.grassTile.imageKey];
-            console.log(tile, tilesetName, tilesetMetadata.grassTile.imageKey);
+            //console.log(tile, tilesetName, tilesetMetadata.grassTile.imageKey);
             const grassCtx = grass.getContext("2d");
             grassCtx?.drawImage(grassMask, 0, 0, 8, 8, dx, dy, 8, 8);
           }

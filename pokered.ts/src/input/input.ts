@@ -15,6 +15,7 @@ const KEY_MAP: Record<GameKey, Set<string>> = {
 
 type DebugCallbacks = {
   toggleWalkOnWalls: () => void;
+  toggleBlockView: () => void;
 };
 
 export class GameInput {
@@ -28,8 +29,12 @@ export class GameInput {
     window.addEventListener("keyup", (e) => {
       this.#pressed.delete(e.key);
 
-      if (e.key == "w") {
+      if (e.key.toLowerCase() == "w") {
         callbacks.toggleWalkOnWalls();
+      }
+
+      if (e.key.toLowerCase() == "b") {
+        callbacks.toggleBlockView();
       }
     });
   }

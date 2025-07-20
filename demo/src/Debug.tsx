@@ -62,7 +62,7 @@ export default function GameDebugPanel({ state, callbacks }: DebugProps) {
             onChange={(e) => callbacks.setWalkOnWalls(e.currentTarget.checked)}
           />
           <Checkbox
-            label="Show Block/Map Outlines"
+            label="Show Block/Map Outlines (b)"
             checked={state.showMapOutlines}
             onChange={(e) =>
               callbacks.setShowMapOutlines(e.currentTarget.checked)
@@ -88,7 +88,7 @@ export default function GameDebugPanel({ state, callbacks }: DebugProps) {
               <Text size="xs">Current Tile ID: {state.map.name}</Text>
             </Stack>
             {state.currentTile && (
-              <Tile color="blue" name="Current" tile={state.currentTile} />
+              <Tile color="cyan" name="Current" tile={state.currentTile} />
             )}
             {state.nextTile && (
               <Tile color="magenta" name="Next" tile={state.nextTile} />

@@ -76,6 +76,10 @@ class PokemonRed {
       toggleWalkOnWalls: () => {
         this.#data.debug.walkOnWalls = !this.#data.debug.walkOnWalls;
         this.#updateDebugState();
+      },
+      toggleBlockView: () => {
+        this.#data.debug.showMapOutlines = !this.#data.debug.showMapOutlines;
+        this.#updateDebugState();
       }
     });
     this.#data = this.#loadGame();
