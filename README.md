@@ -89,3 +89,4 @@ From what I can tell, `pokered.ts` is the most faithful implementation so far.
 - [chase-manning/pokemon-js](https://github.com/chase-manning/pokemon-js) (most progress out of the ones I found, but buggy and far from finished)
 - [KentGrigo/Pokemon](https://github.com/KentGrigo/Pokemon) (visually different, crude)
 - [jamescastells/pokemonHTML](https://github.com/jamescastells/pokemonHTML) (only one route)
+- [smith-chris/poke](https://github.com/smith-chris/poke) (unsure of progress because demo 404s)

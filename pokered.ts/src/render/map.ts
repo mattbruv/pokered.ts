@@ -1,6 +1,5 @@
-import { DebugData } from "../game";
+import { DebugData, MapData } from "../game";
 import { ImageCache } from "../gfx/images";
-import { Map } from "../map";
 import { getBlockIndexAtPosition } from "../overworld/map";
 import {
   getBlockSet,
@@ -8,6 +7,7 @@ import {
   getTilesetMetadata,
   Tileset
 } from "../tileset";
+import { drawSprites } from "./objects";
 import { OverworldCache } from "./renderer";
 import { drawSprite, FacingDirection, MovementStatus, Sprite } from "./sprite";
 
@@ -17,10 +17,9 @@ export const BLOCK_SIZE_PX = TILE_SIZE_PX * 4;
 export function renderOverworld(
   screen: CanvasRenderingContext2D,
   images: ImageCache,
-  currentMap: Map,
+  mapData: MapData,
   cache: OverworldCache,
   playerSprite: Sprite,
-  flowerIndex: number,
   debug: DebugData
 ) {
   const PLAYER_OFFSET = 4;
@@ -62,17 +61,19 @@ export function renderOverworld(
   );
 
   const ct = temp.getContext("2d");
+  const { currentMap } = mapData;
+
   if (ct) {
     ct.drawImage(cache.current.mapImage, 0, 0);
 
     // If we have flowers, draw their current animation
     if (cache.current.flowers) {
-      const flower = cache.current.flowers[flowerIndex];
+      const flower = cache.current.flowers[mapData.flowerAnimIndex];
       ct.drawImage(flower, 0, 0);
     }
 
     // draw map objects to image
-    ct.drawImage(cache.current.objectsImage, 0, 0);
+    drawSprites(ct, mapData.currentMapSprites, false, images);
 
     // draw current block outline if we are debugging
     if (debug.showMapOutlines) {
@@ -193,6 +194,9 @@ export function renderOverworld(
         -4
       );
     }
+
+    // draw the sprites top halves again to display them in grass properly
+    drawSprites(screen, mapData.currentMapSprites, true, images, dx, dy);
   }
 }
 

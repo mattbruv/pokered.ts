@@ -1,33 +1,24 @@
 import { ImageCache } from "../gfx/images";
-import { BLOCK_SIZE_PX } from "./map";
-import { Map } from "../map";
 import { drawSprite, Sprite } from "./sprite";
 
-export function getObjectsImage(
-  map: Map,
+export function drawSprites(
+  context: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
   sprites: Sprite[],
-  images: ImageCache
-): OffscreenCanvas {
-  const canvas = new OffscreenCanvas(
-    map.width * BLOCK_SIZE_PX,
-    map.height * BLOCK_SIZE_PX
-  );
-  const ctx = canvas.getContext("2d");
-
-  if (ctx) {
-    for (const sprite of sprites) {
-      drawSprite(
-        ctx,
-        sprite,
-        images,
-        sprite.position.x,
-        sprite.position.y,
-        false,
-        0,
-        -4 // All sprites are offset by 4 like the player.
-      );
-    }
+  onlyTopHalf: boolean,
+  images: ImageCache,
+  offsetX: number = 0,
+  offsetY: number = 0
+): void {
+  for (const sprite of sprites) {
+    drawSprite(
+      context,
+      sprite,
+      images,
+      sprite.position.x,
+      sprite.position.y,
+      onlyTopHalf,
+      offsetX,
+      offsetY - 4 // All sprites are offset by 4 like the player.
+    );
   }
-
-  return canvas;
 }

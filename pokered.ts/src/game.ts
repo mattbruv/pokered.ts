@@ -370,8 +370,8 @@ class PokemonRed {
           ledgeAnimationCounter: 0,
           hoppingLedge: false,
           position: {
-            x: 5,
-            y: 26
+            x: 13,
+            y: 12
           },
           image: "sprites-red",
           imageWalk: "sprites-red",
