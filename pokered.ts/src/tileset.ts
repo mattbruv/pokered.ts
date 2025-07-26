@@ -32,10 +32,12 @@ export enum Tileset {
 
 type TilesetMetadata = {
   counterTiles: number[];
-  grassTile: {
-    tileId: number;
-    imageKey: keyof ImageCache;
-  } | null;
+  grassTiles:
+    | {
+        tileId: number;
+        imageKey: keyof ImageCache;
+      }[]
+    | null;
   animation: TileAnimation;
 };
 
@@ -48,131 +50,141 @@ enum TileAnimation {
 const TILESET_METADATA: Record<Tileset, TilesetMetadata> = {
   [Tileset.CAVERN]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.CEMETERY]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.CLUB]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.DOJO]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.FACILITY]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.FOREST]: {
     counterTiles: [],
-    grassTile: {
-      imageKey: "tilesets-grass_forest",
-      tileId: 0x20
-    },
+    grassTiles: [
+      {
+        imageKey: "tilesets-grass_forest",
+        tileId: 0x20
+      },
+      {
+        imageKey: "tilesets-grass_forest_flower",
+        tileId: 52
+      }
+    ],
     animation: TileAnimation.None
   },
   [Tileset.FOREST_GATE]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.GATE]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.GYM]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.HOUSE]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.INTERIOR]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.LAB]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.LOBBY]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.MANSION]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.MART]: {
     counterTiles: [0x18, 0x19, 0x1e],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.MUSEUM]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.OVERWORLD]: {
     counterTiles: [],
-    grassTile: {
-      imageKey: "tilesets-grass_overworld",
-      tileId: 0x52
-    },
+    grassTiles: [
+      {
+        imageKey: "tilesets-grass_overworld",
+        tileId: 0x52
+      }
+    ],
     animation: TileAnimation.WaterFlower
   },
   [Tileset.PLATEAU]: {
     counterTiles: [],
-    grassTile: {
-      imageKey: "tilesets-grass_plateau",
-      tileId: 0x45
-    },
+    grassTiles: [
+      {
+        imageKey: "tilesets-grass_plateau",
+        tileId: 0x45
+      }
+    ],
     animation: TileAnimation.None
   },
   [Tileset.POKECENTER]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.REDS_HOUSE_1]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.REDS_HOUSE_2]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.SHIP]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.SHIP_PORT]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   },
   [Tileset.UNDERGROUND]: {
     counterTiles: [],
-    grassTile: null,
+    grassTiles: null,
     animation: TileAnimation.None
   }
 };

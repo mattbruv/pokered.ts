@@ -259,7 +259,7 @@ export function getMapRender(
 
   const tilesetMetadata = getTilesetMetadata(tilesetName);
 
-  const grass: OffscreenCanvas | null = tilesetMetadata.grassTile
+  const grass: OffscreenCanvas | null = tilesetMetadata.grassTiles
     ? newMapCanvas()
     : null;
 
@@ -296,15 +296,16 @@ export function getMapRender(
             TILE_SIZE_PX
           );
 
-          if (
-            grass &&
-            tilesetMetadata.grassTile &&
-            tile === tilesetMetadata?.grassTile.tileId
-          ) {
-            const grassMask = images[tilesetMetadata.grassTile.imageKey];
-            //console.log(tile, tilesetName, tilesetMetadata.grassTile.imageKey);
-            const grassCtx = grass.getContext("2d");
-            grassCtx?.drawImage(grassMask, 0, 0, 8, 8, dx, dy, 8, 8);
+          if (grass) {
+            const grassTile = tilesetMetadata.grassTiles?.find(
+              (x) => x.tileId === tile
+            );
+            if (grassTile) {
+              const grassMask = images[grassTile.imageKey];
+              //console.log(tile, tilesetName, tilesetMetadata.grassTile.imageKey);
+              const grassCtx = grass.getContext("2d");
+              grassCtx?.drawImage(grassMask, 0, 0, 8, 8, dx, dy, 8, 8);
+            }
           }
 
           // If this is a flower tile, render out our flowers.
