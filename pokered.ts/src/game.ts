@@ -34,7 +34,6 @@ export type DebugData = {
 };
 
 export type GameData = {
-  joypad: JoypadState;
   player: PlayerData;
   map: MapData;
   debug: DebugData;
@@ -125,7 +124,7 @@ class PokemonRed {
       this.#data.map.flowerAnimIndex %= 3; // limit to three frames
     }
 
-    const keys = this.#input.getInput(this.#data.joypad, this.#data.player);
+    const keys = this.#input.getInput(this.#data.player);
     const player = this.#data.player.sprite;
 
     TickPlayer(
@@ -163,6 +162,11 @@ class PokemonRed {
       (obj): Sprite => {
         const img = getOverworldSpriteKey(obj.sprite);
         return {
+          joypad: {
+            joypadStates: [],
+            onSimulationEnd: null,
+            scripted: false
+          },
           imageWalk: img,
           imageSurf: img,
           image: img,
@@ -201,6 +205,11 @@ class PokemonRed {
       player: {
         name: "Red",
         sprite: {
+          joypad: {
+            joypadStates: [],
+            onSimulationEnd: null,
+            scripted: false
+          },
           facing: FacingDirection.Down,
           movementStatus: MovementStatus.Ready,
           animationFrameCounter: 0,
@@ -220,11 +229,6 @@ class PokemonRed {
         walkOnWalls: false,
         currentTile: null,
         nextTile: null
-      },
-      joypad: {
-        scripted: false,
-        joypadStates: [],
-        onSimulationEnd: () => {}
       }
     };
 

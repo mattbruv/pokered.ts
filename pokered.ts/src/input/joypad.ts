@@ -3,7 +3,7 @@ import { GameKey } from "./input";
 export type JoypadState = {
   scripted: boolean;
   joypadStates: GameKey[];
-  onSimulationEnd: () => void;
+  onSimulationEnd: (() => void) | null;
 };
 
 export function SimulateJoypad(

@@ -1,4 +1,5 @@
 import { ImageCache } from "../gfx/images";
+import { JoypadState } from "../input/joypad";
 import { SpriteName } from "../sprite";
 
 export enum MovementStatus {
@@ -8,6 +9,7 @@ export enum MovementStatus {
 }
 
 export type Sprite = {
+  joypad: JoypadState;
   ledgeAnimationCounter: number;
   imageWalk: SpriteName;
   imageSurf: SpriteName;

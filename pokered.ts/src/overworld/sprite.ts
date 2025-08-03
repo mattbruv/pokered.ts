@@ -58,7 +58,7 @@ export function TickPlayer(
         player.facing = yDiff > 0 ? FacingDirection.Down : FacingDirection.Up;
       }
 
-      if (game.joypad.scripted || !collisionCheck || game.debug.walkOnWalls) {
+      if (player.joypad.scripted || !collisionCheck || game.debug.walkOnWalls) {
         game.debug.currentTile = nextTile;
         game.debug.nextTile = nextNextTile;
         player.image = nextTile.canSurf ? player.imageSurf : player.imageWalk;
@@ -79,12 +79,12 @@ export function TickPlayer(
           currentTile.tileId,
           nextTile.tileId
         );
-        if (ledge && !game.joypad.scripted) {
+        if (ledge && !player.joypad.scripted) {
           player.movementStatus = MovementStatus.Ready;
-          console.log("JUMP LEDGE!", game.joypad.joypadStates);
+          console.log("JUMP LEDGE!", player.joypad.joypadStates);
           const key = ledge[3];
           game.player.sprite.hoppingLedge = true;
-          SimulateJoypad(game.joypad, [key, key], () => {
+          SimulateJoypad(player.joypad, [key, key], () => {
             console.log("ledge jump finished");
             game.player.sprite.ledgeAnimationCounter = 0;
             game.player.sprite.hoppingLedge = false;
@@ -110,7 +110,7 @@ export function TickPlayer(
     if (player.animationFrameCounter >= 16) {
       player.animationFrameCounter = 0;
 
-      const joypad = game.joypad;
+      const joypad = player.joypad;
 
       if (joypad.scripted) {
         // remove the key we just consumed
@@ -120,7 +120,7 @@ export function TickPlayer(
         if (!joypad.joypadStates.length) {
           joypad.scripted = false;
           // call the user defined callback function at the end of scripting
-          joypad.onSimulationEnd();
+          if (joypad.onSimulationEnd) joypad.onSimulationEnd();
         }
       }
 
