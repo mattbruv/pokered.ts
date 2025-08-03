@@ -1,12 +1,11 @@
 import { DebugCallbacks, DebugState, getDebugState } from "./debug";
 import { ImageCache, loadImageBitmaps } from "./gfx/images";
 import { GameInput } from "./input/input";
-import { JoypadState } from "./input/joypad";
 import { Map, MapName } from "./map";
 import { getMap } from "./mapLookup";
 import { TileProbe } from "./overworld/map";
 import { getObjectFacingDirection, updateNPCSprite } from "./overworld/npc";
-import { TickPlayer } from "./overworld/sprite";
+import { TickNPCs, TickPlayer } from "./overworld/sprite";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, Sprite } from "./render/sprite";
 import { getOverworldSpriteKey } from "./sprite";
@@ -135,6 +134,8 @@ class PokemonRed {
       this.#data
     );
 
+    TickNPCs(this.#data);
+
     // Update NPC logic
     updateNPCSprite(this.#data);
   }
@@ -163,9 +164,9 @@ class PokemonRed {
         const img = getOverworldSpriteKey(obj.sprite);
         return {
           joypad: {
-            joypadStates: [],
+            joypadStates: ["Down", "Down", "Left", "Left"],
             onSimulationEnd: null,
-            scripted: false
+            scripted: true
           },
           imageWalk: img,
           imageSurf: img,

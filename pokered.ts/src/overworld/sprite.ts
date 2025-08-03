@@ -1,5 +1,5 @@
 import { DebugData, GameData, MapData } from "../game";
-import { InputState } from "../input/input";
+import { GameKey, InputState } from "../input/input";
 import { SimulateJoypad } from "../input/joypad";
 import { MapName, Warp } from "../map";
 import { FacingDirection, MovementStatus, Sprite } from "../render/sprite";
@@ -40,8 +40,23 @@ export function TickPlayer(
   updateDebugState();
 }
 
-export function TickNPCs() {
-  //
+export function TickNPCs(game: GameData) {
+  for (const npc of game.map.currentMapSprites) {
+    const key: GameKey | undefined = npc.joypad.scripted
+      ? npc.joypad.joypadStates.at(0)
+      : undefined;
+
+    const state: InputState = {
+      Up: false,
+      Down: false,
+      Left: false,
+      Right: false
+    };
+
+    if (key) state[key] = true;
+
+    handleSpriteMovement(npc, state, game.map, null, null, null);
+  }
 }
 
 function handleWarp(
