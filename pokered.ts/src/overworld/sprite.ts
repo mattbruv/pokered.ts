@@ -1,7 +1,7 @@
 import { DebugData, GameData, MapData } from "../game";
 import { GameKey, InputState } from "../input/input";
 import { SimulateJoypad } from "../input/joypad";
-import { MapName, Warp } from "../map";
+import { Map, MapName, Warp } from "../map";
 import { FacingDirection, MovementStatus, Sprite } from "../render/sprite";
 import {
   probeTile,
@@ -27,11 +27,14 @@ export function TickPlayer(
     handleWarp(warp, game, loadMap, player);
   };
 
+  const allSprites = [player, ...game.map.currentMapSprites];
+
   // Move the player
   handleSpriteMovement(
     player,
     keys,
-    game.map,
+    game.map.currentMap,
+    allSprites,
     game.debug,
     onConnection,
     onWarp
@@ -42,6 +45,8 @@ export function TickPlayer(
 
 export function TickNPCs(game: GameData) {
   for (const npc of game.map.currentMapSprites) {
+    // TODO: only move player if he is within the player's view
+
     const key: GameKey | undefined = npc.joypad.scripted
       ? npc.joypad.joypadStates.at(0)
       : undefined;
@@ -55,7 +60,17 @@ export function TickNPCs(game: GameData) {
 
     if (key) state[key] = true;
 
-    handleSpriteMovement(npc, state, game.map, null, null, null);
+    const allSprites = [game.player.sprite, ...game.map.currentMapSprites];
+
+    handleSpriteMovement(
+      npc,
+      state,
+      game.map.currentMap,
+      allSprites,
+      null,
+      null,
+      null
+    );
   }
 }
 
@@ -103,7 +118,8 @@ function processConnection(
 function handleSpriteMovement(
   sprite: Sprite,
   keys: InputState,
-  mapData: MapData,
+  currentMap: Map,
+  allSprites: Sprite[],
   debug: DebugData | null,
   onConnection: ((connection: ConnectionDir) => void) | null,
   onWarp: ((warp: Warp) => void) | null
@@ -130,17 +146,30 @@ function handleSpriteMovement(
       // If we have supplied an onConnection callback, allow walking outside of the map
       const allowConnections = onConnection !== null;
 
-      const currentTile = probeTile(mapData.currentMap, x, y, allowConnections);
-      const nextTile = probeTile(mapData.currentMap, dx, dy, allowConnections);
+      const currentTile = probeTile(
+        allSprites,
+        currentMap,
+        x,
+        y,
+        allowConnections
+      );
+      const nextTile = probeTile(
+        allSprites,
+        currentMap,
+        dx,
+        dy,
+        allowConnections
+      );
       const nextNextTile = probeTile(
-        mapData.currentMap,
+        allSprites,
+        currentMap,
         dx + xDiff,
         dy + yDiff,
         allowConnections
       );
 
       const collisionCheck = collisionLandCheck(
-        mapData.currentMap.tileset,
+        currentMap.tileset,
         currentTile,
         nextTile
       );
@@ -228,7 +257,7 @@ function handleSpriteMovement(
 
       // Check to see if we've walked into a connecting map
       const connection = checkMapConnections(
-        mapData.currentMap,
+        currentMap,
         sprite.position.x,
         sprite.position.y
       );
@@ -243,7 +272,7 @@ function handleSpriteMovement(
 
       // Check to see if we've warped somewhere
       const warp = getWarpAtPos(
-        mapData.currentMap,
+        currentMap,
         sprite.position.x,
         sprite.position.y
       );

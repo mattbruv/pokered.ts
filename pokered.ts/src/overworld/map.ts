@@ -1,7 +1,8 @@
+import { MapData } from "../game";
 import { GameInput, GameKey } from "../input/input";
 import { Map, MapConnections, Warp } from "../map";
 import { getMap } from "../mapLookup";
-import { FacingDirection } from "../render/sprite";
+import { FacingDirection, Sprite } from "../render/sprite";
 import { getBlockSet, getTileCollisions, Tileset } from "../tileset";
 
 export type ConnectionDir = {
@@ -165,6 +166,7 @@ export function collisionLandCheck(
 }
 
 export function probeTile(
+  sprites: Sprite[],
   map: Map,
   tileX: number,
   tileY: number,
@@ -194,7 +196,14 @@ export function probeTile(
         inBounds: false
       };
     const { x, y } = connection.newPosition;
-    return probeTile(getMap(connectingMapName), x, y, allowConnections);
+
+    return probeTile(
+      sprites,
+      getMap(connectingMapName),
+      x,
+      y,
+      allowConnections
+    );
   }
 
   const mapBlockIndex = getBlockIndexAtPosition(map, tileX, tileY);
@@ -226,9 +235,13 @@ export function probeTile(
 
   const canSurf = WATER_TILESETS.includes(map.tileset) && isWaterTile;
 
+  const isTileAlreadyOccupied = sprites.some(
+    (sprite) => sprite.position.x === tileX && sprite.position.y === tileY
+  );
+
   return {
     inBounds: true,
-    canWalk: passableTiles.includes(tileId),
+    canWalk: !isTileAlreadyOccupied && passableTiles.includes(tileId),
     canSurf,
     tileId: tileId,
     tileX,

@@ -165,14 +165,15 @@ class PokemonRed {
         return {
           joypad: {
             joypadStates: [
+              "Down",
+              "Down",
+              "Down",
+              "Down",
+              "Down",
               "Left",
+              "Right",
               "Left",
-              "Left",
-              "Left",
-              "Left",
-              "Left",
-              "Left",
-              "Left"
+              "Right"
             ],
             onSimulationEnd: null,
             scripted: true
