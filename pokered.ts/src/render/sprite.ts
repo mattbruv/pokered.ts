@@ -8,6 +8,11 @@ export enum MovementStatus {
   WalkingInPlace
 }
 
+export type TilePosition = {
+  x: number;
+  y: number;
+};
+
 export type Sprite = {
   joypad: JoypadState;
   ledgeAnimationCounter: number;
@@ -18,11 +23,7 @@ export type Sprite = {
   facing: FacingDirection;
   movementStatus: MovementStatus;
   animationFrameCounter: number;
-
-  position: {
-    x: number;
-    y: number;
-  };
+  position: TilePosition;
 };
 
 export enum FacingDirection {

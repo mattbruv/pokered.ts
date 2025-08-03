@@ -1,4 +1,4 @@
-import { GameData } from "../game";
+import { DebugData, GameData, MapData } from "../game";
 import { InputState } from "../input/input";
 import { SimulateJoypad } from "../input/joypad";
 import { MapName } from "../map";
@@ -18,8 +18,30 @@ export function TickPlayer(
   updateDebugState: () => void,
   game: GameData
 ) {
-  // If the player is not moving and we are pressing a key, move him
-  if (player.movementStatus === MovementStatus.Ready) {
+  handleSpriteMovement(
+    player,
+    keys,
+    game.map,
+    game.debug,
+    loadMap,
+    updateDebugState
+  );
+}
+
+/**
+ * If keys are pressed, move the sprite accordingly
+ * Or update the sprite's movement state if moving already.
+ */
+function handleSpriteMovement(
+  sprite: Sprite,
+  keys: InputState,
+  mapData: MapData,
+  debug: DebugData | null,
+  loadMap: (nextMapName: MapName) => void,
+  updateDebugState: () => void
+) {
+  // If the sprite is not moving and we are pressing a key, move it
+  if (sprite.movementStatus === MovementStatus.Ready) {
     let xDiff = 0;
     let yDiff = 0;
 
@@ -31,63 +53,61 @@ export function TickPlayer(
     // get position offset at x/y diff
     // get tile at that pos
     // if in collidables, don't move
-    const { x, y } = player.position;
-    const dx = player.position.x + xDiff;
-    const dy = player.position.y + yDiff;
+    const { x, y } = sprite.position;
+    const dx = sprite.position.x + xDiff;
+    const dy = sprite.position.y + yDiff;
 
-    // Only allow the player to press one key at a time to register walking
+    // Only allow one key at a time
     if ((xDiff && !yDiff) || (yDiff && !xDiff)) {
-      const currentTile = probeTile(game.map.currentMap, x, y);
-      const nextTile = probeTile(game.map.currentMap, dx, dy);
+      const currentTile = probeTile(mapData.currentMap, x, y);
+      const nextTile = probeTile(mapData.currentMap, dx, dy);
       const nextNextTile = probeTile(
-        game.map.currentMap,
+        mapData.currentMap,
         dx + xDiff,
         dy + yDiff
       );
 
       const collisionCheck = collisionLandCheck(
-        game.map.currentMap.tileset,
+        mapData.currentMap.tileset,
         currentTile,
         nextTile
       );
 
       if (xDiff) {
-        player.facing =
+        sprite.facing =
           xDiff > 0 ? FacingDirection.Right : FacingDirection.Left;
       } else if (yDiff) {
-        player.facing = yDiff > 0 ? FacingDirection.Down : FacingDirection.Up;
+        sprite.facing = yDiff > 0 ? FacingDirection.Down : FacingDirection.Up;
       }
 
-      if (player.joypad.scripted || !collisionCheck || game.debug.walkOnWalls) {
-        game.debug.currentTile = nextTile;
-        game.debug.nextTile = nextNextTile;
-        player.image = nextTile.canSurf ? player.imageSurf : player.imageWalk;
-        player.movementStatus = MovementStatus.Moving;
+      if (sprite.joypad.scripted || !collisionCheck || debug?.walkOnWalls) {
+        if (debug) {
+          debug.currentTile = nextTile;
+          debug.nextTile = nextNextTile;
+        }
+        sprite.image = nextTile.canSurf ? sprite.imageSurf : sprite.imageWalk;
+        sprite.movementStatus = MovementStatus.Moving;
       } else {
         // we are not moving into a new tile, so just render the walking animation in place
-        player.movementStatus = MovementStatus.WalkingInPlace;
+        sprite.movementStatus = MovementStatus.WalkingInPlace;
       }
 
       // Process ledges
-      if (
-        !game.debug.walkOnWalls &&
-        currentTile.inBounds &&
-        nextTile.inBounds
-      ) {
+      if (!debug?.walkOnWalls && currentTile.inBounds && nextTile.inBounds) {
         const ledge = isJumpingLedge(
-          player.facing,
+          sprite.facing,
           currentTile.tileId,
           nextTile.tileId
         );
-        if (ledge && !player.joypad.scripted) {
-          player.movementStatus = MovementStatus.Ready;
-          console.log("JUMP LEDGE!", player.joypad.joypadStates);
+        if (ledge && !sprite.joypad.scripted) {
+          sprite.movementStatus = MovementStatus.Ready;
+          console.log("JUMP LEDGE!", sprite.joypad.joypadStates);
           const key = ledge[3];
-          game.player.sprite.hoppingLedge = true;
-          SimulateJoypad(player.joypad, [key, key], () => {
+          sprite.hoppingLedge = true;
+          SimulateJoypad(sprite.joypad, [key, key], () => {
             console.log("ledge jump finished");
-            game.player.sprite.ledgeAnimationCounter = 0;
-            game.player.sprite.hoppingLedge = false;
+            sprite.ledgeAnimationCounter = 0;
+            sprite.hoppingLedge = false;
           });
         }
       }
@@ -96,21 +116,21 @@ export function TickPlayer(
 
   // If the player is moving, update the animation
   if (
-    player.movementStatus === MovementStatus.Moving ||
-    player.movementStatus === MovementStatus.WalkingInPlace
+    sprite.movementStatus === MovementStatus.Moving ||
+    sprite.movementStatus === MovementStatus.WalkingInPlace
   ) {
-    player.animationFrameCounter++;
-    if (player.hoppingLedge) {
+    sprite.animationFrameCounter++;
+    if (sprite.hoppingLedge) {
       // The original game has 16 different unique y-value offsets for the jump animation.
       // Each step is 16 frames, so we increment the ledge animation index (0-15) at half the rate
       // because the ledge jump animation is walking 2 steps (16 * 2)
-      if (player.animationFrameCounter % 2 == 0) player.ledgeAnimationCounter++;
+      if (sprite.animationFrameCounter % 2 == 0) sprite.ledgeAnimationCounter++;
     }
     // If we finished the animation
-    if (player.animationFrameCounter >= 16) {
-      player.animationFrameCounter = 0;
+    if (sprite.animationFrameCounter >= 16) {
+      sprite.animationFrameCounter = 0;
 
-      const joypad = player.joypad;
+      const joypad = sprite.joypad;
 
       if (joypad.scripted) {
         // remove the key we just consumed
@@ -128,37 +148,37 @@ export function TickPlayer(
       // are not walking in place
       if (
         joypad.scripted ||
-        player.movementStatus !== MovementStatus.WalkingInPlace
+        sprite.movementStatus !== MovementStatus.WalkingInPlace
       ) {
-        if (player.facing == FacingDirection.Left) player.position.x--;
-        if (player.facing == FacingDirection.Right) player.position.x++;
-        if (player.facing == FacingDirection.Up) player.position.y--;
-        if (player.facing == FacingDirection.Down) player.position.y++;
+        if (sprite.facing == FacingDirection.Left) sprite.position.x--;
+        if (sprite.facing == FacingDirection.Right) sprite.position.x++;
+        if (sprite.facing == FacingDirection.Up) sprite.position.y--;
+        if (sprite.facing == FacingDirection.Down) sprite.position.y++;
       }
 
-      player.movementStatus = MovementStatus.Ready;
+      sprite.movementStatus = MovementStatus.Ready;
 
-      const { x, y } = player.position;
+      const { x, y } = sprite.position;
 
       // If we have moved into a new map, load it.
-      const connection = checkMapConnections(game.map.currentMap, x, y);
+      const connection = checkMapConnections(mapData.currentMap, x, y);
 
       if (connection) {
         console.log(connection.dir, connection.newPosition);
-        player.position = connection.newPosition;
-        const nextMap = game.map.currentMap.connections[connection.dir];
+        sprite.position = connection.newPosition;
+        const nextMap = mapData.currentMap.connections[connection.dir];
         if (nextMap) {
           loadMap(nextMap.map);
         }
       }
 
       // check to see if we've warped somewhere
-      const warp = getWarpAtPos(game.map.currentMap, x, y);
+      const warp = getWarpAtPos(mapData.currentMap, x, y);
 
       if (warp) {
         const nextMapName =
           warp.toMap === "LAST_MAP" || warp.toMap === "UNUSED_MAP_ED"
-            ? game.map.previousOutdoorMapName
+            ? mapData.previousOutdoorMapName
             : warp.toMap;
 
         // Load the warp map
@@ -166,9 +186,9 @@ export function TickPlayer(
 
         // Set the player's position to the destination warp coordinates, looked up by index
         const destinationWarp =
-          game.map.currentMap.objects.warps[warp.warpIndex];
+          mapData.currentMap.objects.warps[warp.warpIndex];
 
-        game.player.sprite.position = {
+        sprite.position = {
           x: destinationWarp.x,
           y: destinationWarp.y
         };
