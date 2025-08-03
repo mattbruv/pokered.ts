@@ -9,7 +9,7 @@ export type JoypadState = {
 export function SimulateJoypad(
   state: JoypadState,
   buffer: GameKey[],
-  onSimulationEnd: () => void
+  onSimulationEnd: (() => void) | null
 ) {
   state.scripted = true;
   state.joypadStates = buffer;

@@ -1,7 +1,7 @@
 import { DebugData, GameData, MapData } from "../game";
 import { GameKey, InputState } from "../input/input";
 import { SimulateJoypad } from "../input/joypad";
-import { Map, MapName, Warp } from "../map";
+import { BaseObjectDirection, Map, MapName, MovementType, Warp } from "../map";
 import { FacingDirection, MovementStatus, Sprite } from "../render/sprite";
 import {
   probeTile,
@@ -46,12 +46,51 @@ export function TickPlayer(
   updateDebugState();
 }
 
-export function TickNPCs(game: GameData) {
-  for (const npc of game.map.currentMapObjects.map((x) => x.sprite)) {
-    // TODO: only move player if he is within the player's view
+const DIRECTION_KEYS: Record<BaseObjectDirection, GameKey[]> = {
+  UP: ["Up"],
+  LEFT_RIGHT: ["Left", "Right"],
+  ANY_DIR: ["Left", "Right", "Up", "Down"],
+  RIGHT: ["Right"],
+  DOWN: ["Down"],
+  NONE: [],
+  UP_DOWN: ["Up", "Down"],
+  BOULDER_MOVEMENT_BYTE_2: [],
+  LEFT: ["Left"]
+};
 
-    const key: GameKey | undefined = npc.joypad.scripted
-      ? npc.joypad.joypadStates.at(0)
+const KEY_FACING: Record<GameKey, FacingDirection> = {
+  Up: FacingDirection.Up,
+  Down: FacingDirection.Down,
+  Left: FacingDirection.Left,
+  Right: FacingDirection.Right
+};
+
+export function TickNPCs(game: GameData) {
+  for (const npc of game.map.currentMapObjects) {
+    // TODO: only add new sprite movements if it is within the player's view
+    if (!npc.sprite.joypad.joypadStates.length) {
+      // Add a new state for walkers (or turn NPC if not walker) every ~4 seconds.
+      if (Math.floor(Math.random() * 4 * 60) === 0) {
+        const keys = DIRECTION_KEYS[npc.object.direction];
+        if (keys.length) {
+          const randomKey = keys[Math.floor(Math.random() * keys.length)];
+
+          const behavior: Record<MovementType, () => void> = {
+            STAY: () => {
+              npc.sprite.facing = KEY_FACING[randomKey];
+            },
+            WALK: () => {
+              SimulateJoypad(npc.sprite.joypad, [randomKey], null);
+            }
+          };
+
+          behavior[npc.object.movement]();
+        }
+      }
+    }
+
+    const key: GameKey | undefined = npc.sprite.joypad.scripted
+      ? npc.sprite.joypad.joypadStates.at(0)
       : undefined;
 
     const state: InputState = {
@@ -69,7 +108,7 @@ export function TickNPCs(game: GameData) {
     ];
 
     handleSpriteMovement(
-      npc,
+      npc.sprite,
       state,
       game.map.currentMap,
       allSprites,
