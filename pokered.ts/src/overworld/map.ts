@@ -4,7 +4,7 @@ import { getMap } from "../mapLookup";
 import { FacingDirection } from "../render/sprite";
 import { getBlockSet, getTileCollisions, Tileset } from "../tileset";
 
-type ConnectionDir = {
+export type ConnectionDir = {
   dir: keyof MapConnections;
   newPosition: {
     x: number;
