@@ -9,7 +9,13 @@ import {
 } from "../tileset";
 import { drawSprites } from "./objects";
 import { OverworldCache } from "./renderer";
-import { drawSprite, FacingDirection, MovementStatus, Sprite } from "./sprite";
+import {
+  drawSprite,
+  FacingDirection,
+  getSpriteDrawOffset,
+  MovementStatus,
+  Sprite
+} from "./sprite";
 
 export const TILE_SIZE_PX = 8;
 export const BLOCK_SIZE_PX = TILE_SIZE_PX * 4;
@@ -32,19 +38,10 @@ export function renderOverworld(
 
   // If player walking, adjust dx/dy
   if (playerSprite.movementStatus !== MovementStatus.WalkingInPlace) {
-    const offset = playerSprite.animationFrameCounter;
+    const [walkXDelta, walkYDelta] = getSpriteDrawOffset(playerSprite);
 
-    const adjustmentMap: Record<FacingDirection, [number, number]> = {
-      [FacingDirection.Down]: [0, -offset],
-      [FacingDirection.Up]: [0, offset],
-      [FacingDirection.Left]: [offset, 0],
-      [FacingDirection.Right]: [-offset, 0]
-    };
-
-    const [walkXDelta, walkYDelta] = adjustmentMap[playerSprite.facing];
-
-    dx += walkXDelta;
-    dy += walkYDelta;
+    dx -= walkXDelta;
+    dy -= walkYDelta;
   }
 
   // First step: Cover background with the border block image.
