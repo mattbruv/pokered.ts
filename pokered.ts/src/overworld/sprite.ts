@@ -40,10 +40,9 @@ export function TickPlayer(
     allSprites,
     game.debug,
     onConnection,
-    onWarp
+    onWarp,
+    updateDebugState
   );
-
-  updateDebugState();
 }
 
 const DIRECTION_KEYS: Record<BaseObjectDirection, GameKey[]> = {
@@ -65,7 +64,7 @@ const KEY_FACING: Record<GameKey, FacingDirection> = {
   Right: FacingDirection.Right
 };
 
-export function TickNPCs(game: GameData) {
+export function TickNPCs(game: GameData, updateDebugState: () => void) {
   for (const npc of game.map.currentMapObjects) {
     // TODO: only add new sprite movements if it is within the player's view
     if (!npc.sprite.joypad.joypadStates.length) {
@@ -114,7 +113,8 @@ export function TickNPCs(game: GameData) {
       allSprites,
       null,
       null,
-      null
+      null,
+      updateDebugState
     );
   }
 }
@@ -167,7 +167,8 @@ function handleSpriteMovement(
   allSprites: Sprite[],
   debug: DebugData | null,
   onConnection: ((connection: ConnectionDir) => void) | null,
-  onWarp: ((warp: Warp) => void) | null
+  onWarp: ((warp: Warp) => void) | null,
+  updateDebugState: () => void
 ) {
   // If the sprite is not moving and we are pressing a key, move it
   if (sprite.movementStatus === MovementStatus.Ready) {
@@ -325,6 +326,8 @@ function handleSpriteMovement(
       if (warp && onWarp) {
         onWarp(warp);
       }
+
+      updateDebugState();
     }
   }
 }

@@ -139,7 +139,7 @@ class PokemonRed {
       this.#data
     );
 
-    TickNPCs(this.#data);
+    TickNPCs(this.#data, () => this.#updateDebugState());
 
     // Update NPC logic
     updateNPCSprite(this.#data);
