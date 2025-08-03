@@ -2,7 +2,12 @@ import { DebugData, GameData, MapData } from "../game";
 import { InputState } from "../input/input";
 import { SimulateJoypad } from "../input/joypad";
 import { MapName } from "../map";
-import { FacingDirection, MovementStatus, Sprite } from "../render/sprite";
+import {
+  FacingDirection,
+  MovementStatus,
+  Sprite,
+  TilePosition
+} from "../render/sprite";
 import {
   probeTile,
   collisionLandCheck,
@@ -18,14 +23,67 @@ export function TickPlayer(
   updateDebugState: () => void,
   game: GameData
 ) {
-  handleSpriteMovement(
-    player,
-    keys,
-    game.map,
-    game.debug,
-    loadMap,
-    updateDebugState
+  // Move the player
+  handleSpriteMovement(player, keys, game.map, game.debug);
+
+  // If we have moved into a new map, load it.
+  processConnection(game, player, loadMap);
+
+  // Check to see if we've warped somewhere
+  handleWarp(game, loadMap, player);
+
+  updateDebugState();
+}
+
+function handleWarp(
+  game: GameData,
+  loadMap: (nextMapName: MapName) => void,
+  player: Sprite
+) {
+  const warp = getWarpAtPos(
+    game.map.currentMap,
+    player.position.x,
+    player.position.y
   );
+
+  if (warp) {
+    const nextMapName =
+      warp.toMap === "LAST_MAP" || warp.toMap === "UNUSED_MAP_ED"
+        ? game.map.previousOutdoorMapName
+        : warp.toMap;
+
+    // Load the warp map
+    loadMap(nextMapName);
+
+    // Set the player's position to the destination warp coordinates, looked up by index
+    const destinationWarp = game.map.currentMap.objects.warps[warp.warpIndex];
+
+    player.position = {
+      x: destinationWarp.x,
+      y: destinationWarp.y
+    };
+  }
+}
+
+function processConnection(
+  game: GameData,
+  player: Sprite,
+  loadMap: (nextMapName: MapName) => void
+) {
+  const connection = checkMapConnections(
+    game.map.currentMap,
+    player.position.x,
+    player.position.y
+  );
+
+  if (connection) {
+    console.log(connection.dir, connection.newPosition);
+    player.position = connection.newPosition;
+    const nextMap = game.map.currentMap.connections[connection.dir];
+    if (nextMap) {
+      loadMap(nextMap.map);
+    }
+  }
 }
 
 /**
@@ -36,9 +94,7 @@ function handleSpriteMovement(
   sprite: Sprite,
   keys: InputState,
   mapData: MapData,
-  debug: DebugData | null,
-  loadMap: (nextMapName: MapName) => void,
-  updateDebugState: () => void
+  debug: DebugData | null
 ) {
   // If the sprite is not moving and we are pressing a key, move it
   if (sprite.movementStatus === MovementStatus.Ready) {
@@ -114,7 +170,7 @@ function handleSpriteMovement(
     }
   }
 
-  // If the player is moving, update the animation
+  // If the sprite is moving, update the animation
   if (
     sprite.movementStatus === MovementStatus.Moving ||
     sprite.movementStatus === MovementStatus.WalkingInPlace
@@ -136,7 +192,7 @@ function handleSpriteMovement(
         // remove the key we just consumed
         joypad.joypadStates.splice(0, 1);
 
-        // Stop scripting the player if we ran out of joypad states
+        // Stop scripting the sprite if we ran out of joypad states
         if (!joypad.joypadStates.length) {
           joypad.scripted = false;
           // call the user defined callback function at the end of scripting
@@ -144,8 +200,7 @@ function handleSpriteMovement(
         }
       }
 
-      // Only update the player's position if we
-      // are not walking in place
+      // Only update the sprite's position if we are not walking in place
       if (
         joypad.scripted ||
         sprite.movementStatus !== MovementStatus.WalkingInPlace
@@ -157,44 +212,6 @@ function handleSpriteMovement(
       }
 
       sprite.movementStatus = MovementStatus.Ready;
-
-      const { x, y } = sprite.position;
-
-      // If we have moved into a new map, load it.
-      const connection = checkMapConnections(mapData.currentMap, x, y);
-
-      if (connection) {
-        console.log(connection.dir, connection.newPosition);
-        sprite.position = connection.newPosition;
-        const nextMap = mapData.currentMap.connections[connection.dir];
-        if (nextMap) {
-          loadMap(nextMap.map);
-        }
-      }
-
-      // check to see if we've warped somewhere
-      const warp = getWarpAtPos(mapData.currentMap, x, y);
-
-      if (warp) {
-        const nextMapName =
-          warp.toMap === "LAST_MAP" || warp.toMap === "UNUSED_MAP_ED"
-            ? mapData.previousOutdoorMapName
-            : warp.toMap;
-
-        // Load the warp map
-        loadMap(nextMapName);
-
-        // Set the player's position to the destination warp coordinates, looked up by index
-        const destinationWarp =
-          mapData.currentMap.objects.warps[warp.warpIndex];
-
-        sprite.position = {
-          x: destinationWarp.x,
-          y: destinationWarp.y
-        };
-      }
-
-      updateDebugState();
     }
   }
 }
