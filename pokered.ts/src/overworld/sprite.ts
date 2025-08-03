@@ -217,10 +217,7 @@ function handleSpriteMovement(
       }
 
       // Only update the sprite's position if we are not walking in place
-      if (
-        joypad.scripted ||
-        sprite.movementStatus !== MovementStatus.WalkingInPlace
-      ) {
+      if (sprite.movementStatus !== MovementStatus.WalkingInPlace) {
         if (sprite.facing == FacingDirection.Left) sprite.position.x--;
         if (sprite.facing == FacingDirection.Right) sprite.position.x++;
         if (sprite.facing == FacingDirection.Up) sprite.position.y--;
