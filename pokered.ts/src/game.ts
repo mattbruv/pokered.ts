@@ -165,14 +165,14 @@ class PokemonRed {
         return {
           joypad: {
             joypadStates: [
-              "Down",
-              "Down",
-              "Down",
-              "Down",
-              "Down",
-              "Down",
-              "Down",
-              "Down"
+              "Left",
+              "Left",
+              "Left",
+              "Left",
+              "Left",
+              "Left",
+              "Left",
+              "Left"
             ],
             onSimulationEnd: null,
             scripted: true
@@ -227,7 +227,7 @@ class PokemonRed {
           hoppingLedge: false,
           position: {
             x: 13,
-            y: 18
+            y: 16
           },
           image: "sprites-red",
           imageWalk: "sprites-red",

@@ -134,3 +134,20 @@ export function drawSprite(
     );
   }
 }
+
+export function getSpriteDrawOffset(sprite: Sprite): [number, number] {
+  if (sprite.movementStatus === MovementStatus.WalkingInPlace) {
+    return [0, 0];
+  }
+
+  const offset = sprite.animationFrameCounter;
+
+  const adjustmentMap: Record<FacingDirection, [number, number]> = {
+    [FacingDirection.Down]: [0, offset],
+    [FacingDirection.Up]: [0, -offset],
+    [FacingDirection.Left]: [-offset, 0],
+    [FacingDirection.Right]: [offset, 0]
+  };
+
+  return adjustmentMap[sprite.facing];
+}
