@@ -164,14 +164,19 @@ export function collisionLandCheck(
   return true;
 }
 
-export function probeTile(map: Map, tileX: number, tileY: number): TileProbe {
+export function probeTile(
+  map: Map,
+  tileX: number,
+  tileY: number,
+  allowConnections: boolean
+): TileProbe {
   // If the user is about to walk about of bounds,
   // it means that they are about to walk over to a connecting map
   if (!isInBounds(map, tileX, tileY)) {
     // If we're not in bounds, we are probably walking to a connection, or walking OOB.
     // If this returns null, we are walking out of bounds, so prevent that.
     const connection = checkMapConnections(map, tileX, tileY);
-    if (!connection)
+    if (!connection || !allowConnections)
       return {
         canWalk: false,
         canSurf: false,
@@ -189,7 +194,7 @@ export function probeTile(map: Map, tileX: number, tileY: number): TileProbe {
         inBounds: false
       };
     const { x, y } = connection.newPosition;
-    return probeTile(getMap(connectingMapName), x, y);
+    return probeTile(getMap(connectingMapName), x, y, allowConnections);
   }
 
   const mapBlockIndex = getBlockIndexAtPosition(map, tileX, tileY);

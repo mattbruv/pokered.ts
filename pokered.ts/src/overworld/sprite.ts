@@ -112,12 +112,16 @@ function handleSpriteMovement(
 
     // Only allow one key at a time
     if ((xDiff && !yDiff) || (yDiff && !xDiff)) {
-      const currentTile = probeTile(mapData.currentMap, x, y);
-      const nextTile = probeTile(mapData.currentMap, dx, dy);
+      // If we have supplied an onConnection callback, allow walking outside of the map
+      const allowConnections = onConnection !== null;
+
+      const currentTile = probeTile(mapData.currentMap, x, y, allowConnections);
+      const nextTile = probeTile(mapData.currentMap, dx, dy, allowConnections);
       const nextNextTile = probeTile(
         mapData.currentMap,
         dx + xDiff,
-        dy + yDiff
+        dy + yDiff,
+        allowConnections
       );
 
       const collisionCheck = collisionLandCheck(
