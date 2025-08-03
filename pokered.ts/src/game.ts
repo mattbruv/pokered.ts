@@ -1,7 +1,7 @@
 import { DebugCallbacks, DebugState, getDebugState } from "./debug";
 import { ImageCache, loadImageBitmaps } from "./gfx/images";
 import { GameInput } from "./input/input";
-import { Map, MapName } from "./map";
+import { Map, MapName, MapObject, MapObjectData } from "./map";
 import { getMap } from "./mapLookup";
 import { TileProbe } from "./overworld/map";
 import { getObjectFacingDirection, updateNPCSprite } from "./overworld/npc";
@@ -38,11 +38,16 @@ export type GameData = {
   debug: DebugData;
 };
 
+export type MapObjectWithSprite = {
+  object: Readonly<MapObject>;
+  sprite: Sprite;
+};
+
 export type MapData = {
   flowerAnimCounter: number;
   flowerAnimIndex: number;
   currentMap: Map;
-  currentMapSprites: Sprite[];
+  currentMapObjects: MapObjectWithSprite[];
   currentMapName: MapName;
   previousOutdoorMapName: MapName;
 };
@@ -159,42 +164,34 @@ class PokemonRed {
     this.#data.debug.currentTile = null;
     this.#data.debug.nextTile = null;
 
-    this.#data.map.currentMapSprites = nextMap.objects.objects.map(
-      (obj): Sprite => {
-        const img = getOverworldSpriteKey(obj.sprite);
-        return {
+    this.#data.map.currentMapObjects = nextMap.objects.objects.map(
+      (object): MapObjectWithSprite => {
+        const img = getOverworldSpriteKey(object.sprite);
+        const sprite = {
           joypad: {
-            joypadStates: [
-              "Down",
-              "Down",
-              "Down",
-              "Down",
-              "Down",
-              "Left",
-              "Right",
-              "Left",
-              "Right"
-            ],
+            joypadStates: [],
             onSimulationEnd: null,
-            scripted: true
+            scripted: false
           },
           imageWalk: img,
           imageSurf: img,
           image: img,
-          facing: getObjectFacingDirection(obj.direction),
+          facing: getObjectFacingDirection(object.direction),
           movementStatus: MovementStatus.Ready,
           ledgeAnimationCounter: 0,
           animationFrameCounter: 0,
           position: {
-            x: obj.x,
-            y: obj.y
+            x: object.x,
+            y: object.y
           },
           hoppingLedge: false
         };
+
+        return { sprite, object };
       }
     );
 
-    this.#renderer.loadMap(nextMap, this.#data.map.currentMapSprites);
+    this.#renderer.loadMap(nextMap);
   }
 
   #render() {
@@ -209,7 +206,7 @@ class PokemonRed {
         currentMap: map,
         currentMapName: mapName,
         previousOutdoorMapName: MapName.Route1,
-        currentMapSprites: [],
+        currentMapObjects: [],
         flowerAnimCounter: 0,
         flowerAnimIndex: 0
       },

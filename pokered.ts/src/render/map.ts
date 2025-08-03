@@ -73,7 +73,12 @@ export function renderOverworld(
     }
 
     // draw map objects to image
-    drawSprites(ct, mapData.currentMapSprites, false, images);
+    drawSprites(
+      ct,
+      mapData.currentMapObjects.map((x) => x.sprite),
+      false,
+      images
+    );
 
     // draw current block outline if we are debugging
     if (debug.showMapOutlines) {
@@ -196,7 +201,14 @@ export function renderOverworld(
     }
 
     // draw the sprites top halves again to display them in grass properly
-    drawSprites(screen, mapData.currentMapSprites, true, images, dx, dy);
+    drawSprites(
+      screen,
+      mapData.currentMapObjects.map((x) => x.sprite),
+      true,
+      images,
+      dx,
+      dy
+    );
   }
 }
 

@@ -77,7 +77,7 @@ export type ItemObject = BaseObject & {
   itemId: string; // e.g., "ANTIDOTE", "POTION"
 };
 
-type MapObject = SpriteObject | TrainerObject | ItemObject;
+export type MapObject = SpriteObject | TrainerObject | ItemObject;
 
 export type MapObjectData = {
   warps: Warp[];

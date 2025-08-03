@@ -27,7 +27,10 @@ export function TickPlayer(
     handleWarp(warp, game, loadMap, player);
   };
 
-  const allSprites = [player, ...game.map.currentMapSprites];
+  const allSprites = [
+    player,
+    ...game.map.currentMapObjects.map((x) => x.sprite)
+  ];
 
   // Move the player
   handleSpriteMovement(
@@ -44,7 +47,7 @@ export function TickPlayer(
 }
 
 export function TickNPCs(game: GameData) {
-  for (const npc of game.map.currentMapSprites) {
+  for (const npc of game.map.currentMapObjects.map((x) => x.sprite)) {
     // TODO: only move player if he is within the player's view
 
     const key: GameKey | undefined = npc.joypad.scripted
@@ -60,7 +63,10 @@ export function TickNPCs(game: GameData) {
 
     if (key) state[key] = true;
 
-    const allSprites = [game.player.sprite, ...game.map.currentMapSprites];
+    const allSprites = [
+      game.player.sprite,
+      ...game.map.currentMapObjects.map((x) => x.sprite)
+    ];
 
     handleSpriteMovement(
       npc,
