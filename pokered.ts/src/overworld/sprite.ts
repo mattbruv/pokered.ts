@@ -2,7 +2,12 @@ import { DebugData, GameData, MapData } from "../game";
 import { GameKey, InputState } from "../input/input";
 import { SimulateJoypad } from "../input/joypad";
 import { BaseObjectDirection, Map, MapName, MovementType, Warp } from "../map";
-import { FacingDirection, MovementStatus, Sprite } from "../render/sprite";
+import {
+  FacingDirection,
+  MovementStatus,
+  Sprite,
+  TilePosition
+} from "../render/sprite";
 import {
   probeTile,
   collisionLandCheck,
@@ -64,12 +69,20 @@ const KEY_FACING: Record<GameKey, FacingDirection> = {
   Right: FacingDirection.Right
 };
 
+function isWithinRange(a: TilePosition, b: TilePosition): boolean {
+  return Math.abs(a.x - b.x) <= 4 && Math.abs(a.y - b.y) <= 4;
+}
+
 export function TickNPCs(game: GameData, updateDebugState: () => void) {
   for (const npc of game.map.currentMapObjects) {
     // TODO: only add new sprite movements if it is within the player's view
     if (!npc.sprite.joypad.joypadStates.length) {
       // Add a new state for walkers (or turn NPC if not walker) every ~4 seconds.
-      if (Math.floor(Math.random() * 4 * 60) === 0) {
+      // We only do this if the NPC is within our player's range
+      if (
+        Math.floor(Math.random() * 4 * 60) === 0 &&
+        isWithinRange(npc.sprite.position, game.player.sprite.position)
+      ) {
         const keys = DIRECTION_KEYS[npc.object.direction];
         if (keys.length) {
           const randomKey = keys[Math.floor(Math.random() * keys.length)];
