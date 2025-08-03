@@ -243,8 +243,10 @@ function getTileDimensions(map: Map) {
   };
 }
 
-// If we have gone out of bounds of the current map,
-// get the new position and connection we moved into.
+/**
+ * If we have gone out of bounds of the current map,
+ * get the new position and connection we moved into.
+ */
 export function checkMapConnections(
   map: Map,
   tileX: number,
