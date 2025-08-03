@@ -39,7 +39,8 @@ export class GameInput {
     });
   }
 
-  getInput(joypad: JoypadState, player: PlayerData): InputState {
+  getInput(player: PlayerData): InputState {
+    const { joypad } = player.sprite;
     const state: InputState = {
       Up: false,
       Down: false,

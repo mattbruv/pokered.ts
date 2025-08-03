@@ -1,4 +1,5 @@
 import { ImageCache } from "../gfx/images";
+import { JoypadState } from "../input/joypad";
 import { SpriteName } from "../sprite";
 
 export enum MovementStatus {
@@ -7,7 +8,13 @@ export enum MovementStatus {
   WalkingInPlace
 }
 
+export type TilePosition = {
+  x: number;
+  y: number;
+};
+
 export type Sprite = {
+  joypad: JoypadState;
   ledgeAnimationCounter: number;
   imageWalk: SpriteName;
   imageSurf: SpriteName;
@@ -16,11 +23,7 @@ export type Sprite = {
   facing: FacingDirection;
   movementStatus: MovementStatus;
   animationFrameCounter: number;
-
-  position: {
-    x: number;
-    y: number;
-  };
+  position: TilePosition;
 };
 
 export enum FacingDirection {
@@ -130,4 +133,21 @@ export function drawSprite(
       dHeight
     );
   }
+}
+
+export function getSpriteDrawOffset(sprite: Sprite): [number, number] {
+  if (sprite.movementStatus === MovementStatus.WalkingInPlace) {
+    return [0, 0];
+  }
+
+  const offset = sprite.animationFrameCounter;
+
+  const adjustmentMap: Record<FacingDirection, [number, number]> = {
+    [FacingDirection.Down]: [0, offset],
+    [FacingDirection.Up]: [0, -offset],
+    [FacingDirection.Left]: [-offset, 0],
+    [FacingDirection.Right]: [offset, 0]
+  };
+
+  return adjustmentMap[sprite.facing];
 }

@@ -39,7 +39,7 @@ export type BackgroundItem = {
 };
 
 /** Represents a dynamic object in the map, such as NPCs, trainers, items, etc. */
-type MovementType = "STAY" | "WALK"; // expand as needed
+export type MovementType = "STAY" | "WALK"; // expand as needed
 
 export type BaseObjectDirection =
   | "UP"
@@ -77,7 +77,7 @@ export type ItemObject = BaseObject & {
   itemId: string; // e.g., "ANTIDOTE", "POTION"
 };
 
-type MapObject = SpriteObject | TrainerObject | ItemObject;
+export type MapObject = SpriteObject | TrainerObject | ItemObject;
 
 export type MapObjectData = {
   warps: Warp[];

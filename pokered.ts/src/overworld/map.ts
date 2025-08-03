@@ -1,10 +1,11 @@
+import { MapData } from "../game";
 import { GameInput, GameKey } from "../input/input";
 import { Map, MapConnections, Warp } from "../map";
 import { getMap } from "../mapLookup";
-import { FacingDirection } from "../render/sprite";
+import { FacingDirection, Sprite } from "../render/sprite";
 import { getBlockSet, getTileCollisions, Tileset } from "../tileset";
 
-type ConnectionDir = {
+export type ConnectionDir = {
   dir: keyof MapConnections;
   newPosition: {
     x: number;
@@ -164,14 +165,20 @@ export function collisionLandCheck(
   return true;
 }
 
-export function probeTile(map: Map, tileX: number, tileY: number): TileProbe {
+export function probeTile(
+  sprites: Sprite[],
+  map: Map,
+  tileX: number,
+  tileY: number,
+  allowConnections: boolean
+): TileProbe {
   // If the user is about to walk about of bounds,
   // it means that they are about to walk over to a connecting map
   if (!isInBounds(map, tileX, tileY)) {
     // If we're not in bounds, we are probably walking to a connection, or walking OOB.
     // If this returns null, we are walking out of bounds, so prevent that.
     const connection = checkMapConnections(map, tileX, tileY);
-    if (!connection)
+    if (!connection || !allowConnections)
       return {
         canWalk: false,
         canSurf: false,
@@ -189,7 +196,14 @@ export function probeTile(map: Map, tileX: number, tileY: number): TileProbe {
         inBounds: false
       };
     const { x, y } = connection.newPosition;
-    return probeTile(getMap(connectingMapName), x, y);
+
+    return probeTile(
+      sprites,
+      getMap(connectingMapName),
+      x,
+      y,
+      allowConnections
+    );
   }
 
   const mapBlockIndex = getBlockIndexAtPosition(map, tileX, tileY);
@@ -221,9 +235,13 @@ export function probeTile(map: Map, tileX: number, tileY: number): TileProbe {
 
   const canSurf = WATER_TILESETS.includes(map.tileset) && isWaterTile;
 
+  const isTileAlreadyOccupied = sprites.some(
+    (sprite) => sprite.position.x === tileX && sprite.position.y === tileY
+  );
+
   return {
     inBounds: true,
-    canWalk: passableTiles.includes(tileId),
+    canWalk: !isTileAlreadyOccupied && passableTiles.includes(tileId),
     canSurf,
     tileId: tileId,
     tileX,
@@ -243,8 +261,10 @@ function getTileDimensions(map: Map) {
   };
 }
 
-// If we have gone out of bounds of the current map,
-// get the new position and connection we moved into.
+/**
+ * If we have gone out of bounds of the current map,
+ * get the new position and connection we moved into.
+ */
 export function checkMapConnections(
   map: Map,
   tileX: number,

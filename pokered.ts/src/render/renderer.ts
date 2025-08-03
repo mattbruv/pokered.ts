@@ -57,7 +57,7 @@ export class Renderer {
 
   // When the player walks into/loads a new map,
   // load the adjacent maps and cache some stuff
-  loadMap(map: Map, sprites: Sprite[]) {
+  loadMap(map: Map) {
     const mapRender = getMapRender(
       map.width,
       map.height,

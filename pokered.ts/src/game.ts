@@ -1,18 +1,11 @@
 import { DebugCallbacks, DebugState, getDebugState } from "./debug";
 import { ImageCache, loadImageBitmaps } from "./gfx/images";
-import { GameInput, GameKey } from "./input/input";
-import { JoypadState, SimulateJoypad } from "./input/joypad";
-import { Map, MapName } from "./map";
+import { GameInput } from "./input/input";
+import { Map, MapName, MapObject, MapObjectData } from "./map";
 import { getMap } from "./mapLookup";
-import {
-  checkMapConnections,
-  probeTile,
-  getWarpAtPos,
-  TileProbe,
-  collisionLandCheck,
-  isJumpingLedge
-} from "./overworld/map";
+import { TileProbe } from "./overworld/map";
 import { getObjectFacingDirection, updateNPCSprite } from "./overworld/npc";
+import { TickNPCs, TickPlayer } from "./overworld/sprite";
 import { Renderer } from "./render/renderer";
 import { FacingDirection, MovementStatus, Sprite } from "./render/sprite";
 import { getOverworldSpriteKey } from "./sprite";
@@ -40,17 +33,21 @@ export type DebugData = {
 };
 
 export type GameData = {
-  joypad: JoypadState;
   player: PlayerData;
   map: MapData;
   debug: DebugData;
+};
+
+export type MapObjectWithSprite = {
+  object: Readonly<MapObject>;
+  sprite: Sprite;
 };
 
 export type MapData = {
   flowerAnimCounter: number;
   flowerAnimIndex: number;
   currentMap: Map;
-  currentMapSprites: Sprite[];
+  currentMapObjects: MapObjectWithSprite[];
   currentMapName: MapName;
   previousOutdoorMapName: MapName;
 };
@@ -131,173 +128,18 @@ class PokemonRed {
       this.#data.map.flowerAnimIndex %= 3; // limit to three frames
     }
 
-    const keys = this.#input.getInput(this.#data.joypad, this.#data.player);
+    const keys = this.#input.getInput(this.#data.player);
     const player = this.#data.player.sprite;
 
-    // If the player is not moving and we are pressing a key, move him
-    if (player.movementStatus === MovementStatus.Ready) {
-      let xDiff = 0;
-      let yDiff = 0;
+    TickPlayer(
+      player,
+      keys,
+      (mapName) => this.#loadMap(mapName),
+      () => this.#updateDebugState(),
+      this.#data
+    );
 
-      if (keys.Down) yDiff = 1;
-      if (keys.Up) yDiff = -1;
-      if (keys.Left) xDiff = -1;
-      if (keys.Right) xDiff = 1;
-
-      // get position offset at x/y diff
-      // get tile at that pos
-      // if in collidables, don't move
-      const { x, y } = player.position;
-      const dx = player.position.x + xDiff;
-      const dy = player.position.y + yDiff;
-
-      // Only allow the player to press one key at a time to register walking
-      if ((xDiff && !yDiff) || (yDiff && !xDiff)) {
-        const currentTile = probeTile(this.#data.map.currentMap, x, y);
-        const nextTile = probeTile(this.#data.map.currentMap, dx, dy);
-        const nextNextTile = probeTile(
-          this.#data.map.currentMap,
-          dx + xDiff,
-          dy + yDiff
-        );
-
-        const collisionCheck = collisionLandCheck(
-          this.#data.map.currentMap.tileset,
-          currentTile,
-          nextTile
-        );
-
-        if (xDiff) {
-          player.facing =
-            xDiff > 0 ? FacingDirection.Right : FacingDirection.Left;
-        } else if (yDiff) {
-          player.facing = yDiff > 0 ? FacingDirection.Down : FacingDirection.Up;
-        }
-
-        if (
-          this.#data.joypad.scripted ||
-          !collisionCheck ||
-          this.#data.debug.walkOnWalls
-        ) {
-          this.#data.debug.currentTile = nextTile;
-          this.#data.debug.nextTile = nextNextTile;
-          player.image = nextTile.canSurf ? player.imageSurf : player.imageWalk;
-          player.movementStatus = MovementStatus.Moving;
-        } else {
-          // we are not moving into a new tile, so just render the walking animation in place
-          player.movementStatus = MovementStatus.WalkingInPlace;
-        }
-
-        // Process ledges
-        if (
-          !this.#data.debug.walkOnWalls &&
-          currentTile.inBounds &&
-          nextTile.inBounds
-        ) {
-          const ledge = isJumpingLedge(
-            player.facing,
-            currentTile.tileId,
-            nextTile.tileId
-          );
-          if (ledge && !this.#data.joypad.scripted) {
-            player.movementStatus = MovementStatus.Ready;
-            console.log("JUMP LEDGE!", this.#data.joypad.joypadStates);
-            const key = ledge[3];
-            this.#data.player.sprite.hoppingLedge = true;
-            SimulateJoypad(this.#data.joypad, [key, key], () => {
-              console.log("ledge jump finished");
-              this.#data.player.sprite.ledgeAnimationCounter = 0;
-              this.#data.player.sprite.hoppingLedge = false;
-            });
-          }
-        }
-      }
-    }
-
-    // If the player is moving, update the animation
-    if (
-      player.movementStatus === MovementStatus.Moving ||
-      player.movementStatus === MovementStatus.WalkingInPlace
-    ) {
-      player.animationFrameCounter++;
-      if (player.hoppingLedge) {
-        // The original game has 16 different unique y-value offsets for the jump animation.
-        // Each step is 16 frames, so we increment the ledge animation index (0-15) at half the rate
-        // because the ledge jump animation is walking 2 steps (16 * 2)
-        if (player.animationFrameCounter % 2 == 0)
-          player.ledgeAnimationCounter++;
-      }
-      // If we finished the animation
-      if (player.animationFrameCounter >= 16) {
-        player.animationFrameCounter = 0;
-
-        const joypad = this.#data.joypad;
-
-        if (joypad.scripted) {
-          // remove the key we just consumed
-          joypad.joypadStates.splice(0, 1);
-
-          // Stop scripting the player if we ran out of joypad states
-          if (!joypad.joypadStates.length) {
-            joypad.scripted = false;
-            // call the user defined callback function at the end of scripting
-            joypad.onSimulationEnd();
-          }
-        }
-
-        // Only update the player's position if we
-        // are not walking in place
-        if (
-          joypad.scripted ||
-          player.movementStatus !== MovementStatus.WalkingInPlace
-        ) {
-          if (player.facing == FacingDirection.Left) player.position.x--;
-          if (player.facing == FacingDirection.Right) player.position.x++;
-          if (player.facing == FacingDirection.Up) player.position.y--;
-          if (player.facing == FacingDirection.Down) player.position.y++;
-        }
-
-        player.movementStatus = MovementStatus.Ready;
-
-        const { x, y } = player.position;
-
-        // If we have moved into a new map, load it.
-        const connection = checkMapConnections(this.#data.map.currentMap, x, y);
-
-        if (connection) {
-          console.log(connection.dir, connection.newPosition);
-          player.position = connection.newPosition;
-          const nextMap = this.#data.map.currentMap.connections[connection.dir];
-          if (nextMap) {
-            this.#loadMap(nextMap.map);
-          }
-        }
-
-        // check to see if we've warped somewhere
-        const warp = getWarpAtPos(this.#data.map.currentMap, x, y);
-
-        if (warp) {
-          const nextMapName =
-            warp.toMap === "LAST_MAP" || warp.toMap === "UNUSED_MAP_ED"
-              ? this.#data.map.previousOutdoorMapName
-              : warp.toMap;
-
-          // Load the warp map
-          this.#loadMap(nextMapName);
-
-          // Set the player's position to the destination warp coordinates, looked up by index
-          const destinationWarp =
-            this.#data.map.currentMap.objects.warps[warp.warpIndex];
-
-          this.#data.player.sprite.position = {
-            x: destinationWarp.x,
-            y: destinationWarp.y
-          };
-        }
-
-        this.#updateDebugState();
-      }
-    }
+    TickNPCs(this.#data, () => this.#updateDebugState());
 
     // Update NPC logic
     updateNPCSprite(this.#data);
@@ -322,27 +164,34 @@ class PokemonRed {
     this.#data.debug.currentTile = null;
     this.#data.debug.nextTile = null;
 
-    this.#data.map.currentMapSprites = nextMap.objects.objects.map(
-      (obj): Sprite => {
-        const img = getOverworldSpriteKey(obj.sprite);
-        return {
+    this.#data.map.currentMapObjects = nextMap.objects.objects.map(
+      (object): MapObjectWithSprite => {
+        const img = getOverworldSpriteKey(object.sprite);
+        const sprite = {
+          joypad: {
+            joypadStates: [],
+            onSimulationEnd: null,
+            scripted: false
+          },
           imageWalk: img,
           imageSurf: img,
           image: img,
-          facing: getObjectFacingDirection(obj.direction),
+          facing: getObjectFacingDirection(object.direction),
           movementStatus: MovementStatus.Ready,
           ledgeAnimationCounter: 0,
           animationFrameCounter: 0,
           position: {
-            x: obj.x,
-            y: obj.y
+            x: object.x,
+            y: object.y
           },
           hoppingLedge: false
         };
+
+        return { sprite, object };
       }
     );
 
-    this.#renderer.loadMap(nextMap, this.#data.map.currentMapSprites);
+    this.#renderer.loadMap(nextMap);
   }
 
   #render() {
@@ -357,13 +206,18 @@ class PokemonRed {
         currentMap: map,
         currentMapName: mapName,
         previousOutdoorMapName: MapName.Route1,
-        currentMapSprites: [],
+        currentMapObjects: [],
         flowerAnimCounter: 0,
         flowerAnimIndex: 0
       },
       player: {
         name: "Red",
         sprite: {
+          joypad: {
+            joypadStates: [],
+            onSimulationEnd: null,
+            scripted: false
+          },
           facing: FacingDirection.Down,
           movementStatus: MovementStatus.Ready,
           animationFrameCounter: 0,
@@ -371,7 +225,7 @@ class PokemonRed {
           hoppingLedge: false,
           position: {
             x: 13,
-            y: 12
+            y: 16
           },
           image: "sprites-red",
           imageWalk: "sprites-red",
@@ -383,11 +237,6 @@ class PokemonRed {
         walkOnWalls: false,
         currentTile: null,
         nextTile: null
-      },
-      joypad: {
-        scripted: false,
-        joypadStates: [],
-        onSimulationEnd: () => {}
       }
     };
 

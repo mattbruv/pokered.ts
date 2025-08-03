@@ -1,5 +1,5 @@
 import { ImageCache } from "../gfx/images";
-import { drawSprite, Sprite } from "./sprite";
+import { drawSprite, getSpriteDrawOffset, Sprite } from "./sprite";
 
 export function drawSprites(
   context: CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D,
@@ -10,6 +10,8 @@ export function drawSprites(
   offsetY: number = 0
 ): void {
   for (const sprite of sprites) {
+    const [walkOffsetX, walkOffsetY] = getSpriteDrawOffset(sprite);
+
     drawSprite(
       context,
       sprite,
@@ -17,8 +19,8 @@ export function drawSprites(
       sprite.position.x,
       sprite.position.y,
       onlyTopHalf,
-      offsetX,
-      offsetY - 4 // All sprites are offset by 4 like the player.
+      offsetX + walkOffsetX,
+      offsetY - 4 + walkOffsetY // All sprites are offset by 4 like the player.
     );
   }
 }
