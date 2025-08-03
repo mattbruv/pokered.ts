@@ -152,7 +152,7 @@ function handleSpriteMovement(
         sprite.facing = yDiff > 0 ? FacingDirection.Down : FacingDirection.Up;
       }
 
-      if (sprite.joypad.scripted || !collisionCheck || debug?.walkOnWalls) {
+      if (sprite.hoppingLedge || !collisionCheck || debug?.walkOnWalls) {
         if (debug) {
           debug.currentTile = nextTile;
           debug.nextTile = nextNextTile;
@@ -171,13 +171,13 @@ function handleSpriteMovement(
           currentTile.tileId,
           nextTile.tileId
         );
-        if (ledge && !sprite.joypad.scripted) {
+        if (ledge && !sprite.hoppingLedge) {
+          sprite.hoppingLedge = true;
           sprite.movementStatus = MovementStatus.Ready;
           console.log("JUMP LEDGE!", sprite.joypad.joypadStates);
           const key = ledge[3];
-          sprite.hoppingLedge = true;
           SimulateJoypad(sprite.joypad, [key, key], () => {
-            console.log("ledge jump finished");
+            console.log("ledge jump finished", sprite.imageWalk);
             sprite.ledgeAnimationCounter = 0;
             sprite.hoppingLedge = false;
           });

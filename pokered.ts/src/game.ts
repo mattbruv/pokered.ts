@@ -164,7 +164,16 @@ class PokemonRed {
         const img = getOverworldSpriteKey(obj.sprite);
         return {
           joypad: {
-            joypadStates: ["Down", "Down", "Left", "Left"],
+            joypadStates: [
+              "Down",
+              "Down",
+              "Down",
+              "Down",
+              "Down",
+              "Down",
+              "Down",
+              "Down"
+            ],
             onSimulationEnd: null,
             scripted: true
           },
@@ -218,7 +227,7 @@ class PokemonRed {
           hoppingLedge: false,
           position: {
             x: 13,
-            y: 12
+            y: 18
           },
           image: "sprites-red",
           imageWalk: "sprites-red",
