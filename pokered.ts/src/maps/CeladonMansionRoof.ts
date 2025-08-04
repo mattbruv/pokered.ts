@@ -21,5 +21,5 @@ export const CeladonMansionRoof: Map = {
     ],
     objects: []
   },
-  textPointers: []
+  text: { _CeladonMansionRoofHouseSignText: [["text", "I KNOW EVERYTHING!"]] }
 };

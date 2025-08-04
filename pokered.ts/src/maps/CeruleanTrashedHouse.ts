@@ -40,5 +40,35 @@ export const CeruleanTrashedHouse: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _CeruleanTrashedHouseFishingGuruTheyStoleATMText: [
+      ["text", "Those miserable"],
+      ["line", "ROCKETs!"],
+      ["para", "Look what they"],
+      ["line", "did here!"],
+      ["para", "They stole a TM"],
+      ["line", "for teaching"],
+      ["cont", "#MON how to"],
+      ["cont", "DIG holes!"],
+      ["para", "That cost me a"],
+      ["line", "bundle, it did!"]
+    ],
+    _CeruleanTrashedHouseFishingGuruWhatsLostIsLostText: [
+      ["text", "I figure what's"],
+      ["line", "lost is lost!"],
+      ["para", "I decided to teach"],
+      ["line", "DIGLETT how to"],
+      ["cont", "DIG without a TM!"]
+    ],
+    _CeruleanTrashedHouseGirlText: [
+      ["text", "TEAM ROCKET must"],
+      ["line", "be trying to DIG"],
+      ["cont", "their way into no"],
+      ["cont", "good!"]
+    ],
+    _CeruleanTrashedHouseWallHoleText: [
+      ["text", "TEAM ROCKET left"],
+      ["line", "a way out!"]
+    ]
+  }
 };

@@ -18,5 +18,5 @@ export const UndergroundPathNorthSouth: Map = {
     backgroundItems: [],
     objects: []
   },
-  textPointers: []
+  text: {}
 };

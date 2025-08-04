@@ -29,5 +29,11 @@ export const UndergroundPathRoute8: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _UndergroundPathRoute8GirlText: [
+      ["text", "The dept. store"],
+      ["line", "in CELADON has a"],
+      ["cont", "great selection!"]
+    ]
+  }
 };

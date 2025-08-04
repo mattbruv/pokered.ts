@@ -30,5 +30,5 @@ export const Route7Gate: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {}
 };

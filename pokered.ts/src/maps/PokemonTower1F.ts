@@ -65,5 +65,32 @@ export const PokemonTower1F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _PokemonTower1FReceptionistText: [
+      ["text", "#MON TOWER was"],
+      ["line", "erected in the"],
+      ["cont", "memory of #MON"],
+      ["cont", "that had died."]
+    ],
+    _PokemonTower1FMiddleAgedWomanText: [
+      ["text", "Did you come to"],
+      ["line", "pay respects?"],
+      ["cont", "Bless you!"]
+    ],
+    _PokemonTower1FBaldingGuyText: [
+      ["text", "I came to pray"],
+      ["line", "for my CLEFAIRY."],
+      ["para", "Sniff! I can't"],
+      ["line", "stop crying..."]
+    ],
+    _PokemonTower1FGirlText: [
+      ["text", "My GROWLITHE..."],
+      ["line", "Why did you die?"]
+    ],
+    _PokemonTower1FChannelerText: [
+      ["text", "I am a CHANNELER!"],
+      ["line", "There are spirits"],
+      ["cont", "up to mischief!"]
+    ]
+  }
 };

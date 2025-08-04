@@ -78,5 +78,5 @@ export const SeafoamIslandsB3F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {}
 };

@@ -37,5 +37,16 @@ export const SafariZoneCenterRestHouse: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _SafariZoneCenterRestHouseGirlText: [
+      ["text", "SARA: Where did"],
+      ["line", "my boy friend,"],
+      ["cont", "ERIK, go?"]
+    ],
+    _SafariZoneCenterRestHouseScientistText: [
+      ["text", "I'm catching"],
+      ["line", "#MON to take"],
+      ["cont", "home as gifts!"]
+    ]
+  }
 };

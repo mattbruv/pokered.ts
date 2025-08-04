@@ -41,5 +41,16 @@ export const GameCornerPrizeRoom: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _GameCornerPrizeRoomBaldingGuyText: [
+      ["text", "I sure do fancy"],
+      ["line", "that PORYGON!"],
+      ["para", "But, it's hard to"],
+      ["line", "win at slots!"]
+    ],
+    _GameCornerPrizeRoomGamblerText: [
+      ["text", "I had a major"],
+      ["line", "haul today!"]
+    ]
+  }
 };

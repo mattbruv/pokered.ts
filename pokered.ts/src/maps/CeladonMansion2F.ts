@@ -22,5 +22,10 @@ export const CeladonMansion2F: Map = {
     ],
     objects: []
   },
-  textPointers: []
+  text: {
+    _CeladonMansion2FMeetingRoomSignText: [
+      ["text", "GAME FREAK"],
+      ["line", "Meeting Room"]
+    ]
+  }
 };

@@ -18,5 +18,11 @@ export const RocketHideoutElevator: Map = {
     backgroundItems: [{ x: 1, y: 1, signId: "TEXT_ROCKETHIDEOUTELEVATOR" }],
     objects: []
   },
-  textPointers: []
+  text: {
+    _RocketHideoutElevatorAppearsToNeedKeyText: [
+      ["text", "It appears to"],
+      ["line", "need a key.@"],
+      ["text_end"]
+    ]
+  }
 };

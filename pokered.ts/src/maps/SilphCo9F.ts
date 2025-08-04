@@ -64,5 +64,56 @@ export const SilphCo9F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    SilphCo9FNurseYouLookTiredText: [
+      ["text", "You look tired!"],
+      ["line", "You should take a"],
+      ["cont", "quick nap!"],
+      ["prompt"]
+    ],
+    SilphCo9FNurseDontGiveUpText: [["text", "Don't give up!"]],
+    SilphCo9FNurseThankYouText: [
+      ["text", "Thank you so"],
+      ["line", "much!"]
+    ],
+    _SilphCo9FRocket1BattleText: [
+      ["text", "Your #MON seem"],
+      ["line", "to adore you, kid!"]
+    ],
+    _SilphCo9FRocket1EndBattleText: [["text", "Ghaaah!"], ["prompt"]],
+    _SilphCo9FRocket1AfterBattleText: [
+      ["text", "If I had started"],
+      ["line", "as a trainer at"],
+      ["cont", "your age..."]
+    ],
+    _SilphCo9FScientistBattleText: [
+      ["text", "Your #MON have"],
+      ["line", "weak points! I"],
+      ["cont", "can nail them!"]
+    ],
+    _SilphCo9FScientistEndBattleText: [
+      ["text", "You"],
+      ["line", "hammered me!"],
+      ["prompt"]
+    ],
+    _SilphCo9FScientistAfterBattleText: [
+      ["text", "Exploiting weak"],
+      ["line", "spots does work!"],
+      ["cont", "Think about"],
+      ["cont", "element types!"]
+    ],
+    _SilphCo9FRocket2BattleText: [
+      ["text", "I am one of the 4"],
+      ["line", "ROCKET BROTHERS!"]
+    ],
+    _SilphCo9FRocket2EndBattleText: [
+      ["text", "Warg!"],
+      ["line", "Brothers, I lost!"],
+      ["prompt"]
+    ],
+    _SilphCo9FRocket2AfterBattleText: [
+      ["text", "My brothers will"],
+      ["line", "avenge me!"]
+    ]
+  }
 };

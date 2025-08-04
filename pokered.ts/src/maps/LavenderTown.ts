@@ -61,5 +61,57 @@ export const LavenderTown: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _LavenderTownLittleGirlDoYouBelieveInGhostsText: [
+      ["text", "Do you believe in"],
+      ["line", "GHOSTs?"]
+    ],
+    _LavenderTownLittleGirlSoThereAreBelieversText: [
+      ["text", "Really? So there"],
+      ["line", "are believers..."]
+    ],
+    _LavenderTownLittleGirlHaHaGuessNotText: [
+      ["text", "Hahaha, I guess"],
+      ["line", "not."],
+      ["para", "That white hand"],
+      ["line", "on your shoulder,"],
+      ["cont", "it's not real."]
+    ],
+    _LavenderTownCooltrainerMText: [
+      ["text", "This town is known"],
+      ["line", "as the grave site"],
+      ["cont", "of #MON."],
+      ["para", "Memorial services"],
+      ["line", "are held in"],
+      ["cont", "#MON TOWER."]
+    ],
+    _LavenderTownSuperNerdText: [
+      ["text", "GHOSTs appeared"],
+      ["line", "in #MON TOWER."],
+      ["para", "I think they're"],
+      ["line", "the spirits of"],
+      ["cont", "#MON that the"],
+      ["cont", "ROCKETs killed."]
+    ],
+    _LavenderTownSignText: [
+      ["text", "LAVENDER TOWN"],
+      ["line", "The Noble Purple"],
+      ["cont", "Town"]
+    ],
+    _LavenderTownSilphScopeSignText: [
+      ["text", "New SILPH SCOPE!"],
+      ["para", "Make the Invisible"],
+      ["line", "Plain to See!"],
+      ["para", "SILPH CO."]
+    ],
+    _LavenderTownPokemonHouseSignText: [
+      ["text", "LAVENDER VOLUNTEER"],
+      ["line", "#MON HOUSE"]
+    ],
+    _LavenderTownPokemonTowerSignText: [
+      ["text", "May the Souls of"],
+      ["line", "#MON Rest Easy"],
+      ["cont", "#MON TOWER"]
+    ]
+  }
 };

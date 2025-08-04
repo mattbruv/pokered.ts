@@ -55,5 +55,17 @@ export const PewterPokecenter: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _PewterPokecenterGentlemanText: [
+      ["text", "What!?"],
+      ["para", "TEAM ROCKET is"],
+      ["line", "at MT.MOON? Huh?"],
+      ["cont", "I'm on the phone!"],
+      ["para", "Scram!"]
+    ],
+    _PewterPokecenterJigglypuffText: [
+      ["text", "JIGGLYPUFF: Puu"],
+      ["line", "pupuu!"]
+    ]
+  }
 };

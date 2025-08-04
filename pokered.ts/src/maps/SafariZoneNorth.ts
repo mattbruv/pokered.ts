@@ -52,5 +52,27 @@ export const SafariZoneNorth: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _SafariZoneNorthRestHouseSignText: [["text", "REST HOUSE"]],
+    _SafariZoneNorthTrainerTips1Text: [
+      ["text", "TRAINER TIPS"],
+      ["para", "The SECRET HOUSE"],
+      ["line", "is still ahead!"]
+    ],
+    _SafariZoneNorthSignText: [["text", "AREA 2"]],
+    _SafariZoneNorthTrainerTips2Text: [
+      ["text", "TRAINER TIPS"],
+      ["para", "#MON hide in"],
+      ["line", "tall grass!"],
+      ["para", "Zigzag through"],
+      ["line", "grassy areas to"],
+      ["cont", "flush them out."]
+    ],
+    _SafariZoneNorthTrainerTips3Text: [
+      ["text", "TRAINER TIPS"],
+      ["para", "Win a free HM for"],
+      ["line", "finding the"],
+      ["cont", "SECRET HOUSE!"]
+    ]
+  }
 };

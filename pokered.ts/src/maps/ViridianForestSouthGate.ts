@@ -39,5 +39,18 @@ export const ViridianForestSouthGate: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _ViridianForestSouthGateGirlText: [
+      ["text", "Are you going to"],
+      ["line", "VIRIDIAN FOREST?"],
+      ["cont", "Be careful, it's"],
+      ["cont", "a natural maze!"]
+    ],
+    _ViridianForestSouthGateLittleGirlText: [
+      ["text", "RATTATA may be"],
+      ["line", "small, but its"],
+      ["cont", "bite is wicked!"],
+      ["cont", "Did you get one?"]
+    ]
+  }
 };

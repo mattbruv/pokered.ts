@@ -26,5 +26,11 @@ export const Route7: Map = {
     ],
     objects: []
   },
-  textPointers: []
+  text: {
+    _Route7UndergroundPathSignText: [
+      ["text", "UNDERGROUND PATH"],
+      ["line", "CELADON CITY -"],
+      ["cont", "LAVENDER TOWN"]
+    ]
+  }
 };

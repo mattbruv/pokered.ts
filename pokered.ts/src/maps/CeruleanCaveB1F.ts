@@ -47,5 +47,5 @@ export const CeruleanCaveB1F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: { _MewtwoBattleText: [["text", "Mew!@"], ["text_end"]] }
 };

@@ -70,5 +70,28 @@ export const SafariZoneWest: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _SafariZoneWestRestHouseSignText: [["text", "REST HOUSE"]],
+    _SafariZoneWestFindWardensTeethSignText: [
+      ["text", "REQUEST NOTICE"],
+      ["para", "Please find the"],
+      ["line", "SAFARI WARDEN's"],
+      ["cont", "lost GOLD TEETH."],
+      ["cont", "They're around"],
+      ["cont", "here somewhere."],
+      ["para", "Reward offered!"],
+      ["line", "Contact: WARDEN"]
+    ],
+    _SafariZoneWestTrainerTipsText: [
+      ["text", "TRAINER TIPS"],
+      ["para", "Zone Exploration"],
+      ["line", "Campaign!"],
+      ["para", "The Search for"],
+      ["line", "the SECRET HOUSE!"]
+    ],
+    _SafariZoneWestSignText: [
+      ["text", "AREA 3"],
+      ["line", "EAST: CENTER AREA"]
+    ]
+  }
 };

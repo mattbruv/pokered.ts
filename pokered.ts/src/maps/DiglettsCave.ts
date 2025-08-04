@@ -18,5 +18,5 @@ export const DiglettsCave: Map = {
     backgroundItems: [],
     objects: []
   },
-  textPointers: []
+  text: {}
 };

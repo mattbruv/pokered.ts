@@ -56,5 +56,5 @@ export const CeruleanCave1F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {}
 };

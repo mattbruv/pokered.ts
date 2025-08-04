@@ -58,5 +58,24 @@ export const CeladonMart2F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _CeladonMart2FMiddleAgedManText: [
+      ["text", "SUPER REPEL keeps"],
+      ["line", "weak #MON at"],
+      ["cont", "bay..."],
+      ["para", "Hmm, it's a more"],
+      ["line", "powerful REPEL!"]
+    ],
+    _CeladonMart2FGirlText: [
+      ["text", "For long outings,"],
+      ["line", "you should buy"],
+      ["cont", "REVIVE."]
+    ],
+    _CeladonMart2FCurrentFloorSignText: [
+      ["text", "Top Grade Items"],
+      ["line", "for Trainers!"],
+      ["para", "2F: TRAINER'S"],
+      ["line", "    MARKET"]
+    ]
+  }
 };

@@ -131,5 +131,95 @@ export const SSAnne1FRooms: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _SSAnne1FRoomsWigglytuffText: [
+      ["text", "WIGGLYTUFF: Puup"],
+      ["line", "pupuu!@"],
+      ["text_end"]
+    ],
+    _SSAnne1FRoomsGentleman1BattleText: [
+      ["text", "I travel alone"],
+      ["line", "on my journeys!"],
+      ["para", "My #MON are my"],
+      ["line", "only friends!"]
+    ],
+    _SSAnne1FRoomsGentleman1EndBattleText: [
+      ["text", "My, my"],
+      ["line", "friends..."],
+      ["prompt"]
+    ],
+    _SSAnne1FRoomsGentleman1AfterBattleText: [
+      ["text", "You should be"],
+      ["line", "nice to friends!"]
+    ],
+    _SSAnne1FRoomsGentleman2BattleText: [
+      ["text", "You pup! How dare"],
+      ["line", "you barge in!"]
+    ],
+    _SSAnne1FRoomsGentleman2EndBattleText: [
+      ["text", "Humph!"],
+      ["line", "You rude child!"],
+      ["prompt"]
+    ],
+    _SSAnne1FRoomsGentleman2AfterBattleText: [
+      ["text", "I wish to be left"],
+      ["line", "alone! Get out!"]
+    ],
+    _SSAnne1FRoomsYoungsterBattleText: [
+      ["text", "I love #MON!"],
+      ["line", "Do you?"]
+    ],
+    _SSAnne1FRoomsYoungsterEndBattleText: [
+      ["text", "Wow! "],
+      ["line", "You're great!"],
+      ["prompt"]
+    ],
+    _SSAnne1FRoomsYoungsterAfterBattleText: [
+      ["text", "Let me be your"],
+      ["line", "friend, OK?"],
+      ["para", "Then we can trade"],
+      ["line", "#MON!"]
+    ],
+    _SSAnne1FRoomsCooltrainerFBattleText: [
+      ["text", "I collected these"],
+      ["line", "#MON from all"],
+      ["cont", "around the world!"]
+    ],
+    _SSAnne1FRoomsCooltrainerFEndBattleText: [
+      ["text", "Oh no!"],
+      ["line", "I went around the"],
+      ["cont", "world for these!"],
+      ["prompt"]
+    ],
+    _SSAnne1FRoomsCooltrainerFAfterBattleText: [
+      ["text", "You hurt my poor"],
+      ["line", "worldly #MON!"],
+      ["para", "I demand that you"],
+      ["line", "heal them at a"],
+      ["cont", "#MON CENTER!"]
+    ],
+    _SSAnne1FRoomsGirl1Text: [
+      ["text", "Waiter, I would"],
+      ["line", "like a cherry pie"],
+      ["cont", "please!"]
+    ],
+    _SSAnne1FRoomsMiddleAgedManText: [
+      ["text", "A cruise is so"],
+      ["line", "elegant yet cozy!"]
+    ],
+    _SSAnne1FRoomsLittleGirlText: [
+      ["text", "I always travel"],
+      ["line", "with WIGGLYTUFF!"]
+    ],
+    _SSAnne1FRoomsGirl2Text: [
+      ["text", "We are cruising"],
+      ["line", "around the world."]
+    ],
+    _SSAnne1FRoomsGentleman3Text: [
+      ["text", "Ssh! I'm a GLOBAL"],
+      ["line", "POLICE agent!"],
+      ["para", "I'm on the trail"],
+      ["line", "of TEAM ROCKET!"]
+    ]
+  }
 };

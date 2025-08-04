@@ -134,5 +134,48 @@ export const SilphCo5F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _SilphCo5FSilphWorkerMThatsYouRightText: [
+      ["text", "TEAM ROCKET is"],
+      ["line", "in an uproar over"],
+      ["cont", "some intruder."],
+      ["cont", "That's you right?"]
+    ],
+    _SilphCo5FSilphWorkerMYoureOurHeroText: [
+      ["text", "TEAM ROCKET took"],
+      ["line", "off! You're our"],
+      ["cont", "hero! Thank you!"]
+    ],
+    _SilphCo5FRocket1BattleText: [
+      ["text", "I heard a kid was"],
+      ["line", "wandering around."]
+    ],
+    _SilphCo5FRocket1EndBattleText: [["text", "Boom!"], ["prompt"]],
+    _SilphCo5FRocket1AfterBattleText: [
+      ["text", "It's not smart"],
+      ["line", "to pick a fight"],
+      ["cont", "with TEAM ROCKET!"]
+    ],
+    _SilphCo5FScientistBattleText: [
+      ["text", "We study #"],
+      ["line", "BALL technology"],
+      ["cont", "on this floor!"]
+    ],
+    _SilphCo5FScientistEndBattleText: [
+      ["text", "Dang!"],
+      ["line", "Blast it!"],
+      ["prompt"]
+    ],
+    _SilphCo5FScientistAfterBattleText: [
+      ["text", "We worked on the"],
+      ["line", "ultimate #"],
+      ["cont", "BALL which would"],
+      ["cont", "catch anything!"]
+    ],
+    _SilphCo5FRockerBattleText: [
+      ["text", "Whaaat? There"],
+      ["line", "shouldn't be any"],
+      ["cont", "children here?"]
+    ]
+  }
 };

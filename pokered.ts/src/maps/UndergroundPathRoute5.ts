@@ -29,5 +29,5 @@ export const UndergroundPathRoute5: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {}
 };

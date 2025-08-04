@@ -28,5 +28,12 @@ export const SSAnne3F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _SSAnne3FSailorText: [
+      ["text", "Our CAPTAIN is a"],
+      ["line", "sword master!"],
+      ["para", "He even teaches"],
+      ["line", "CUT to #MON!"]
+    ]
+  }
 };

@@ -55,5 +55,17 @@ export const CeladonPokecenter: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _CeladonPokecenterGentlemanText: [
+      ["text", "# FLUTE awakens"],
+      ["line", "#MON with a"],
+      ["cont", "sound that only"],
+      ["cont", "they can hear!"]
+    ],
+    _CeladonPokecenterBeautyText: [
+      ["text", "I rode uphill on"],
+      ["line", "CYCLING ROAD from"],
+      ["cont", "FUCHSIA!"]
+    ]
+  }
 };

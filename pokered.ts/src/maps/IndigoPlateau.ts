@@ -20,5 +20,5 @@ export const IndigoPlateau: Map = {
     backgroundItems: [],
     objects: []
   },
-  textPointers: []
+  text: {}
 };

@@ -28,5 +28,5 @@ export const VermilionTradeHouse: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {}
 };

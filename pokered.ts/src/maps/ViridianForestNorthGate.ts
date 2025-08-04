@@ -39,5 +39,22 @@ export const ViridianForestNorthGate: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _ViridianForestNorthGateSuperNerdText: [
+      ["text", "Many #MON live"],
+      ["line", "only in forests "],
+      ["cont", "and caves."],
+      ["para", "You need to look"],
+      ["line", "everywhere to get"],
+      ["cont", "different kinds!"]
+    ],
+    _ViridianForestNorthGateGrampsText: [
+      ["text", "Have you noticed"],
+      ["line", "the bushes on the"],
+      ["cont", "roadside?"],
+      ["para", "They can be cut"],
+      ["line", "down by a special"],
+      ["cont", "#MON move."]
+    ]
+  }
 };

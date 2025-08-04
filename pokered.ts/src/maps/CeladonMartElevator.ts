@@ -18,5 +18,5 @@ export const CeladonMartElevator: Map = {
     backgroundItems: [{ x: 3, y: 0, signId: "TEXT_CELADONMARTELEVATOR" }],
     objects: []
   },
-  textPointers: []
+  text: {}
 };

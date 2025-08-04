@@ -42,5 +42,5 @@ export const SeafoamIslandsB2F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {}
 };

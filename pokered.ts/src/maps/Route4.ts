@@ -57,5 +57,36 @@ export const Route4: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _Route4CooltrainerF1Text: [
+      ["text", "Ouch! I tripped"],
+      ["line", "over a rocky"],
+      ["cont", "#MON, GEODUDE!"]
+    ],
+    _Route4CooltrainerF2BattleText: [
+      ["text", "I came to get my"],
+      ["line", "mushroom #MON!"]
+    ],
+    _Route4CooltrainerF2EndBattleText: [
+      ["text", "Oh! My cute"],
+      ["line", "mushroom #MON!"],
+      ["prompt"]
+    ],
+    _Route4CooltrainerF2AfterBattleText: [
+      ["text", "There might not"],
+      ["line", "be any more"],
+      ["cont", "mushrooms here."],
+      ["para", "I think I got"],
+      ["line", "them all."]
+    ],
+    _Route4MtMoonSignText: [
+      ["text", "MT.MOON"],
+      ["line", "Tunnel Entrance"]
+    ],
+    _Route4SignText: [
+      ["text", "ROUTE 4"],
+      ["line", "MT.MOON -"],
+      ["cont", "CERULEAN CITY"]
+    ]
+  }
 };

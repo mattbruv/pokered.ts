@@ -18,5 +18,5 @@ export const SilphCoElevator: Map = {
     backgroundItems: [{ x: 3, y: 0, signId: "TEXT_SILPHCOELEVATOR_ELEVATOR" }],
     objects: []
   },
-  textPointers: []
+  text: {}
 };

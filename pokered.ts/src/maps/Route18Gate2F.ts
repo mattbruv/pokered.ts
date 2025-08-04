@@ -28,5 +28,18 @@ export const Route18Gate2F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _Route18Gate2FLeftBinocularsText: [
+      ["text", "Looked into the"],
+      ["line", "binoculars."],
+      ["para", "PALLET TOWN is in"],
+      ["line", "the west!"]
+    ],
+    _Route18Gate2FRightBinocularsText: [
+      ["text", "Looked into the"],
+      ["line", "binoculars."],
+      ["para", "There are people"],
+      ["line", "swimming!"]
+    ]
+  }
 };

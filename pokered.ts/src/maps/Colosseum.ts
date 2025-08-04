@@ -25,5 +25,5 @@ export const Colosseum: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {}
 };

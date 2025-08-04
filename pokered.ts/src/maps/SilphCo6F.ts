@@ -120,5 +120,94 @@ export const SilphCo6F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _SilphCo6FSilphWorkerM1TookOverTheBuildingText: [
+      ["text", "The ROCKETs came"],
+      ["line", "and took over the"],
+      ["cont", "building!"]
+    ],
+    _SilphCo6FSilphWorkerM1BackToWorkText: [
+      ["text", "Well, better get"],
+      ["line", "back to work!"]
+    ],
+    _SilphCo6FSilphWorkerMHelpMePleaseText: [
+      ["text", "Oh dear, oh dear."],
+      ["line", "Help me please!"]
+    ],
+    _SilphCo6FSilphWorkerMWeGotEngagedText: [
+      ["text", "We got engaged!"],
+      ["line", "Heheh!"]
+    ],
+    _SilphCo6FSilphWorkerF1SuchACowardText: [
+      ["text", "Look at him! He's"],
+      ["line", "such a coward!"]
+    ],
+    _SilphCo6FSilphWorkerF1HaveToMarryHimText: [
+      ["text", "I feel so sorry"],
+      ["line", "for him, I have"],
+      ["cont", "to marry him!"]
+    ],
+    _SilphCo6FSilphWorkerF2TeamRocketConquerWorldText: [
+      ["text", "TEAM ROCKET is"],
+      ["line", "trying to conquer"],
+      ["cont", "the world with"],
+      ["cont", "#MON!"]
+    ],
+    _SilphCo6FSilphWorkerF2TeamRocketRanText: [
+      ["text", "TEAM ROCKET ran"],
+      ["line", "because of you!"]
+    ],
+    _SilphCo6FSilphWorkerM3TargetedSilphText: [
+      ["text", "They must have"],
+      ["line", "targeted SILPH"],
+      ["cont", "for our #MON"],
+      ["cont", "products."]
+    ],
+    _SilphCo6FSilphWorkerM3WorkForSilphText: [
+      ["text", "Come work for"],
+      ["line", "SILPH when you"],
+      ["cont", "get older!"]
+    ],
+    _SilphCo6FRocket1BattleText: [
+      ["text", "I am one of the 4"],
+      ["line", "ROCKET BROTHERS!"]
+    ],
+    _SilphCo6FRocket1EndBattleText: [
+      ["text", "Flame"],
+      ["line", "out!"],
+      ["prompt"]
+    ],
+    _SilphCo6FRocket1AfterBattleText: [
+      ["text", "No matter!"],
+      ["line", "My brothers will"],
+      ["cont", "avenge me!"]
+    ],
+    _SilphCo6FScientistBattleText: [
+      ["text", "That rotten"],
+      ["line", "PRESIDENT!"],
+      ["para", "He shouldn't have"],
+      ["line", "sent me to the"],
+      ["cont", "TIKSI BRANCH!"]
+    ],
+    _SilphCo6FScientistEndBattleText: [["text", "Shoot!"], ["prompt"]],
+    _SilphCo6FScientistAfterBattleText: [
+      ["text", "TIKSI BRANCH?"],
+      ["line", "It's in Russian"],
+      ["cont", "no man's land!"]
+    ],
+    _SilphCo6FRocket2BattleText: [
+      ["text", "You dare betray"],
+      ["line", "TEAM ROCKET?"]
+    ],
+    _SilphCo6FRocket2EndBattleText: [
+      ["text", "You"],
+      ["line", "traitor!"],
+      ["prompt"]
+    ],
+    _SilphCo6FRocket2AfterBattleText: [
+      ["text", "If you stand for"],
+      ["line", "justice, you"],
+      ["cont", "betray evil!"]
+    ]
+  }
 };

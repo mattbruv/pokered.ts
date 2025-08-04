@@ -15,5 +15,5 @@ export const RedsHouse2F: Map = {
     backgroundItems: [],
     objects: []
   },
-  textPointers: []
+  text: {}
 };

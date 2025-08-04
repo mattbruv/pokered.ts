@@ -46,5 +46,23 @@ export const CeladonHotel: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _CeladonHotelGrannyText: [
+      ["text", "#MON? No, this"],
+      ["line", "is a hotel for"],
+      ["cont", "people."],
+      ["para", "We're full up."]
+    ],
+    _CeladonHotelBeautyText: [
+      ["text", "I'm on vacation"],
+      ["line", "with my brother"],
+      ["cont", "and boy friend."],
+      ["para", "CELADON is such a"],
+      ["line", "pretty city!"]
+    ],
+    _CeladonHotelSuperNerdText: [
+      ["text", "Why did she bring"],
+      ["line", "her brother?"]
+    ]
+  }
 };

@@ -22,17 +22,18 @@ for text_file in text_files:
             label = line.replace("::", "").strip()
             if label  not in text_data:
                 text_data[label] = []
-        elif label != "" and line.strip() != "":
+        elif label != "" and line.strip() != "" and line.strip() != "done":
             line = line.strip()
             split = line.split(" ")
             cmd = split[0]
             rest = " ".join(split[1::])
             commands.add(cmd)
             print(cmd, rest)
-            text_data[label].append({
-                "cmd": cmd,
-                "value": rest.replace("\"", "")
-            })
+            rest = rest.replace("\"", "")
+            if rest != "":
+                text_data[label].append([cmd, rest])
+            else:
+                text_data[label].append([cmd])
 
     map_name = p.stem.replace("_2", "")
     if map_name in map_data:

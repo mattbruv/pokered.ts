@@ -26,7 +26,7 @@ TS_BODY_TEMPLATE = """export const {map_name}: Map = {{
   tileset: Tileset.{tileset},
   connections: {connections},
   objects: {objects},
-  textPointers: [],
+  text: {text},
 }};
 """
 
@@ -69,6 +69,7 @@ def main():
         tileset = value["tileset"].upper()
         map_objects = value["objects"]
         border = map_objects["border_block"]
+        text = value["text"] if "text" in value else {}
         del map_objects["border_block"]
         # print(map_objects)
 
@@ -106,7 +107,8 @@ def main():
                 tileset=tileset,
                 border=border,
                 connections=connections,
-                objects=map_object_json
+                objects=map_object_json,
+                text=text
             )
         )
 

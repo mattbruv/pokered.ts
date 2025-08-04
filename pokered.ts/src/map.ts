@@ -1,4 +1,5 @@
 import { OverworldSprite, SpriteName } from "./sprite";
+import { MapText } from "./text";
 import { Tileset } from "./tileset";
 
 export type Map = {
@@ -16,8 +17,8 @@ export type Map = {
   connections: MapConnections;
   /** Data about objects within this map such as warps, sprites, trainers, and signs. */
   objects: MapObjectData;
-  /** */
-  textPointers: unknown[];
+  /** Defines an object of dynamic text for that map */
+  text: MapText;
 };
 
 /** Represents a warp target */

@@ -18,5 +18,5 @@ export const VermilionDock: Map = {
     backgroundItems: [],
     objects: []
   },
-  textPointers: []
+  text: { _VermilionDockUnusedText: [["text_start"]] }
 };

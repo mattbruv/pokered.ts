@@ -55,5 +55,23 @@ export const ViridianNicknameHouse: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _ViridianNicknameHouseBaldingGuyText: [
+      ["text", "Coming up with"],
+      ["line", "nicknames is fun,"],
+      ["cont", "but hard."],
+      ["para", "Simple names are"],
+      ["line", "the easiest to"],
+      ["cont", "remember."]
+    ],
+    _ViridianNicknameHouseLittleGirlText: [
+      ["text", "My Daddy loves"],
+      ["line", "#MON too."]
+    ],
+    _ViridianNicknameHouseSpearowText: [["text", "SPEARY: Tetweet!"]],
+    _ViridianNicknameHouseSpearySignText: [
+      ["text", "SPEAROW"],
+      ["line", "Name: SPEARY"]
+    ]
+  }
 };

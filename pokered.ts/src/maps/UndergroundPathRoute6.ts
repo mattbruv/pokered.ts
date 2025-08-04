@@ -29,5 +29,11 @@ export const UndergroundPathRoute6: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _UndergroundPathRoute6GirlText: [
+      ["text", "People often lose"],
+      ["line", "things in that"],
+      ["cont", "UNDERGROUND PATH."]
+    ]
+  }
 };

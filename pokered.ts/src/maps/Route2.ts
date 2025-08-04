@@ -49,5 +49,12 @@ export const Route2: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _Route2SignText: [
+      ["text", "ROUTE 2"],
+      ["line", "VIRIDIAN CITY -"],
+      ["cont", "PEWTER CITY"]
+    ],
+    _Route2DiglettsCaveSignText: [["text", "DIGLETT's CAVE"]]
+  }
 };

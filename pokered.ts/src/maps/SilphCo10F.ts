@@ -84,5 +84,43 @@ export const SilphCo10F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _SilphCo10FSilphWorkerFImScaredText: [
+      ["text", "Waaaaa!"],
+      ["cont", "I'm scared!"]
+    ],
+    _SilphCo10FSilphWorkerFQuietAboutMyCryingText: [
+      ["text", "Please keep quiet"],
+      ["line", "about my crying!"]
+    ],
+    _SilphCo10FRocketBattleText: [
+      ["text", "Welcome to the"],
+      ["line", "10F! So good of"],
+      ["cont", "you to join me!"]
+    ],
+    _SilphCo10FRocketEndBattleText: [
+      ["text", "I'm"],
+      ["line", "stunned!"],
+      ["prompt"]
+    ],
+    _SilphCo10FRocketAfterBattleText: [
+      ["text", "Nice try, but the"],
+      ["line", "boardroom is up"],
+      ["cont", "one more floor!"]
+    ],
+    _SilphCo10FScientistBattleText: [
+      ["text", "Enough of your"],
+      ["line", "silly games!"]
+    ],
+    _SilphCo10FScientistEndBattleText: [
+      ["text", "No"],
+      ["line", "continues left!"],
+      ["prompt"]
+    ],
+    _SilphCo10FScientistAfterBattleText: [
+      ["text", "Are you satisfied"],
+      ["line", "with beating me?"],
+      ["cont", "Then go on home!"]
+    ]
+  }
 };

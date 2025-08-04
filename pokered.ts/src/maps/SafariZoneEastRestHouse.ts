@@ -46,5 +46,21 @@ export const SafariZoneEastRestHouse: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _SafariZoneEastRestHouseScientistText: [
+      ["text", "How many did you"],
+      ["line", "catch? I'm bushed"],
+      ["cont", "from the work!"]
+    ],
+    _SafariZoneEastRestHouseRockerText: [
+      ["text", "I caught a"],
+      ["line", "CHANSEY!"],
+      ["para", "That makes this"],
+      ["line", "all worthwhile!"]
+    ],
+    _SafariZoneEastRestHouseSilphWorkerMText: [
+      ["text", "Whew! I'm tired"],
+      ["line", "from all the fun!"]
+    ]
+  }
 };

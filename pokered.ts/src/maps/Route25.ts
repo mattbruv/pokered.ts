@@ -127,5 +127,144 @@ export const Route25: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _Route25Youngster1BattleText: [
+      ["text", "Local trainers"],
+      ["line", "come here to"],
+      ["cont", "practice!"]
+    ],
+    _Route25Youngster1EndBattleText: [
+      ["text", "You're"],
+      ["line", "decent."],
+      ["prompt"]
+    ],
+    _Route25Youngster1AfterBattleText: [
+      ["text", "All #MON have"],
+      ["line", "weaknesses. It's"],
+      ["cont", "best to raise"],
+      ["cont", "different kinds."]
+    ],
+    _Route25Youngster2BattleText: [
+      ["text", "Dad took me to a"],
+      ["line", "great party on"],
+      ["cont", "S.S.ANNE at"],
+      ["cont", "VERMILION CITY!"]
+    ],
+    _Route25Youngster2EndBattleText: [
+      ["text", "I'm"],
+      ["line", "not mad!"],
+      ["prompt"]
+    ],
+    _Route25Youngster2AfterBattleText: [
+      ["text", "On S.S.ANNE, I"],
+      ["line", "saw trainers from"],
+      ["cont", "around the world."]
+    ],
+    _Route25CooltrainerMBattleText: [
+      ["text", "I'm a cool guy."],
+      ["line", "I've got a girl"],
+      ["cont", "friend!"]
+    ],
+    _Route25CooltrainerMEndBattleText: [
+      ["text", "Aww,"],
+      ["line", "darn..."],
+      ["prompt"]
+    ],
+    _Route25CooltrainerMAfterBattleText: [
+      ["text", "Oh well. My girl"],
+      ["line", "will cheer me up."]
+    ],
+    _Route25CooltrainerF1BattleText: [
+      ["text", "Hi! My boy"],
+      ["line", "friend is cool!"]
+    ],
+    _Route25CooltrainerF1EndBattleText: [
+      ["text", "I was in"],
+      ["line", "bad condition!"],
+      ["prompt"]
+    ],
+    _Route25CooltrainerF1AfterBattleText: [
+      ["text", "I wish my guy was"],
+      ["line", "as good as you!"]
+    ],
+    _Route25Youngster3BattleText: [
+      ["text", "I knew I had to"],
+      ["line", "fight you!"]
+    ],
+    _Route25Youngster3EndBattleText: [
+      ["text", "I knew"],
+      ["line", "I'd lose too!"],
+      ["prompt"]
+    ],
+    _Route25Youngster3AfterBattleText: [
+      ["text", "If your #MON"],
+      ["line", "gets confused or"],
+      ["cont", "falls asleep,"],
+      ["cont", "switch it!"]
+    ],
+    _Route25CooltrainerF2BattleText: [
+      ["text", "My friend has a"],
+      ["line", "cute #MON."],
+      ["cont", "I'm so jealous!"]
+    ],
+    _Route25CooltrainerF2EndBattleText: [
+      ["text", "I'm"],
+      ["line", "not so jealous!"],
+      ["prompt"]
+    ],
+    _Route25CooltrainerF2AfterBattleText: [
+      ["text", "You came from MT."],
+      ["line", "MOON? May I have"],
+      ["cont", "a CLEFAIRY?"]
+    ],
+    _Route25Hiker1BattleText: [
+      ["text", "I just got down"],
+      ["line", "from MT.MOON,"],
+      ["cont", "but I'm ready!"]
+    ],
+    _Route25Hiker1EndBattleText: [
+      ["text", "You"],
+      ["line", "worked hard!"],
+      ["prompt"]
+    ],
+    _Route25Hiker1AfterBattleText: [
+      ["text", "Drat!"],
+      ["line", "A ZUBAT bit me"],
+      ["cont", "back in there."]
+    ],
+    _Route25Hiker2BattleText: [
+      ["text", "I'm off to see a"],
+      ["line", "#MON collector"],
+      ["cont", "at the cape!"]
+    ],
+    _Route25Hiker2EndBattleText: [
+      ["text", "You"],
+      ["line", "got me."],
+      ["prompt"]
+    ],
+    _Route25Hiker2AfterBattleText: [
+      ["text", "The collector has"],
+      ["line", "many rare kinds"],
+      ["cont", "of #MON."]
+    ],
+    _Route25Hiker3BattleText: [
+      ["text", "You're going to"],
+      ["line", "see BILL? First,"],
+      ["cont", "let's fight!"]
+    ],
+    _Route25Hiker3EndBattleText: [
+      ["text", "You're"],
+      ["line", "something."],
+      ["prompt"]
+    ],
+    _Route25Hiker3AfterBattleText: [
+      ["text", "The trail below"],
+      ["line", "is a shortcut to"],
+      ["cont", "CERULEAN CITY."]
+    ],
+    _Route25BillSignText: [
+      ["text", "SEA COTTAGE"],
+      ["line", "BILL lives here!"]
+    ]
+  }
 };

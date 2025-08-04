@@ -169,5 +169,8 @@ export const PowerPlant: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _PowerPlantVoltorbBattleText: [["text", "Bzzzt!"]],
+    _PowerPlantZapdosBattleText: [["text", "Gyaoo!@"], ["text_end"]]
+  }
 };

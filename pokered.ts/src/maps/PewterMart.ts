@@ -46,5 +46,21 @@ export const PewterMart: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _PewterMartYoungsterText: [
+      ["text", "A shady, old man"],
+      ["line", "got me to buy"],
+      ["cont", "this really weird"],
+      ["cont", "fish #MON!"],
+      ["para", "It's totally weak"],
+      ["line", "and it cost ¥500!"]
+    ],
+    _PewterMartSuperNerdText: [
+      ["text", "Good things can"],
+      ["line", "happen if you"],
+      ["cont", "raise #MON"],
+      ["cont", "diligently, even"],
+      ["cont", "the weak ones!"]
+    ]
+  }
 };

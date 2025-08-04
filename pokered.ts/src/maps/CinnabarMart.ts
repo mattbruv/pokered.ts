@@ -46,5 +46,15 @@ export const CinnabarMart: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _CinnabarMartSilphWorkerFText: [
+      ["text", "Don't they have X"],
+      ["line", "ATTACK? It's good"],
+      ["cont", "for battles!"]
+    ],
+    _CinnabarMartScientistText: [
+      ["text", "It never hurts to"],
+      ["line", "have extra items!"]
+    ]
+  }
 };

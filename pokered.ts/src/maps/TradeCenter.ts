@@ -25,5 +25,5 @@ export const TradeCenter: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {}
 };

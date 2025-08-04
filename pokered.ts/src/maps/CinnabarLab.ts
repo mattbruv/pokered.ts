@@ -36,5 +36,30 @@ export const CinnabarLab: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _CinnabarLabFishingGuruText: [
+      ["text", "We study #MON"],
+      ["line", "extensively here."],
+      ["para", "People often bring"],
+      ["line", "us rare #MON"],
+      ["cont", "for examination."]
+    ],
+    _CinnabarLabPhotoText: [
+      ["text", "A photo of the"],
+      ["line", "LAB's founder,"],
+      ["cont", "DR.FUJI!"]
+    ],
+    _CinnabarLabMeetingRoomSignText: [
+      ["text", "#MON LAB"],
+      ["line", "Meeting Room"]
+    ],
+    _CinnabarLabRAndDSignText: [
+      ["text", "#MON LAB"],
+      ["line", "R-and-D Room"]
+    ],
+    _CinnabarLabTestingRoomSignText: [
+      ["text", "#MON LAB"],
+      ["line", "Testing Room"]
+    ]
+  }
 };

@@ -176,5 +176,123 @@ export const SaffronCity: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _SaffronCityRocket1Text: [
+      ["text", "What do you want?"],
+      ["line", "Get lost!"]
+    ],
+    _SaffronCityRocket2Text: [
+      ["text", "BOSS said he'll"],
+      ["line", "take this town!"]
+    ],
+    _SaffronCityRocket3Text: [
+      ["text", "Get out of the"],
+      ["line", "way!"]
+    ],
+    _SaffronCityRocket4Text: [
+      ["text", "SAFFRON belongs"],
+      ["line", "to TEAM ROCKET!"]
+    ],
+    _SaffronCityRocket5Text: [
+      ["text", "Being evil makes"],
+      ["line", "me feel so alive!"]
+    ],
+    _SaffronCityRocket6Text: [
+      ["text", "Ow! Watch where"],
+      ["line", "you're walking!"]
+    ],
+    _SaffronCityRocket7Text: [
+      ["text", "With SILPH under"],
+      ["line", "control, we can"],
+      ["cont", "exploit #MON"],
+      ["cont", "around the world!"]
+    ],
+    _SaffronCityScientistText: [
+      ["text", "You beat TEAM"],
+      ["line", "ROCKET all alone?"],
+      ["cont", "That's amazing!"]
+    ],
+    _SaffronCitySilphWorkerMText: [
+      ["text", "Yeah! TEAM ROCKET"],
+      ["line", "is gone!"],
+      ["cont", "It's safe to go"],
+      ["cont", "out again!"]
+    ],
+    _SaffronCitySilphWorkerFText: [
+      ["text", "People should be"],
+      ["line", "flocking back to"],
+      ["cont", "SAFFRON now."]
+    ],
+    _SaffronCityGentlemanText: [
+      ["text", "I flew here on my"],
+      ["line", "PIDGEOT when I"],
+      ["cont", "read about SILPH."],
+      ["para", "It's already over?"],
+      ["line", "I missed the"],
+      ["cont", "media action."]
+    ],
+    _SaffronCityPidgeotText: [["text", "PIDGEOT: Bi bibii!@"], ["text_end"]],
+    _SaffronCityRockerText: [
+      ["text", "I saw ROCKET"],
+      ["line", "BOSS escaping"],
+      ["cont", "SILPH's building."]
+    ],
+    _SaffronCityRocket8Text: [
+      ["text", "I'm a security"],
+      ["line", "guard."],
+      ["para", "Suspicious kids I"],
+      ["line", "don't allow in!"]
+    ],
+    _SaffronCityRocket9Text: [
+      ["text", "..."],
+      ["line", "Snore..."],
+      ["para", "Hah! He's taking"],
+      ["line", "a snooze!"]
+    ],
+    _SaffronCitySignText: [
+      ["text", "SAFFRON CITY"],
+      ["line", "Shining, Golden"],
+      ["cont", "Land of Commerce"]
+    ],
+    _SaffronCityFightingDojoSignText: [["text", "FIGHTING DOJO"]],
+    _SaffronCityGymSignText: [
+      ["text", "SAFFRON CITY"],
+      ["line", "#MON GYM"],
+      ["cont", "LEADER: SABRINA"],
+      ["para", "The Master of"],
+      ["line", "Psychic #MON!"]
+    ],
+    _SaffronCityTrainerTips1Text: [
+      ["text", "TRAINER TIPS"],
+      ["para", "FULL HEAL cures"],
+      ["line", "all ailments like"],
+      ["cont", "sleep and burns."],
+      ["para", "It costs a bit"],
+      ["line", "more, but it's"],
+      ["cont", "more convenient."]
+    ],
+    _SaffronCityTrainerTips2Text: [
+      ["text", "TRAINER TIPS"],
+      ["para", "New GREAT BALL"],
+      ["line", "offers improved"],
+      ["cont", "capture rates."],
+      ["para", "Try it on those"],
+      ["line", "hard-to-catch"],
+      ["cont", "#MON."]
+    ],
+    _SaffronCitySilphCoSignText: [
+      ["text", "SILPH CO."],
+      ["line", "OFFICE BUILDING"]
+    ],
+    _SaffronCityMrPsychicsHouseSignText: [
+      ["text", "MR.PSYCHIC's"],
+      ["line", "HOUSE"]
+    ],
+    _SaffronCitySilphCoLatestProductSignText: [
+      ["text", "SILPH's latest"],
+      ["line", "product!"],
+      ["para", "Release to be"],
+      ["line", "determined..."]
+    ]
+  }
 };

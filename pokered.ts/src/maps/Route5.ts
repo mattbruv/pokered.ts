@@ -26,5 +26,11 @@ export const Route5: Map = {
     ],
     objects: []
   },
-  textPointers: []
+  text: {
+    _Route5UndergroundPathSignText: [
+      ["text", "UNDERGROUND PATH"],
+      ["line", "CERULEAN CITY -"],
+      ["cont", "VERMILION CITY"]
+    ]
+  }
 };

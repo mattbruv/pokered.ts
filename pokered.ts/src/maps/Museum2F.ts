@@ -64,5 +64,41 @@ export const Museum2F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _Museum2FYoungsterText: [
+      ["text", "MOON STONE?"],
+      ["para", "What's so special"],
+      ["line", "about it?"]
+    ],
+    _Museum2FGrampsText: [
+      ["text", "July 20, 1969!"],
+      ["para", "The 1st lunar"],
+      ["line", "landing!"],
+      ["para", "I bought a color"],
+      ["line", "TV to watch it!"]
+    ],
+    _Museum2FScientistText: [
+      ["text", "We have a space"],
+      ["line", "exhibit now."]
+    ],
+    _Museum2FBrunetteGirlText: [
+      ["text", "I want a PIKACHU!"],
+      ["line", "It's so cute!"],
+      ["para", "I asked my Daddy"],
+      ["line", "to catch me one!"]
+    ],
+    _Museum2FHikerText: [
+      ["text", "Yeah, a PIKACHU"],
+      ["line", "soon, I promise!"]
+    ],
+    _Museum2FSpaceShuttleSignText: [
+      ["text", "SPACE SHUTTLE"],
+      ["line", "COLUMBIA"]
+    ],
+    _Museum2FMoonStoneSignText: [
+      ["text", "Meteorite that"],
+      ["line", "fell on MT.MOON."],
+      ["cont", "(MOON STONE?)"]
+    ]
+  }
 };

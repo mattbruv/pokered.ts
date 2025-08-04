@@ -44,5 +44,25 @@ export const Route16Gate1F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _Route16Gate1FGuardNoPedestriansAllowedText: [
+      ["text", "No pedestrians"],
+      ["line", "are allowed on"],
+      ["cont", "CYCLING ROAD!"]
+    ],
+    _Route16Gate1FGuardCyclingRoadExplanationText: [
+      ["text", "CYCLING ROAD is a"],
+      ["line", "downhill course"],
+      ["cont", "by the sea. It's"],
+      ["cont", "a great ride."]
+    ],
+    _Route16Gate1FGuardWaitUpText: [
+      ["text", "Excuse me! Wait"],
+      ["line", "up please!"]
+    ],
+    _Route16Gate1FGamblerText: [
+      ["text", "How'd you get in?"],
+      ["line", "Good effort!"]
+    ]
+  }
 };

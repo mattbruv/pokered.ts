@@ -22,5 +22,5 @@ export const SSAnneB1F: Map = {
     backgroundItems: [],
     objects: []
   },
-  textPointers: []
+  text: {}
 };

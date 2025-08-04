@@ -37,5 +37,14 @@ export const CeruleanTradeHouse: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _CeruleanTradeHouseGrannyText: [
+      ["text", "My husband likes"],
+      ["line", "trading #MON."],
+      ["para", "If you are a"],
+      ["line", "collector, would"],
+      ["cont", "you please trade"],
+      ["cont", "with him?"]
+    ]
+  }
 };

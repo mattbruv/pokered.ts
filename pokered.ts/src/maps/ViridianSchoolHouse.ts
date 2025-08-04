@@ -37,5 +37,17 @@ export const ViridianSchoolHouse: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _ViridianSchoolHouseBrunetteGirlText: [
+      ["text", "Whew! I'm trying"],
+      ["line", "to memorize all"],
+      ["cont", "my notes."]
+    ],
+    _ViridianSchoolHouseCooltrainerFText: [
+      ["text", "Okay!"],
+      ["para", "Be sure to read"],
+      ["line", "the blackboard"],
+      ["cont", "carefully!"]
+    ]
+  }
 };

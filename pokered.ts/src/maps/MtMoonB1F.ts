@@ -24,5 +24,5 @@ export const MtMoonB1F: Map = {
     backgroundItems: [],
     objects: []
   },
-  textPointers: []
+  text: { _MtMoonB1FUnusedText: [["text_start"]] }
 };

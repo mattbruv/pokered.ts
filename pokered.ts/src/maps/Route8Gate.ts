@@ -30,5 +30,5 @@ export const Route8Gate: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {}
 };

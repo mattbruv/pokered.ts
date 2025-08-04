@@ -31,5 +31,16 @@ export const Route18Gate1F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _Route18Gate1FGuardYouNeedABicycleText: [
+      ["text", "You need a BICYCLE"],
+      ["line", "for CYCLING ROAD!"]
+    ],
+    _Route18Gate1FGuardCyclingRoadUphillText: [
+      ["text", "CYCLING ROAD is"],
+      ["line", "all uphill from"],
+      ["cont", "here."]
+    ],
+    _Route18Gate1FGuardExcuseMeText: [["text", "Excuse me!"]]
+  }
 };

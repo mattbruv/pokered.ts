@@ -56,5 +56,23 @@ export const PokemonMansion1F: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _PokemonMansion1FScientistBattleText: [
+      ["text", "Who are you? There"],
+      ["line", "shouldn't be"],
+      ["cont", "anyone here."]
+    ],
+    _PokemonMansion1FScientistEndBattleText: [["text", "Ouch!"], ["prompt"]],
+    _PokemonMansion1FScientistAfterBattleText: [
+      ["text", "A key? I don't"],
+      ["line", "know what you're"],
+      ["cont", "talking about."]
+    ],
+    _PokemonMansion1FSwitchText: [
+      ["text", "A secret switch!"],
+      ["para", "Press it?"]
+    ],
+    _PokemonMansion1FSwitchPressedText: [["text", "Who wouldn't?"], ["prompt"]],
+    _PokemonMansion1FSwitchNotPressedText: [["text", "Not quite yet!"]]
+  }
 };

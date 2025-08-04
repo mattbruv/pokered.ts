@@ -39,5 +39,13 @@ export const SafariZoneCenter: Map = {
       }
     ]
   },
-  textPointers: []
+  text: {
+    _SafariZoneCenterRestHouseSignText: [["text", "REST HOUSE"]],
+    _SafariZoneCenterTrainerTipsSignText: [
+      ["text", "TRAINER TIPS"],
+      ["para", "Press the START"],
+      ["line", "Button to check"],
+      ["cont", "remaining time!"]
+    ]
+  }
 };
