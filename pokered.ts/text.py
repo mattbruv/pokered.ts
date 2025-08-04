@@ -8,6 +8,7 @@ text_files = glob.glob("../pokered/text/*.asm", recursive=True)
 
 map_data = json.loads(open("maps.json", "r").read())
 
+commands = set()
 for text_file in text_files:
     p = Path(text_file)
     data = open(p).readlines()
@@ -21,8 +22,17 @@ for text_file in text_files:
             label = line.replace("::", "").strip()
             if label  not in text_data:
                 text_data[label] = []
-        elif label is not "" and line.strip() is not "":
-            text_data[label].append(line.strip())
+        elif label != "" and line.strip() != "":
+            line = line.strip()
+            split = line.split(" ")
+            cmd = split[0]
+            rest = " ".join(split[1::])
+            commands.add(cmd)
+            print(cmd, rest)
+            text_data[label].append({
+                "cmd": cmd,
+                "value": rest.replace("\"", "")
+            })
 
     map_name = p.stem.replace("_2", "")
     if map_name in map_data:
@@ -30,4 +40,5 @@ for text_file in text_files:
     else:
         print("NOT IN MAP: ", map_name)
 
-open("maps.json", "w").write(json.dumps(map_data))
+open("maps.json", "w", encoding="utf-8").write(json.dumps(map_data, ensure_ascii=False, indent=4))
+print(commands)
