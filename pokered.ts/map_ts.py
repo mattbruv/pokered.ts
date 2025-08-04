@@ -60,7 +60,7 @@ def main():
         maps = json.load(f)
 
     for key, value in maps.items():
-        print(key, value["id"])
+        # print(key, value["id"])
         map_name = key
         map_id = value["id"]
         width = value["width"]
@@ -70,7 +70,7 @@ def main():
         map_objects = value["objects"]
         border = map_objects["border_block"]
         del map_objects["border_block"]
-        print(map_objects)
+        # print(map_objects)
 
         # Prepare block export
         blocks_const = f"{map_id}_BLOCKS"
