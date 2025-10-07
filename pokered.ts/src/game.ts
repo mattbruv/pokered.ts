@@ -44,8 +44,10 @@ export type MapObjectWithSprite = {
 };
 
 export type MapData = {
-  flowerAnimCounter: number;
-  flowerAnimIndex: number;
+  animFrameCounter: number;
+  animFlowerIndex: number;
+  animWaveMoveRight: boolean;
+  animWaveIndex: number;
   currentMap: Map;
   currentMapObjects: MapObjectWithSprite[];
   currentMapName: MapName;
@@ -120,12 +122,24 @@ class PokemonRed {
 
   // Game update logic
   #update() {
-    // blow the flowers in the wind
-    this.#data.map.flowerAnimCounter++;
-    if (this.#data.map.flowerAnimCounter >= 21) {
-      this.#data.map.flowerAnimCounter = 0;
-      this.#data.map.flowerAnimIndex++;
-      this.#data.map.flowerAnimIndex %= 3; // limit to three frames
+    // blow the flowers in the wind and simulate waves
+    this.#data.map.animFrameCounter++;
+
+    // only update animations every 21 frames
+    if (this.#data.map.animFrameCounter >= 21) {
+      this.#data.map.animFrameCounter = 0;
+      this.#data.map.animFlowerIndex++;
+      this.#data.map.animFlowerIndex %= 3; // limit to three frames
+      // update wave animation
+      const waveIndexDirection = this.#data.map.animWaveMoveRight ? +1 : -1;
+      const nextIndex = this.#data.map.animWaveIndex + waveIndexDirection;
+      // If we've gone past our wave textures in either direction, change direction
+      if (nextIndex < 0 || nextIndex >= 4) {
+        this.#data.map.animWaveMoveRight = !this.#data.map.animWaveMoveRight;
+        // this.#data.map.animWaveIndex += -waveIndexDirection;
+      } else {
+        this.#data.map.animWaveIndex = nextIndex;
+      }
     }
 
     const keys = this.#input.getInput(this.#data.player);
@@ -199,7 +213,7 @@ class PokemonRed {
   }
 
   #loadGame(): GameData {
-    const mapName = MapName.Route1;
+    const mapName = MapName.PalletTown;
     const map = getMap(mapName);
     const data: GameData = {
       map: {
@@ -207,8 +221,10 @@ class PokemonRed {
         currentMapName: mapName,
         previousOutdoorMapName: MapName.Route1,
         currentMapObjects: [],
-        flowerAnimCounter: 0,
-        flowerAnimIndex: 0
+        animFrameCounter: 0,
+        animFlowerIndex: 0,
+        animWaveIndex: 0,
+        animWaveMoveRight: false
       },
       player: {
         name: "Red",

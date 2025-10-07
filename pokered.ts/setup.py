@@ -168,12 +168,60 @@ def generate_shadow():
     im_double_size.paste(im_v, (0, im.height))
     im_double_size.save("../pokered/gfx/sprites/shadow_full.png")
 
-# Example usage
+def extract_tile_make_shifted(input_path, tile_x, tile_y, output_path_prefix):
+    """
+    Opens input_path, extracts 8x8 tile at tile_x, tile_y (tile coords, each 8 pixels),
+    makes white pixels transparent, generates 3 horizontally wrapped shifts,
+    and saves them as output_path_prefix_1.png, _2.png, _3.png.
+    """
+    with Image.open(input_path) as img:
+        # Calculate pixel coordinates
+        left = tile_x * 8
+        upper = tile_y * 8
+        right = left + 8
+        lower = upper + 8
+
+        # Crop the 8x8 tile and convert to RGBA
+        tile = img.crop((left, upper, right, lower)).convert("RGBA")
+
+        # Generate 3 horizontally wrapped shifts
+        shifted_tiles = []
+        current_tile = tile
+        for i in range(4):
+            current_tile = shift_wrap(current_tile, 1, 0)  # shift 1 pixel right, wrap
+            shifted_tiles.append(current_tile)
+
+        # Save the shifted tiles
+        for i, t in enumerate(shifted_tiles):
+            t.save(f"{output_path_prefix}_{i+1}.png")
+
+def shift_wrap(img, dx, dy):
+    """Shift image by dx, dy with wrapping."""
+    width, height = img.size
+    # Convert to RGBA if needed
+    img = img.convert("RGBA")
+
+    # Use crop + paste for horizontal wrapping
+    dx = dx % width
+    dy = dy % height
+    shifted = Image.new("RGBA", (width, height))
+    shifted.paste(img.crop((0, 0, width - dx, height)), (dx, 0))
+    shifted.paste(img.crop((width - dx, 0, width, height)), (0, 0))
+
+    if dy != 0:
+        shifted_vert = Image.new("RGBA", (width, height))
+        shifted_vert.paste(shifted.crop((0, 0, width, height - dy)), (0, dy))
+        shifted_vert.paste(shifted.crop((0, height - dy, width, height)), (0, 0))
+        shifted = shifted_vert
+
+    return shifted
+
 
 extract_tile_make_white_transparent("../pokered/gfx/tilesets/overworld.png", 2, 5, "../pokered/gfx/tilesets/grass_overworld.png")
 extract_tile_make_white_transparent("../pokered/gfx/tilesets/forest.png", 0, 2, "../pokered/gfx/tilesets/grass_forest.png")
 extract_tile_make_white_transparent("../pokered/gfx/tilesets/forest.png", 4, 3, "../pokered/gfx/tilesets/grass_forest_flower.png")
 extract_tile_make_white_transparent("../pokered/gfx/tilesets/plateau.png", 5, 4, "../pokered/gfx/tilesets/grass_plateau.png")
+extract_tile_make_shifted("../pokered/gfx/tilesets/overworld.png", 4, 1, "../pokered/gfx/tilesets/water")
 # pre-bake the player's shadow, it's not 1996, we can afford a 16x16 pixel image in memory
 # instead of creating it at runtime
 generate_shadow()

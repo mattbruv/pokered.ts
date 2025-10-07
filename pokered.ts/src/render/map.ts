@@ -65,8 +65,14 @@ export function renderOverworld(
 
     // If we have flowers, draw their current animation
     if (cache.current.flowers) {
-      const flower = cache.current.flowers[mapData.flowerAnimIndex];
+      const flower = cache.current.flowers[mapData.animFlowerIndex];
       ct.drawImage(flower, 0, 0);
+    }
+
+    // if we have water, draw the current wave animation
+    if (cache.current.water) {
+      const water = cache.current.water[mapData.animWaveIndex];
+      ct.drawImage(water, 0, 0);
     }
 
     // draw map objects to image
@@ -211,16 +217,33 @@ export function renderOverworld(
 
 export type FlowerCache = [OffscreenCanvas, OffscreenCanvas, OffscreenCanvas];
 
-const FLOWER_SPRITES: (keyof ImageCache)[] = [
+// 8 total wave animations
+// goes back and forth, 4 frames one way, 4 frames back
+export type WaterCache = [
+  OffscreenCanvas,
+  OffscreenCanvas,
+  OffscreenCanvas,
+  OffscreenCanvas
+];
+
+const FLOWER_FRAMES: (keyof ImageCache)[] = [
   "tilesets-flower-flower1",
   "tilesets-flower-flower2",
   "tilesets-flower-flower3"
+];
+
+const WATER_SPRITES: (keyof ImageCache)[] = [
+  "tilesets-water_1",
+  "tilesets-water_2",
+  "tilesets-water_3",
+  "tilesets-water_4"
 ];
 
 export type MapRender = {
   mapImage: OffscreenCanvas;
   grass: OffscreenCanvas | null;
   flowers: FlowerCache | null;
+  water: WaterCache | null;
 };
 
 /*
@@ -255,15 +278,15 @@ export function getMapRender(
 
   const canvas = newMapCanvas();
 
-  // also we want to render out each flower animation
-  const flower1 = newMapCanvas();
-  const flower2 = newMapCanvas();
-  const flower3 = newMapCanvas();
-
   const inOverworld = tilesetName === Tileset.OVERWORLD;
 
+  // also we want to render out each flower and water animation
   const mapFlowers: FlowerCache | null = inOverworld
-    ? [flower1, flower2, flower3]
+    ? [newMapCanvas(), newMapCanvas(), newMapCanvas()]
+    : null;
+
+  const mapWater: WaterCache | null = inOverworld
+    ? [newMapCanvas(), newMapCanvas(), newMapCanvas(), newMapCanvas()]
     : null;
 
   const tilesetMetadata = getTilesetMetadata(tilesetName);
@@ -321,9 +344,19 @@ export function getMapRender(
           if (inOverworld && mapFlowers && tile === 3) {
             for (let i = 0; i < 3; i++) {
               const flowerMap = mapFlowers[i];
-              const flowerImage = images[FLOWER_SPRITES[i]];
+              const flowerImage = images[FLOWER_FRAMES[i]];
               const flowerCtx = flowerMap.getContext("2d");
               flowerCtx?.drawImage(flowerImage, 0, 0, 8, 8, dx, dy, 8, 8);
+            }
+          }
+
+          // If this is a water tile, render wave animation frames.
+          if (mapWater && tile === 20) {
+            for (let i = 0; i < 4; i++) {
+              const waterMap = mapWater[i];
+              const waterImage = images[WATER_SPRITES[i]];
+              const waterCtx = waterMap.getContext("2d");
+              waterCtx?.drawImage(waterImage, 0, 0, 8, 8, dx, dy, 8, 8);
             }
           }
         }
@@ -334,6 +367,7 @@ export function getMapRender(
   return {
     mapImage: canvas,
     grass,
-    flowers: mapFlowers
+    flowers: mapFlowers,
+    water: mapWater
   };
 }

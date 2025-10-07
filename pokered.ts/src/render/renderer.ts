@@ -1,6 +1,6 @@
 import { GameData } from "../game";
 import { ImageCache } from "../gfx/images";
-import { getMapRender, renderOverworld } from "./map";
+import { FlowerCache, getMapRender, renderOverworld, WaterCache } from "./map";
 import { Map } from "../map";
 import { getMap } from "../mapLookup";
 import { Sprite } from "./sprite";
@@ -11,7 +11,8 @@ const SCREEN_HEIGHT = 144;
 export type MapCache = {
   mapImage: OffscreenCanvas;
   grass: OffscreenCanvas | null;
-  flowers: [OffscreenCanvas, OffscreenCanvas, OffscreenCanvas] | null;
+  flowers: FlowerCache | null;
+  water: WaterCache | null;
 };
 
 export type OverworldCache = {
@@ -36,7 +37,8 @@ export class Renderer {
       current: {
         mapImage: new OffscreenCanvas(0, 0),
         grass: null,
-        flowers: null
+        flowers: null,
+        water: null
       },
       outOfBounds: new OffscreenCanvas(0, 0)
     };
@@ -68,6 +70,7 @@ export class Renderer {
 
     this.#overworldCache.current.mapImage = mapRender.mapImage;
     this.#overworldCache.current.flowers = mapRender.flowers;
+    this.#overworldCache.current.water = mapRender.water;
     this.#overworldCache.current.grass = mapRender.grass;
 
     const directions = ["north", "east", "south", "west"] as const;
@@ -87,7 +90,8 @@ export class Renderer {
         this.#overworldCache[dir] = {
           mapImage: mapRender.mapImage,
           grass: mapRender.grass,
-          flowers: mapRender.flowers
+          flowers: mapRender.flowers,
+          water: mapRender.water
         };
       } else {
         this.#overworldCache[dir] = undefined; // clear cache if no connection
